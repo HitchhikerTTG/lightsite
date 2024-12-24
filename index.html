@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,9 +104,17 @@
             position: absolute;
             right: 0;
             top: 0;
-            width: 25%;
+            width: 60%;
             height: 100%;
             object-fit: cover;
+            transform: rotate(-8.9deg);
+        }
+
+        @media (min-width: 769px) {
+            .benefits-section .background-image {
+                width: 25%;
+                height: 90%;
+            }
         }
 
         .benefits-section .products-image {
