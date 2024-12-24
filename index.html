@@ -55,12 +55,23 @@
         }
 
         .hero-section h1 {
-            font-size: 8vw; /* Na mobile będzie ok. 30px przy 375px szerokości */
+            font-size: 8vw;
             color: #002855;
+            margin-left: 50%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
         }
         
         .hero-section h1 .id-text {
             color: #fff;
+        }
+
+        @media (min-width: 769px) {
+            .hero-section h1 {
+                margin-left: 20%;
+                text-align: center;
+            }
         }
 
         .hero-section .lead {
@@ -159,7 +170,10 @@
     <header class="hero-section">
         <div class="viewport-indicator"></div>
         <div class="container text-center">
-            <h1 class="display-4 mb-4">Regain Conf<span class="id-text">iD</span>ence</h1>
+            <h1 class="display-4 mb-4">
+                <span>Regain</span>
+                <span>Conf<span class="id-text">iD</span>ence</span>
+            </h1>
         </div>
     </header>
     <div class="sub-hero text-center py-4">
