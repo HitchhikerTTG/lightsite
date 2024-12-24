@@ -162,13 +162,23 @@
         }
 
         .keep-doing-bg {
-            background: url('img/lifestyle_active.png') no-repeat;
+            background: url('img/lifestyle_active.png') center/cover no-repeat;
             min-height: 500px;
         }
 
         .wear-what-bg {
-            background: url('img/lifestyle_fashion.png') no-repeat;
+            background: url('img/lifestyle_fashion.png') center/cover no-repeat;
             min-height: 500px;
+        }
+
+        @media (min-width: 768px) {
+            .keep-doing-bg {
+                background: url('img/lifestyle_active_desktop.png') center/cover no-repeat;
+            }
+
+            .wear-what-bg {
+                background: url('img/lifestyle_fashion_desktop.png') center/cover no-repeat;
+            }
         }
 
         .lifestyle-section .row::before {
