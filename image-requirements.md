@@ -1,8 +1,9 @@
 
 # Image Requirements for Mobile-First Design
 
-## Product Images (600x600px)
-- header.png (main hero product)
+## Header Images
+- header.png (mobile header background, 600x400px)
+- header_desktop.png (desktop header background, 1200x600px)
 - product-mini.png
 - product-midi.png
 - product-maxi.png

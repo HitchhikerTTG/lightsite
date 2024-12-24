@@ -23,11 +23,20 @@
         .hero-section {
             background-color: var(--light-pink);
             padding: 60px 0;
+            background-image: url('img/header.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
         }
 
-        .product-image {
-            max-width: 300px;
-            margin: 20px auto;
+        @media (min-width: 769px) {
+            .hero-section {
+                background-image: url('img/header_desktop.png');
+                min-height: 600px;
+            }
         }
 
         .benefits-section {
@@ -108,7 +117,6 @@
         <div class="container text-center">
             <h1 class="display-4 mb-4">Regain Confidence!</h1>
             <p class="lead mb-4">Experience our sleek, ultra-thin design—so comfortable to use,<br>you'll forget you're wearing it.</p>
-            <img src="img/header.png" alt="ID Light Product" class="product-image">
             <div class="mt-4">
                 <button class="cta-button">Shop Now</button>
             </div>
