@@ -2,7 +2,7 @@
 # Image Requirements for Mobile-First Design
 
 ## Product Images (600x600px)
-- product-image.png (main hero product)
+- header.png (main hero product)
 - product-mini.png
 - product-midi.png
 - product-maxi.png
