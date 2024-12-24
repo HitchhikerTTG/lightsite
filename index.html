@@ -161,12 +161,16 @@
             padding: 40px 0;
         }
 
-        .lifestyle-section .row:first-child {
-            background: url('img/keep-doing-bg.png') center/cover no-repeat;
+        .keep-doing-bg {
+            background: url('img/lifestyle-active.png') right center/50% no-repeat,
+                        url('img/keep-doing-bg.png') center/cover no-repeat;
+            min-height: 500px;
         }
 
-        .lifestyle-section .row:last-child {
-            background: url('img/wear-what-bg.png') center/cover no-repeat;
+        .wear-what-bg {
+            background: url('img/lifestyle-fashion.png') left center/50% no-repeat,
+                        url('img/wear-what-bg.png') center/cover no-repeat;
+            min-height: 500px;
         }
 
         .lifestyle-section .row::before {
@@ -268,7 +272,7 @@
 
     <section class="lifestyle-section">
         <div class="container">
-            <div class="row mb-5">
+            <div class="row mb-5 keep-doing-bg">
                 <div class="col-md-6 offset-md-6">
                     <h2 class="mb-4">Keep doing what you love!</h2>
                     <ul class="features-list">
@@ -276,10 +280,9 @@
                         <li>Enjoy your favorite activities</li>
                         <li>Live life without interruptions</li>
                     </ul>
-                    <img src="img/lifestyle-active.png" alt="Active Lifestyle" class="img-fluid mt-4">
                 </div>
             </div>
-            <div class="row">
+            <div class="row wear-what-bg">
                 <div class="col-md-6">
                     <h2 class="mb-4">Wear what you want!</h2>
                     <ul class="features-list">
@@ -287,7 +290,6 @@
                         <li>Invisible under clothes</li>
                         <li>Comfortable fit for any outfit</li>
                     </ul>
-                    <img src="img/lifestyle-fashion.png" alt="Fashion Choices" class="img-fluid mt-4">
                 </div>
             </div>
         </div>
