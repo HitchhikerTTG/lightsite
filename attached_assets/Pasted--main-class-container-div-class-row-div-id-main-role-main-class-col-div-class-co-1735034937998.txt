@@ -1,0 +1,1079 @@
+<main class="container">
+<div class="row">
+<div id="main" role="main" class="col">
+
+
+
+<div class="container clearfix">
+<h1>Comfy Junior - Pants</h1>
+<div id="ComfySlip_landing">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+  #ComfySlip_landing .count-svg{
+    height:120px
+  }
+
+  #ComfySlip_landing {
+    font-size: 62.5%; /* This makes 1rem = 10px */
+    font-size: 1.8rem; /* This is 18px */
+  }
+
+    #ComfySlip_landing .col-5 img.img-fluid {
+      color: yellow;
+      width: 120%; /* lub inny procent większy niż domyślny */
+      height: auto; /* zachowaj proporcje */
+    }
+    #ComfySlip_landing .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+  /* Podstawowe nagłówki */
+#ComfySlip_landing h1 {
+    font-size: 4.5rem; /* większe niż display-2 dla głównego nagłówka */
+    font-weight: bold;
+}
+
+#ComfySlip_landing h2 {
+    font-size: 1.6rem; /* display-2 i h2 mają ten sam rozmiar */
+    font-weight: bold;
+
+}
+
+#ComfySlip_landing h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+/* Display headings */
+#ComfySlip_landing .display-1 {
+    font-size: 4rem; /* bardzo duży nagłówek */
+    font-weight: bold;
+
+}
+
+#ComfySlip_landing .display-2 {
+    font-size: 2rem; /* równy h2 */
+    font-weight: bold;
+
+}
+
+#ComfySlip_landing .display-3 {
+    font-size: 1.8rem; /* większy niż h3 */
+    font-weight: bold;
+
+}
+
+#ComfySlip_landing .display-4 {
+    font-size: 3rem; /* podobny do h3 */
+    font-weight: bold;
+
+}
+
+  @media screen and (max-width: 768px) {
+    #ComfySlip_landing {
+      font-size: 1.3rem; /* 20px */
+      overflow-x: hidden;
+    }
+    #ComfySlip_landing .product-features p {
+        line-height: 1em;
+        font-size:1.3rem;
+      }
+    
+    #ComfySlip_landing .diaper-image {
+      width: 150px; /* Adjust based on your design */
+    
+    }
+    #ComfySlip_landing .feature-number {
+      width: 30px; /* Adjust based on your design */
+      height: 30px; /* Adjust based on your design */
+      line-height: 30px; /* Adjust based on your design */
+      font-size: 0.8em; /* Adjust based on your design */
+    }
+    
+
+  }
+  /* Additional styling for background colors */
+  #ComfySlip_landing .hero-section,
+  .feature-section,
+  .technical-features,
+  .product-comparison,
+  .promotions,
+  .faq {
+    /* Update with the correct background colors as per the design shared */
+    background-color: #EFEFEF; /* This is just a placeholder color */
+  }
+  #ComfySlip_landing .testimonials {
+    background-color: #09A3C6;
+    color: #FFFDFF;
+  }
+  #ComfySlip_landing .subscribe {
+    /* Update with the correct background colors as per the design shared */
+    background-color: #D8D967; /* This is just a placeholder color */
+  }
+  /* For feature-section and additional-features, if they require different colors */
+  #ComfySlip_landing .product-features,
+  #ComfySlip_landing .additional-features {
+    background-color: #9BCBEB; /* This is just a placeholder color */
+  }
+  #ComfySlip_landing .uninterrupted-sleep {
+    background-color: #002855;
+    color: #FFFDFF;
+  }
+#ComfySlip_landing .uninterrupted-sleep h2,#ComfySlip_landing .uninterrupted-sleep h3 {
+    color: #fffdff;
+}
+/*Header */
+#ComfySlip_landing .wit-header {
+    background: linear-gradient(to top, #BFD0DD, #588FC4);
+    position: relative;
+    height: 450px; /* Załóżmy, że to jest wysokość twojego headera */
+  }
+  #ComfySlip_landing .wit-header h3.fancy {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1em;
+color:white;
+  }
+  #ComfySlip_landing .wit-header p {
+    font-size: 1.3rem;
+  }
+  #ComfySlip_landing .background-overlay {
+    position: absolute;
+    top: 1%; /* Umieszczenie nad dolną 1/4 obrazka */
+    left: 0;
+    right: 0;
+    color: white;
+    /*text-align: center;*/
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  #ComfySlip_landing .below-image {
+    padding: 20px 0; /* adds space around the text */
+    /* Additional styling for text alignment and responsiveness */
+  }
+
+  #ComfySlip_landing .full-width-image {
+    position: absolute;
+    bottom: 0; /* Przy dolnej krawędzi */
+    left: 0;
+    right: 0;
+    height: 75%; /* 3/4 wysokości kontenera */
+    margin-left: auto;
+    margin-right: auto;
+    background: url('/media/Page-images/value/.ffSwyzBZ/Page-images-53.png') no-repeat center bottom; /* Brak powtarzania, wyśrodkowane i przy dolnej krawędzi */
+    background-size: contain;
+    z-index: 2;
+  }
+
+#ComfySlip_landing .numbered-feature {
+    font-size: 1rem;
+    color: #007BFF; /* Bootstrap primary color */
+  }
+  #ComfySlip_landing .feature-heading {
+    font-size: 1.4rem;
+    color: #333333;
+  }
+  #ComfySlip_landing .feature-content {
+    font-size: 1.2rem;
+    color: #555555;
+  }
+  #ComfySlip_landing .uninterrupted-sleep .feature-heading {
+    font-size: 1.4rem;
+    color: #FFFDFF;
+  }
+  #ComfySlip_landing .uninterrupted-sleep .feature-content {
+    font-size: 1.2rem;
+    color: #FFFDFF;
+  }
+
+  #ComfySlip_landing .image-container {
+    position: relative; /* Makes sure the overlay is positioned relative to this container */
+    width: 100%;
+    /*max-height: 500px;*/
+  }
+  #ComfySlip_landing .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+
+  /*RATUNKUUUUU */
+
+#ComfySlip_landing .product-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+
+#ComfySlip_landing .product-wrapper {
+    position: relative;
+    max-height: 500px;
+    max-width: 359px; /* Zmieniona maksymalna szerokoĹ›Ä‡ */
+    width: 88%;
+    margin-left: 10%;
+    margin-right: 2%;
+    height: auto;
+}
+
+#ComfySlip_landing .ComfyPants47 {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+}
+
+#ComfySlip_landing .cape47 {
+    position: absolute;
+    top: 0;
+    left:-53%;
+/*    transform: translateX(-50%);*/
+    transform:scaleX(-1);
+    width: auto;
+    height: 50%;
+    max-height: 250px;
+}
+
+
+#ComfySlip_landing .ComfyPants815 {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    display: block;
+    object-fit: contain;
+}
+
+#ComfySlip_landing .cape815 {
+    position: absolute;
+    top: 0;
+    left:-53%;
+/*    transform: translateX(-50%);*/
+    transform:scaleX(-1);
+    width: auto;
+    height: 50%;
+    max-height: 250px;
+}
+
+/* Read more */
+
+  #ComfySlip_landing .read-more-button {
+    background-color: #9BCBEB;
+    color: #002855;
+    padding: 5px 10px 5px 20px;
+    border-radius: 25px; /* Adjust as necessary to match the roundness */
+    border: 1px solid #002855;
+    font-family: Arial, sans-serif; /* Use the exact font-family from your design */
+    text-transform: uppercase;
+    font-size: 1.2rem; /* Adjust as necessary */
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3); /* For inner white border */
+    display: inline-flex; /* To align the text and the arrow icon */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Spacing between text and arrow icon */
+    cursor: pointer;
+    text-decoration: none; /* If it's a link */
+    transition: background-color 0.3s ease;
+  }
+
+/* Elements below the slip*/
+
+  #ComfySlip_landing .ordered-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: item;
+  }
+  #ComfySlip_landing .ordered-list li {
+    margin-bottom: 20px;
+    /*border-radius: 100px; /* Adjust the border-radius to match your design */
+    padding-left: 80px;
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif; /* Replace with your font of choice */
+    font-size: 1.1rem;
+    counter-increment: item;
+    height: 100px;
+    display: flex;
+    align-items: center;
+  }
+  #ComfySlip_landing .ordered-list li:nth-child(odd) {
+    /* Styles for odd li elements */
+    background: linear-gradient(to bottom, #81C9CA, #2E6485);
+    border-top-left-radius: 100px; /* Zaokrąglenie lewego górnego narożnika */
+    border-bottom-left-radius: 100px; /* Zaokrąglenie lewego dolnego narożnika */
+  }
+  #ComfySlip_landing .ordered-list li:nth-child(even) {
+    /* Styles for even li elements */
+    background-color: #A5CAE8;
+    border-top-right-radius: 100px; /* Zaokrąglenie lewego górnego narożnika */
+    border-bottom-right-radius: 100px; /* Zaokrąglenie lewego dolnego narożnika */
+  }
+  #ComfySlip_landing .ordered-list li::before {
+    content: counter(item);
+    background-color: #002855; /* Replace with the background color of your circle */
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    min-width: 50px; /* Adjust as needed to form a circle */
+    height: 50px;
+    line-height: 50px; /* This should be equal to the height to center the text vertically */
+    position: absolute;
+    left: 15px; /* Half of the width to center it on the edge */
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Arial, sans-serif; /* Replace with your font of choice */
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow to the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+#ComfySlip_landing .form-control {
+    display: block;
+    width: 100%;
+    min-height: calc(2.5em + .75rem + 2px);
+    padding: .575rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #FFFFFF;
+    background-clip: padding-box;
+    border: 1px solid #CED4DA;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 52px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+
+  #ComfySlip_landing .border-rad {
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    color: #FFFFFF;
+    background-color: #F9A826;
+    border-color: #F9A826;
+    font-size: 0.8rem;
+  }
+
+  #ComfySlip_landing .input-group{
+  display:flex;
+  }
+
+  #ComfySlip_landing .diaper-features {
+    position: relative;
+    text-align: center;
+    width: fit-content; /* Ajuste to fit your layout */
+    margin: auto; /* Center in the container */
+  }
+  #ComfySlip_landing .diaper-image {
+    width: 100%;
+    height: auto;
+  }
+ #ComfySlip_landing .feature-number {
+    position: absolute;
+    background-color: #002855; /* Blue background */
+    color: white; /* White text */
+    border-radius: 50%;
+    width: 45px; /* Adjust based on your design */
+    height: 45px; /* Adjust based on your design */
+    line-height: 45px; /* Center text vertically */
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+  }
+
+#ComfySlip_landing .discount-background {
+    background: url('/media/Page-images/value/.f2EWtzBZ/Page-images-52.svg') no-repeat center center;
+    background-size: contain; /* Dostosuj to, aby pasowało do rozmiaru tła, który chcesz */
+    display: flex;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    position: relative;
+  }
+  #ComfySlip_landing .text-discount {
+    font-size: 2rem;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    transform: translateX(-10%);
+  }
+  #ComfySlip_landing .blockquote-custom {
+    padding: 1.5rem;
+    position: relative;
+    font-style: italic;
+    color: #083F4D; /* Możesz dostosować kolor tekstu do swojej palety */
+    background-color: #E1F5FE; /* Możesz dostosować kolor tła do swojej palety */
+    border-left: 10px solid #0277BD; /* Możesz dostosować kolor paska do swojej palety */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  #ComfySlip_landing .blockquote-custom p {
+    font-size: 1.2rem; /* Dostosuj rozmiar czcionki tekstu cytatu */
+    line-height: 2rem;
+  }
+
+
+/*  Styling the order now*/
+  #ComfySlip_landing .order-now-button {
+    background: linear-gradient(to right, #B03BF6, #3D4AEB);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(162, 91, 246, 0.5);
+    cursor: pointer;
+    font-size: 1.2rem;
+    outline: none;
+    transition: transform 0.1s ease-in-out;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #ComfySlip_landing .order-now-button:hover {
+    transform: scale(1.05);
+  }
+  #ComfySlip_landing .order-now-button:active {
+    transform: scale(0.95);
+  }
+  #ComfySlip_landing .order-now-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgba(162, 91, 246, 0.5);
+  }
+  #ComfySlip_landing .order-now-button img {
+    margin-left: 10px;
+    /* Adjust width and height as necessary */
+    width: 16px;
+    height: 16px;
+  }
+
+/* Styling the Super */
+#ComfySlip_landing .super {
+    position: relative;
+    line-height: 2rem;
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  #ComfySlip_landing .super::after {
+    content: "";
+    display: block;
+    width: 60px; /* lub inny wymiar */
+    height: 60px; /* lub inny wymiar */
+    background-image: url('/media/Page-images/value/.fJ3zzzBZ/Page-images-55.svg');
+    background-size: cover;
+    position: absolute;
+    top: 25px; /* Dostosuj, aby umieścić nad tekstem */
+    left: 103%; /* Centrowanie */
+    transform: translate(-50%, -100%); /* Centrowanie i przesunięcie do góry */
+    z-index: 3;
+  }
+  #ComfySlip_landing .highlighted {
+    color: #7E2B85;
+    font-weight: bold;
+  }
+
+    #ComfySlip_landing .uninterrupted-sleep .highlighted {
+    color: #cf00ff;
+    font-weight: bold;
+  }
+
+  /* BREVO STYLE*/
+
+  #sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #c0ccda;
+  }
+
+  .input--hidden {
+    display:none !important
+  }
+
+  .sib-form-message-panel {
+    font-size: 16px;
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #661d1d;
+    background-color: #ffeded;
+    border-radius: 3px;
+    border-color: #ff4949;
+    max-width: 540px;
+    display: none;
+}
+
+#success-message {
+    color: #085229;
+    background-color: #e7faf0;
+    border-color: #13ce66;
+}
+
+.entry__label {
+    font-weight: 700;
+    text-align: left;
+    font-size: 17px;
+    font-family: "Helvetica", sans-serif;
+    color: #3c4858;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.entry__error {
+    font-size: 16px;
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #661d1d;
+    background-color: #ffeded;
+    border-radius: 3px;
+    border-color: #ff4949;
+    display: none;
+}
+
+.entry__specification {
+    font-size: 14px;
+    text-align: left;
+    font-family: "Helvetica", sans-serif;
+    color: #8390A4;
+}
+
+.checkbox_tick_positive {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.sib-form-block__button {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-family: "Helvetica", sans-serif;
+    color: #FFFFFF;
+    background-color: #3978aa;
+    border-radius: 3px;
+    border-width: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/*Styling the Checkbox */
+
+        /* Hide the default checkbox */
+        .custom-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Create a custom checkbox */
+        .custom-checkbox input[type="checkbox"] + label {
+            position: relative;
+            cursor: pointer;
+            padding-left: 25px;
+            display: inline-block;
+            color: #495057;
+        }
+
+        /* Style the custom checkbox */
+        .custom-checkbox input[type="checkbox"] + label:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #adb5bd;
+            border-radius: 4px;
+            background: #fff;
+        }
+
+        /* Style the checkmark */
+        .custom-checkbox input[type="checkbox"]:checked + label:before {
+            background: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label:after {
+            content: '\2713';
+            position: absolute;
+            left: 4px;
+            top: -2px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .custom-checkbox span {
+            vertical-align: middle;
+        }
+
+/* EOStyling*/
+
+</style>
+
+<div class="wit-header mb-0">
+  <!-- Tło gradientowe -->
+  <section class="full-width-image">
+    <!-- Tu będzie zdjęcie w tle -->
+  </section>
+  <div class="container background-overlay">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h3 class="fancy mb-0 pr-0">Every child</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-right pr-5">
+        <p>deserves to feel like a</p>
+      </div>
+    </div>
+    <!-- Warstwa z tekstem -->
+  </div>
+</div>
+<div class="container text-center pb-5">
+  <div class="row pb-5">
+    <div class="col">
+      <h2 class="display-1 mb-0 pb-0"><span class="highlighted super">SuperHero</span></h2>
+      <h3>Looking for a solution for a young explorer aged 4 years or older that helps them conquer any challenge <i>leak-free</i>?</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+    </div>
+  </div>
+</div>
+<!-- Product Feature Section -->
+<section class="product-features py-1">
+  <div class="container text-center">
+    <h3 class="display-3 mt-3">Meet</h3>
+    <h2 class="display-2 pb-1">iD Comfy Junior Pants 4-7</h2>
+
+    <div class="product-container d-flex justify-content-center">
+      <div class="product-wrapper">
+        <img src="/media/Page-images/value/.f_8NQfBZ/Page-images-39.svg" class="cape47" alt="Overlay Image">
+        <img src="/media/Page-images/value/.fbfBvCCZ/Page-images-38.png" class="ComfyPants47" alt="Main Image">
+
+      </div>
+    </div>
+
+    <h3 class="display-3 mt-3">and meet</h3>
+    <h2 class="display-2 pb-1">iD Comfy Junior Pants 8-15</h2>
+    <div class="product-container d-flex justify-content-center">
+      <div class="product-wrapper">
+        <img src="/media/Page-images/value/.f_8NQfBZ/Page-images-39.svg" class="cape815" alt="Overlay Image">
+        <img src="/media/Page-images/value/.fzfBvCCZ/Page-images-37.png" class="ComfyPants815" alt="Main Image">
+
+      </div>
+    </div>
+    
+    <h3 class="display-3 pb-1 mt-3">best known for:</h3>
+    <!-- ONE MORE TIME WIT -->
+    <section class="container-fluid my-5">
+      <div class="row align-items-center pb-5">
+        <!-- Column for the superhero image -->
+        <div class="col-6 position-relative px-0 mx-0">
+          <img src="/media/Page-images/value/.fHJ0QfBZ/Page-images-40.svg" alt="Delivery Hero" class="img-fluid">
+          <div class="position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <p class="text-primary">Super Speed Absorption</p>
+          </div>
+        </div>
+        <!-- Column for the text and package image -->
+        <div class="col-6 px-0 mx-0">
+          <div class="row pr-2">
+            <div class="col-12">
+              <h3>Worried about leaks? </h3>
+              <p>Not on Comfy's watch!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center pb-5">
+        <!-- Column for the superhero image -->
+        <!-- Column for the text and package image -->
+        <div class="col-6 px-0 mx-0">
+          <div class="row pl-2">
+            <div class="col-12">
+              <h3>Want to keep a secret secret?</h3>
+              <p>Comfy Pants can do it like no other!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 position-relative px-0 mx-0">
+          <img src="/media/Page-images/value/.fRJ0QfBZ/Page-images-41.svg" alt="Delivery Hero" class="img-fluid">
+          <div class="position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <p class="text-white">Discreet design</p>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center pb-5">
+        <!-- Column for the superhero image -->
+        <div class="col-6 position-relative px-0 mx-0">
+          <img src="/media/Page-images/value/.fHJ0QfBZ/Page-images-40.svg" alt="Delivery Hero" class="img-fluid">
+          <div class="position-absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <p class="text-primary">Cloud like comfort</p>
+          </div>
+        </div>
+        <!-- Column for the text and package image -->
+        <div class="col-6 px-0 mx-0">
+          <div class="row pr-2">
+            <div class="col-12">
+              <h3>Ready to feel the ease?</h3>
+              <p> Experience comfort like never before!</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3> But how?</h3>
+          <p>If you would like to know more, we have prepared the <s>boooring</s> technical stuff...</p>
+          <p><a href="#technical" class="read-more-button">Read More <i class="bi bi-arrow-right-circle"></i></a></p>
+          <p>
+          </p></div>
+      </div>
+    </section>
+  </div>
+  <!-- Call to Action -->
+  <div class="row justify-content-center mt-4 mb-4">
+    <div class="col text-center">
+      <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+    </div>
+  </div>
+</section>
+<!-- EO ONE MORE TIME-->
+<section class="feature-section py-1">
+  <div class="container">
+    <!-- Feature Title -->
+    <div class="row justify-content-center mb-4">
+      <div class="col text-center">
+        <h3>We are turning every parent's dream into reality!</h3>
+      </div>
+    </div>
+    <div class="row align-items-center justify-content-center">
+      <!-- SVG Image -->
+      <!-- Text Content -->
+      <div class="col pr-1">
+        <h2 class="display-3">Imagine <span class="highlighted">uninterrupted playtimes</span> during the day</h2>
+      </div>
+      <div class="col-3 pl-0 pr-2 align-self-start">
+        <img src="/media/Page-images/value/.fIEWtzBZ/Page-images-48.svg">
+      </div>
+    </div>
+    <!-- Feature Items -->
+    <div class="row">
+      <div class="col-md-4 text-center feature-item">
+        <img src="/media/Page-images/value/.fBZmTfBZ/Page-images-44.svg" class="count-svg">
+        <h3 class="feature-heading mt-3">All-Day Dryness</h3>
+        <p class="feature-content">Comfy will absorb the liquid faster than you can say "sixty six slinky snakes silently slid through the southwest
+          forest".</p>
+      </div>
+      <div class="col-md-4 text-center feature-item">
+        <img src="/media/Page-images/value/.fGZmTfBZ/Page-images-45.svg" class="count-svg">
+        <h3 class="feature-heading mt-3">Freedom of Movement</h3>
+        <p class="feature-content">A flexible fit that allows your child to move freely promoting healthy development.</p>
+      </div>
+      <div class="col-md-4 text-center feature-item">
+        <img src="/media/Page-images/value/.fKZmTfBZ/Page-images-46.svg" class="count-svg">
+        <h3 class="feature-heading mt-3">Peace of Mind</h3>
+        <p class="feature-content">Wearing the best incontinence
+          product for their comfort and protection, allowing you to focus on
+          enjoying precious moments together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="uninterrupted-sleep py-1">
+  <div class="container text-center">
+    <h3 class="pb-3">But wait, there's more...</h3>
+    <div class="row align-items-center justify-content-center">
+      
+      <div class="col-3 pl-2 pr-0 align-self-start">
+      <img src="/media/Page-images/value/.f9DWtzBZ/Page-images-47.svg">
+      </div>
+      <!-- Text Content -->
+      <div class="col pl-1">
+        <h2 class="display-3">Uninterrupted sleep <span class="highlighted">during the night</span></h2>
+      </div>
+    </div>
+    <!-- Feature Items -->
+    <div class="row">
+      <div class="col-md text-center feature-item">
+        <img src="/media/Page-images/value/.f4YmTfBZ/Page-images-42.svg" class="count-svg">
+        <h3 class="feature-heading">Dry &amp; Comfortable Nights</h3>
+        <p class="feature-content">Your kid sleeps soundly, knowing they're protected.</p>
+      </div>
+      <div class="col-md text-center feature-item">
+        <img src="/media/Page-images/value/.f9YmTfBZ/Page-images-43.svg" class="count-svg">
+        <h3 class="feature-heading">Rested Superheros</h3>
+        <p class="feature-content">A well-rested child also means rested parents, ready to tackle the day ahead with energy and positivity.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Call to Action -->
+  <div class="row justify-content-center mt-4 mb-4">
+    <div class="col text-center">
+      <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+    </div>
+  </div>
+</section>
+<!-- New Section for Technical Features -->
+<section class="technical-features py-1">
+  <div id="technical" class="container">
+    <h3>Now is the time to...</h3>
+    <h2 class="display-3">Get technical!</h2>
+    <div class="diaper-features">
+      <img src="/media/Page-images/value/.fwTwyzBZ/Page-images-54.png" alt="Diaper Image" class="img-fluid">
+      <div class="feature-number" style="top: 60%; left: 55%;">1</div>
+      <div class="feature-number" style="top: 70%; left: 60%;">2</div>
+      <div class="feature-number" style="top: 50%; left: 25%;">3</div>
+      <div class="feature-number" style="top: 20%; left: 30%;">4</div>
+    </div>
+    <ol class="ordered-list">
+      <li>Fast &amp; secure absorption</li>
+      <li>Anti-leak cuffs</li>
+      <li>Non-bulky material</li>
+      <li>Soft side waistband comfortable for movement</li>
+    </ol>
+    <div class="row pt-4">
+      <div class="col">
+        <h3>In other words</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p><strong>iD Comfy Junior Pants</strong> are designed just like a real underwear with super absorbing power. It can be worn by children over four years of age and offers an ideal solution for night and daytime wetting. It offers a great absorption capacity as well as maximum discretion and comfort.</p>
+        <p>Secure fit and a discreet design are ensured to maintain normalcy in daily activities or sleep. </p>
+        <p><strong>iD Comfy Junior Pants</strong> are easy to use enhancing the child's comfort and confidence during wear. </p></div>
+    </div>
+  </div>
+  <!-- Call to Action -->
+  <div class="row justify-content-center mt-4 mb-4">
+    <div class="col text-center">
+      <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+    </div>
+  </div>
+</section>
+<!-- New Section for Testimonials -->
+<section class="testimonials py-1">
+  <div class="container">
+    <h3>Don't take just our word for it</h3>
+    <h2 class="display-3">Discover what parents of other <span class="highlighted">SuperHeroes</span> are saying</h2>
+    <blockquote class="blockquote-custom"><p>I am so please with these pants they do everything they describe whic is great for my 6 year old disabled little boy. No more sitting in wet clothes he is now full of confidence. Would highly recommended these pull up pants better than supermarket.</p>Sandra M.</blockquote>
+    <p>This is just one of many reviews - you can find more Comfy Junior Pants reviews <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html">RIGHT HERE</a> »</p>
+    <p>We love to share our reviews. You know why? Because they are real reviews, written by real parents who care about their <span class="highlighted">SuperHeroes</span> like no other.</p><p>It makes us feel proud, so of course it makes us want to shout about them.</p>
+  </div>
+</section>
+<!-- New Section for Product Comparison -->
+<section class="product-comparison py-1">
+  <div class="container my-5">
+    <h3>Not sure which product is best for your child?</h3>
+    <h2 class="display-3">We have a table for you</h2>
+    <p>Here is a brief comparison between Comfy Junior Pants and Comfy Junior Slip to help you choose.</p>
+    <!-- <div class="row align-items-center">
+    <div class="col">
+    <img src="CS_images/Slip.png" class="img-fluid" alt="Left Product">
+    </div>
+    <div class="col-3 text-center">
+    <img src="CS_images/VS.svg" class="img-fluid" alt="Left Product">
+    </div>
+    <div class="col">
+    <img src="CS_images/ComfyPants.png" class="img-fluid" alt="Right Product">
+    </div>
+    </div>
+    -->
+    <!-- Add a comparison table or detailed list here -->
+    <div class="image-container">
+      <img src="/media/Page-images/value/.fXEWtzBZ/Page-images-49.png" class="img-fluid wide-container" alt="Main Image">
+    </div>
+  </div>
+  <div class="row justify-content-center mt-4 mb-4">
+    <div class="col text-center">
+      <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+    </div>
+  </div>
+</section>
+<!-- New Section for Delivery Information -->
+<section class="delivery-info py-1">
+  <div class="container my-5">
+    <h3>How fast can you have it?</h3>
+    <h2 class="display-3">Really fast</h2>
+    <div class="row align-items-center">
+      <div class="col">
+        <h2 class="pb-1">Our delivery heroes are almost as fast as lightning</h2>
+      </div>
+    </div>
+    <div class="row align-items-center pb-5">
+      <!-- Column for the superhero image -->
+      <div class="col-4">
+        <img src="/media/Page-images/value/.fmEWtzBZ/Page-images-50.svg" alt="Delivery Hero" class="img-fluid">
+      </div>
+      <!-- Column for the text and package image -->
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <p>ensuring your package arrives in a flash!</p>
+            <p>You will have it within 3 working days...</p>
+            <p>... or faster.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col">
+        <h2 class="pb-1">And it will all stay between us!</h2>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12 mt-4">
+            <p>Discreet packaging – because your privacy matters!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <img src="/media/Page-images/value/.fuEWtzBZ/Page-images-51.svg" alt="Package" class="img-fluid mt-3">
+      </div>
+    </div>
+    <div class="row justify-content-center mt-4 mb-4">
+      <div class="col text-center">
+        <a href="../product/iD-Comfy-Junior/iD-Comfy-Junior-4-7-Years-Pants_5501135140.html" class="order-now-button pb-2 mb-3"><i class="bi bi-cart4"></i> Order Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- New Section for Promotions -->
+<section class="subscribe py-1">
+  <div class="container">
+    <div class="container my-5">
+      <h3>Have we got any promo codes you ask...</h3>
+      <h2 class="display-3">Well... actually.. </h2>
+      <div class="row">
+        <div class="col-md-5 offset-md-3"><h2>Sign up for a great discount</h2></div>
+        <div class="col-md-5 offset-md-3 discount-background"><span class="text-discount">15%</span></div>
+        <div class="col-md-8 offset-md-3"><p>... and let us tell you more about our exclusive offers!</p></div>
+      </div>
+
+<!-- START - We recommend to place the below code where you want the form in your website html  -->
+<div class="sib-form" style="text-align: center; background-color: #d8d967;">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:#d8d967;">
+      <form id="sib-form" method="POST" action="https://27847d69.sibforms.com/serve/MUIFAIp6pZ5VnZXMpK9CbvzUaUrH_lBBNYGG_fFPe_1maDF-uy5hm4uJ6IUJU70e9A75R2A4uMf3axKl91Zsg2ikJUpslJm88dE3YUwEzMSIjt6G3ED2mzlyUEKlzVyBss12Uddad4ZtpUA2Lh5b6_QGkK0T6mKYsfbKrYk2r_U41aGdJBPfW7jkCFScTAs7Oyzh_6sBsUuoY9BL">
+        <div style="padding: 8px 0;">
+          <div class="sib-input sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
+
+                <div class="entry__field">
+                  <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required="">
+                </div>
+              </div>
+
+              <label class="entry__error entry__error--primary">
+              </label>
+              <label class="entry__specification">
+                Provide your favourite email address to subscribe.
+              </label>
+            </div>
+          </div>
+        </div>
+<div style="padding: 8px 0;">
+                        <div class="sib-optin sib-form-block">
+                            <div class="form__entry entry_mcq custom-checkbox">
+                                <div class="form__label-row">
+                                    <div class="entry__choice">
+                                        <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN">
+                                        <label for="OPT_IN">
+                                            <span class="checkbox checkbox_tick_positive"></span>
+                                            <span>I have read and accepted the information on <a href="https://www.id-direct.com/ukb2c/en/page/legal.html" target="_blank">our privacy policy</a>.</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <label class="entry__error entry__error--primary"></label>
+                                <label class="entry__specification">You may unsubscribe at any time using the link in our newsletter.</label>
+                            </div>
+                        </div>
+                    </div>
+        <div style="padding: 8px 0;">
+        </div>
+        <div style="padding: 8px 0;">
+          <div class="sib-form-block">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
+
+              SUBSCRIBE
+            </button>
+          </div>
+        </div>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+        <input type="hidden" name="html_type" value="simple">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- END - We recommend to place the above code where you want the form in your website html  -->
+
+    </div>
+  </div>
+</section>
+<!-- <section class="Ontex py-1">
+  <div class="container">
+    <h3>And who are we, exactly?</h3>
+    <h2 class="display-3">iD Comfy Slip is brought to you by Ontex</h2>
+    <p><strong>Ontex</strong> is a leading international producer of personal hygiene solutions for babies, women, and adults.</p>
+    <p>With a heritage of quality and innovation that spans over
+      40 years, Ontex has a commitment to making quality personal care
+      products that meet the needs of families around the world.</p>
+    <div class="text-right pt-3">
+      <img src="" class="img-fluid logo" alt="Ontex Here for you">
+    </div>
+  </div>
+</section> -->
+<!-- New Section for FAQ -->
+<section class="faq py-1">
+  <div class="container">
+    <h3>We don't want to leave any questions unasnwered</h3>
+    <h2 class="display-3">How about...</h2>
+    <p>Unfortunatelly, this is all the space we have, but not
+      all that we know. If you have any additional questions, please reach out
+      to us.</p>
+    <div class="ContactInfo">
+      <p><strong> Our friendly customer service team is there to help you! </strong></p>
+      <p><strong>For any advice or support for purchases online</strong>:<br>
+        Call us on: <a href="tel:08003896185">0800 389 6185</a> <br>
+        E-mail: <a href="mailto:shopUK@ontexglobal.com">shopUK@ontexglobal.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- End of .container -->
+</div> <!-- end of landing -->
+<div id="id26" hidden="" data-wicket-placeholder=""></div>
+</div>
+
+
+
+</div>
+
+</div>
+</main>
