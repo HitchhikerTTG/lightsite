@@ -73,6 +73,34 @@
             position: absolute;
             left: 0;
         }
+
+        .motion-system-section {
+            background-color: #f8f9fa;
+        }
+
+        .bubble {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        .star {
+            color: #ffc107;
+            font-size: 24px;
+        }
+
+        .delivery-info {
+            background-color: #f8f9fa;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-blue);
+        }
     </style>
 </head>
 <body>
@@ -120,6 +148,72 @@
                         <li>Comfortable fit for active lifestyles</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="motion-system-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">With iD Light, you can continue enjoying life without interruptions!</h2>
+            <div class="motion-features">
+                <img src="motion-system.png" alt="Motion System Features" class="img-fluid mb-4">
+                <h3 class="mb-3">How all this is possible?</h3>
+                <div class="d-flex justify-content-center gap-3">
+                    <a href="#" class="btn btn-primary rounded-pill">READ MORE</a>
+                    <a href="#" class="btn btn-primary rounded-pill">SHOP NOW</a>
+                </div>
+                <h3 class="mt-4 mb-4">Your trusted partner!</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials py-5">
+        <div class="container text-center">
+            <div class="review-bubbles d-flex justify-content-center gap-4 mb-4">
+                <div class="bubble">Feel comfortable to wear</div>
+                <div class="bubble">Soft & comfortable</div>
+                <div class="bubble">Very reliable</div>
+            </div>
+            <div class="d-flex justify-content-center gap-3 mb-4">
+                <button class="btn btn-primary rounded-pill">Read now</button>
+                <button class="btn btn-primary rounded-pill">SHOP NOW</button>
+            </div>
+            <div class="ratings">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-lineup py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">We have got you covered!</h2>
+            <p class="mb-4">Pick the best solution for you!</p>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4 mb-3">
+                    <img src="product-mini.png" alt="iD Light Mini" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="product-midi.png" alt="iD Light Midi" class="img-fluid">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="product-maxi.png" alt="iD Light Maxi" class="img-fluid">
+                </div>
+            </div>
+            <button class="btn btn-primary rounded-pill">SHOP NOW</button>
+        </div>
+    </section>
+
+    <section class="delivery-info py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">From discreet design to discreet delivery,<br>your privacy is our priority!</h2>
+            <div class="delivery-features">
+                <p>✓ Free delivery from £45</p>
+                <p>✓ Delivery within 3 working days</p>
+                <img src="delivery-boxes.png" alt="Delivery Boxes" class="img-fluid mt-3">
             </div>
         </div>
     </section>
