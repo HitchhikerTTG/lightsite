@@ -30,6 +30,28 @@
             aspect-ratio: 3/2;
             display: flex;
             align-items: center;
+            position: relative;
+        }
+
+        .viewport-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .viewport-indicator::after {
+            content: "Mobile View (header.png)";
+        }
+
+        @media (min-width: 769px) {
+            .viewport-indicator::after {
+                content: "Desktop View (header_desktop.png)";
+            }
         }
 
         .hero-section h1 {
@@ -130,6 +152,7 @@
 </head>
 <body>
     <header class="hero-section">
+        <div class="viewport-indicator"></div>
         <div class="container text-center">
             <h1 class="display-4 mb-4">Regain Confidence!</h1>
             <p class="lead mb-4">Experience our sleek, ultra-thin design—so comfortable to use,<br>you'll forget you're wearing it.</p>
