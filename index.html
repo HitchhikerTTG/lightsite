@@ -96,6 +96,28 @@
         .benefits-section {
             background-color: white;
             padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits-section .background-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 25%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .benefits-section .products-image {
+            max-width: 100%;
+            margin-top: 2rem;
+        }
+
+        .benefits-section .content {
+            width: 70%;
+            position: relative;
+            z-index: 2;
         }
 
         .cta-button {
@@ -181,19 +203,16 @@
     </div>
 
     <section class="benefits-section">
+        <img src="img/background-benefits.png" alt="Background" class="background-image">
         <div class="container">
-            <h2 class="text-center mb-5">Meet iD Light - Your Partner in Light Continence Care!</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <ul class="features-list">
-                        <li>Dry technology, keeping you comfortable throughout the day</li>
-                        <li>Ultra-thin medical-grade protection</li>
-                        <li>Unscented odors up to 10 hours</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <img src="img/product-details.png" alt="Product Details" class="img-fluid">
-                </div>
+            <div class="content">
+                <h2 class="mb-5">Meet iD Light - Your Partner in Light Continence Care!</h2>
+                <ul class="features-list">
+                    <li>Dry technology, keeping you comfortable throughout the day</li>
+                    <li>Ultra-thin medical-grade protection</li>
+                    <li>Unscented odors up to 10 hours</li>
+                </ul>
+                <img src="img/products-composition.png" alt="Product Lineup" class="products-image">
             </div>
         </div>
     </section>
