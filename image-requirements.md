@@ -1,23 +1,28 @@
 
 # Image Requirements for Mobile-First Design
 
-## Product Images
-- Product showcase images: 600x600px
-- Thumbnail versions: 300x300px
-- Format: PNG or JPG with compression
-- Max file size: 200KB
+## Product Images (600x600px)
+- product-image.png (main hero product)
+- product-mini.png
+- product-midi.png
+- product-maxi.png
+Format: PNG with compression
+Max file size: 200KB
 
-## Lifestyle/Model Images
-- Hero/Banner images: 800x600px
-- Section images: 600x450px
-- Format: JPG with compression
-- Max file size: 300KB
+## Section/Lifestyle Images (600x450px)
+- product-details.png (benefits section)
+- lifestyle-image.png
+- motion-system.png
+- delivery-boxes.png
+- product-features.png (features diagram)
+- smiling-woman.png
+Format: JPG with compression
+Max file size: 300KB
 
-## Icon Images
-- Standard icons: 32x32px or 48x48px
-- Contact/Feature icons: 64x64px
-- Format: PNG with transparency
-- Max file size: 50KB
+## Icons (64x64px)
+- phone-icon.png
+Format: PNG with transparency
+Max file size: 50KB
 
 ## General Guidelines
 1. All images should be responsive
