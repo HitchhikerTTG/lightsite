@@ -4,108 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Landing Page</title>
+    <title>ID Light - Regain Confidence</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #09A3C6;
-            --secondary-color: #002855;
-            --accent-color: #9BCBEB;
-            --text-color: #333333;
-            --light-bg: #EFEFEF;
+            --primary-blue: #3A7BD5;
+            --light-pink: #FFF0F5;
+            --dark-blue: #1E3F6F;
+            --text-dark: #333333;
         }
 
         body {
-            font-family: 'Segoe UI', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
+            color: var(--text-dark);
         }
 
         .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: var(--light-pink);
+            padding: 60px 0;
+        }
+
+        .product-image {
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .benefits-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .cta-button {
+            background-color: var(--primary-blue);
             color: white;
-            padding: 100px 0;
-            text-align: center;
+            padding: 12px 30px;
+            border-radius: 25px;
+            border: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
         }
 
-        .feature-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+        .cta-button:hover {
+            background-color: var(--dark-blue);
+            color: white;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .lifestyle-section {
+            background-color: #FFF8FA;
+            padding: 60px 0;
         }
 
-        .accent-section {
-            background-color: var(--accent-color);
-            padding: 80px 0;
+        .features-list {
+            list-style: none;
+            padding-left: 0;
         }
 
-        .icon-box {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
+        .features-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: "✓";
+            color: var(--primary-blue);
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
 <body>
     <header class="hero-section">
-        <div class="container">
-            <h1 class="display-3 mb-4">Welcome to Our Modern Design</h1>
-            <p class="lead">Create stunning experiences with our innovative platform</p>
-            <button class="btn btn-light btn-lg mt-4">Get Started</button>
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">Regain Confidence!</h1>
+            <p class="lead mb-4">Experience our sleek, ultra-thin design—so comfortable to use,<br>you'll forget you're wearing it.</p>
+            <img src="product-image.png" alt="ID Light Product" class="product-image">
+            <div class="mt-4">
+                <button class="cta-button">Shop Now</button>
+            </div>
         </div>
     </header>
 
-    <section class="py-5">
+    <section class="benefits-section">
         <div class="container">
+            <h2 class="text-center mb-5">Meet iD Light - Your Partner in Light Continence Care!</h2>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h3>Responsive Design</h3>
-                        <p>Perfectly adapted for all screen sizes</p>
-                    </div>
+                <div class="col-md-6">
+                    <ul class="features-list">
+                        <li>Dry technology, keeping you comfortable throughout the day</li>
+                        <li>Ultra-thin medical-grade protection</li>
+                        <li>Unscented odors up to 10 hours</li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="bi bi-gear"></i>
-                        </div>
-                        <h3>Easy Setup</h3>
-                        <p>Quick and simple configuration</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <div class="icon-box">
-                            <i class="bi bi-graph-up"></i>
-                        </div>
-                        <h3>Analytics</h3>
-                        <p>Track your performance</p>
-                    </div>
+                <div class="col-md-6">
+                    <img src="product-details.png" alt="Product Details" class="img-fluid">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="accent-section">
+    <section class="lifestyle-section">
         <div class="container text-center">
-            <h2 class="display-4 mb-4">Ready to Start?</h2>
-            <p class="lead mb-4">Join thousands of satisfied customers today</p>
-            <button class="btn btn-dark btn-lg">Sign Up Now</button>
+            <h2 class="mb-4">Keep doing what you love!</h2>
+            <p class="lead mb-4">Wear what you want!</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="lifestyle-image.png" alt="Active Lifestyle" class="img-fluid mb-4">
+                </div>
+                <div class="col-md-6 text-start">
+                    <ul class="features-list">
+                        <li>Discreet slim design</li>
+                        <li>Ultra-thin medical-grade protection that won't show through clothes</li>
+                        <li>Comfortable fit for active lifestyles</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
