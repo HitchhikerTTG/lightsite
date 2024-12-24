@@ -147,6 +147,40 @@
         .lifestyle-section {
             background-color: #FFF8FA;
             padding: 60px 0;
+            position: relative;
+        }
+
+        .lifestyle-section::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('img/keep-doing-bg.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .lifestyle-section::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+            background-image: url('img/wear-what-bg.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .lifestyle-section .container {
+            position: relative;
+            z-index: 2;
         }
 
         .features-list {
