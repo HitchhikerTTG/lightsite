@@ -270,6 +270,25 @@
         .absorption-level {
             color: var(--primary-blue);
             font-size: 1.2rem;
+            display: flex;
+            gap: 2px;
+            justify-content: center;
+        }
+
+        .droplet {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #e0e0e0 50%, #e0e0e0 50%);
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.5c-3.5 0-6.5-3-6.5-6.5 0-4 6.5-12 6.5-12s6.5 8 6.5 12c0 3.5-3 6.5-6.5 6.5z'/%3E%3C/svg%3E") center/contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.5c-3.5 0-6.5-3-6.5-6.5 0-4 6.5-12 6.5-12s6.5 8 6.5 12c0 3.5-3 6.5-6.5 6.5z'/%3E%3C/svg%3E") center/contain no-repeat;
+        }
+
+        .droplet.filled {
+            background: linear-gradient(to bottom, var(--primary-blue) 50%, var(--primary-blue) 50%);
+        }
+
+        .droplet.half {
+            background: linear-gradient(to bottom, #e0e0e0 50%, var(--primary-blue) 50%);
         }
 
         .carousel-item {
@@ -391,7 +410,14 @@
                             <h3>iD Light Ultra Mini</h3>
                             <img src="img/Ultra_Mini_5111010281.png" alt="iD Light Ultra Mini" class="img-fluid">                            
                             <div class="absorption-level">
-                                <span class="drops">💧</span>
+                                <div class="droplet filled"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
+                                <div class="droplet"></div>
                             </div>
                         </a>
                     </div>
@@ -482,7 +508,14 @@
                         <img src="img/Mini_5121020201-03.png" alt="iD Light Normal" class="img-fluid">
 
                         <div class="absorption-level">
-                            <span class="drops">💧💧</span>
+                            <div class="droplet filled"></div>
+                            <div class="droplet filled"></div>
+                            <div class="droplet half"></div>
+                            <div class="droplet"></div>
+                            <div class="droplet"></div>
+                            <div class="droplet"></div>
+                            <div class="droplet"></div>
+                            <div class="droplet"></div>
                         </div>
                     </a>
                 </div>
