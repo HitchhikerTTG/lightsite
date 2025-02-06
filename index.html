@@ -247,6 +247,46 @@
         .btn-primary:hover {
             background-color: var(--dark-blue);
         }
+
+        .product-card {
+            display: block;
+            text-decoration: none;
+            color: var(--text-dark);
+            padding: 15px;
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            color: var(--text-dark);
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .absorption-level {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        .carousel-item {
+            padding: 20px;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: var(--primary-blue);
+            border-radius: 50%;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -342,18 +382,150 @@
         <div class="container text-center">
             <h2 class="mb-4">We have got you covered!</h2>
             <p class="mb-4">Pick the best solution for you!</p>
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-4 mb-3">
-                    <img src="img/product-mini.png" alt="iD Light Mini" class="img-fluid">
+            
+            <!-- Mobile Carousel -->
+            <div id="productCarousel" class="carousel slide d-md-none" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="#product-1" class="product-card">
+                            <img src="img/product-mini.png" alt="iD Light Mini" class="img-fluid">
+                            <h3>iD Light Mini</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-2" class="product-card">
+                            <img src="img/product-midi.png" alt="iD Light Normal" class="img-fluid">
+                            <h3>iD Light Normal</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-3" class="product-card">
+                            <img src="img/product-maxi.png" alt="iD Light Extra" class="img-fluid">
+                            <h3>iD Light Extra</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-4" class="product-card">
+                            <img src="img/product-mini.png" alt="iD Light Extra Plus" class="img-fluid">
+                            <h3>iD Light Extra Plus</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧💧💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-5" class="product-card">
+                            <img src="img/product-midi.png" alt="iD Light Super" class="img-fluid">
+                            <h3>iD Light Super</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧💧💧💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-6" class="product-card">
+                            <img src="img/product-maxi.png" alt="iD Light Super Plus" class="img-fluid">
+                            <h3>iD Light Super Plus</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧💧💧💧💧</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#product-7" class="product-card">
+                            <img src="img/product-maxi.png" alt="iD Light Maxi" class="img-fluid">
+                            <h3>iD Light Maxi</h3>
+                            <div class="absorption-level">
+                                <span class="drops">💧💧💧💧💧💧💧</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <img src="img/product-midi.png" alt="iD Light Midi" class="img-fluid">
+                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Desktop Grid -->
+            <div class="row justify-content-center mb-4 d-none d-md-flex flex-wrap">
+                <div class="col-md-4 mb-4">
+                    <a href="#product-1" class="product-card">
+                        <img src="img/product-mini.png" alt="iD Light Mini" class="img-fluid">
+                        <h3>iD Light Mini</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧</span>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <img src="img/product-maxi.png" alt="iD Light Maxi" class="img-fluid">
+                <div class="col-md-4 mb-4">
+                    <a href="#product-2" class="product-card">
+                        <img src="img/product-midi.png" alt="iD Light Normal" class="img-fluid">
+                        <h3>iD Light Normal</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#product-3" class="product-card">
+                        <img src="img/product-maxi.png" alt="iD Light Extra" class="img-fluid">
+                        <h3>iD Light Extra</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧💧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#product-4" class="product-card">
+                        <img src="img/product-mini.png" alt="iD Light Extra Plus" class="img-fluid">
+                        <h3>iD Light Extra Plus</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧💧💧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#product-5" class="product-card">
+                        <img src="img/product-midi.png" alt="iD Light Super" class="img-fluid">
+                        <h3>iD Light Super</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧💧💧💧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#product-6" class="product-card">
+                        <img src="img/product-maxi.png" alt="iD Light Super Plus" class="img-fluid">
+                        <h3>iD Light Super Plus</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧💧💧💧💧</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <a href="#product-7" class="product-card">
+                        <img src="img/product-maxi.png" alt="iD Light Maxi" class="img-fluid">
+                        <h3>iD Light Maxi</h3>
+                        <div class="absorption-level">
+                            <span class="drops">💧💧💧💧💧💧💧</span>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <button class="btn btn-primary rounded-pill">SHOP NOW</button>
         </div>
     </section>
 
