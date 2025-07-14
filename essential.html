@@ -5,6 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>iD Essential | Simple Everyday Protection</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+/* Font-face definitions as before */
+@font-face {
+  font-family: 'GothamRounded';
+  src: url('fonts/GothamRounded-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GothamRoundedBold';
+  src: url('fonts/GothamRoundedBold_21016.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NexaRustScript';
+  src: url('fonts/NexaRustScriptR-00.otf') format('opentype');
+}
+body {
+  font-family: 'GothamRounded', Arial, sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'GothamRoundedBold', Arial, sans-serif;
+}
+.accent-text {
+  font-family: 'NexaRustScript', cursive;
+}
+
+/* Responsive product image styling */
+.product-image {
+  max-width: 100%;       /* scale down on mobile */
+  height: auto;          /* keep aspect ratio */
+  display: block;
+  margin: 0 auto 1rem;   /* center with bottom space */
+}
+
+@media (min-width: 768px) {
+  .product-image {
+    max-width: 200px;    /* limit size on larger screens */
+    margin-right: 1rem;  /* space next to text */
+  }
+}
+</style>
+
 </head>
 <body style="font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #FAFAFA; color: #2D2D2D;">
 
@@ -38,7 +78,7 @@
   <section class="p-4 mb-3" style="background-color: #F5F5F5; border-radius: 10px;">
     <div class="container d-flex flex-column flex-md-row align-items-center">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4" style="width: 150px;">
-        <img src="light-pads.jpg" alt="Light Pads Packaging" class="img-fluid rounded">
+        <img src="cat/IDEL.png" alt="Light Pads Packaging" class="img-fluid rounded">
       </div>
       <div>
         <h3 style="font-size: 1.4rem; color: #009FDB;">Light Pads</h3>
@@ -57,7 +97,7 @@
   <section class="p-4 mb-3" style="background-color: #E6F7FB; border-radius: 10px;">
     <div class="container d-flex flex-column flex-md-row align-items-center">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4" style="width: 150px;">
-        <img src="unisex-pants.jpg" alt="Unisex Pants Packaging" class="img-fluid rounded">
+        <img src="cat/IDEPants.png" alt="Unisex Pants Packaging" class="img-fluid rounded">
       </div>
       <div>
         <h3 style="font-size: 1.4rem; color: #009FDB;">Unisex Pants</h3>
@@ -75,7 +115,7 @@
   <section class="p-4 mb-3" style="background-color: #FFF5F0; border-radius: 10px;">
     <div class="container d-flex flex-column flex-md-row align-items-center">
       <div class="flex-shrink-0 mb-3 mb-md-0 me-md-4" style="width: 150px;">
-        <img src="underpads.jpg" alt="Underpads Packaging" class="img-fluid rounded">
+        <img src="cat/IDEU.png" alt="Underpads Packaging" class="img-fluid rounded">
       </div>
       <div>
         <h3 style="font-size: 1.4rem; color: #009FDB;">Underpads</h3>
