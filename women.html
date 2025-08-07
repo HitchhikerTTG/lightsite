@@ -41,9 +41,69 @@
   .navbar-nav .dropdown-menu {
     min-width: 200px;
   }
+  
+  /* Mega Menu Styling for Desktop */
   @media (min-width: 992px) {
     .navbar-nav .dropdown:hover .dropdown-menu {
       display: block;
+    }
+    
+    /* Full-width mega menu */
+    .navbar-nav .dropdown .dropdown-menu {
+      position: static;
+      float: none;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      border: none;
+      border-radius: 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      margin-top: 0;
+      padding: 2rem 0;
+      z-index: 1000;
+    }
+    
+    /* Multi-column layout for mega menu items */
+    .navbar-nav .dropdown .dropdown-menu {
+      display: none;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar-nav .dropdown:hover .dropdown-menu {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    /* Style individual dropdown items in mega menu */
+    .mega-menu-section {
+      flex: 1;
+      max-width: 200px;
+      margin: 0 2rem;
+    }
+    
+    .mega-menu-section h6 {
+      font-weight: bold;
+      color: #7B5EA7;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #7B5EA7;
+    }
+    
+    .mega-menu-section .dropdown-item {
+      padding: 0.5rem 0;
+      border: none;
+      background: transparent;
+      color: #2D2D2D;
+      transition: all 0.2s ease;
+      font-size: 0.95rem;
+    }
+    
+    .mega-menu-section .dropdown-item:hover {
+      background: rgba(123, 94, 167, 0.1);
+      color: #7B5EA7;
+      padding-left: 1rem;
     }
   }
   </style>
@@ -66,53 +126,111 @@
         <!-- WOMEN -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-semibold" href="/shop/women" id="navWomen" role="button" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
-          <ul class="dropdown-menu" aria-labelledby="navWomen">
-            <li><a class="dropdown-item" href="/shop/women#liners">Liners</a></li>
-            <li><a class="dropdown-item" href="/shop/women#pads">Pads</a></li>
-            <li><a class="dropdown-item" href="/shop/women#pants">Pants</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="navWomen">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Light Protection</h6>
+                  <a class="dropdown-item" href="/shop/women#liners">Liners</a>
+                  <a class="dropdown-item" href="/shop/women#mini">Mini Pads</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Moderate Protection</h6>
+                  <a class="dropdown-item" href="/shop/women#pads">Regular Pads</a>
+                  <a class="dropdown-item" href="/shop/women#maxi">Maxi Pads</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Maximum Protection</h6>
+                  <a class="dropdown-item" href="/shop/women#pants">Pants</a>
+                  <a class="dropdown-item" href="/shop/women#overnight">Overnight</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
         <!-- MEN -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-semibold" href="/shop/men" id="navMen" role="button" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
-          <ul class="dropdown-menu" aria-labelledby="navMen">
-            <li><a class="dropdown-item" href="/shop/men#pads">Pads</a></li>
-            <li><a class="dropdown-item" href="/shop/men#pants">Pants</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="navMen">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Light to Moderate</h6>
+                  <a class="dropdown-item" href="/shop/men#pads">Guards & Pads</a>
+                  <a class="dropdown-item" href="/shop/men#shields">Shields</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Heavy Protection</h6>
+                  <a class="dropdown-item" href="/shop/men#pants">Underwear</a>
+                  <a class="dropdown-item" href="/shop/men#briefs">Protective Briefs</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
         <!-- JUNIORS & BABY -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-semibold" href="/shop/junior-baby" id="navJunior" role="button" data-bs-toggle="dropdown" aria-expanded="false">Juniors & Baby</a>
-          <ul class="dropdown-menu" aria-labelledby="navJunior">
-            <li><a class="dropdown-item" href="/shop/junior-baby#diapers">Baby Diapers</a></li>
-            <li><a class="dropdown-item" href="/shop/junior-baby#pants">Baby Pants</a></li>
-            <li><a class="dropdown-item" href="/shop/junior-baby#comfy-pants">Comfy Pants</a></li>
-            <li><a class="dropdown-item" href="/shop/junior-baby#comfy-slip">Comfy Slip</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="navJunior">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Baby Care</h6>
+                  <a class="dropdown-item" href="/shop/junior-baby#diapers">Baby Diapers</a>
+                  <a class="dropdown-item" href="/shop/junior-baby#pants">Baby Pants</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Junior Protection</h6>
+                  <a class="dropdown-item" href="/shop/junior-baby#comfy-pants">Comfy Pants</a>
+                  <a class="dropdown-item" href="/shop/junior-baby#comfy-slip">Comfy Slip</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
         <!-- ADVANCED NEEDS -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-semibold" href="/shop/advanced" id="navAdvanced" role="button" data-bs-toggle="dropdown" aria-expanded="false">Advanced Needs</a>
-          <ul class="dropdown-menu" aria-labelledby="navAdvanced">
-            <li><a class="dropdown-item" href="/shop/advanced#pants">Pants</a></li>
-            <li><a class="dropdown-item" href="/shop/advanced#slip">Slip</a></li>
-            <li><a class="dropdown-item" href="/shop/advanced#form">Form</a></li>
-            <li><a class="dropdown-item" href="/shop/advanced#net">Net Pants</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="navAdvanced">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Protective Wear</h6>
+                  <a class="dropdown-item" href="/shop/advanced#pants">Protective Pants</a>
+                  <a class="dropdown-item" href="/shop/advanced#slip">Slip-On</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Specialized</h6>
+                  <a class="dropdown-item" href="/shop/advanced#form">Formed Pads</a>
+                  <a class="dropdown-item" href="/shop/advanced#net">Net Fixation</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
         <!-- COMPLEMENTARY -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle fw-semibold" href="/shop/complementary" id="navComplementary" role="button" data-bs-toggle="dropdown" aria-expanded="false">Complementary</a>
-          <ul class="dropdown-menu" aria-labelledby="navComplementary">
-            <li><a class="dropdown-item" href="/shop/complementary#underpads">Underpads</a></li>
-            <li><a class="dropdown-item" href="/shop/complementary#cosmetics">Cosmetics</a></li>
-            <li><a class="dropdown-item" href="/shop/complementary#wipes">Wet Wipes</a></li>
-            <li><a class="dropdown-item" href="/shop/complementary#shower">Shower Caps</a></li>
-          </ul>
+          <div class="dropdown-menu" aria-labelledby="navComplementary">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Accessories</h6>
+                  <a class="dropdown-item" href="/shop/complementary#underpads">Bed Protection</a>
+                  <a class="dropdown-item" href="/shop/complementary#wipes">Cleansing Wipes</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Personal Care</h6>
+                  <a class="dropdown-item" href="/shop/complementary#cosmetics">Skin Care</a>
+                  <a class="dropdown-item" href="/shop/complementary#shower">Bath Accessories</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
 
       </ul>
