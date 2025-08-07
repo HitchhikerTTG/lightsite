@@ -1,0 +1,909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iD Advanced Needs | Specialized Incontinence Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #2D2D2D;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .range-badge {
+      font-size: 0.75rem;
+      padding: 0.3em 0.6em;
+      border-radius: 0.5em;
+      font-weight: 600;
+    }
+    .essential { background-color: #009FDB; color: white; }
+    .discreet { background-color: #7B5EA7; color: white; }
+    .sensitive { background-color: #FF9F45; color: white; }
+    .advanced { background-color: #28a745; color: white; }
+    .subcategory-nav a {
+      margin-right: 1rem;
+    }
+    .subcategory-btn {
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid #6c757d;
+    }
+    .subcategory-btn:hover {
+      background-color: #28a745;
+      border-color: #28a745;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .subcategory-btn:hover small {
+      color: rgba(255,255,255,0.8) !important;
+    }
+    .navbar-nav .dropdown-menu {
+      min-width: 200px;
+    }
+    
+    /* Mega Menu Styling for Desktop */
+    @media (min-width: 992px) {
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      
+      /* Full-width mega menu */
+      .navbar-nav .dropdown .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100vw;
+        left: 50%;
+        transform: translateX(-50%);
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        margin-top: 0;
+        padding: 2rem 0;
+        z-index: 1000;
+      }
+      
+      /* Multi-column layout for mega menu items */
+      .navbar-nav .dropdown .dropdown-menu {
+        display: none;
+        transition: all 0.3s ease;
+      }
+      
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      
+      /* Style individual dropdown items in mega menu */
+      .mega-menu-section {
+        flex: 1;
+        max-width: 200px;
+        margin: 0 2rem;
+      }
+      
+      .mega-menu-section h6 {
+        font-weight: bold;
+        color: #28a745;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #28a745;
+      }
+      
+      .mega-menu-section .dropdown-item {
+        padding: 0.5rem 0;
+        border: none;
+        background: transparent;
+        color: #2D2D2D;
+        transition: all 0.2s ease;
+        font-size: 0.95rem;
+      }
+      
+      .mega-menu-section .dropdown-item:hover {
+        background: rgba(40, 167, 69, 0.1);
+        color: #28a745;
+        padding-left: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/shop">Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav w-100 d-flex flex-column flex-lg-row justify-content-between">
+
+        <!-- WOMEN -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="/women.html" id="navWomen" role="button" data-bs-toggle="dropdown" aria-expanded="false">Women</a>
+          <div class="dropdown-menu" aria-labelledby="navWomen">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Light Protection</h6>
+                  <a class="dropdown-item" href="/women.html#liners">Liners</a>
+                  <a class="dropdown-item" href="/women.html#mini">Mini Pads</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Moderate Protection</h6>
+                  <a class="dropdown-item" href="/women.html#pads">Regular Pads</a>
+                  <a class="dropdown-item" href="/women.html#maxi">Maxi Pads</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Maximum Protection</h6>
+                  <a class="dropdown-item" href="/women.html#pants">Pants</a>
+                  <a class="dropdown-item" href="/women.html#overnight">Overnight</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- MEN -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="/shop/men" id="navMen" role="button" data-bs-toggle="dropdown" aria-expanded="false">Men</a>
+          <div class="dropdown-menu" aria-labelledby="navMen">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Light to Moderate</h6>
+                  <a class="dropdown-item" href="/shop/men#pads">Guards & Pads</a>
+                  <a class="dropdown-item" href="/shop/men#shields">Shields</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Heavy Protection</h6>
+                  <a class="dropdown-item" href="/shop/men#pants">Underwear</a>
+                  <a class="dropdown-item" href="/shop/men#briefs">Protective Briefs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- JUNIORS & BABY -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="/shop/junior-baby" id="navJunior" role="button" data-bs-toggle="dropdown" aria-expanded="false">Juniors & Baby</a>
+          <div class="dropdown-menu" aria-labelledby="navJunior">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Baby Care</h6>
+                  <a class="dropdown-item" href="/shop/junior-baby#diapers">Baby Diapers</a>
+                  <a class="dropdown-item" href="/shop/junior-baby#pants">Baby Pants</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Junior Protection</h6>
+                  <a class="dropdown-item" href="/shop/junior-baby#comfy-pants">Comfy Pants</a>
+                  <a class="dropdown-item" href="/shop/junior-baby#comfy-slip">Comfy Slip</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- ADVANCED NEEDS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold active" href="/advanced.html" id="navAdvanced" role="button" data-bs-toggle="dropdown" aria-expanded="false">Advanced Needs</a>
+          <div class="dropdown-menu" aria-labelledby="navAdvanced">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Protective Wear</h6>
+                  <a class="dropdown-item" href="/advanced.html#pants">Protective Pants</a>
+                  <a class="dropdown-item" href="/advanced.html#slip">Slip-On</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Specialized</h6>
+                  <a class="dropdown-item" href="/advanced.html#form">Formed Pads</a>
+                  <a class="dropdown-item" href="/advanced.html#net">Net Fixation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- COMPLEMENTARY -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fw-semibold" href="/shop/complementary" id="navComplementary" role="button" data-bs-toggle="dropdown" aria-expanded="false">Complementary</a>
+          <div class="dropdown-menu" aria-labelledby="navComplementary">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="mega-menu-section">
+                  <h6>Accessories</h6>
+                  <a class="dropdown-item" href="/shop/complementary#underpads">Bed Protection</a>
+                  <a class="dropdown-item" href="/shop/complementary#wipes">Cleansing Wipes</a>
+                </div>
+                <div class="mega-menu-section">
+                  <h6>Personal Care</h6>
+                  <a class="dropdown-item" href="/shop/complementary#cosmetics">Skin Care</a>
+                  <a class="dropdown-item" href="/shop/complementary#shower">Bath Accessories</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CATEGORY INTRO -->
+<section class="p-4 text-center">
+  <div class="container">
+    <h1>Advanced Needs Solutions</h1>
+    <p>Specialized products for complex incontinence management - designed for maximum protection, security and professional care environments.</p>
+    
+    <!-- Enhanced Subcategory Navigation -->
+    <div class="subcategory-nav mt-4 mb-4">
+      <div class="row justify-content-center g-3">
+        <div class="col-12 col-md-3">
+          <a href="#form" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Formed Pads</div>
+            <small class="text-muted d-block mt-1">Anatomical Protection</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="#slip" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Slip & Belt</div>
+            <small class="text-muted d-block mt-1">All-in-One Solutions</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="#net" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Net Fixation</div>
+            <small class="text-muted d-block mt-1">Secure Support</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="#rectangular" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Rectangular Pads</div>
+            <small class="text-muted d-block mt-1">Professional Care</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS TOGGLE FOR MOBILE -->
+<div class="container">
+  <button class="btn btn-outline-primary filter-toggle" onclick="document.getElementById('filters').classList.toggle('d-none')">
+    Toggle Filters
+  </button>
+</div>
+
+<!-- PRODUCT FILTERS + LISTING WRAPPER -->
+<section class="p-4" id="advanced-products">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar Filters (Desktop) -->
+      <aside class="col-md-3 d-none d-md-block" id="filters">
+        <h5>Filter By</h5>
+        <div class="mb-3">
+          <label for="filter-absorbency">Absorbency</label>
+          <select class="form-select" id="filter-absorbency">
+            <option>All</option>
+            <option>Normal</option>
+            <option>Plus</option>
+            <option>Extra</option>
+            <option>Extra Plus</option>
+            <option>Super</option>
+            <option>Maxi</option>
+            <option>Maxi Prime</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="filter-size">Size</label>
+          <select class="form-select" id="filter-size">
+            <option>All</option>
+            <option>XS</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+            <option>XL</option>
+            <option>XXL</option>
+            <option>XXXL</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="filter-type">Product Type</label>
+          <select class="form-select" id="filter-type">
+            <option>All</option>
+            <option>Formed Pad</option>
+            <option>Slip</option>
+            <option>Belt</option>
+            <option>Net Fixation</option>
+            <option>Rectangular Pad</option>
+            <option>Anatomical Pad</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Product Cards -->
+      <div class="col-md-9">
+        
+        <!-- FORMED PADS SECTION -->
+        <section id="form" class="mb-5">
+          <h2 class="mb-4">iD Form - Anatomical Shaped Pads</h2>
+          <p class="mb-4">Designed to follow the natural contours of the body for optimal comfort and security.</p>
+          
+          <ul class="row list-unstyled mb-0 g-4">
+            
+            <!-- iD Form Normal -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-discreet-%2853cm%29-Normal_5310155280.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fOTkROQY/ProductFamily-26.png" alt="iD Form Normal" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Normal</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fpHdncnW/DropAbsorbency-7.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: discreet (53cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="8.57">8.57</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-discreet-%2853cm%29-Normal_5310155280.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Form Plus -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Plus_5310260210.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fw92TOQY/ProductFamily-28.png" alt="iD Form Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Plus</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.ftHdncnW/DropAbsorbency-10.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: long (64 cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="8.32">8.32</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Plus_5310260210.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Form Extra -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Extra_5310265210.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.ffGnZOQY/ProductFamily-29.png" alt="iD Form Extra" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Extra</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fvHdncnW/DropAbsorbency-11.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: long (64 cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="8.93">8.93</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Extra_5310265210.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Form Extra Plus -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Extra-Plus_5310270210.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fN0_aOQY/ProductFamily-30.png" alt="iD Form Extra Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Extra Plus</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fwHdncnW/DropAbsorbency-12.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: long (64 cm), extra long (70cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="9.54">9.54</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Extra-Plus_5310270210.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Form Super -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Super_5310275210.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.f6amdOQY/ProductFamily-31.png" alt="iD Form Super" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Super</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fyHdncnW/DropAbsorbency-13.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: long (64 cm), extra long (70cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="10.40">10.40</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-long-%2864-cm%29-Super_5310275210.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Form Maxi -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Form/iD-Form-extra-long-%2870cm%29-Maxi_5310380210.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fap_eOQY/ProductFamily-32.png" alt="iD Form Maxi" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Form Maxi</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fzHdncnW/DropAbsorbency-14.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: extra long (70cm)</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="11.63">11.63</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Form/iD-Form-extra-long-%2870cm%29-Maxi_5310380210.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- NET FIXATION SECTION -->
+        <section id="net" class="mb-5">
+          <h2 class="mb-4">iD Care Net Pants - Secure Fixation System</h2>
+          <p class="mb-4">Specially designed pants for secure pad fixation in professional care environments.</p>
+          
+          <ul class="row list-unstyled mb-0 g-4">
+            
+            <!-- iD Care Net pants Comfort Super -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Care-Net-pants/iD-Care-Net-pants-S-Comfort-Super_5410100050.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fAjVcByY/ProductFamily-33.png" alt="iD Care Net pants Comfort Super" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Care Net pants Comfort Super</h5>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: S, M, L, XL, XXL, XXXL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.67">3.67</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Care-Net-pants/iD-Care-Net-pants-S-Comfort-Super_5410100050.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Care Net pants With Legs -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Care-Net-pants/iD-Care-Net-pants-S-M-With-Legs_5420150050.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fz0UCpSY/ProductFamily-35.png" alt="iD Care Net pants With Legs" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Care Net pants With Legs</h5>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: S-M, XL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.33">3.33</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Care-Net-pants/iD-Care-Net-pants-S-M-With-Legs_5420150050.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- SLIP & BELT SECTION -->
+        <section id="slip" class="mb-5">
+          <h2 class="mb-4">iD Slip & Belt - All-in-One Protection</h2>
+          <p class="mb-4">Complete protection systems with integrated or belt-secured design for maximum security.</p>
+          
+          <ul class="row list-unstyled mb-0 g-4">
+            
+            <!-- iD Slip Plus -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Plus_5630160140.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fj163XjY/ProductFamily-44.png" alt="iD Slip Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Slip Plus</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.ftHdncnW/DropAbsorbency-10.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: S, M, L, XL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="9.35">9.35</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Plus_5630160140.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Slip Extra Plus -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Extra-Plus_5630170140.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fqcP2XjY/ProductFamily-46.png" alt="iD Slip Extra Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Slip Extra Plus</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fwHdncnW/DropAbsorbency-12.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: M, L, XL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="12.10">12.10</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Extra-Plus_5630170140.html">More info</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Slip Super -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Slip/iD-Slip-XS-Super_5630075140.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fpEk4XjY/ProductFamily-47.png" alt="iD Slip Super" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Slip Super</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fyHdncnW/DropAbsorbency-13.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: XS, S, M, L, XL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="10.05">10.05</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Slip/iD-Slip-XS-Super_5630075140.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Slip Maxi -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Maxi_5630180200.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fJN04XjY/ProductFamily-48.png" alt="iD Slip Maxi" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Slip Maxi</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fzHdncnW/DropAbsorbency-14.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: S, M, L</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="12.05">12.05</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Slip/iD-Slip-S-Maxi_5630180200.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Slip Maxi Prime -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Slip/iD-Slip-M-Maxi-Prime_56302100150.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.f2mk3XjY/ProductFamily-313.png" alt="iD Slip Maxi Prime" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Slip Maxi Prime</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fhSyUjcY/DropAbsorbency-65.png" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: M, L</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="15.95">15.95</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Slip/iD-Slip-M-Maxi-Prime_56302100150.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Expert Slip PE Products -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Expert-Slip-PE/iD-Expert-Slip-PE-M-Normal_5600255280.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductGroup/mainImage-detail/.fVq9HRJU/ProductGroup-42.png" alt="iD Expert Slip PE Normal" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Expert Slip PE Normal</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.fsHdncnW/DropAbsorbency-9.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge sensitive">Expert</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: M, L</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="12.05">12.05</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Expert-Slip-PE/iD-Expert-Slip-PE-M-Normal_5600255280.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- iD Belt Products -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/iD-Belt/iD-Belt-S-Plus_5700160140.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fTVeOJQY/ProductFamily-40.png" alt="iD Belt Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">iD Belt Plus</h5>
+                  <div class="absorbency-drops mb-2">
+                    <img alt="absorbency drops" class="py-1" src="https://id-direct.com/media/DropAbsorbency/image/.ftHdncnW/DropAbsorbency-10.svg" style="max-height: 30px;">
+                  </div>
+                  <div class="mb-2">
+                    <span class="badge advanced">Advanced</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Sizes: S, M, L, XL</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="8.02">8.02</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/iD-Belt/iD-Belt-S-Plus_5700160140.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+        <!-- RECTANGULAR PADS SECTION -->
+        <section id="rectangular" class="mb-5">
+          <h2 class="mb-4">Rectangular & Anatomical Pads</h2>
+          <p class="mb-4">Professional-grade protection for institutional and home care use.</p>
+          
+          <ul class="row list-unstyled mb-0 g-4">
+            
+            <!-- Rectangular Normal NW -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/Rectangular/Rectangular-530-Normal-NW_59606500280.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fIfsbFLY/ProductFamily-88.png" alt="Rectangular Normal NW" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">Rectangular Normal NW</h5>
+                  <div class="mb-2">
+                    <span class="badge advanced">Professional</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: 530</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="7.95">7.95</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/Rectangular/Rectangular-530-Normal-NW_59606500280.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Rectangular Mini NW -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/Rectangular/Rectangular-110x360-Mini-NW_59361100280.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.f8Nz8ELY/ProductFamily-94.png" alt="Rectangular Mini NW" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">Rectangular Mini NW</h5>
+                  <div class="mb-2">
+                    <span class="badge advanced">Professional</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: 110x360</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="9.33">9.33</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/Rectangular/Rectangular-110x360-Mini-NW_59361100280.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Anatomical Pad Normal PE -->
+            <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+              <div class="card h-100">
+                <div class="card-img-container" style="height: 200px;">
+                  <a href="https://id-direct.com/product/Anatomical-Pad/Anatomical-Pad-530-Normal-PE_59606510280.html" class="d-flex justify-content-center align-items-center h-100">
+                    <img src="https://id-direct.com/media/ProductFamily/mainImage-detail/.fu27bFLY/ProductFamily-87.png" alt="Anatomical Pad Normal PE" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                  </a>
+                </div>
+                <div class="card-body text-center d-flex flex-column">
+                  <h5 class="card-title" itemprop="name">Anatomical Pad Normal PE</h5>
+                  <div class="mb-2">
+                    <span class="badge advanced">Professional</span>
+                  </div>
+                  <div class="sizes mb-2">
+                    <small class="text-muted">Size: 530</small>
+                  </div>
+                  <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="7.71">7.71</span></h6>
+                    <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                    <a class="btn btn-primary btn-sm" href="https://id-direct.com/product/Anatomical-Pad/Anatomical-Pad-530-Normal-PE_59606510280.html">Add to basket</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .badge.bg-green, .badge.advanced {
+    background-color: #28a745;
+    color: white;
+  }
+  .badge.essential {
+    background-color: #009FDB;
+    color: white;
+  }
+  .badge.sensitive {
+    background-color: #FF9F45;
+    color: white;
+  }
+  .card-img-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .price-section {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+  .absorbency-drops img {
+    max-height: 30px;
+    object-fit: contain;
+  }
+  #product-grid .card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #dee2e6;
+  }
+  #product-grid .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
