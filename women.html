@@ -23,6 +23,21 @@
     .subcategory-nav a {
       margin-right: 1rem;
     }
+    .subcategory-btn {
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid #6c757d;
+    }
+    .subcategory-btn:hover {
+      background-color: #7B5EA7;
+      border-color: #7B5EA7;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .subcategory-btn:hover small {
+      color: rgba(255,255,255,0.8) !important;
+    }
   .navbar-nav .dropdown-menu {
     min-width: 200px;
   }
@@ -112,10 +127,29 @@
   <div class="container">
     <h1>Products for Women</h1>
     <p>Discover protection designed for female anatomy, movement and lifestyle -- from everyday freshness to more advanced needs.</p>
-    <div class="subcategory-nav mt-3">
-      <a href="#liners" class="btn btn-outline-secondary btn-sm">Liners</a>
-      <a href="#pads" class="btn btn-outline-secondary btn-sm">Pads</a>
-      <a href="#pants" class="btn btn-outline-secondary btn-sm">Pants</a>
+    
+    <!-- Enhanced Subcategory Navigation -->
+    <div class="subcategory-nav mt-4 mb-4">
+      <div class="row justify-content-center g-3">
+        <div class="col-12 col-md-4">
+          <a href="#liners" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Liners</div>
+            <small class="text-muted d-block mt-1">Ultra Mini - Mini Plus</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a href="#pads" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Pads</div>
+            <small class="text-muted d-block mt-1">Normal - Maxi</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-4">
+          <a href="#pants" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="fw-bold">Pants</div>
+            <small class="text-muted d-block mt-1">Normal - Super</small>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
