@@ -128,26 +128,21 @@
     </button>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <div class="container mt-4">
+<!-- PRODUCT FILTERS + LISTING WRAPPER -->
+<section class="p-4" id="women-products">
+  <div class="container">
     <div class="row">
-      <!-- FILTERS SIDEBAR -->
-      <aside id="filters" class="col-md-3">
+
+      <!-- Sidebar Filters (Desktop) -->
+      <aside class="col-md-3 d-none d-md-block">
         <h5>Filter By</h5>
         <div class="mb-3">
-          <label class="form-label">Product Type</label>
-          <select class="form-select">
-            <option value="">All</option>
-            <option>Liner</option>
-            <option>Pad</option>
-            <option>Pants</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">Absorbency</label>
-          <select class="form-select">
-            <option value="">All</option>
-            <option>Light</option>
+          <label for="filter-absorbency">Absorbency</label>
+          <select class="form-select" id="filter-absorbency">
+            <option>All</option>
+            <option>Ultra Mini</option>
+            <option>Mini</option>
+            <option>Mini Plus</option>
             <option>Normal</option>
             <option>Extra</option>
             <option>Super</option>
@@ -155,67 +150,86 @@
           </select>
         </div>
         <div class="mb-3">
-          <label class="form-label">Size</label>
-          <select class="form-select">
-            <option value="">All</option>
-            <option>S</option>
+          <label for="filter-size">Size</label>
+          <select class="form-select" id="filter-size">
+            <option>All</option>
             <option>M</option>
             <option>L</option>
             <option>XL</option>
           </select>
         </div>
+        <div class="mb-3">
+          <label for="filter-type">Product Type</label>
+          <select class="form-select" id="filter-type">
+            <option>All</option>
+            <option>Liner</option>
+            <option>Pad</option>
+            <option>Pants</option>
+          </select>
+        </div>
       </aside>
 
-      <!-- PRODUCT LIST -->
-      <main class="col-md-9">
-        <div class="row">
-          <!-- Liner -->
-          <div class="col-md-4">
-            <div class="product-card">
-              <img src="cat/liner.png" alt="Liner" class="img-fluid mb-2">
-              <h5>Liner</h5>
-              <p><span class="range-badge essential">Essential</span></p>
-              <p>Absorbency: Light</p>
-              <p>Size: One size</p>
+      <!-- Product Cards -->
+      <div class="col-md-9">
+        <div class="row g-4">
+
+          <!-- Example Product Card 1 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fpRRsheZ/ProductFamily-10.png" class="card-img-top" alt="iD Discreet Light Ultra Mini">
+              <div class="card-body text-center">
+                <h5 class="card-title">iD Discreet Light Ultra Mini</h5>
+                <div><small class="text-muted">Absorbency: Ultra Mini</small></div>
+                <div><span class="badge bg-pink">Discreet</span></div>
+                <p class="mt-2">From £3.63</p>
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Ultra-Mini_5111010281.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
+              </div>
             </div>
           </div>
 
-          <!-- Pads (sample 3 of 10) -->
-          <div class="col-md-4">
-            <div class="product-card">
-              <img src="cat/pad1.png" alt="Pad" class="img-fluid mb-2">
-              <h5>Pad Normal</h5>
-              <p><span class="range-badge discreet">Discreet</span></p>
-              <p>Absorbency: Normal</p>
-              <p>Size: One size</p>
+          <!-- Example Product Card 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f2AeWegZ/ProductFamily-495.jpg" class="card-img-top" alt="iD Discreet Light Mini">
+              <div class="card-body text-center">
+                <h5 class="card-title">iD Discreet Light Mini</h5>
+                <div><small class="text-muted">Absorbency: Mini</small></div>
+                <div><span class="badge bg-pink">Discreet</span></div>
+                <p class="mt-2">From £3.63</p>
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini_IDD21021920.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
+              </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="product-card">
-              <img src="cat/pad2.png" alt="Pad" class="img-fluid mb-2">
-              <h5>Pad Extra</h5>
-              <p><span class="range-badge essential">Essential</span></p>
-              <p>Absorbency: Extra</p>
-              <p>Size: One size</p>
+          <!-- Example Product Card 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100">
+              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fnzlWegZ/ProductFamily-508.jpg" class="card-img-top" alt="iD Discreet Light Mini Plus">
+              <div class="card-body text-center">
+                <h5 class="card-title">iD Discreet Light Mini Plus</h5>
+                <div><small class="text-muted">Absorbency: Mini Plus</small></div>
+                <div><span class="badge bg-pink">Discreet</span></div>
+                <p class="mt-2">From £3.63</p>
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini-Plus_IDD21031916.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
+              </div>
             </div>
           </div>
 
-          <!-- Pants (sample) -->
-          <div class="col-md-4">
-            <div class="product-card">
-              <img src="cat/pants1.png" alt="Pants" class="img-fluid mb-2">
-              <h5>iD Pants M</h5>
-              <p><span class="range-badge discreet">Discreet</span></p>
-              <p>Absorbency: Super</p>
-              <p>Sizes: M, L</p>
-            </div>
-          </div>
+          <!-- Add more cards here as needed -->
 
         </div>
-      </main>
+      </div>
+
     </div>
   </div>
+</section>
+
+<style>
+  .badge.bg-pink {
+    background-color: #FF7BAC;
+    color: white;
+  }
+</style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
