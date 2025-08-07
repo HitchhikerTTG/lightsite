@@ -38,23 +38,43 @@
     .subcategory-btn:hover small {
       color: rgba(255,255,255,0.8) !important;
     }
+    
+    /* Mobile mega menu sections */
+    .mega-menu-section {
+      margin-bottom: 1rem;
+    }
+    
+    .mega-menu-section h6 {
+      font-weight: bold;
+      color: #7B5EA7;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .mega-menu-section .dropdown-item {
+      padding: 0.5rem 1rem;
+      color: #2D2D2D;
+      transition: all 0.2s ease;
+    }
+    
+    .mega-menu-section .dropdown-item:hover {
+      background: rgba(123, 94, 167, 0.1);
+      color: #7B5EA7;
+    }
   .navbar-nav .dropdown-menu {
     min-width: 200px;
   }
   
   /* Mega Menu Styling for Desktop */
   @media (min-width: 992px) {
-    .navbar-nav .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-    
     /* Full-width mega menu */
     .navbar-nav .dropdown .dropdown-menu {
-      position: static;
-      float: none;
-      width: 100vw;
+      position: absolute;
+      top: 100%;
       left: 50%;
       transform: translateX(-50%);
+      width: 100vw;
+      max-width: 1200px;
       border: none;
       border-radius: 0;
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
@@ -62,38 +82,26 @@
       margin-top: 0;
       padding: 2rem 0;
       z-index: 1000;
-      
-      /* Ensure menu stays open on hover */
-      pointer-events: auto;
-    }
-    
-    /* Multi-column layout for mega menu items */
-    .navbar-nav .dropdown .dropdown-menu {
       display: none;
+      opacity: 0;
+      visibility: hidden;
       transition: all 0.3s ease;
     }
     
-    .navbar-nav .dropdown:hover .dropdown-menu,
-    .navbar-nav .dropdown .dropdown-menu:hover {
+    /* Show mega menu on hover */
+    .navbar-nav .dropdown:hover .dropdown-menu {
       display: flex;
+      opacity: 1;
+      visibility: visible;
       justify-content: center;
       align-items: flex-start;
     }
     
-    /* Prevent menu from disappearing when moving mouse */
-    .navbar-nav .dropdown {
-      position: relative;
-    }
-    
-    .navbar-nav .dropdown::before {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      height: 10px;
-      background: transparent;
-      z-index: 999;
+    /* Keep menu open when hovering over it */
+    .navbar-nav .dropdown .dropdown-menu:hover {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
     }
     
     /* Style individual dropdown items in mega menu */
@@ -124,6 +132,16 @@
       background: rgba(123, 94, 167, 0.1);
       color: #7B5EA7;
       padding-left: 1rem;
+    }
+    
+    /* Prevent Bootstrap default dropdown behavior on desktop */
+    .navbar-nav .dropdown-toggle::after {
+      display: none;
+    }
+    
+    /* Ensure dropdown links work normally on desktop */
+    .navbar-nav .dropdown > .nav-link {
+      pointer-events: auto;
     }
   }
   </style>
@@ -654,29 +672,48 @@ document.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
   
   dropdowns.forEach(dropdown => {
-    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-    let timeoutId;
-    
-    dropdown.addEventListener('mouseenter', function() {
-      if (window.innerWidth >= 992) {
-        clearTimeout(timeoutId);
-        dropdownMenu.classList.add('show');
-      }
-    });
-    
-    dropdown.addEventListener('mouseleave', function() {
-      if (window.innerWidth >= 992) {
-        timeoutId = setTimeout(() => {
-          dropdownMenu.classList.remove('show');
-        }, 100);
-      }
-    });
-    
-    // Prevent clicks on dropdown toggles from navigating on desktop
     const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
-    dropdownToggle.addEventListener('click', function(e) {
-      if (window.innerWidth >= 992) {
-        e.preventDefault();
+    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+    let hoverTimeout;
+    
+    // Desktop behavior
+    if (window.innerWidth >= 992) {
+      // Prevent Bootstrap dropdown behavior on desktop
+      dropdownToggle.removeAttribute('data-bs-toggle');
+      
+      // Handle hover events
+      dropdown.addEventListener('mouseenter', function() {
+        clearTimeout(hoverTimeout);
+        dropdownMenu.style.display = 'flex';
+        dropdownMenu.style.opacity = '1';
+        dropdownMenu.style.visibility = 'visible';
+      });
+      
+      dropdown.addEventListener('mouseleave', function() {
+        hoverTimeout = setTimeout(() => {
+          dropdownMenu.style.display = 'none';
+          dropdownMenu.style.opacity = '0';
+          dropdownMenu.style.visibility = 'hidden';
+        }, 150);
+      });
+      
+      // Allow clicking on main nav links
+      dropdownToggle.addEventListener('click', function(e) {
+        // Allow normal navigation
+        window.location.href = this.getAttribute('href');
+      });
+    }
+  });
+  
+  // Re-enable Bootstrap dropdowns on mobile
+  window.addEventListener('resize', function() {
+    const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+    dropdowns.forEach(dropdown => {
+      const dropdownToggle = dropdown.querySelector('.nav-link');
+      if (window.innerWidth < 992) {
+        dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
+      } else {
+        dropdownToggle.removeAttribute('data-bs-toggle');
       }
     });
   });
