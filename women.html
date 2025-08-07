@@ -171,108 +171,184 @@
 
       <!-- Product Cards -->
       <div class="col-md-9">
-        <div class="row g-4">
-
-          <!-- Example Product Card 1 -->
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100">
-              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fpRRsheZ/ProductFamily-10.png" class="card-img-top" alt="iD Discreet Light Ultra Mini">
-              <div class="card-body text-center">
-                <h5 class="card-title">iD Discreet Light Ultra Mini</h5>
-                <div><small class="text-muted">Absorbency: Ultra Mini</small></div>
-                <div><span class="badge bg-pink">Discreet</span></div>
-                <p class="mt-2">From £3.63</p>
-                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Ultra-Mini_5111010281.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Example Product Card 2 -->
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100">
-              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f2AeWegZ/ProductFamily-495.jpg" class="card-img-top" alt="iD Discreet Light Mini">
-              <div class="card-body text-center">
-                <h5 class="card-title">iD Discreet Light Mini</h5>
-                <div><small class="text-muted">Absorbency: Mini</small></div>
-                <div><span class="badge bg-pink">Discreet</span></div>
-                <p class="mt-2">From £3.63</p>
-                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini_IDD21021920.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Example Product Card 3 -->
-          <div class="col-12 col-sm-6 col-lg-4">
-            <div class="card h-100">
-              <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fnzlWegZ/ProductFamily-508.jpg" class="card-img-top" alt="iD Discreet Light Mini Plus">
-              <div class="card-body text-center">
-                <h5 class="card-title">iD Discreet Light Mini Plus</h5>
-                <div><small class="text-muted">Absorbency: Mini Plus</small></div>
-                <div><span class="badge bg-pink">Discreet</span></div>
-                <p class="mt-2">From £3.63</p>
-                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini-Plus_IDD21031916.html?context=Women" class="btn btn-sm btn-outline-primary">Add to Basket</a>
-              </div>
-            </div>
-          </div>
+        <ul class="row list-unstyled mb-0 g-4" id="product-grid">
           
+          <!-- Product 1: iD Discreet Light Ultra Mini -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Ultra-Mini_5111010281.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fpRRsheZ/ProductFamily-10.png" alt="iD Discreet Light Ultra Mini" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Ultra Mini</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fKHdncnW/DropAbsorbency-0.svg" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.63">3.63</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Ultra-Mini_5111010281.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
+          <!-- Product 2: iD Discreet Light Mini -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini_IDD21021920.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f2AeWegZ/ProductFamily-495.jpg" alt="iD Discreet Light Mini" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Mini</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fuX6c8gZ/DropAbsorbency-111.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.63">3.63</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini_IDD21021920.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    <!-- Product 4 -->
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
-      <div class="card h-100">
-        <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fjlwWegZ/ProductFamily-512.jpg" class="card-img-top" alt="iD Discreet Light Normal">
-        <div class="card-body text-center">
-          <h5 class="card-title">iD Discreet Light Normal</h5>
-          <div class="mb-2">
-            <img src="https://www.id-direct.com/media/DropAbsorbency/image/.fYvEX8gZ/DropAbsorbency-105.png" alt="Absorbency drops" class="img-fluid py-1">
-          </div>
-          <p><span class="badge bg-pink">Discreet</span></p>
-          <p class="mb-1">Price: from <strong>£3.63</strong></p>
-          <p class="text-muted small">VAT excl, Transport excl.</p>
-          <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Normal_IDD21041912.html?context=Women" class="btn btn-primary btn-sm">Add to basket</a>
-        </div>
-      </div>
-    </div>
+          <!-- Product 3: iD Discreet Light Mini Plus -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini-Plus_IDD21031916.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fnzlWegZ/ProductFamily-508.jpg" alt="iD Discreet Light Mini Plus" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Mini Plus</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fMtGg8gZ/DropAbsorbency-112.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.63">3.63</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Mini-Plus_IDD21031916.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    <!-- Product 5 -->
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
-      <div class="card h-100">
-        <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fRrtrheZ/ProductFamily-14.png" class="card-img-top" alt="iD Discreet Light Extra">
-        <div class="card-body text-center">
-          <h5 class="card-title">iD Discreet Light Extra</h5>
-          <div class="mb-2">
-            <img src="https://www.id-direct.com/media/DropAbsorbency/image/.fnHdncnW/DropAbsorbency-6.svg" alt="Absorbency drops" class="img-fluid py-1">
-          </div>
-          <p><span class="badge bg-pink">Discreet</span></p>
-          <p class="mb-1">Price: from <strong>£3.63</strong></p>
-          <p class="text-muted small">VAT excl, Transport excl.</p>
-          <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Extra_5171040101.html?context=Women" class="btn btn-primary btn-sm">Add to basket</a>
-        </div>
-      </div>
-    </div>
+          <!-- Product 4: iD Discreet Light Normal -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Normal_IDD21041912.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fjlwWegZ/ProductFamily-512.jpg" alt="iD Discreet Light Normal" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Normal</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fYvEX8gZ/DropAbsorbency-105.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.63">3.63</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Normal_IDD21041912.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
-    <!-- Product 6 -->
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
-      <div class="card h-100">
-        <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f3EDXegZ/ProductFamily-513.jpg" class="card-img-top" alt="iD Discreet Light Super">
-        <div class="card-body text-center">
-          <h5 class="card-title">iD Discreet Light Super</h5>
-          <div class="mb-2">
-            <img src="https://www.id-direct.com/media/DropAbsorbency/image/.fkuxX8gZ/DropAbsorbency-107.png" alt="Absorbency drops" class="img-fluid py-1">
-          </div>
-          <p><span class="badge bg-pink">Discreet</span></p>
-          <p class="mb-1">Price: from <strong>£4.84</strong></p>
-          <p class="text-muted small">VAT excl, Transport excl.</p>
-          <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Super_IDD21052910.html?context=Women" class="btn btn-primary btn-sm">Add to basket</a>
-        </div>
-      </div>
-    </div>
+          <!-- Product 5: iD Discreet Light Extra -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Extra_5171040101.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fRrtrheZ/ProductFamily-14.png" alt="iD Discreet Light Extra" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Extra</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fnHdncnW/DropAbsorbency-6.svg" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="3.63">3.63</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Extra_5171040101.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
+          <!-- Product 6: iD Discreet Light Super -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Super_IDD21052910.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f3EDXegZ/ProductFamily-513.jpg" alt="iD Discreet Light Super" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Super</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fkuxX8gZ/DropAbsorbency-107.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="4.84">4.84</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Super_IDD21052910.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
+          <!-- Product 7: iD Discreet Light Maxi -->
+          <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
+            <div class="card h-100">
+              <div class="card-img-container" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Maxi_IDD22060910.html?context=Women" class="d-flex justify-content-center align-items-center h-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fedUXegZ/ProductFamily-514.jpg" alt="iD Discreet Light Maxi" class="img-fluid" itemprop="image" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title" itemprop="name">iD Discreet Light Maxi</h5>
+                <div class="absorbency-drops mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fGzDb6hZ/DropAbsorbency-113.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge discreet">Discreet</span>
+                </div>
+                <div class="price-section mt-auto" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                  <h6 class="mb-1">Price: from <span itemprop="priceCurrency" content="GBP">£</span><span itemprop="price" content="5.08">5.08</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-Light/iD-Discreet-Light-Maxi_IDD22060910.html?context=Women">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </li>
 
-          <!-- Add more cards here as needed -->
-
-        </div>
+        </ul>
       </div>
 
     </div>
@@ -280,9 +356,37 @@
 </section>
 
 <style>
-  .badge.bg-pink {
-    background-color: #FF7BAC;
+  .badge.bg-pink, .badge.discreet {
+    background-color: #7B5EA7;
     color: white;
+  }
+  .badge.essential {
+    background-color: #009FDB;
+    color: white;
+  }
+  .badge.sensitive {
+    background-color: #FF9F45;
+    color: white;
+  }
+  .card-img-container {
+    position: relative;
+    overflow: hidden;
+  }
+  .price-section {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+  .absorbency-drops img {
+    max-height: 30px;
+    object-fit: contain;
+  }
+  #product-grid .card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #dee2e6;
+  }
+  #product-grid .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
 </style>
 
