@@ -38,25 +38,25 @@
     .subcategory-btn:hover small {
       color: rgba(255,255,255,0.8) !important;
     }
-    
+
     /* Mobile mega menu sections */
     .mega-menu-section {
       margin-bottom: 1rem;
     }
-    
+
     .mega-menu-section h6 {
       font-weight: bold;
       color: #7B5EA7;
       margin-bottom: 0.5rem;
       font-size: 1rem;
     }
-    
+
     .mega-menu-section .dropdown-item {
       padding: 0.5rem 1rem;
       color: #2D2D2D;
       transition: all 0.2s ease;
     }
-    
+
     .mega-menu-section .dropdown-item:hover {
       background: rgba(123, 94, 167, 0.1);
       color: #7B5EA7;
@@ -64,30 +64,30 @@
   .navbar-nav .dropdown-menu {
     min-width: 200px;
   }
-  
+
   /* Mega Menu Styling for Desktop */
-  @media (min-width: 992px) {
-    /* Full-width mega menu */
-    .navbar-nav .dropdown .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100vw;
-      max-width: 1200px;
-      border: none;
-      border-radius: 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-      margin-top: 0;
-      padding: 2rem 0;
-      z-index: 1000;
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-    }
-    
+    @media (min-width: 992px) {
+      /* Full-width mega menu */
+      .navbar-nav .dropdown .dropdown-menu {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: 100vw;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        margin-top: 0;
+        padding: 2rem 0;
+        z-index: 1000;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+      }
+
     /* Show mega menu on hover */
     .navbar-nav .dropdown:hover .dropdown-menu {
       display: flex;
@@ -96,21 +96,21 @@
       justify-content: center;
       align-items: flex-start;
     }
-    
+
     /* Keep menu open when hovering over it */
     .navbar-nav .dropdown .dropdown-menu:hover {
       display: flex;
       opacity: 1;
       visibility: visible;
     }
-    
+
     /* Style individual dropdown items in mega menu */
     .mega-menu-section {
       flex: 1;
       max-width: 200px;
       margin: 0 2rem;
     }
-    
+
     .mega-menu-section h6 {
       font-weight: bold;
       color: #7B5EA7;
@@ -118,7 +118,7 @@
       padding-bottom: 0.5rem;
       border-bottom: 2px solid #7B5EA7;
     }
-    
+
     .mega-menu-section .dropdown-item {
       padding: 0.5rem 0;
       border: none;
@@ -127,18 +127,18 @@
       transition: all 0.2s ease;
       font-size: 0.95rem;
     }
-    
+
     .mega-menu-section .dropdown-item:hover {
       background: rgba(123, 94, 167, 0.1);
       color: #7B5EA7;
       padding-left: 1rem;
     }
-    
+
     /* Prevent Bootstrap default dropdown behavior on desktop */
     .navbar-nav .dropdown-toggle::after {
       display: none;
     }
-    
+
     /* Ensure dropdown links work normally on desktop */
     .navbar-nav .dropdown > .nav-link {
       pointer-events: auto;
@@ -283,7 +283,7 @@
   <div class="container">
     <h1>Products for Women</h1>
     <p>Discover protection designed for female anatomy, movement and lifestyle -- from everyday freshness to more advanced needs.</p>
-    
+
     <!-- Enhanced Subcategory Navigation -->
     <div class="subcategory-nav mt-4 mb-4">
       <div class="row justify-content-center g-3">
@@ -362,7 +362,7 @@
       <!-- Product Cards -->
       <div class="col-md-9">
         <ul class="row list-unstyled mb-0 g-4" id="product-grid">
-          
+
           <!-- Product 1: iD Discreet Light Ultra Mini -->
           <li class="col-12 col-sm-6 col-lg-4 col-xl-3" itemscope itemtype="http://schema.org/Product">
             <div class="card h-100">
@@ -670,17 +670,17 @@
 // Improve dropdown behavior on desktop
 document.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
-  
+
   dropdowns.forEach(dropdown => {
     const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
     const dropdownMenu = dropdown.querySelector('.dropdown-menu');
     let hoverTimeout;
-    
+
     // Desktop behavior
     if (window.innerWidth >= 992) {
       // Prevent Bootstrap dropdown behavior on desktop
       dropdownToggle.removeAttribute('data-bs-toggle');
-      
+
       // Handle hover events
       dropdown.addEventListener('mouseenter', function() {
         clearTimeout(hoverTimeout);
@@ -688,7 +688,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownMenu.style.opacity = '1';
         dropdownMenu.style.visibility = 'visible';
       });
-      
+
       dropdown.addEventListener('mouseleave', function() {
         hoverTimeout = setTimeout(() => {
           dropdownMenu.style.display = 'none';
@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function() {
           dropdownMenu.style.visibility = 'hidden';
         }, 150);
       });
-      
+
       // Allow clicking on main nav links
       dropdownToggle.addEventListener('click', function(e) {
         // Allow normal navigation
@@ -704,7 +704,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-  
+
   // Re-enable Bootstrap dropdowns on mobile
   window.addEventListener('resize', function() {
     const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
