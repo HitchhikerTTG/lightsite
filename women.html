@@ -82,68 +82,77 @@
         margin-top: 0;
         padding: 2rem 0;
         z-index: 1000;
-        display: none;
+        display: none !important;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
       }
 
-    /* Show mega menu on hover */
-    .navbar-nav .dropdown:hover .dropdown-menu {
-      display: flex;
-      opacity: 1;
-      visibility: visible;
-      justify-content: center;
-      align-items: flex-start;
-    }
+      /* Show mega menu on hover */
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: flex !important;
+        opacity: 1;
+        visibility: visible;
+        justify-content: center;
+        align-items: flex-start;
+      }
 
-    /* Keep menu open when hovering over it */
-    .navbar-nav .dropdown .dropdown-menu:hover {
-      display: flex;
-      opacity: 1;
-      visibility: visible;
-    }
+      /* Keep menu open when hovering over it */
+      .navbar-nav .dropdown .dropdown-menu:hover {
+        display: flex !important;
+        opacity: 1;
+        visibility: visible;
+      }
 
-    /* Style individual dropdown items in mega menu */
-    .mega-menu-section {
-      flex: 1;
-      max-width: 200px;
-      margin: 0 2rem;
-    }
+      /* Style individual dropdown items in mega menu */
+      .mega-menu-section {
+        flex: 1;
+        max-width: 200px;
+        margin: 0 2rem;
+      }
 
-    .mega-menu-section h6 {
-      font-weight: bold;
-      color: #7B5EA7;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #7B5EA7;
-    }
+      .mega-menu-section h6 {
+        font-weight: bold;
+        color: #7B5EA7;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #7B5EA7;
+      }
 
-    .mega-menu-section .dropdown-item {
-      padding: 0.5rem 0;
-      border: none;
-      background: transparent;
-      color: #2D2D2D;
-      transition: all 0.2s ease;
-      font-size: 0.95rem;
-    }
+      .mega-menu-section .dropdown-item {
+        padding: 0.5rem 0;
+        border: none;
+        background: transparent;
+        color: #2D2D2D;
+        transition: all 0.2s ease;
+        font-size: 0.95rem;
+      }
 
-    .mega-menu-section .dropdown-item:hover {
-      background: rgba(123, 94, 167, 0.1);
-      color: #7B5EA7;
-      padding-left: 1rem;
-    }
+      .mega-menu-section .dropdown-item:hover {
+        background: rgba(123, 94, 167, 0.1);
+        color: #7B5EA7;
+        padding-left: 1rem;
+      }
 
-    /* Prevent Bootstrap default dropdown behavior on desktop */
-    .navbar-nav .dropdown-toggle::after {
-      display: none;
-    }
+      /* Prevent Bootstrap default dropdown behavior on desktop */
+      .navbar-nav .dropdown-toggle::after {
+        display: none;
+      }
 
-    /* Ensure dropdown links work normally on desktop */
-    .navbar-nav .dropdown > .nav-link {
-      pointer-events: auto;
+      /* Ensure dropdown links work normally on desktop */
+      .navbar-nav .dropdown > .nav-link {
+        pointer-events: auto;
+      }
+
+      /* Disable Bootstrap dropdown JS on desktop */
+      .navbar-nav .dropdown-toggle[data-bs-toggle="dropdown"] {
+        pointer-events: none;
+      }
+      
+      .navbar-nav .dropdown-toggle {
+        pointer-events: auto;
+      }
     }
-  }
   </style>
 </head>
 <body>
@@ -671,63 +680,41 @@
 document.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
 
-  function initDesktopBehavior() {
+  function initBehavior() {
     dropdowns.forEach(dropdown => {
       const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
       const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-      let hoverTimeout;
 
       if (window.innerWidth >= 992) {
-        // Prevent Bootstrap dropdown toggle on desktop
+        // Desktop: Prevent Bootstrap dropdown and use CSS hover
         dropdownToggle.addEventListener('click', function(e) {
           e.preventDefault();
-          // Navigate to the href instead
+          e.stopPropagation();
+          // Navigate to href on desktop click
           if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
             window.location.href = this.getAttribute('href');
           }
         });
-
-        // Clear any existing listeners
-        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
-
-        // Add hover events
-        dropdown._mouseenterHandler = function() {
-          clearTimeout(hoverTimeout);
-          dropdownMenu.style.display = 'flex';
-          dropdownMenu.style.opacity = '1';
-          dropdownMenu.style.visibility = 'visible';
-        };
-
-        dropdown._mouseleaveHandler = function() {
-          hoverTimeout = setTimeout(() => {
-            dropdownMenu.style.display = 'none';
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-          }, 200);
-        };
-
-        dropdown.addEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.addEventListener('mouseleave', dropdown._mouseleaveHandler);
-      } else {
-        // Mobile behavior - ensure Bootstrap dropdowns work
-        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
         
-        // Reset dropdown styles for mobile
+        // Reset any inline styles that might interfere
         dropdownMenu.style.display = '';
         dropdownMenu.style.opacity = '';
         dropdownMenu.style.visibility = '';
+      } else {
+        // Mobile: Allow Bootstrap dropdown to work normally
+        dropdownToggle.removeEventListener('click', arguments.callee);
       }
     });
   }
 
   // Initialize on load
-  initDesktopBehavior();
+  initBehavior();
 
   // Re-initialize on resize
+  let resizeTimeout;
   window.addEventListener('resize', function() {
-    setTimeout(initDesktopBehavior, 100);
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initBehavior, 150);
   });
 });
 </script>

@@ -83,15 +83,15 @@
         margin-top: 0;
         padding: 2rem 0;
         z-index: 1000;
-        display: none;
+        display: none !important;
         opacity: 0;
         visibility: hidden;
-        transition: all 0.3s ease;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
       }
       
       /* Show mega menu on hover */
       .navbar-nav .dropdown:hover .dropdown-menu {
-        display: flex;
+        display: flex !important;
         opacity: 1;
         visibility: visible;
         justify-content: center;
@@ -100,7 +100,7 @@
       
       /* Keep menu open when hovering over it */
       .navbar-nav .dropdown .dropdown-menu:hover {
-        display: flex;
+        display: flex !important;
         opacity: 1;
         visibility: visible;
       }
@@ -142,6 +142,15 @@
       
       /* Ensure dropdown links work normally on desktop */
       .navbar-nav .dropdown > .nav-link {
+        pointer-events: auto;
+      }
+
+      /* Disable Bootstrap dropdown JS on desktop */
+      .navbar-nav .dropdown-toggle[data-bs-toggle="dropdown"] {
+        pointer-events: none;
+      }
+      
+      .navbar-nav .dropdown-toggle {
         pointer-events: auto;
       }
     }
@@ -948,63 +957,41 @@
 document.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
 
-  function initDesktopBehavior() {
+  function initBehavior() {
     dropdowns.forEach(dropdown => {
       const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
       const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-      let hoverTimeout;
 
       if (window.innerWidth >= 992) {
-        // Prevent Bootstrap dropdown toggle on desktop
+        // Desktop: Prevent Bootstrap dropdown and use CSS hover
         dropdownToggle.addEventListener('click', function(e) {
           e.preventDefault();
-          // Navigate to the href instead
+          e.stopPropagation();
+          // Navigate to href on desktop click
           if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
             window.location.href = this.getAttribute('href');
           }
         });
-
-        // Clear any existing listeners
-        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
-
-        // Add hover events
-        dropdown._mouseenterHandler = function() {
-          clearTimeout(hoverTimeout);
-          dropdownMenu.style.display = 'flex';
-          dropdownMenu.style.opacity = '1';
-          dropdownMenu.style.visibility = 'visible';
-        };
-
-        dropdown._mouseleaveHandler = function() {
-          hoverTimeout = setTimeout(() => {
-            dropdownMenu.style.display = 'none';
-            dropdownMenu.style.opacity = '0';
-            dropdownMenu.style.visibility = 'hidden';
-          }, 200);
-        };
-
-        dropdown.addEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.addEventListener('mouseleave', dropdown._mouseleaveHandler);
-      } else {
-        // Mobile behavior - ensure Bootstrap dropdowns work
-        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
-        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
         
-        // Reset dropdown styles for mobile
+        // Reset any inline styles that might interfere
         dropdownMenu.style.display = '';
         dropdownMenu.style.opacity = '';
         dropdownMenu.style.visibility = '';
+      } else {
+        // Mobile: Allow Bootstrap dropdown to work normally
+        dropdownToggle.removeEventListener('click', arguments.callee);
       }
     });
   }
 
   // Initialize on load
-  initDesktopBehavior();
+  initBehavior();
 
   // Re-initialize on resize
+  let resizeTimeout;
   window.addEventListener('resize', function() {
-    setTimeout(initDesktopBehavior, 100);
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(initBehavior, 150);
   });
 });
 </script>
