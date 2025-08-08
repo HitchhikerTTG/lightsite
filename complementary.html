@@ -204,6 +204,20 @@
         position: relative;
         z-index: 1000;
       }
+
+      /* Mega menu images */
+      .mega-menu-image {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+      }
+
+      .mega-menu-section:hover .mega-menu-image {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -316,14 +330,30 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="mega-menu-section">
-                  <h6>Accessories</h6>
-                  <a class="dropdown-item" href="/complementary.html#underpads">Bed Protection</a>
-                  <a class="dropdown-item" href="/complementary.html#wipes">Cleansing Wipes</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Accessories</h6>
+                      <p class="small text-muted mb-2">Essential bed protection and cleansing solutions for complete care routines.</p>
+                      <a class="dropdown-item" href="/complementary.html#underpads">Bed Protection</a>
+                      <a class="dropdown-item" href="/complementary.html#wipes">Cleansing Wipes</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/IDDU.png" alt="Accessories" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
                 <div class="mega-menu-section">
-                  <h6>Personal Care</h6>
-                  <a class="dropdown-item" href="/complementary.html#cosmetics">Skin Care</a>
-                  <a class="dropdown-item" href="/complementary.html#shower">Bath Accessories</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Personal Care</h6>
+                      <p class="small text-muted mb-2">Gentle skin care products and bathing accessories for maintaining comfort.</p>
+                      <a class="dropdown-item" href="/complementary.html#cosmetics">Skin Care</a>
+                      <a class="dropdown-item" href="/complementary.html#shower">Bath Accessories</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/Sensitive.png" alt="Personal Care" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

@@ -203,6 +203,20 @@
         position: relative;
         z-index: 1000;
       }
+
+      /* Mega menu images */
+      .mega-menu-image {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+      }
+
+      .mega-menu-section:hover .mega-menu-image {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -252,14 +266,30 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="mega-menu-section">
-                  <h6>Light to Moderate</h6>
-                  <a class="dropdown-item" href="/men.html#pads">Guards & Pads</a>
-                  <a class="dropdown-item" href="/men.html#shields">Shields</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Light to Moderate</h6>
+                      <p class="small text-muted mb-2">Discreet masculine protection for daily confidence and active lifestyles.</p>
+                      <a class="dropdown-item" href="/men.html#pads">Guards & Pads</a>
+                      <a class="dropdown-item" href="/men.html#shields">Shields</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/IDDPM.png" alt="Light to Moderate Protection" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
                 <div class="mega-menu-section">
-                  <h6>Heavy Protection</h6>
-                  <a class="dropdown-item" href="/men.html#pants">Underwear</a>
-                  <a class="dropdown-item" href="/men.html#briefs">Protective Briefs</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Heavy Protection</h6>
+                      <p class="small text-muted mb-2">Full protection underwear for maximum security and comfort all day long.</p>
+                      <a class="dropdown-item" href="/men.html#pants">Underwear</a>
+                      <a class="dropdown-item" href="/men.html#briefs">Protective Briefs</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/IDDPantsM.png" alt="Heavy Protection" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

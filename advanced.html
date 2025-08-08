@@ -202,6 +202,20 @@
         position: relative;
         z-index: 1000;
       }
+
+      /* Mega menu images */
+      .mega-menu-image {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        border-radius: 8px;
+        opacity: 0.8;
+        transition: opacity 0.2s ease;
+      }
+
+      .mega-menu-section:hover .mega-menu-image {
+        opacity: 1;
+      }
     }
   </style>
 </head>
@@ -293,14 +307,30 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="mega-menu-section">
-                  <h6>Protective Wear</h6>
-                  <a class="dropdown-item" href="/advanced.html#pants">Protective Pants</a>
-                  <a class="dropdown-item" href="/advanced.html#slip">Slip-On</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Protective Wear</h6>
+                      <p class="small text-muted mb-2">Complete all-in-one protection systems for complex incontinence management.</p>
+                      <a class="dropdown-item" href="/advanced.html#pants">Protective Pants</a>
+                      <a class="dropdown-item" href="/advanced.html#slip">Slip-On</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/IDEPants.png" alt="Protective Wear" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
                 <div class="mega-menu-section">
-                  <h6>Specialized</h6>
-                  <a class="dropdown-item" href="/advanced.html#form">Formed Pads</a>
-                  <a class="dropdown-item" href="/advanced.html#net">Net Fixation</a>
+                  <div class="d-flex align-items-start">
+                    <div class="flex-grow-1">
+                      <h6>Specialized</h6>
+                      <p class="small text-muted mb-2">Professional-grade anatomical solutions for institutional and home care.</p>
+                      <a class="dropdown-item" href="/advanced.html#form">Formed Pads</a>
+                      <a class="dropdown-item" href="/advanced.html#net">Net Fixation</a>
+                    </div>
+                    <div class="ms-3">
+                      <img src="/cat/IDEL.png" alt="Specialized Products" class="mega-menu-image">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
