@@ -667,55 +667,67 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// Improve dropdown behavior on desktop
+// Mega menu behavior
 document.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
 
-  dropdowns.forEach(dropdown => {
-    const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
-    const dropdownMenu = dropdown.querySelector('.dropdown-menu');
-    let hoverTimeout;
-
-    // Desktop behavior
-    if (window.innerWidth >= 992) {
-      // Prevent Bootstrap dropdown behavior on desktop
-      dropdownToggle.removeAttribute('data-bs-toggle');
-
-      // Handle hover events
-      dropdown.addEventListener('mouseenter', function() {
-        clearTimeout(hoverTimeout);
-        dropdownMenu.style.display = 'flex';
-        dropdownMenu.style.opacity = '1';
-        dropdownMenu.style.visibility = 'visible';
-      });
-
-      dropdown.addEventListener('mouseleave', function() {
-        hoverTimeout = setTimeout(() => {
-          dropdownMenu.style.display = 'none';
-          dropdownMenu.style.opacity = '0';
-          dropdownMenu.style.visibility = 'hidden';
-        }, 150);
-      });
-
-      // Allow clicking on main nav links
-      dropdownToggle.addEventListener('click', function(e) {
-        // Allow normal navigation
-        window.location.href = this.getAttribute('href');
-      });
-    }
-  });
-
-  // Re-enable Bootstrap dropdowns on mobile
-  window.addEventListener('resize', function() {
-    const dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+  function initDesktopBehavior() {
     dropdowns.forEach(dropdown => {
-      const dropdownToggle = dropdown.querySelector('.nav-link');
-      if (window.innerWidth < 992) {
-        dropdownToggle.setAttribute('data-bs-toggle', 'dropdown');
+      const dropdownToggle = dropdown.querySelector('[data-bs-toggle="dropdown"]');
+      const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+      let hoverTimeout;
+
+      if (window.innerWidth >= 992) {
+        // Prevent Bootstrap dropdown toggle on desktop
+        dropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Navigate to the href instead
+          if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+            window.location.href = this.getAttribute('href');
+          }
+        });
+
+        // Clear any existing listeners
+        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
+        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
+
+        // Add hover events
+        dropdown._mouseenterHandler = function() {
+          clearTimeout(hoverTimeout);
+          dropdownMenu.style.display = 'flex';
+          dropdownMenu.style.opacity = '1';
+          dropdownMenu.style.visibility = 'visible';
+        };
+
+        dropdown._mouseleaveHandler = function() {
+          hoverTimeout = setTimeout(() => {
+            dropdownMenu.style.display = 'none';
+            dropdownMenu.style.opacity = '0';
+            dropdownMenu.style.visibility = 'hidden';
+          }, 200);
+        };
+
+        dropdown.addEventListener('mouseenter', dropdown._mouseenterHandler);
+        dropdown.addEventListener('mouseleave', dropdown._mouseleaveHandler);
       } else {
-        dropdownToggle.removeAttribute('data-bs-toggle');
+        // Mobile behavior - ensure Bootstrap dropdowns work
+        dropdown.removeEventListener('mouseenter', dropdown._mouseenterHandler);
+        dropdown.removeEventListener('mouseleave', dropdown._mouseleaveHandler);
+        
+        // Reset dropdown styles for mobile
+        dropdownMenu.style.display = '';
+        dropdownMenu.style.opacity = '';
+        dropdownMenu.style.visibility = '';
       }
     });
+  }
+
+  // Initialize on load
+  initDesktopBehavior();
+
+  // Re-initialize on resize
+  window.addEventListener('resize', function() {
+    setTimeout(initDesktopBehavior, 100);
   });
 });
 </script>
