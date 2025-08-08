@@ -1,181 +1,477 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Feel Confident Every Day | iD</title>
+  <title>iD Overview | Complete Range of Incontinence Solutions</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-/* Font-face definitions as before */
-@font-face {
-  font-family: 'GothamRounded';
-  src: url('fonts/GothamRounded-Medium.otf') format('opentype');
-}
-@font-face {
-  font-family: 'GothamRoundedBold';
-  src: url('fonts/GothamRoundedBold_21016.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'NexaRustScript';
-  src: url('fonts/NexaRustScriptR-00.otf') format('opentype');
-}
-body {
-  font-family: 'GothamRounded', Arial, sans-serif;
-}
-h1, h2, h3 {
-  font-family: 'GothamRoundedBold', Arial, sans-serif;
-}
-.accent-text {
-  font-family: 'NexaRustScript', cursive;
-}
-
-/* Responsive product image styling */
-.product-image {
-  max-width: 100%;       /* scale down on mobile */
-  height: auto;          /* keep aspect ratio */
-  display: block;
-  margin: 0 auto 1rem;   /* center with bottom space */
-}
-
-@media (min-width: 768px) {
-  .product-image {
-    max-width: 200px;    /* limit size on larger screens */
-    margin-right: 1rem;  /* space next to text */
-  }
-}
-</style>
-
+    body {
+      background-color: #FAFAFA;
+      color: #2D2D2D;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #003366 0%, #009FDB 100%);
+      color: white;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="40" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="70" cy="20" r="0.8" fill="rgba(255,255,255,0.06)"/><circle cx="90" cy="60" r="1.2" fill="rgba(255,255,255,0.04)"/></svg>') repeat;
+      pointer-events: none;
+    }
+    
+    .range-badge {
+      font-size: 0.75rem;
+      padding: 0.3em 0.6em;
+      border-radius: 0.5em;
+      font-weight: 600;
+    }
+    
+    .essential { background-color: #009FDB; color: white; }
+    .discreet { background-color: #7B5EA7; color: white; }
+    .sensitive { background-color: #FF9F45; color: white; }
+    .advanced { background-color: #28a745; color: white; }
+    .junior { background-color: #e91e63; color: white; }
+    .complementary { background-color: #4caf50; color: white; }
+    .men { background-color: #003366; color: white; }
+    
+    .product-range-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .product-range-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .card-header-custom {
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    .card-body-custom {
+      padding: 1.5rem;
+    }
+    
+    .icon-placeholder {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .stats-section {
+      background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 60px 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #009FDB;
+      display: block;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #7B5EA7 0%, #9575cd 100%);
+      color: white;
+      padding: 80px 0;
+    }
+    
+    .btn-custom {
+      background-color: white;
+      color: #7B5EA7;
+      border: 2px solid white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-custom:hover {
+      background-color: transparent;
+      color: white;
+      border-color: white;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .feature-item {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #009FDB, #7B5EA7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      color: white;
+      font-size: 2rem;
+    }
+  </style>
 </head>
-<body style="font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #FAFAFA; color: #2D2D2D;">
+<body>
 
-  <!-- HERO -->
-  <header class="text-center p-4" style="background-color: #003366; color: #FFFFFF;">
-    <div class="container" style="max-width: 800px; margin: auto;">
-      <h1 style="font-size: 2.2rem; font-weight: bold;">Feel Confident, Stay Active</h1>
-      <p style="font-size: 1.1rem;">Solutions for little leaks, sudden urges, or overnight security -- we help you live without limits.</p>
-      <a href="#ranges" class="btn" style="background-color: #009FDB; color: white; margin-top: 1rem;">Find Your Solution</a>
-    </div>
-  </header>
-
-  <!-- INTRO -->
-  <section class="p-4 text-center">
-    <div class="container" style="max-width: 800px;">
-      <h2 style="font-size: 1.8rem; color: #003366;">Your Needs, Our Priority</h2>
-      <p style="font-size: 1.05rem;">We offer three tailored ranges built around real-life benefits -- discover which one brings you confidence, comfort, and care.</p>
-    </div>
-  </section>
-  <div class="row">
-  <section class="p-4 text-center" style="background-color: #E6F7FB;">
-  <div class="container" style="max-width: 900px;">
-    <h2 style="font-size: 1.8rem; color: #003366;">What Are You Experiencing?</h2>
-    <p style="font-size: 1rem; max-width: 700px; margin: auto;">
-      Everyone’s experience is different we’re here to help you figure out what you need. Choose the situation that sounds most like you, and we’ll guide you toward solutions that fit.
-    </p>
-    <div class="row text-center mt-4">
-  <div class="col-md-4 mb-3">
-    <a href="products.html#light" class="btn btn-outline-info w-100 p-3">
-      <h3>Little Discomforts</h3>
-      <p>Do you sometimes lose a few drops of urine when you laugh, cough, sneeze, or do some physical exercise?</p>
-    </a>
-  </div>
-  <div class="col-md-4 mb-3">
-    <a href="products.html#medium" class="btn btn-outline-primary w-100 p-3">
-      <h3>Bladder Weakness</h3>
-      <p>Do you sometimes have small losses and occasionally have accidents because you are unable to reach the toilet on time?</p>
-    </a>
-  </div>
-
-  <div class="col-md-4 mb-3">
-    <a href="products.html#trueincontinence" class="btn btn-outline-danger w-100 p-3">
-      <h3>True Incontinence</h3>
-      <p>Does your bladder empty without warning or sensation, or are you unaware you are passing urine?</p>
-    </a>
-  </div>
-    </div>
-    <div class="row">
-  <div class="col" style="opacity: 0.7; margin-top: 1rem;">
-    <a href="products.html#complementary" class="btn btn-outline-warning w-100 p-3">
-      <h4 style="font-size:1.1rem;">Complementary Protection</h4>
-      <p style="font-size:0.9rem;">For protecting beds or chairs - whether for yourself or someone you care for. Gentle, discreet, and practical solutions.</p>
-    </a>
-  </div>
-  </div>
-</div>
-  </div>
-</section>
-
-
-
-
-  <!-- RANGES OVERVIEW -->
-  <section id="ranges" class="p-4">
-    <div class="container" style="max-width: 1000px;">
-      <h2 class="text-center" style="font-size: 1.8rem; color: #003366;">MEET OUR THREE NEW TAILORED-MADE RANGES</h2>
-      <p style="font-size: 1.05rem; max-width: 800px; margin: 2rem auto; text-align: center;">
- At iD, we understand that dealing with incontinence is deeply personal. That’s why we’ve tailored our three
-new ranges to meet your specific needs with care. <br> Our commitment to protection, discretion,
-and skin integrity ensures that each product not only meets but truly exceeds your expectations.
-</p>
-<div class="row gx-2">
-      <div class="col-md-4 mb-4" >
-      <div class="p-3" style="background-color: #e1edf5; border-radius: 10px;">
-  <img src="cat/Essential.png" alt="Essential Range" class="range-image mb-2" style="width: 100%;
-  height: auto; object-fit: cover; margin-bottom: 0.5rem;">
-  <p style="font-size: 1rem;">A no-frills range for those seeking reliable performance and accessible protection.</p>
-  <span style="display: inline-block; width: 40px; height: 4px; background-color: #009FDB; margin-bottom: 10px;"></span><br>
-  <a href="essential.html" class="btn btn-sm" style="background-color: #009FDB; color: white;">Explore Essential</a>
-</div>
-</div>
-        <div class="col-md-4 mb-4">
-        <div class="p-3" style="background-color: #e3e2ec; border-radius: 10px;">
-          <img src="cat/Discreet.png" alt="Discreet Range" class="range-image mb-2" style="width: 100%;
-  height: auto; object-fit: cover; margin-bottom: 0.5rem;">
-          <p style="font-size: 1rem;">Created for light to moderate incontinence, offering discretion good fit and comfort to active individuals who value control and confidence.</p>
-          <span style="display: inline-block; width: 40px; height: 4px; background-color: #FF7BAC; margin-bottom: 10px;"></span><br>
-          <a href="discreet.html" class="btn btn-sm" style="background-color: #FF7BAC; color: white;">Explore Discreet</a>
-        </div></div>
-        <div class="col-md-4 mb-4">
-        <div class="p-3" style="background-color: #e5f3f1; border-radius: 10px;">
-          <img src="cat/Sensitive.png" alt="Sensitive Range" class="range-image mb-2" style="width: 100%;
-  height: auto; object-fit: cover; margin-bottom: 0.5rem;" >
-          <p style="font-size: 1rem;">Providing extra protection for the skin,this range is designed for heavy incontinence, helping to prevent irritation and maintain skin health</p>
-          <span style="display: inline-block; width: 40px; height: 4px; background-color: #FF9F45; margin-bottom: 10px;"></span><br>
-          <a href="sensitive.html" class="btn btn-sm" style="background-color: #FF9F45; color: white;">Explore Sensitive</a>
-        </div>
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-4">iD Complete Range</h1>
+        <p class="lead mb-4">Discover confidence in every moment with our comprehensive collection of incontinence solutions. From light protection to advanced needs, we have the right product for every lifestyle.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="#product-ranges" class="btn btn-custom">Explore Products</a>
+          <a href="https://blog.id-direct.com/find-my-solution/" class="btn btn-outline-light">Find My Solution</a>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- BRAND PROMISE -->
-  <section class="p-4 text-center">
-    <div class="container" style="max-width: 800px;">
-      <h2 style="font-size: 1.8rem; color: #003366;">Why Trust iD?</h2>
-      <p style="font-size: 1.05rem;">With over 45 years of expertise, iD combines cutting-edge technology with care. Our commitment to sustainability and skin health means you can choose confidently -- for yourself and the planet.</p>
-      <span style="display: inline-block; width: 40px; height: 4px; background-color: #FF9F45; margin-bottom: 10px;"></span><br>
-          <a href="about.html" class="btn btn-sm" style="background-color: #FF9F45; color: white;">Learn more about iD</a>
+<!-- STATS SECTION -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">45+</span>
+          <p class="mb-0">Years of Expertise</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">100+</span>
+          <p class="mb-0">Product Variants</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <p class="mb-0">Protection Available</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <span class="stat-number">1M+</span>
+          <p class="mb-0">Happy Customers</p>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CALL TO ACTION -->
-  <section class="p-4 text-center" style="background-color: #E6F7FB;">
-    <div class="container" style="max-width: 800px;">
-      <h2 style="font-size: 1.8rem; color: #003366;">Need Help Choosing?</h2>
-      <p style="font-size: 1.05rem;">Not sure where to start? Our product finder helps you match your needs with the right solution.</p>
-      <a href="https://blog.id-direct.com/find-my-solution/" class="btn" style="background-color: #009FDB; color: white; margin-top: 1rem;">Try Our Product Finder</a>
+<!-- PRODUCT RANGES SECTION -->
+<section id="product-ranges" class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3">Choose Your Range</h2>
+      <p class="lead">Each range is carefully designed for specific needs and lifestyles</p>
     </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="text-center p-4" style="font-size: 0.85rem; background-color: #003366; color: #FFFFFF;">
-    <div class="container" style="max-width: 1000px;">
-      <p>© iD by Ontex | <a href="https://www.id-direct.com" style="color: #FFFFFF; text-decoration: underline;">www.id-direct.com</a></p>
-      <p>Korte Keppestraat 21, 9320 Aalst, Belgium</p>
+    
+    <div class="row g-4">
+      
+      <!-- Women's Products -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder discreet">👩</div>
+            <h3 class="h4 mb-2">Women's Protection</h3>
+            <span class="range-badge discreet">Discreet Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Designed specifically for female anatomy with ultra-thin, discreet protection from light to heavy needs.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Ultra Mini to Maxi protection</li>
+              <li>✓ Anatomically designed</li>
+              <li>✓ Completely discreet</li>
+              <li>✓ Odor control technology</li>
+            </ul>
+            <a href="women.html" class="btn btn-outline-primary w-100">Explore Women's Range</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Men's Products -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder men">👨</div>
+            <h3 class="h4 mb-2">Men's Protection</h3>
+            <span class="range-badge men">Men's Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Masculine protection designed for male anatomy and active lifestyle, from guards to full underwear.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Guards & shields</li>
+              <li>✓ Protective underwear</li>
+              <li>✓ Designed for men</li>
+              <li>✓ Active lifestyle friendly</li>
+            </ul>
+            <a href="men.html" class="btn btn-outline-primary w-100">Explore Men's Range</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Essential Range -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder essential">⭐</div>
+            <h3 class="h4 mb-2">iD Essential</h3>
+            <span class="range-badge essential">Essential Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Reliable, everyday protection with proven performance for moderate to heavy incontinence needs.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Proven absorption</li>
+              <li>✓ All-day comfort</li>
+              <li>✓ Great value</li>
+              <li>✓ Trusted performance</li>
+            </ul>
+            <a href="essential.html" class="btn btn-outline-primary w-100">Explore Essential Range</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sensitive Range -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder sensitive">🤲</div>
+            <h3 class="h4 mb-2">iD Sensitive</h3>
+            <span class="range-badge sensitive">Sensitive Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Extra gentle care for sensitive skin with dermatologically tested, hypoallergenic materials.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Hypoallergenic materials</li>
+              <li>✓ Dermatologically tested</li>
+              <li>✓ Extra soft touch</li>
+              <li>✓ Skin-friendly design</li>
+            </ul>
+            <a href="sensitive.html" class="btn btn-outline-primary w-100">Explore Sensitive Range</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Advanced Needs -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder advanced">🛡️</div>
+            <h3 class="h4 mb-2">Advanced Needs</h3>
+            <span class="range-badge advanced">Advanced Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Maximum protection for heavy incontinence with specialized products for complex care needs.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Maximum absorption</li>
+              <li>✓ Professional-grade</li>
+              <li>✓ Specialized designs</li>
+              <li>✓ 24/7 protection</li>
+            </ul>
+            <a href="advanced.html" class="btn btn-outline-primary w-100">Explore Advanced Range</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Juniors & Baby -->
+      <div class="col-lg-4 col-md-6">
+        <div class="product-range-card">
+          <div class="card-header-custom">
+            <div class="icon-placeholder junior">👶</div>
+            <h3 class="h4 mb-2">Juniors & Baby</h3>
+            <span class="range-badge junior">Junior Range</span>
+          </div>
+          <div class="card-body-custom">
+            <p class="mb-3">Gentle protection for babies and children, designed with growing families in mind.</p>
+            <ul class="list-unstyled mb-4">
+              <li>✓ Baby nappies & pants</li>
+              <li>✓ Junior protection</li>
+              <li>✓ Swimming protection</li>
+              <li>✓ Age-appropriate designs</li>
+            </ul>
+            <a href="juniors.html" class="btn btn-outline-primary w-100">Explore Junior Range</a>
+          </div>
+        </div>
+      </div>
+      
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- COMPLEMENTARY PRODUCTS SECTION -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h2 class="h3 mb-4">Complete Your Care Routine</h2>
+        <p class="mb-4">Enhance your protection with our complementary products including bed protection, skin care, and cleansing solutions.</p>
+        <div class="row g-3 mb-4">
+          <div class="col-6">
+            <div class="feature-item">
+              <h6>Bed Protection</h6>
+              <p class="small mb-0">Underpads in multiple sizes</p>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="feature-item">
+              <h6>Personal Care</h6>
+              <p class="small mb-0">Skin care & cleansing</p>
+            </div>
+          </div>
+        </div>
+        <a href="complementary.html" class="btn btn-primary">
+          <span class="badge complementary me-2">Complementary</span>
+          Explore All Products
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <div class="text-center">
+          <div class="feature-icon complementary">🛏️</div>
+          <h4>360° Protection</h4>
+          <p>Complete care solutions for every aspect of incontinence management</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-6 fw-bold mb-3">Why Choose iD?</h2>
+      <p class="lead">Advanced technology meets compassionate care</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🔬</div>
+        <h4>Advanced Technology</h4>
+        <p>Cutting-edge absorption technology with odor control and skin-friendly materials for maximum comfort and confidence.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">🌱</div>
+        <h4>Sustainable Commitment</h4>
+        <p>100% renewable energy in production, responsible materials, and reduced environmental impact across our entire range.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">👥</div>
+        <h4>Expert Support</h4>
+        <p>45+ years of expertise with free consultation and personalized recommendations to help you find the perfect solution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 fw-bold mb-4">Ready to Find Your Perfect Solution?</h2>
+        <p class="lead mb-4">Take our quick assessment to get personalized product recommendations based on your specific needs and lifestyle.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="https://blog.id-direct.com/find-my-solution/" class="btn btn-custom btn-lg">Start Product Finder</a>
+          <a href="tel:08003896185" class="btn btn-outline-light btn-lg">
+            📞 Get Expert Advice
+          </a>
+        </div>
+        <div class="mt-4">
+          <small class="opacity-75">Free consultation: 0800 389 6185</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="fw-bold mb-3">iD by Ontex</h5>
+        <p class="mb-3">Trusted incontinence solutions for over 45 years. We're committed to helping you live confidently with products designed for your comfort, dignity, and peace of mind.</p>
+        <div class="d-flex gap-3">
+          <span class="badge essential">Essential</span>
+          <span class="badge discreet">Discreet</span>
+          <span class="badge sensitive">Sensitive</span>
+          <span class="badge advanced">Advanced</span>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="women.html" class="text-light text-decoration-none">Women's Products</a></li>
+          <li><a href="men.html" class="text-light text-decoration-none">Men's Products</a></li>
+          <li><a href="juniors.html" class="text-light text-decoration-none">Juniors & Baby</a></li>
+          <li><a href="complementary.html" class="text-light text-decoration-none">Complementary</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Support</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://blog.id-direct.com/find-my-solution/" class="text-light text-decoration-none">Product Finder</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About iD</a></li>
+          <li><a href="tel:08003896185" class="text-light text-decoration-none">Contact: 0800 389 6185</a></li>
+          <li><a href="https://www.id-direct.com" class="text-light text-decoration-none">www.id-direct.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">&copy; 2024 iD by Ontex. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small class="text-muted">Korte Keppestraat 21, 9320 Aalst, Belgium</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
-
-
