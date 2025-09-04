@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iD – Discreet Support for Light Incontinence</title>
+  <meta name="description" content="Request your free sample box for light incontinence. Discreet pads and pants, plain packaging, no obligation. Insurance support available." />
+  <meta property="og:title" content="iD – Discreet Support for Light Incontinence" />
+  <meta property="og:description" content="Free, discreet sample box. Try at home without obligation. Insurance support available." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5a0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#0ea5a0; /* teal */
+      --brand-600:#0b8d89;
+      --brand-700:#097b78;
+      --ink:#0f172a;   /* slate-900 */
+      --slate-700:#334155;
+      --slate-600:#475569;
+      --slate-500:#64748b;
+      --slate-300:#cbd5e1;
+      --slate-200:#e2e8f0;
+      --slate-100:#f1f5f9;
+      --bg:#ffffff;
+      --accent:#e8faf8; /* pale brand */
+      --radius:16px;
+      --shadow:0 6px 24px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    a{color:var(--brand);text-decoration:none}
+    .container{width:100%;max-width:1024px;margin:0 auto;padding:0 16px}
+    .btn{display:inline-flex;gap:.5rem;align-items:center;justify-content:center;padding:14px 18px;border-radius:999px;background:var(--brand);color:#fff;font-weight:600;border:none;box-shadow:var(--shadow);transition:transform .05s ease, background .2s ease}
+    .btn:hover{background:var(--brand-600)}
+    .btn:active{transform:translateY(1px)}
+    .btn-outline{background:#fff;color:var(--brand);border:1px solid var(--brand);box-shadow:none}
+    .pill{display:inline-block;background:var(--accent);color:var(--brand-700);padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:600}
+    header.hero{padding:32px 0 8px;background:linear-gradient(180deg, var(--accent), #fff)}
+    .hero h1{font-size:1.9rem;line-height:1.2;margin:8px 0 12px}
+    .hero p.lead{font-size:1.05rem;color:var(--slate-600);margin:0 0 18px}
+    .hero .cta{display:flex;flex-direction:column;gap:10px}
+    .trustbar{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+    .trust{background:#fff;border:1px solid var(--slate-200);border-radius:12px;padding:10px 12px;text-align:center}
+    .trust b{display:block;font-size:1.1rem}
+
+    /* sections */
+    section{padding:26px 0}
+    section .section-title{font-size:1.35rem;margin:0 0 10px}
+    .muted{color:var(--slate-600)}
+
+    /* feature cards */
+    .cards{display:grid;grid-template-columns:1fr;gap:12px}
+    .card{background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+    .card h3{margin:4px 0 6px;font-size:1.05rem}
+    .card p{margin:0;color:var(--slate-600);font-size:.98rem}
+    .card .icon{width:44px;height:44px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:12px}
+
+    /* stepper */
+    .stepper{display:grid;grid-template-columns:1fr;gap:10px}
+    .step{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--slate-200);border-radius:12px;padding:14px}
+    .badge{flex:0 0 28px;height:28px;border-radius:999px;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+    /* highlight strip */
+    .bleed{background:var(--accent)}
+
+    /* testimonials */
+    .testi{display:grid;grid-template-columns:1fr;gap:12px}
+    .quote{background:#fff;border:1px solid var(--slate-200);border-radius:14px;padding:14px;box-shadow:var(--shadow);font-size:.98rem}
+    .quote b{display:block;margin-top:8px;font-size:.9rem;color:var(--slate-700)}
+
+    /* form */
+    .form-wrap{background:#fff;border:1px solid var(--slate-200);border-radius:20px;padding:16px;box-shadow:var(--shadow)}
+    form{display:grid;gap:12px}
+    label{font-weight:600;font-size:.92rem}
+    .help{font-size:.88rem;color:var(--slate-600)}
+    input,select,textarea{width:100%;padding:12px;border:1px solid var(--slate-300);border-radius:12px;font:inherit}
+    input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(14,165,160,.15)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .switch{display:flex;gap:10px}
+    .switch button{flex:1}
+    .consent{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--slate-600)}
+
+    /* sticky mobile cta */
+    .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--slate-200);padding:10px 12px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+    .sticky-cta .btn{flex:1}
+
+    /* larger screens */
+    @media (min-width: 680px){
+      .hero h1{font-size:2.4rem}
+      .hero .cta{flex-direction:row;align-items:center}
+      .trustbar{grid-template-columns:repeat(4,1fr)}
+      .cards{grid-template-columns:repeat(3,1fr)}
+      .grid-2{grid-template-columns:repeat(2,1fr)}
+      .stepper{grid-template-columns:repeat(2,1fr)}
+      .testi{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <span class="pill">Discreet & supportive</span>
+      <h1>No more worrying about small leaks – discreet solutions for everyday peace of mind</h1>
+      <p class="lead">Even small leaks can feel like a big burden. You don’t have to keep carrying that worry. There are simple, discreet products that fit seamlessly into your life -- so you can focus on your day.</p>
+      <div class="cta">
+        <a href="#form" class="btn" aria-label="Request your free sample box">Request free sample box</a>
+        <a href="#how" class="btn btn-outline" aria-label="How it works">How it works</a>
+      </div>
+      <div class="trustbar" aria-label="Trust indicators">
+        <div class="trust"><b>40+ yrs</b><span class="muted">Ontex expertise</span></div>
+        <div class="trust"><b>Discreet</b><span class="muted">Plain packaging</span></div>
+        <div class="trust"><b>Free</b><span class="muted">Sample box</span></div>
+        <div class="trust"><b>Coverage</b><span class="muted">Insurance possible</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Be prepared, not burdened</h2>
+        <p class="muted">When you know you’re protected, your mind is free again.</p>
+        <div class="cards" role="list">
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🩹</div>
+            <h3>Thin pads</h3>
+            <p>Almost invisible, perfect for light leaks and everyday comfort.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🩲</div>
+            <h3>Pants like underwear</h3>
+            <p>Comfortable, secure and discreet -- keep moving with confidence.</p>
+          </article>
+          <article class="card" role="listitem">
+            <div class="icon" aria-hidden="true">🛏️</div>
+            <h3>Underpads</h3>
+            <p>For restful nights without worry and extra protection at home.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="bleed">
+      <div class="container">
+        <h2 class="section-title">How it works</h2>
+        <div class="stepper" role="list">
+          <div class="step" role="listitem"><span class="badge">1</span>
+            <div><b>Fill out the short form</b><br><span class="muted">Request your free sample box – discreet and without obligation.</span></div>
+          </div>
+          <div class="step" role="listitem"><span class="badge">2</span>
+            <div><b>Optional fast track</b><br><span class="muted">Add more details now; people who do are contacted faster.</span></div>
+          </div>
+          <div class="step" role="listitem"><span class="badge">3</span>
+            <div><b>Personal call</b><br><span class="muted">A friendly advisor will call discreetly to understand your needs.</span></div>
+          </div>
+          <div class="step" role="listitem"><span class="badge">4</span>
+            <div><b>Your solution</b><br><span class="muted">We send samples and explain next steps -- self-pay or prescription.</span></div>
+          </div>
+        </div>
+        <p class="help" style="margin-top:10px">You stay in control. Nothing is sent or decided without your agreement.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Free or covered by insurance -- both are possible</h2>
+        <div class="grid-2">
+          <article class="card">
+            <div class="icon" aria-hidden="true">🛒</div>
+            <h3>Self-pay</h3>
+            <p class="muted">Order and test discreetly at home. Ideal for trying lighter protection.</p>
+          </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">🧾</div>
+            <h3>With prescription</h3>
+            <p class="muted">Your health insurance may cover your products. We guide you step by step and handle the paperwork.</p>
+            <p class="help"><a href="#form" aria-label="Go to form to start prescription process">Start via the form below</a> or go directly to our <a href="/prescription" aria-label="Go to prescription page">prescription page</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bleed">
+      <div class="container">
+        <h2 class="section-title">Discretion, every step of the way</h2>
+        <ul class="muted" style="padding-left:18px;line-height:1.75">
+          <li>Plain packaging -- no logos, no product names on the box.</li>
+          <li>Friendly, non-judgmental support from trained advisors.</li>
+          <li>Your data handled with care and in line with privacy regulations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Voices of reassurance</h2>
+        <div class="testi">
+          <blockquote class="quote">"I thought I’d never relax at work again. With the pads, I stopped thinking about it."<b>Anna, 48</b></blockquote>
+          <blockquote class="quote">"The sample box helped me find what fits best -- now I don’t worry about surprises."<b>Karin, 55</b></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="form">
+      <div class="container">
+        <div class="form-wrap">
+          <h2 class="section-title" style="margin-top:0">Your next step to peace of mind</h2>
+          <p class="muted">It’s just one form, one small action. But it can take away a lot of worry.</p>
+          <form action="#" method="post" novalidate>
+            <div class="row">
+              <div>
+                <label for="firstName">First name</label>
+                <input id="firstName" name="firstName" autocomplete="given-name" required />
+              </div>
+              <div>
+                <label for="lastName">Last name (optional)</label>
+                <input id="lastName" name="lastName" autocomplete="family-name" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="contactChoice">Preferred contact</label>
+                <div class="switch" role="group" aria-label="Preferred contact">
+                  <button type="button" class="btn btn-outline" data-choice="email">Email</button>
+                  <button type="button" class="btn btn-outline" data-choice="phone">Phone</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="emailField" style="display:none">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" />
+            </div>
+            <div id="phoneField" style="display:none">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+
+            <details style="border:1px solid var(--slate-300);border-radius:12px;padding:10px">
+              <summary><b>Optional fast track</b> -- add details now to be contacted faster</summary>
+              <div class="row" style="margin-top:10px">
+                <div>
+                  <label for="zip">ZIP / Postcode</label>
+                  <input id="zip" name="zip" inputmode="numeric" pattern="[0-9\-\s]*" />
+                </div>
+                <div>
+                  <label for="hasRx">Do you have a prescription?</label>
+                  <select id="hasRx" name="hasRx">
+                    <option value="">Select…</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label for="notes">Anything we should know to help you better? (optional)</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="e.g., when leaks occur, preferred product type, sensitivity, etc."></textarea>
+              </div>
+            </details>
+
+            <div class="consent">
+              <input type="checkbox" id="consent" required aria-required="true" />
+              <label for="consent">I agree that my data will be used to contact me about incontinence solutions. You can withdraw consent at any time.</label>
+            </div>
+
+            <button class="btn" type="submit" aria-label="Submit to request a free sample box">Request free sample box</button>
+            <p class="help">Discreet packaging • No obligation • We will call you to find your best fit</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sticky-cta" aria-hidden="true">
+    <span class="muted" style="font-weight:600">Free, discreet samples</span>
+    <a href="#form" class="btn">Get started</a>
+  </div>
+
+  <script>
+    // Simple toggle for preferred contact field
+    (function(){
+      const emailBtn = document.querySelector('[data-choice="email"]');
+      const phoneBtn = document.querySelector('[data-choice="phone"]');
+      const emailField = document.getElementById('emailField');
+      const phoneField = document.getElementById('phoneField');
+
+      function activate(choice){
+        // reset
+        [emailBtn, phoneBtn].forEach(b=>b.classList.remove('active'));
+        emailField.style.display = 'none';
+        phoneField.style.display = 'none';
+        if(choice==='email'){
+          emailBtn.classList.add('active');
+          emailField.style.display = 'block';
+          document.getElementById('email').setAttribute('required','required');
+          document.getElementById('phone').removeAttribute('required');
+        } else {
+          phoneBtn.classList.add('active');
+          phoneField.style.display = 'block';
+          document.getElementById('phone').setAttribute('required','required');
+          document.getElementById('email').removeAttribute('required');
+        }
+      }
+
+      // Defaults to email
+      activate('email');
+      emailBtn.addEventListener('click',()=>activate('email'));
+      phoneBtn.addEventListener('click',()=>activate('phone'));
+
+      // Simple prevent default submit (demo)
+      document.querySelector('form').addEventListener('submit', function(e){
+        // Remove this block when wiring to backend
+        e.preventDefault();
+        alert('Thanks! We\'ve received your request. Our advisor will contact you soon.');
+      });
+    })();
+  </script>
+</body>
+</html>
