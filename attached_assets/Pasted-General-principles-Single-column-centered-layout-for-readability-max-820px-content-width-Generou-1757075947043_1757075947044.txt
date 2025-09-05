@@ -1,0 +1,55 @@
+General principles
+Single-column, centered layout for readability (max 820px content width).
+Generous spacing: each section is a block with 50–70px padding top & bottom, so the reader can breathe.
+Neutral background rhythm: alternate between white and soft grey/soft teal blocks to create visual pauses.
+CTAs = forms (not just buttons), placed every ~3 sections, with visual variation.
+Imagery: lifestyle photos (everyday moments, smiling discreetly, calm, not “clinical”) + product packshots (pads, pants, underpads).
+Module Flow
+1. Hero (white background)
+Left: Headline + subhead + Form 1 (3 fields) in a light card.
+Right: Image placeholder → woman laughing with a friend, natural moment.
+Below: Trust strip with 4 icons: discreet packaging, free samples, everyday products, insurance option.
+2. Empathy Section (soft grey background)
+Wide text block (no form).
+Copy mirrors user’s experience: leaks at work, exercise, night → the mental weight.
+Visual placeholder: subtle illustration (silhouette looking thoughtful).
+3. Product Snapshot (white background)
+3 product cards with images (pads, pants, underpads).
+Each card = product photo + one-line caption.
+Below cards: Form 2 (styled horizontally) with headline “Want to try them at home?”
+4. Process “How it works” (soft teal background)
+Stepper layout: 4 numbered steps, each in its own card with an icon.
+Right below: Form 3 (narrow) with headline “Start Step 1 now.”
+5. Two Paths (white background)
+Two side-by-side cards: “Self-pay” and “With prescription.”
+Each card = icon, headline, 2 lines of copy.
+CTA button below: “Choose your path later – just start today.”
+6. Why it matters (soft grey background)
+Split layout: left column “Before” list, right column “After” list.
+Visual placeholder: image of woman walking relaxed outdoors.
+CTA button centered below → “Take your first step now.”
+7. Discretion (white background)
+Three horizontal icons with short copy: “Plain packaging,” “Respectful support,” “Your data safe.”
+Below: Form 4 (trust-framed) in a card with soft background.
+8. Testimonials (soft grey background)
+Two quote cards side by side.
+Each = short sentence + name + age.
+CTA button: “Like Anna and Karin, you can try it too.”
+9. FAQ (white background)
+Accordion of 4 FAQs: “Is this free?”, “Will anyone know?”, “Do I need a prescription?”, “Do I have to talk on the phone?”
+CTA button below → “Ready to see for yourself? Fill in the form below.”
+10. Credibility Module (soft teal background)
+Text block: “Trusted by millions, 40+ years of expertise.”
+Visual placeholder: doctor / healthcare professional recommending.
+CTA button: “Start with a free sample box.”
+11. Final Conversion Section (white background)
+Form 5 (full) → 3–4 fields, with optional fast track shown only after submit.
+Headline: “Your next step to peace of mind.”
+Subtext: “Discreet packaging • No obligation • Insurance support available.”
+12. Sticky Mobile CTA
+Persistent bottom bar: “Free, discreet samples” + button linking to form.
+✨ Visual Rhythm
+White / Soft grey / Soft teal / White / Grey … → alternating blocks give structure and relief.
+Forms in cards with shadows → stand out without being aggressive.
+Lifestyle + product images interleaved → balance between emotional reassurance and tangible proof.
+Typography: calm, friendly sans-serif (e.g. Inter, as we used).
