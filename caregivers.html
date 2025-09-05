@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,7 +136,7 @@
           <span class="chip">🛏️ Bed protection · calmer nights</span>
           <span class="chip">📦 Always plain packaging</span>
         </div>
-        
+
         <div class="cta-section">
           <button class="cta-trigger" onclick="toggleForm('form1')">Request a Free Starter Box</button>
           <div class="form-wrapper" id="form1">
@@ -252,7 +251,7 @@
           <p>Calmer nights, less laundry, more peace of mind.</p>
         </article>
       </div>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form2')">Request a starter box to try at home</button>
         <div class="form-wrapper" id="form2">
@@ -319,7 +318,7 @@
         <div class="step" role="listitem"><span class="badge">4</span><div><b>Samples arrive at home</b><br><span class="muted">Try them with your loved one, then choose: continue self‑pay, or move to prescription coverage.</span></div></div>
       </div>
       <p style="text-align:center;margin-top:16px;color:var(--muted)">👉 <strong>You're always in control. Nothing happens without your agreement.</strong></p>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form3')">Start Step 1 now</button>
         <div class="form-wrapper" id="form3">
@@ -367,7 +366,7 @@
         <div class="card"><h3>After</h3><p>Dry nights more often. Outings feel manageable. A calmer rhythm at home.</p></div>
       </div>
       <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Peaceful family moment</div>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form5')">Take the first step for your loved one</button>
         <div class="form-wrapper" id="form5">
@@ -421,7 +420,7 @@
           <p class="muted">And privacy</p>
         </div>
       </div>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form6')">Request a discreet starter box</button>
         <div class="form-wrapper" id="form6">
@@ -454,7 +453,7 @@
         <blockquote class="quote">"I wanted to help my father but didn't know where to start. The starter box showed us the right fit without stress."<b>Julia, 52</b></blockquote>
         <blockquote class="quote">"The pants look like underwear. My husband goes out again without feeling embarrassed."<b>Markus, 61</b></blockquote>
       </div>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form7')">You can try it too</button>
         <div class="form-wrapper" id="form7">
@@ -488,7 +487,7 @@
       <details style="margin-top:10px"><summary><b>Do I need my loved one on the call?</b></summary><p class="muted">No, we can talk to you first, and involve them only if you wish.</p></details>
       <details style="margin-top:10px"><summary><b>What if skin is sensitive?</b></summary><p class="muted">We'll suggest suitable, skin-friendly options designed for sensitive skin.</p></details>
       <details style="margin-top:10px"><summary><b>Do I need a prescription to start?</b></summary><p class="muted">No. Begin with self-pay, switch to prescription later if needed.</p></details>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form8')">Ready to see for yourself? Fill in the form</button>
         <div class="form-wrapper" id="form8">
@@ -519,7 +518,7 @@
       <h2>Trusted experience, modern support</h2>
       <p class="lead">Trusted by families and healthcare professionals, with decades of experience from Ontex. With iD, you benefit from proven products and modern, discreet support.</p>
       <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Healthcare professional recommending</div>
-      
+
       <div class="cta-section">
         <button class="cta-trigger" onclick="toggleForm('form9')">Start with a free starter box</button>
         <div class="form-wrapper" id="form9">
@@ -550,12 +549,12 @@
       <div class="form-card" id="finalShell">
         <h2>Your first step to calmer care</h2>
         <p class="lead">This form is simple, discreet, and free. After you submit, you can add optional details to fast‑track your request.</p>
-        
+
         <div class="starter-box-value">
           <div class="price">Free Starter Box for Caregivers</div>
           <div>Pay only delivery • Get €15 discount on first order</div>
         </div>
-        
+
         <form class="form-step1" id="finalForm" data-ab-plz="off" aria-label="Final caregiver request form">
           <div class="row two">
             <div><label for="ff_first">First name</label><input id="ff_first" name="firstName" autocomplete="given-name" required /></div>
@@ -618,7 +617,7 @@
       const wrapper = document.getElementById(formId);
       const allWrappers = document.querySelectorAll('.form-wrapper');
       const allTriggers = document.querySelectorAll('.cta-trigger');
-      
+
       // Close all other forms
       allWrappers.forEach(w => {
         if (w.id !== formId) {
@@ -631,7 +630,7 @@
           t.classList.remove('active');
         }
       });
-      
+
       // Toggle current form
       if (wrapper.classList.contains('expanded')) {
         wrapper.classList.remove('expanded');
