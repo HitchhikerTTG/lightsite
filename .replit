@@ -1,3 +1,6 @@
 run = "echo 'This project does not run on Replit.'"
 [nix]
 channel = "stable"
+
+[agent]
+expertMode = true
