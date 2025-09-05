@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +24,8 @@
     html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     img{max-width:100%;display:block}
     a{color:var(--brand);text-decoration:none}
-    .container{max-width:var(--wrap-wide);margin:0 auto;padding:0 20px}
-    .narrow{max-width:var(--wrap);margin:0 auto}
+    .container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    .wide{max-width:var(--wrap-wide)}
 
     /* rhythm */
     section{padding:56px 0}
@@ -43,6 +44,25 @@
     /* layout helpers */
     .grid{display:grid;gap:20px}
     @media (min-width:900px){.grid.hero{grid-template-columns:1.1fr .9fr}}
+    .grid-2{display:grid;gap:20px}
+    @media (min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
+
+    /* sample box highlight */
+    .sample-box-value{background:linear-gradient(135deg,var(--brand),var(--brand-600));color:#fff;padding:12px 16px;border-radius:12px;font-weight:600;margin:10px 0;text-align:center}
+    .sample-box-value .price{font-size:1.2em;font-weight:700}
+
+    /* expandable CTA sections */
+    .cta-section{margin:20px 0}
+    .cta-trigger{background:var(--brand);color:#fff;border:none;padding:16px 24px;border-radius:999px;font-weight:700;font-size:1.1rem;width:100%;cursor:pointer;transition:all .2s ease;box-shadow:var(--shadow)}
+    .cta-trigger:hover{background:var(--brand-600);transform:translateY(-1px)}
+    .cta-trigger.active{background:var(--brand-700);border-radius:16px 16px 0 0}
+    .form-wrapper{display:none;background:#fff;border:1px solid var(--line);border-radius:0 0 16px 16px;padding:20px;box-shadow:var(--shadow)}
+    .form-wrapper.expanded{display:block;animation:slideDown .3s ease}
+
+    @keyframes slideDown{
+      from{opacity:0;transform:translateY(-10px)}
+      to{opacity:1;transform:translateY(0)}
+    }
 
     /* chips */
     .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
@@ -73,75 +93,150 @@
     .btn-ghost{background:transparent;color:var(--brand);border:none}
     .form-note{font-size:.92rem;color:var(--muted)}
 
+    /* trust bar */
+    .trust-bar{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+    @media (min-width:640px){.trust-bar{grid-template-columns:repeat(4,1fr)}}
+    .trust-item{text-align:center;padding:12px}
+    .trust-item .icon{font-size:24px;margin-bottom:8px}
+    .trust-item .label{font-size:.9rem;font-weight:600}
+    .trust-item .desc{font-size:.8rem;color:var(--muted)}
+
+    /* testimonials */
+    .testi{display:grid;gap:16px;margin-top:20px}
+    @media (min-width:640px){.testi{grid-template-columns:1fr 1fr}}
+    .quote{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:0}
+    .quote b{display:block;margin-top:10px;color:var(--brand)}
+
+    /* FAQ */
+    details{margin:10px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+    summary{padding:16px;background:var(--soft2);cursor:pointer;font-weight:600}
+    details[open] summary{border-bottom:1px solid var(--line)}
+    details p{margin:0;padding:16px}
+
     /* sticky CTA */
     .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;z-index:20}
     .sticky-cta .btn{flex:1}
+
+    /* What is a sample box module */
+    .sample-box-info{background:linear-gradient(135deg,#f8f9fa,#e9ecef);border:2px solid var(--brand);border-radius:16px;padding:20px;margin:20px 0}
+    .sample-box-info h3{color:var(--brand);margin-bottom:12px}
+    .sample-box-info .highlight{background:var(--brand);color:#fff;padding:4px 8px;border-radius:6px;font-weight:600}
   </style>
 </head>
 <body>
   <!-- 1) HERO -->
   <section>
-    <div class="container narrow grid hero">
+    <div class="container grid hero">
       <div>
         <h1>No more worrying about small leaks – quiet protection for everyday peace of mind.</h1>
-        <p class="lead">A small leak shouldn’t cast a shadow over your day. With discreet solutions, you can be prepared -- and focus on what really matters.</p>
+        <p class="lead">A small leak shouldn't cast a shadow over your day. With discreet solutions, you can be prepared -- and focus on what really matters.</p>
         <div class="chips" aria-label="Product highlights and discretion">
           <span class="chip">🩹 Thin pads · light leaks</span>
           <span class="chip">🩲 Pants · look like underwear</span>
           <span class="chip">🛏️ Underpads · better nights</span>
           <span class="chip">📦 Plain packaging</span>
         </div>
-        <div style="margin-top:18px" class="form-card">
-          <form class="form-step1" data-ab-plz="off" aria-label="Request free sample box">
-            <div class="row two">
-              <div>
-                <label for="f1_first">First name</label>
-                <input id="f1_first" name="firstName" autocomplete="given-name" required />
+        
+        <div class="cta-section">
+          <button class="cta-trigger" onclick="toggleForm('form1')">Get Your Free Sample Box (Worth €10)</button>
+          <div class="form-wrapper" id="form1">
+            <div class="sample-box-value">
+              <div class="price">€10 Value Sample Box</div>
+              <div>Pay only delivery • Get €15 discount on first order</div>
+            </div>
+            <form class="form-step1" data-ab-plz="off" aria-label="Request free sample box">
+              <div class="row two">
+                <div>
+                  <label for="f1_first">First name</label>
+                  <input id="f1_first" name="firstName" autocomplete="given-name" required />
+                </div>
+                <div>
+                  <label for="f1_contact">Contact</label>
+                  <select id="f1_contact" name="contact" required>
+                    <option value="">Choose…</option>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                  </select>
+                </div>
               </div>
-              <div>
-                <label for="f1_contact">Contact</label>
-                <select id="f1_contact" name="contact" required>
-                  <option value="">Choose…</option>
-                  <option value="email">Email</option>
-                  <option value="phone">Phone</option>
-                </select>
+              <div id="f1_email" style="display:none">
+                <label for="f1_email_i">Email</label>
+                <input id="f1_email_i" type="email" name="email" autocomplete="email" />
               </div>
-            </div>
-            <div id="f1_email" style="display:none">
-              <label for="f1_email_i">Email</label>
-              <input id="f1_email_i" type="email" name="email" autocomplete="email" />
-            </div>
-            <div id="f1_phone" style="display:none">
-              <label for="f1_phone_i">Phone</label>
-              <input id="f1_phone_i" type="tel" name="phone" autocomplete="tel" />
-            </div>
-            <div class="consent">
-              <input id="f1_consent" type="checkbox" required />
-              <label for="f1_consent">I agree to be contacted about incontinence solutions. You can withdraw consent at any time.</label>
-            </div>
-            <button class="btn" type="submit">Get my sample</button>
-            <p class="form-note">Discreet • Free • No obligation</p>
-          </form>
+              <div id="f1_phone" style="display:none">
+                <label for="f1_phone_i">Phone</label>
+                <input id="f1_phone_i" type="tel" name="phone" autocomplete="tel" />
+              </div>
+              <div class="consent">
+                <input id="f1_consent" type="checkbox" required />
+                <label for="f1_consent">I agree to be contacted about incontinence solutions. You can withdraw consent at any time.</label>
+              </div>
+              <button class="btn" type="submit">Get my sample box</button>
+              <p class="form-note">Discreet • Free • No obligation</p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+          <div class="trust-item">
+            <div class="icon">📦</div>
+            <div class="label">Discreet packaging</div>
+            <div class="desc">Plain boxes</div>
+          </div>
+          <div class="trust-item">
+            <div class="icon">🆓</div>
+            <div class="label">Free samples</div>
+            <div class="desc">No obligation</div>
+          </div>
+          <div class="trust-item">
+            <div class="icon">🛡️</div>
+            <div class="label">Everyday products</div>
+            <div class="desc">Trusted quality</div>
+          </div>
+          <div class="trust-item">
+            <div class="icon">🏥</div>
+            <div class="label">Insurance option</div>
+            <div class="desc">Coverage available</div>
+          </div>
         </div>
       </div>
       <div aria-hidden="true" style="align-self:center">
         <!-- Lifestyle image placeholder -->
-        <div style="height:260px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Lifestyle image</div>
+        <div style="height:260px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Woman laughing with friend</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Box Explanation Module -->
+  <section class="bg-soft">
+    <div class="container">
+      <div class="sample-box-info">
+        <h3>What's in your free sample box?</h3>
+        <p>Your personalized sample box contains a selection of our most popular products tailored to your needs:</p>
+        <ul>
+          <li><strong>Ultra-thin pads</strong> for light protection</li>
+          <li><strong>Comfortable pants</strong> that look like underwear</li>
+          <li><strong>Protective underpads</strong> for extra peace of mind</li>
+          <li><strong>Information guide</strong> to help you choose</li>
+        </ul>
+        <p>Total value: <span class="highlight">€10</span> • You pay only delivery costs • Get <span class="highlight">€15 discount</span> on your first order if you decide to shop with us!</p>
       </div>
     </div>
   </section>
 
   <!-- 2) EMPATHY -->
-  <section class="bg-soft">
-    <div class="container narrow">
-      <h2>When you’re prepared, the worry lifts</h2>
-      <p class="lead">Leaks often start small: a few drops when you laugh, a little during exercise, a damp spot at night. The effect is big -- you become cautious, always on guard. You don’t have to carry this in silence. There are discreet solutions made for exactly these moments.</p>
+  <section>
+    <div class="container">
+      <h2>When you're prepared, the worry lifts</h2>
+      <p class="lead">Leaks often start small: a few drops when you laugh, a little during exercise, a damp spot at night. The effect is big -- you become cautious, always on guard. You don't have to carry this in silence. There are discreet solutions made for exactly these moments.</p>
+      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-top:20px">Thoughtful silhouette illustration</div>
     </div>
   </section>
 
   <!-- 3) PRODUCT SNAPSHOT + FORM -->
-  <section>
-    <div class="container narrow">
+  <section class="bg-soft">
+    <div class="container">
       <h2>Small solutions that make a big difference</h2>
       <div class="cards cols-3" role="list">
         <article class="card" role="listitem">
@@ -160,34 +255,39 @@
           <p>Extra peace of mind for quiet nights and worry‑free rest at home.</p>
         </article>
       </div>
-      <div style="margin-top:18px" class="form-card">
-        <form class="form-step1" data-ab-plz="off" aria-label="Request to try products at home">
-          <div class="row two">
-            <div>
-              <label for="f2_first">First name</label>
-              <input id="f2_first" name="firstName" required />
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form2')">Want to try them at home?</button>
+        <div class="form-wrapper" id="form2">
+          <form class="form-step1" data-ab-plz="off" aria-label="Request to try products at home">
+            <div class="row two">
+              <div>
+                <label for="f2_first">First name</label>
+                <input id="f2_first" name="firstName" required />
+              </div>
+              <div>
+                <label for="f2_contact">Contact</label>
+                <select id="f2_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
             </div>
-            <div>
-              <label for="f2_contact">Contact</label>
-              <select id="f2_contact" name="contact" required>
-                <option value="">Choose…</option>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-              </select>
-            </div>
-          </div>
-          <div id="f2_email" style="display:none"><label for="f2_email_i">Email</label><input id="f2_email_i" type="email" name="email" /></div>
-          <div id="f2_phone" style="display:none"><label for="f2_phone_i">Phone</label><input id="f2_phone_i" type="tel" name="phone" /></div>
-          <div class="consent"><input id="f2_consent" type="checkbox" required /><label for="f2_consent">I agree to be contacted about incontinence solutions.</label></div>
-          <button class="btn" type="submit">Try at home</button>
-        </form>
+            <div id="f2_email" style="display:none"><label for="f2_email_i">Email</label><input id="f2_email_i" type="email" name="email" /></div>
+            <div id="f2_phone" style="display:none"><label for="f2_phone_i">Phone</label><input id="f2_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f2_consent" type="checkbox" required /><label for="f2_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Request sample box</button>
+            <p class="form-note">€10 value • Pay only delivery • €15 discount on first order</p>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 4) HOW IT WORKS + FORM -->
   <section class="bg-teal" id="how">
-    <div class="container narrow">
+    <div class="container">
       <h2>How it works</h2>
       <div class="stepper" role="list" style="margin-top:12px">
         <div class="step" role="listitem"><span class="badge">1</span><div><b>Start with 3 quick fields</b><br><span class="muted">Request your free sample -- discreet and without obligation.</span></div></div>
@@ -195,121 +295,234 @@
         <div class="step" role="listitem"><span class="badge">3</span><div><b>Discreet, friendly call</b><br><span class="muted">We ask a few simple questions to tailor the best fit for you.</span></div></div>
         <div class="step" role="listitem"><span class="badge">4</span><div><b>Your samples & next steps</b><br><span class="muted">Test at home. Continue as self‑pay or, with a prescription, through insurance.</span></div></div>
       </div>
-      <div style="margin-top:18px" class="form-card">
-        <form class="form-step1" data-ab-plz="off" aria-label="Start Step 1 now">
-          <div class="row two">
-            <div><label for="f3_first">First name</label><input id="f3_first" name="firstName" required /></div>
-            <div><label for="f3_contact">Contact</label>
-              <select id="f3_contact" name="contact" required>
-                <option value="">Choose…</option>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-              </select>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form3')">Start Step 1 now</button>
+        <div class="form-wrapper" id="form3">
+          <form class="form-step1" data-ab-plz="off" aria-label="Start Step 1 now">
+            <div class="row two">
+              <div><label for="f3_first">First name</label><input id="f3_first" name="firstName" required /></div>
+              <div><label for="f3_contact">Contact</label>
+                <select id="f3_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div id="f3_email" style="display:none"><label for="f3_email_i">Email</label><input id="f3_email_i" type="email" name="email" /></div>
-          <div id="f3_phone" style="display:none"><label for="f3_phone_i">Phone</label><input id="f3_phone_i" type="tel" name="phone" /></div>
-          <div class="consent"><input id="f3_consent" type="checkbox" required /><label for="f3_consent">I agree to be contacted about incontinence solutions.</label></div>
-          <button class="btn" type="submit">Start Step 1</button>
-        </form>
+            <div id="f3_email" style="display:none"><label for="f3_email_i">Email</label><input id="f3_email_i" type="email" name="email" /></div>
+            <div id="f3_phone" style="display:none"><label for="f3_phone_i">Phone</label><input id="f3_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f3_consent" type="checkbox" required /><label for="f3_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Start Step 1</button>
+            <p class="form-note">You stay in control. Nothing is sent or decided without your agreement.</p>
+          </form>
+        </div>
       </div>
-      <p class="form-note" style="margin-top:8px">You stay in control. Nothing is sent or decided without your agreement.</p>
     </div>
   </section>
 
   <!-- 5) TWO PATHS -->
   <section>
-    <div class="container narrow">
+    <div class="container">
       <h2>Two simple ways forward</h2>
       <div class="cards cols-2" style="margin-top:12px">
         <article class="card"><div class="icon">🛒</div><h3>Self‑pay</h3><p class="muted">Order discreetly and try at home. Perfect if you just want to see what works.</p></article>
         <article class="card"><div class="icon">🧾</div><h3>With prescription</h3><p class="muted">If your doctor prescribes, your health insurance may cover your products. We handle the paperwork.</p></article>
       </div>
-      <p class="lead" style="margin-top:12px">We’ll explain both options clearly during your first call.</p>
+      <p class="lead" style="margin-top:12px">We'll explain both options clearly during your first call.</p>
+      <div style="text-align:center;margin-top:20px"><button class="btn" onclick="toggleForm('form4')">Choose your path later – just start today</button></div>
     </div>
   </section>
 
   <!-- 6) WHY IT MATTERS -->
   <section class="bg-soft">
-    <div class="container narrow">
+    <div class="container">
       <h2>Why it matters</h2>
-      <div class="cards cols-2" style="margin-top:12px">
-        <article class="card"><h3>Before</h3><p>Constantly checking yourself. Avoiding situations. Feeling distracted, never fully present.</p></article>
-        <article class="card"><h3>After</h3><p>Calm and confident, knowing you’re covered. Free to focus on work, friends, and rest at night.</p></article>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card"><h3>Before</h3><p>Constantly checking yourself. Avoiding situations. Feeling distracted, never fully present.</p></div>
+        <div class="card"><h3>After</h3><p>Calm and confident, knowing you're covered. Free to focus on work, friends, and rest at night.</p></div>
       </div>
-      <div style="margin-top:14px" class="center"><a href="#form-final" class="btn">Take your first step</a></div>
+      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Woman walking relaxed outdoors</div>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form5')">Take your first step now</button>
+        <div class="form-wrapper" id="form5">
+          <form class="form-step1" data-ab-plz="off">
+            <div class="row two">
+              <div><label for="f5_first">First name</label><input id="f5_first" name="firstName" required /></div>
+              <div><label for="f5_contact">Contact</label>
+                <select id="f5_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+            <div id="f5_email" style="display:none"><label for="f5_email_i">Email</label><input id="f5_email_i" type="email" name="email" /></div>
+            <div id="f5_phone" style="display:none"><label for="f5_phone_i">Phone</label><input id="f5_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f5_consent" type="checkbox" required /><label for="f5_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Request sample box</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 7) DISCRETION + FORM -->
   <section>
-    <div class="container narrow">
+    <div class="container">
       <h2>Discretion, every step of the way</h2>
-      <p class="lead">From plain packaging to respectful conversations, your privacy matters.</p>
-      <ul class="muted" style="line-height:1.9;margin:14px 0 0 18px">
-        <li>Plain packaging -- no logos, no product names</li>
-        <li>Friendly, non‑judgmental advisors</li>
-        <li>Your data handled with care</li>
-      </ul>
-      <div style="margin-top:18px" class="form-card">
-        <form class="form-step1" data-ab-plz="off" aria-label="Request discreet sample">
-          <div class="row two">
-            <div><label for="f4_first">First name</label><input id="f4_first" name="firstName" required /></div>
-            <div><label for="f4_contact">Contact</label>
-              <select id="f4_contact" name="contact" required>
-                <option value="">Choose…</option>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-              </select>
+      <div class="grid-2" style="margin:20px 0">
+        <div style="text-align:center">
+          <div style="font-size:32px;margin-bottom:10px">📦</div>
+          <h4>Plain packaging</h4>
+          <p class="muted">No logos, no product names</p>
+        </div>
+        <div style="text-align:center">
+          <div style="font-size:32px;margin-bottom:10px">🤝</div>
+          <h4>Respectful support</h4>
+          <p class="muted">Friendly, non-judgmental advisors</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin:20px 0">
+        <div style="font-size:32px;margin-bottom:10px">🔒</div>
+        <h4>Your data safe</h4>
+        <p class="muted">Handled with care and privacy</p>
+      </div>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form6')">Request discreet sample</button>
+        <div class="form-wrapper" id="form6">
+          <form class="form-step1" data-ab-plz="off">
+            <div class="row two">
+              <div><label for="f6_first">First name</label><input id="f6_first" name="firstName" required /></div>
+              <div><label for="f6_contact">Contact</label>
+                <select id="f6_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div id="f4_email" style="display:none"><label for="f4_email_i">Email</label><input id="f4_email_i" type="email" name="email" /></div>
-          <div id="f4_phone" style="display:none"><label for="f4_phone_i">Phone</label><input id="f4_phone_i" type="tel" name="phone" /></div>
-          <div class="consent"><input id="f4_consent" type="checkbox" required /><label for="f4_consent">I agree to be contacted about incontinence solutions.</label></div>
-          <button class="btn" type="submit">Request discreet sample</button>
-        </form>
+            <div id="f6_email" style="display:none"><label for="f6_email_i">Email</label><input id="f6_email_i" type="email" name="email" /></div>
+            <div id="f6_phone" style="display:none"><label for="f6_phone_i">Phone</label><input id="f6_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f6_consent" type="checkbox" required /><label for="f6_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Request discreet sample</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 8) TESTIMONIALS -->
   <section class="bg-soft">
-    <div class="container narrow">
+    <div class="container">
       <h2>Real people, real relief</h2>
-      <div class="cards cols-2" style="margin-top:12px">
-        <article class="card"><p>"I thought I’d never relax at work again. With the pads, I stopped thinking about it."</p><p><b>Anna, 48</b></p></article>
-        <article class="card"><p>"The sample box helped me find what fits best -- now I don’t worry about surprises."</p><p><b>Karin, 55</b></p></article>
+      <div class="testi">
+        <blockquote class="quote">"I thought I'd never relax at work again. With the pads, I stopped thinking about it."<b>Anna, 48</b></blockquote>
+        <blockquote class="quote">"The sample box helped me find what fits best -- now I don't worry about surprises."<b>Karin, 55</b></blockquote>
       </div>
-      <div style="margin-top:14px" class="center"><a href="#form-final" class="btn">Try it for yourself</a></div>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form7')">Like Anna and Karin, you can try it too</button>
+        <div class="form-wrapper" id="form7">
+          <form class="form-step1" data-ab-plz="off">
+            <div class="row two">
+              <div><label for="f7_first">First name</label><input id="f7_first" name="firstName" required /></div>
+              <div><label for="f7_contact">Contact</label>
+                <select id="f7_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+            <div id="f7_email" style="display:none"><label for="f7_email_i">Email</label><input id="f7_email_i" type="email" name="email" /></div>
+            <div id="f7_phone" style="display:none"><label for="f7_phone_i">Phone</label><input id="f7_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f7_consent" type="checkbox" required /><label for="f7_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Try it for yourself</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 9) FAQ -->
   <section>
-    <div class="container narrow">
+    <div class="container">
       <h2>Common questions</h2>
-      <details style="margin-top:10px"><summary><b>Is this really free?</b></summary><p class="muted">Yes. Your first sample box is free and without obligation.</p></details>
+      <details style="margin-top:10px"><summary><b>Is this really free?</b></summary><p class="muted">Yes. Your first sample box is free and without obligation. You only pay delivery costs, and if you make your first order, you get €15 discount.</p></details>
       <details style="margin-top:10px"><summary><b>Will anyone know?</b></summary><p class="muted">No. Every package is plain and discreet -- no logos or product names.</p></details>
-      <details style="margin-top:10px"><summary><b>Do I need a prescription?</b></summary><p class="muted">No. You can start today. If you later have a prescription, we’ll guide you through insurance coverage.</p></details>
-      <details style="margin-top:10px"><summary><b>Do I have to talk on the phone?</b></summary><p class="muted">We call to help you choose what truly fits. It’s respectful, discreet, and on your terms.</p></details>
+      <details style="margin-top:10px"><summary><b>Do I need a prescription?</b></summary><p class="muted">No. You can start today. If you later have a prescription, we'll guide you through insurance coverage.</p></details>
+      <details style="margin-top:10px"><summary><b>Do I have to talk on the phone?</b></summary><p class="muted">We call to help you choose what truly fits. It's respectful, discreet, and on your terms.</p></details>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form8')">Ready to see for yourself? Fill in the form</button>
+        <div class="form-wrapper" id="form8">
+          <form class="form-step1" data-ab-plz="off">
+            <div class="row two">
+              <div><label for="f8_first">First name</label><input id="f8_first" name="firstName" required /></div>
+              <div><label for="f8_contact">Contact</label>
+                <select id="f8_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+            <div id="f8_email" style="display:none"><label for="f8_email_i">Email</label><input id="f8_email_i" type="email" name="email" /></div>
+            <div id="f8_phone" style="display:none"><label for="f8_phone_i">Phone</label><input id="f8_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f8_consent" type="checkbox" required /><label for="f8_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Request sample box</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 10) CREDIBILITY MODULE -->
   <section class="bg-teal">
-    <div class="container narrow">
+    <div class="container">
       <h2>Trusted experience, modern support</h2>
-      <p class="lead">Ontex has specialized in hygiene products for decades. With iD, you benefit from this experience -- combined with today’s discreet, personal service.</p>
-      <div class="center" style="margin-top:12px"><a class="btn" href="#form-final">Start with a free sample box</a></div>
+      <p class="lead">Ontex has specialized in hygiene products for decades. With iD, you benefit from this experience -- combined with today's discreet, personal service.</p>
+      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Healthcare professional recommending</div>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form9')">Start with a free sample box</button>
+        <div class="form-wrapper" id="form9">
+          <form class="form-step1" data-ab-plz="off">
+            <div class="row two">
+              <div><label for="f9_first">First name</label><input id="f9_first" name="firstName" required /></div>
+              <div><label for="f9_contact">Contact</label>
+                <select id="f9_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+            <div id="f9_email" style="display:none"><label for="f9_email_i">Email</label><input id="f9_email_i" type="email" name="email" /></div>
+            <div id="f9_phone" style="display:none"><label for="f9_phone_i">Phone</label><input id="f9_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f9_consent" type="checkbox" required /><label for="f9_consent">I agree to be contacted about incontinence solutions.</label></div>
+            <button class="btn" type="submit">Request sample box</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 11) FINAL FORM + FAST TRACK -->
   <section id="form-final">
-    <div class="container narrow">
+    <div class="container">
       <div class="form-card" id="finalShell">
         <h2>Your next step to peace of mind</h2>
         <p class="lead">This form is simple, discreet, and free. After you submit, you can add optional details to fast‑track your request.</p>
+        
+        <div class="sample-box-value">
+          <div class="price">€10 Value Sample Box</div>
+          <div>Pay only delivery • Get €15 discount on first order</div>
+        </div>
+        
         <form class="form-step1" id="finalForm" data-ab-plz="off" aria-label="Final request form">
           <div class="row two">
             <div><label for="ff_first">First name</label><input id="ff_first" name="firstName" autocomplete="given-name" required /></div>
@@ -323,8 +536,6 @@
           </div>
           <div id="ff_email" style="display:none"><label for="ff_email_i">Email</label><input id="ff_email_i" type="email" name="email" /></div>
           <div id="ff_phone" style="display:none"><label for="ff_phone_i">Phone</label><input id="ff_phone_i" type="tel" name="phone" /></div>
-          <!-- A/B: set data-ab-plz="on" on this form to include ZIP in step 1 -->
-          <div id="ff_zip" style="display:none"><label for="ff_zip_i">ZIP / Postcode</label><input id="ff_zip_i" name="zip" inputmode="numeric" pattern="[0-9\-\s]*" /></div>
           <div class="consent"><input id="ff_consent" type="checkbox" required /><label for="ff_consent">I agree to be contacted about incontinence solutions. Consent can be withdrawn at any time.</label></div>
           <button class="btn" type="submit">Request free sample box</button>
           <p class="form-note">Discreet packaging • No obligation • Insurance support available</p>
@@ -353,8 +564,8 @@
             </div>
             <label for="notes">Anything we should know to help you better? (optional)</label>
             <input id="notes" name="notes" placeholder="e.g., sensitive skin, sizes, or daily routines" />
-            <div class="center" style="margin-top:10px"><button class="btn" type="submit">Send fast‑track details</button></div>
-            <p class="form-note">You can skip this step and we’ll still contact you soon.</p>
+            <div style="text-align:center;margin-top:10px"><button class="btn" type="submit">Send fast‑track details</button></div>
+            <p class="form-note">You can skip this step and we'll still contact you soon.</p>
           </form>
         </div>
       </div>
@@ -363,11 +574,43 @@
 
   <!-- 12) STICKY CTA -->
   <div class="sticky-cta" aria-hidden="true">
-    <span class="muted" style="font-weight:600">Free, discreet samples</span>
+    <span class="muted" style="font-weight:600">Free sample box (€10 value)</span>
     <a class="btn" href="#form-final">Get started</a>
   </div>
 
   <script>
+    // Toggle form visibility
+    function toggleForm(formId) {
+      const trigger = event.target;
+      const wrapper = document.getElementById(formId);
+      const allWrappers = document.querySelectorAll('.form-wrapper');
+      const allTriggers = document.querySelectorAll('.cta-trigger');
+      
+      // Close all other forms
+      allWrappers.forEach(w => {
+        if (w.id !== formId) {
+          w.classList.remove('expanded');
+          w.style.display = 'none';
+        }
+      });
+      allTriggers.forEach(t => {
+        if (t !== trigger) {
+          t.classList.remove('active');
+        }
+      });
+      
+      // Toggle current form
+      if (wrapper.classList.contains('expanded')) {
+        wrapper.classList.remove('expanded');
+        wrapper.style.display = 'none';
+        trigger.classList.remove('active');
+      } else {
+        wrapper.classList.add('expanded');
+        wrapper.style.display = 'block';
+        trigger.classList.add('active');
+      }
+    }
+
     // Util: init a step1 form (contact toggle, optional ZIP via data-ab-plz)
     function initStep1Form(form){
       const contact = form.querySelector('select[name="contact"]');
