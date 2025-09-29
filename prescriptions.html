@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>iD – Discreet Support for Light Incontinence</title>
-  <meta name="description" content="Request your free incontinence sample box. Discreet pads & pants, plain packaging, no obligation. Simple 3‑field forms repeated throughout; optional fast‑track after the first step." />
-  <meta property="og:title" content="iD – Discreet Support for Light Incontinence" />
-  <meta property="og:description" content="Free, discreet sample box • Plain packaging • Insurance path available • Calm, supportive flow with simple forms." />
+  <title>iD – Prescription Incontinence Products – Simple & Discreet</title>
+  <meta name="description" content="Send us your prescription once and we'll handle the rest. Covered by insurance, discreet delivery, reliable monthly supply. Free starter box available." />
+  <meta property="og:title" content="iD – Prescription Incontinence Products – Simple & Discreet" />
+  <meta property="og:description" content="Prescription care without the hassle • Insurance covered • Discreet delivery • Reliable supply" />
   <meta name="theme-color" content="#0ea5a0" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
@@ -50,9 +50,9 @@
     .grid-2{display:grid;gap:20px}
     @media (min-width:760px){.grid-2{grid-template-columns:1fr 1fr}}
 
-    /* sample box highlight */
-    .sample-box-value{background:linear-gradient(135deg,var(--brand),var(--brand-600));color:#fff;padding:12px 16px;border-radius:12px;font-weight:600;margin:10px 0;text-align:center}
-    .sample-box-value .price{font-size:1.2em;font-weight:700}
+    /* prescription box highlight */
+    .prescription-box-value{background:linear-gradient(135deg,var(--brand),var(--brand-600));color:#fff;padding:12px 16px;border-radius:12px;font-weight:600;margin:10px 0;text-align:center}
+    .prescription-box-value .price{font-size:1.2em;font-weight:700}
 
     /* expandable CTA sections */
     .cta-section{margin:20px 0}
@@ -75,7 +75,7 @@
     .cards{display:grid;grid-template-columns:1fr;gap:18px}
     .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
     .card .icon{width:52px;height:52px;border-radius:12px;background:var(--soft);display:flex;align-items:center;justify-content:center;margin-bottom:10px;font-size:22px}
-    @media (min-width:760px){.cards.cols-2{grid-template-columns:repeat(2,1fr)}.cards.cols-3{grid-template-columns:repeat(3,1fr)}}
+    @media (min-width:760px){.cards.cols-2{grid-template-columns:repeat(2,1fr)}.cards.cols-3{grid-template-columns:repeat(3,1fr)}.cards.cols-4{grid-template-columns:repeat(4,1fr)}}
 
     /* stepper */
     .stepper{display:grid;grid-template-columns:1fr;gap:16px}
@@ -121,10 +121,10 @@
     .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between;z-index:20}
     .sticky-cta .btn{flex:1}
 
-    /* What is a sample box module */
-    .sample-box-info{background:linear-gradient(135deg,#f8f9fa,#e9ecef);border:2px solid var(--brand);border-radius:16px;padding:20px;margin:20px 0}
-    .sample-box-info h3{color:var(--brand);margin-bottom:12px}
-    .sample-box-info .highlight{background:var(--brand);color:#fff;padding:4px 8px;border-radius:6px;font-weight:600}
+    /* What is a prescription starter box module */
+    .prescription-box-info{background:linear-gradient(135deg,#f8f9fa,#e9ecef);border:2px solid var(--brand);border-radius:16px;padding:20px;margin:20px 0}
+    .prescription-box-info h3{color:var(--brand);margin-bottom:12px}
+    .prescription-box-info .highlight{background:var(--brand);color:#fff;padding:4px 8px;border-radius:6px;font-weight:600}
   </style>
 </head>
 <body>
@@ -132,23 +132,23 @@
   <section>
     <div class="container grid hero">
       <div>
-        <h1>No more worrying about small leaks – quiet protection for everyday peace of mind.</h1>
-        <p class="lead">A small leak shouldn't cast a shadow over your day. With discreet solutions, you can be prepared -- and focus on what really matters.</p>
-        <div class="chips" aria-label="Product highlights and discretion">
-          <span class="chip">🩹 Thin pads · light leaks</span>
-          <span class="chip">🩲 Pants · look like underwear</span>
-          <span class="chip">🛏️ Underpads · better nights</span>
-          <span class="chip">📦 Plain packaging</span>
+        <h1>Prescription care, without the hassle – simple, discreet, taken care of.</h1>
+        <p class="lead">Send us your prescription once, and we'll handle the rest: approvals, supplies, and discreet deliveries to your door.</p>
+        <div class="chips" aria-label="Prescription service highlights">
+          <span class="chip">📋 We handle paperwork</span>
+          <span class="chip">🏥 Covered by your insurance</span>
+          <span class="chip">📦 Delivered discreetly</span>
+          <span class="chip">🔄 Reliable monthly supply</span>
         </div>
         
         <div class="cta-section">
-          <button class="cta-trigger" onclick="toggleForm('form1')">Get Your Free Sample Box (Worth €10)</button>
+          <button class="cta-trigger" onclick="toggleForm('form1')">Start Your Prescription Process</button>
           <div class="form-wrapper" id="form1">
-            <div class="sample-box-value">
-              <div class="price">€10 Value Sample Box</div>
-              <div>Pay only delivery • Get €15 discount on first order</div>
+            <div class="prescription-box-value">
+              <div class="price">Free Starter Box Available</div>
+              <div>Try before your prescription arrives • Insurance covered supplies</div>
             </div>
-            <form class="form-step1" data-ab-plz="off" aria-label="Request free sample box">
+            <form class="form-step1" data-ab-plz="off" aria-label="Start prescription process">
               <div class="row two">
                 <div>
                   <label for="f1_first">First name</label>
@@ -173,10 +173,10 @@
               </div>
               <div class="consent">
                 <input id="f1_consent" type="checkbox" required />
-                <label for="f1_consent">I agree to be contacted about incontinence solutions. You can withdraw consent at any time.</label>
+                <label for="f1_consent">I agree to be contacted about prescription incontinence products. You can withdraw consent at any time.</label>
               </div>
-              <button class="btn" type="submit">Get my sample box</button>
-              <p class="form-note">Discreet • Free • No obligation</p>
+              <button class="btn" type="submit">Start process</button>
+              <p class="form-note">Insurance covered • Discreet • No obligation</p>
             </form>
           </div>
         </div>
@@ -184,47 +184,48 @@
         <!-- Trust Bar -->
         <div class="trust-bar">
           <div class="trust-item">
-            <div class="icon">📦</div>
-            <div class="label">Discreet packaging</div>
-            <div class="desc">Plain boxes</div>
-          </div>
-          <div class="trust-item">
-            <div class="icon">🆓</div>
-            <div class="label">Free samples</div>
-            <div class="desc">No obligation</div>
-          </div>
-          <div class="trust-item">
-            <div class="icon">🛡️</div>
-            <div class="label">Everyday products</div>
-            <div class="desc">Trusted quality</div>
+            <div class="icon">📋</div>
+            <div class="label">Paperwork handled</div>
+            <div class="desc">We do the forms</div>
           </div>
           <div class="trust-item">
             <div class="icon">🏥</div>
-            <div class="label">Insurance option</div>
-            <div class="desc">Coverage available</div>
+            <div class="label">Insurance covered</div>
+            <div class="desc">No extra costs</div>
+          </div>
+          <div class="trust-item">
+            <div class="icon">📦</div>
+            <div class="label">Discreet delivery</div>
+            <div class="desc">Plain packaging</div>
+          </div>
+          <div class="trust-item">
+            <div class="icon">🔄</div>
+            <div class="label">Reliable supply</div>
+            <div class="desc">Monthly delivery</div>
           </div>
         </div>
       </div>
       <div aria-hidden="true" style="align-self:center">
-        <!-- Lifestyle image placeholder -->
-        <div style="height:260px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Woman laughing with friend</div>
+        <!-- Visual placeholder -->
+        <div style="height:260px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted)">Person holding envelope at door</div>
       </div>
     </div>
   </section>
 
-  <!-- Sample Box Explanation Module -->
+  <!-- Prescription Starter Box Explanation Module -->
   <section class="bg-soft">
     <div class="container">
-      <div class="sample-box-info">
-        <h3>What's in your free sample box?</h3>
-        <p>Your personalized sample box contains a selection of our most popular products tailored to your needs:</p>
+      <div class="prescription-box-info">
+        <h3>What's in your prescription starter box?</h3>
+        <p>While we process your prescription, try our products at home with a free starter box:</p>
         <ul>
-          <li><strong>Ultra-thin pads</strong> for light protection</li>
-          <li><strong>Comfortable pants</strong> that look like underwear</li>
-          <li><strong>Protective underpads</strong> for extra peace of mind</li>
-          <li><strong>Information guide</strong> to help you choose</li>
+          <li><strong>Sample products</strong> that match your prescription needs</li>
+          <li><strong>Insurance-covered products</strong> to try before your regular supply starts</li>
+          <li><strong>Guidance materials</strong> to help you get the best fit</li>
+          <li><strong>Information about</strong> your prescription process and timeline</li>
         </ul>
-        <p>Total value: <span class="highlight">€10</span> • You pay only delivery costs • Get <span class="highlight">€15 discount</span> on your first order if you decide to shop with us!</p>
+        <p>This way you can be confident about comfort and fit <span class="highlight">before</span> your insurance-covered monthly supply begins!</p>
+        <div style="height:180px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-top:16px">Prescription starter box contents</div>
       </div>
     </div>
   </section>
@@ -232,45 +233,31 @@
   <!-- 2) EMPATHY -->
   <section>
     <div class="container">
-      <h2>When you're prepared, the worry lifts</h2>
-      <p class="lead">Leaks often start small: a few drops when you laugh, a little during exercise, a damp spot at night. The effect is big -- you become cautious, always on guard. You don't have to carry this in silence. There are discreet solutions made for exactly these moments.</p>
-      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-top:20px">Thoughtful silhouette illustration</div>
+      <h2>We know the process feels heavy</h2>
+      <p class="lead">Getting a prescription should bring relief. Instead, it often means more forms, more calls, more things to manage. You already have enough to deal with — the last thing you need is chasing supplies.</p>
+      <p><strong>That's where we step in.</strong></p>
+      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin-top:20px">Frustrated person with paperwork</div>
     </div>
   </section>
 
-  <!-- 3) PRODUCT SNAPSHOT + FORM -->
-  <section class="bg-soft">
+  <!-- 3) PROCESS SNAPSHOT + FORM -->
+  <section class="bg-teal">
     <div class="container">
-      <h2>Small solutions that make a big difference</h2>
-      <div class="cards cols-3" role="list">
-        <article class="card" role="listitem">
-          <div class="icon">🩹</div>
-          <h3>Thin pads</h3>
-          <p>Barely noticeable. Stay confident at work, out with friends, or on the go.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon">🩲</div>
-          <h3>Pants like underwear</h3>
-          <p>Secure and comfortable for active days -- they look and feel like the real thing.</p>
-        </article>
-        <article class="card" role="listitem">
-          <div class="icon">🛏️</div>
-          <h3>Underpads</h3>
-          <p>Extra peace of mind for quiet nights and worry‑free rest at home.</p>
-        </article>
+      <h2>How it works</h2>
+      <div class="stepper" role="list" style="margin-top:12px">
+        <div class="step" role="listitem"><span class="badge">1</span><div><b>Get your prescription from your doctor</b><br><span class="muted">Your doctor writes the prescription for incontinence products.</span></div></div>
+        <div class="step" role="listitem"><span class="badge">2</span><div><b>Send it to us</b><br><span class="muted">Post, upload, or use our prepaid envelope — whatever's easiest.</span></div></div>
+        <div class="step" role="listitem"><span class="badge">3</span><div><b>We handle approvals and set up your supply</b><br><span class="muted">All paperwork with your insurance is handled by us.</span></div></div>
+        <div class="step" role="listitem"><span class="badge">4</span><div><b>You receive products discreetly at home</b><br><span class="muted">Month after month, reliable supply delivered to your door.</span></div></div>
       </div>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form2')">Want to try them at home?</button>
+        <button class="cta-trigger" onclick="toggleForm('form2')">Start Step 1 now</button>
         <div class="form-wrapper" id="form2">
-          <form class="form-step1" data-ab-plz="off" aria-label="Request to try products at home">
+          <form class="form-step1" data-ab-plz="off" aria-label="Start Step 1 now">
             <div class="row two">
-              <div>
-                <label for="f2_first">First name</label>
-                <input id="f2_first" name="firstName" required />
-              </div>
-              <div>
-                <label for="f2_contact">Contact</label>
+              <div><label for="f2_first">First name</label><input id="f2_first" name="firstName" required /></div>
+              <div><label for="f2_contact">Contact</label>
                 <select id="f2_contact" name="contact" required>
                   <option value="">Choose…</option>
                   <option value="email">Email</option>
@@ -280,30 +267,46 @@
             </div>
             <div id="f2_email" style="display:none"><label for="f2_email_i">Email</label><input id="f2_email_i" type="email" name="email" /></div>
             <div id="f2_phone" style="display:none"><label for="f2_phone_i">Phone</label><input id="f2_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f2_consent" type="checkbox" required /><label for="f2_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Request sample box</button>
-            <p class="form-note">€10 value • Pay only delivery • €15 discount on first order</p>
+            <div class="consent"><input id="f2_consent" type="checkbox" required /><label for="f2_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Start Step 1</button>
+            <p class="form-note">We'll guide you through each step</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4) HOW IT WORKS + FORM -->
-  <section class="bg-teal" id="how">
+  <!-- 4) PRODUCT COVERAGE OVERVIEW + FORM -->
+  <section>
     <div class="container">
-      <h2>How it works</h2>
-      <div class="stepper" role="list" style="margin-top:12px">
-        <div class="step" role="listitem"><span class="badge">1</span><div><b>Start with 3 quick fields</b><br><span class="muted">Request your free sample -- discreet and without obligation.</span></div></div>
-        <div class="step" role="listitem"><span class="badge">2</span><div><b>Optional fast‑track appears</b><br><span class="muted">After you submit, you can add details. People who do are contacted faster.</span></div></div>
-        <div class="step" role="listitem"><span class="badge">3</span><div><b>Discreet, friendly call</b><br><span class="muted">We ask a few simple questions to tailor the best fit for you.</span></div></div>
-        <div class="step" role="listitem"><span class="badge">4</span><div><b>Your samples & next steps</b><br><span class="muted">Test at home. Continue as self‑pay or, with a prescription, through insurance.</span></div></div>
+      <h2>All prescription products available</h2>
+      <div class="cards cols-4" role="list">
+        <article class="card" role="listitem">
+          <div class="icon">🩲</div>
+          <h3>Pants (various sizes)</h3>
+          <p>Approved for prescription coverage, reliable and comfortable.</p>
+        </article>
+        <article class="card" role="listitem">
+          <div class="icon">🩹</div>
+          <h3>Shaped pads</h3>
+          <p>Approved for prescription coverage, reliable and comfortable.</p>
+        </article>
+        <article class="card" role="listitem">
+          <div class="icon">🛡️</div>
+          <h3>All-in-ones</h3>
+          <p>Approved for prescription coverage, reliable and comfortable.</p>
+        </article>
+        <article class="card" role="listitem">
+          <div class="icon">🛏️</div>
+          <h3>Bed protection</h3>
+          <p>Approved for prescription coverage, reliable and comfortable.</p>
+        </article>
       </div>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form3')">Start Step 1 now</button>
+        <button class="cta-trigger" onclick="toggleForm('form3')">Check what's covered by your insurance</button>
         <div class="form-wrapper" id="form3">
-          <form class="form-step1" data-ab-plz="off" aria-label="Start Step 1 now">
+          <form class="form-step1" data-ab-plz="off" aria-label="Check insurance coverage">
             <div class="row two">
               <div><label for="f3_first">First name</label><input id="f3_first" name="firstName" required /></div>
               <div><label for="f3_contact">Contact</label>
@@ -316,40 +319,66 @@
             </div>
             <div id="f3_email" style="display:none"><label for="f3_email_i">Email</label><input id="f3_email_i" type="email" name="email" /></div>
             <div id="f3_phone" style="display:none"><label for="f3_phone_i">Phone</label><input id="f3_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f3_consent" type="checkbox" required /><label for="f3_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Start Step 1</button>
-            <p class="form-note">You stay in control. Nothing is sent or decided without your agreement.</p>
+            <div class="consent"><input id="f3_consent" type="checkbox" required /><label for="f3_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Check coverage</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5) TWO PATHS -->
-  <section>
+  <!-- 5) TWO OPTIONS MODULE + FORM -->
+  <section class="bg-soft">
     <div class="container">
-      <h2>Two simple ways forward</h2>
+      <h2>Different paths, same peace of mind</h2>
       <div class="cards cols-2" style="margin-top:12px">
-        <article class="card"><div class="icon">🛒</div><h3>Self‑pay</h3><p class="muted">Order discreetly and try at home. Perfect if you just want to see what works.</p></article>
-        <article class="card"><div class="icon">🧾</div><h3>With prescription</h3><p class="muted">If your doctor prescribes, your health insurance may cover your products. We handle the paperwork.</p></article>
+        <article class="card">
+          <div class="icon">📋</div>
+          <h3>Send prescription now</h3>
+          <p class="muted">We take over, supplies set up. Everything handled through your insurance.</p>
+        </article>
+        <article class="card">
+          <div class="icon">❓</div>
+          <h3>Unsure?</h3>
+          <p class="muted">Start with self-pay samples, then switch when ready. No pressure.</p>
+        </article>
       </div>
-      <p class="lead" style="margin-top:12px">We'll explain both options clearly during your first call.</p>
-      <div style="text-align:center;margin-top:20px"><button class="btn" onclick="toggleForm('form4')">Choose your path later – just start today</button></div>
+      
+      <div class="cta-section">
+        <button class="cta-trigger" onclick="toggleForm('form4')">Choose your path (or decide later)</button>
+        <div class="form-wrapper" id="form4">
+          <form class="form-step1" data-ab-plz="off" aria-label="Choose your path">
+            <div class="row two">
+              <div><label for="f4_first">First name</label><input id="f4_first" name="firstName" required /></div>
+              <div><label for="f4_contact">Contact</label>
+                <select id="f4_contact" name="contact" required>
+                  <option value="">Choose…</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+            <div id="f4_email" style="display:none"><label for="f4_email_i">Email</label><input id="f4_email_i" type="email" name="email" /></div>
+            <div id="f4_phone" style="display:none"><label for="f4_phone_i">Phone</label><input id="f4_phone_i" type="tel" name="phone" /></div>
+            <div class="consent"><input id="f4_consent" type="checkbox" required /><label for="f4_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Get guidance</button>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 6) WHY IT MATTERS -->
-  <section class="bg-soft">
+  <!-- 6) WHY IT MATTERS + FORM -->
+  <section class="bg-teal">
     <div class="container">
-      <h2>Why it matters</h2>
+      <h2>Before / After prescription support</h2>
       <div class="grid-2" style="margin-top:12px">
-        <div class="card"><h3>Before</h3><p>Constantly checking yourself. Avoiding situations. Feeling distracted, never fully present.</p></div>
-        <div class="card"><h3>After</h3><p>Calm and confident, knowing you're covered. Free to focus on work, friends, and rest at night.</p></div>
+        <div class="card"><h3>Before</h3><p>Endless forms, repeated trips, uncertainty about supplies, dealing with insurance directly.</p></div>
+        <div class="card"><h3>After</h3><p>One-time setup, regular supplies, discreet delivery, no more insurance paperwork.</p></div>
       </div>
-      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Woman walking relaxed outdoors</div>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form5')">Take your first step now</button>
+        <button class="cta-trigger" onclick="toggleForm('form5')">Take the first step — we'll handle the rest</button>
         <div class="form-wrapper" id="form5">
           <form class="form-step1" data-ab-plz="off">
             <div class="row two">
@@ -364,38 +393,27 @@
             </div>
             <div id="f5_email" style="display:none"><label for="f5_email_i">Email</label><input id="f5_email_i" type="email" name="email" /></div>
             <div id="f5_phone" style="display:none"><label for="f5_phone_i">Phone</label><input id="f5_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f5_consent" type="checkbox" required /><label for="f5_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Request sample box</button>
+            <div class="consent"><input id="f5_consent" type="checkbox" required /><label for="f5_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Start process</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7) DISCRETION + FORM -->
+  <!-- 7) DISCRETION & RELIABILITY + FORM -->
   <section>
     <div class="container">
-      <h2>Discretion, every step of the way</h2>
-      <div class="grid-2" style="margin:20px 0">
-        <div style="text-align:center">
-          <div style="font-size:32px;margin-bottom:10px">📦</div>
-          <h4>Plain packaging</h4>
-          <p class="muted">No logos, no product names</p>
-        </div>
-        <div style="text-align:center">
-          <div style="font-size:32px;margin-bottom:10px">🤝</div>
-          <h4>Respectful support</h4>
-          <p class="muted">Friendly, non-judgmental advisors</p>
-        </div>
-      </div>
-      <div style="text-align:center;margin:20px 0">
-        <div style="font-size:32px;margin-bottom:10px">🔒</div>
-        <h4>Your data safe</h4>
-        <p class="muted">Handled with care and privacy</p>
-      </div>
+      <h2>What you can count on</h2>
+      <ul style="list-style:none;padding:0;font-size:1.04rem;line-height:1.8">
+        <li>✓ Plain, discreet packaging</li>
+        <li>✓ Reliable monthly deliveries</li>
+        <li>✓ Products covered by insurance</li>
+        <li>✓ Support team to answer your questions</li>
+      </ul>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form6')">Request discreet sample</button>
+        <button class="cta-trigger" onclick="toggleForm('form6')">Submit your prescription — discreet and simple</button>
         <div class="form-wrapper" id="form6">
           <form class="form-step1" data-ab-plz="off">
             <div class="row two">
@@ -410,8 +428,8 @@
             </div>
             <div id="f6_email" style="display:none"><label for="f6_email_i">Email</label><input id="f6_email_i" type="email" name="email" /></div>
             <div id="f6_phone" style="display:none"><label for="f6_phone_i">Phone</label><input id="f6_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f6_consent" type="checkbox" required /><label for="f6_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Request discreet sample</button>
+            <div class="consent"><input id="f6_consent" type="checkbox" required /><label for="f6_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Submit prescription info</button>
           </form>
         </div>
       </div>
@@ -421,14 +439,14 @@
   <!-- 8) TESTIMONIALS -->
   <section class="bg-soft">
     <div class="container">
-      <h2>Real people, real relief</h2>
+      <h2>From prescription users</h2>
       <div class="testi">
-        <blockquote class="quote">"I thought I'd never relax at work again. With the pads, I stopped thinking about it."<b>Anna, 48</b></blockquote>
-        <blockquote class="quote">"The sample box helped me find what fits best -- now I don't worry about surprises."<b>Karin, 55</b></blockquote>
+        <blockquote class="quote">"I thought the paperwork would be endless. In reality, I sent it once, and everything just works."<b>Maria, 62</b></blockquote>
+        <blockquote class="quote">"Now the supplies arrive every month without me worrying — it's one less burden."<b>Thomas, 58</b></blockquote>
       </div>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form7')">Like Anna and Karin, you can try it too</button>
+        <button class="cta-trigger" onclick="toggleForm('form7')">Experience the same relief</button>
         <div class="form-wrapper" id="form7">
           <form class="form-step1" data-ab-plz="off">
             <div class="row two">
@@ -443,8 +461,8 @@
             </div>
             <div id="f7_email" style="display:none"><label for="f7_email_i">Email</label><input id="f7_email_i" type="email" name="email" /></div>
             <div id="f7_phone" style="display:none"><label for="f7_phone_i">Phone</label><input id="f7_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f7_consent" type="checkbox" required /><label for="f7_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Try it for yourself</button>
+            <div class="consent"><input id="f7_consent" type="checkbox" required /><label for="f7_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Get started</button>
           </form>
         </div>
       </div>
@@ -454,14 +472,15 @@
   <!-- 9) FAQ -->
   <section>
     <div class="container">
-      <h2>Common questions</h2>
-      <details style="margin-top:10px"><summary><b>Is this really free?</b></summary><p class="muted">Yes. Your first sample box is free and without obligation. You only pay delivery costs, and if you make your first order, you get €15 discount.</p></details>
-      <details style="margin-top:10px"><summary><b>Will anyone know?</b></summary><p class="muted">No. Every package is plain and discreet -- no logos or product names.</p></details>
-      <details style="margin-top:10px"><summary><b>Do I need a prescription?</b></summary><p class="muted">No. You can start today. If you later have a prescription, we'll guide you through insurance coverage.</p></details>
-      <details style="margin-top:10px"><summary><b>Do I have to talk on the phone?</b></summary><p class="muted">We call to help you choose what truly fits. It's respectful, discreet, and on your terms.</p></details>
+      <h2>Answering doubts</h2>
+      <details style="margin-top:10px"><summary><b>Do I need to send the original prescription?</b></summary><p class="muted">You can send a copy first, and we'll let you know if we need the original. Most cases work with copies or digital uploads.</p></details>
+      <details style="margin-top:10px"><summary><b>How long does approval take?</b></summary><p class="muted">Usually 1-2 weeks. We'll keep you updated and can provide interim supplies if needed.</p></details>
+      <details style="margin-top:10px"><summary><b>What if my prescription changes?</b></summary><p class="muted">Just send us the updated prescription. We'll handle all changes with your insurance.</p></details>
+      <details style="margin-top:10px"><summary><b>Will delivery show what's inside?</b></summary><p class="muted">No. All packages are plain with no indication of contents.</p></details>
+      <details style="margin-top:10px"><summary><b>Can I switch supplier later?</b></summary><p class="muted">Yes, you can change suppliers at any time. There's no long-term commitment.</p></details>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form8')">Ready to see for yourself? Fill in the form</button>
+        <button class="cta-trigger" onclick="toggleForm('form8')">Ready to simplify your prescription process?</button>
         <div class="form-wrapper" id="form8">
           <form class="form-step1" data-ab-plz="off">
             <div class="row two">
@@ -476,8 +495,8 @@
             </div>
             <div id="f8_email" style="display:none"><label for="f8_email_i">Email</label><input id="f8_email_i" type="email" name="email" /></div>
             <div id="f8_phone" style="display:none"><label for="f8_phone_i">Phone</label><input id="f8_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f8_consent" type="checkbox" required /><label for="f8_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Request sample box</button>
+            <div class="consent"><input id="f8_consent" type="checkbox" required /><label for="f8_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Start process</button>
           </form>
         </div>
       </div>
@@ -487,12 +506,12 @@
   <!-- 10) CREDIBILITY MODULE -->
   <section class="bg-teal">
     <div class="container">
-      <h2>Trusted experience, modern support</h2>
-      <p class="lead">Ontex has specialized in hygiene products for decades. With iD, you benefit from this experience -- combined with today's discreet, personal service.</p>
-      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Healthcare professional recommending</div>
+      <h2>Trusted by health insurers</h2>
+      <p class="lead">Trusted by health insurers, with decades of expertise in incontinence care. With iD, you're in safe hands.</p>
+      <div style="height:160px;border:1px dashed var(--line);border-radius:18px;display:flex;align-items:center;justify-content:center;color:var(--muted);margin:20px 0">Healthcare professional with insurance documents</div>
       
       <div class="cta-section">
-        <button class="cta-trigger" onclick="toggleForm('form9')">Start with a free sample box</button>
+        <button class="cta-trigger" onclick="toggleForm('form9')">Trust the experts — start today</button>
         <div class="form-wrapper" id="form9">
           <form class="form-step1" data-ab-plz="off">
             <div class="row two">
@@ -507,8 +526,8 @@
             </div>
             <div id="f9_email" style="display:none"><label for="f9_email_i">Email</label><input id="f9_email_i" type="email" name="email" /></div>
             <div id="f9_phone" style="display:none"><label for="f9_phone_i">Phone</label><input id="f9_phone_i" type="tel" name="phone" /></div>
-            <div class="consent"><input id="f9_consent" type="checkbox" required /><label for="f9_consent">I agree to be contacted about incontinence solutions.</label></div>
-            <button class="btn" type="submit">Request sample box</button>
+            <div class="consent"><input id="f9_consent" type="checkbox" required /><label for="f9_consent">I agree to be contacted about prescription incontinence products.</label></div>
+            <button class="btn" type="submit">Start process</button>
           </form>
         </div>
       </div>
@@ -519,15 +538,15 @@
   <section id="form-final">
     <div class="container">
       <div class="form-card" id="finalShell">
-        <h2>Your next step to peace of mind</h2>
-        <p class="lead">This form is simple, discreet, and free. After you submit, you can add optional details to fast‑track your request.</p>
+        <h2>Submit your prescription, we'll take care of the rest</h2>
+        <p class="lead">Simple form, discreet contact. After you submit, you can upload or post your prescription, and add optional details to fast-track approval.</p>
         
-        <div class="sample-box-value">
-          <div class="price">€10 Value Sample Box</div>
-          <div>Pay only delivery • Get €15 discount on first order</div>
+        <div class="prescription-box-value">
+          <div class="price">Free Starter Box Available</div>
+          <div>While we process your prescription • Insurance covers ongoing supply</div>
         </div>
         
-        <form class="form-step1" id="finalForm" data-ab-plz="off" aria-label="Final request form">
+        <form class="form-step1" id="finalForm" data-ab-plz="off" aria-label="Final prescription form">
           <div class="row two">
             <div><label for="ff_first">First name</label><input id="ff_first" name="firstName" autocomplete="given-name" required /></div>
             <div><label for="ff_contact">Contact</label>
@@ -540,36 +559,53 @@
           </div>
           <div id="ff_email" style="display:none"><label for="ff_email_i">Email</label><input id="ff_email_i" type="email" name="email" /></div>
           <div id="ff_phone" style="display:none"><label for="ff_phone_i">Phone</label><input id="ff_phone_i" type="tel" name="phone" /></div>
-          <div class="consent"><input id="ff_consent" type="checkbox" required /><label for="ff_consent">I agree to be contacted about incontinence solutions. Consent can be withdrawn at any time.</label></div>
-          <button class="btn" type="submit">Request free sample box</button>
-          <p class="form-note">Discreet packaging • No obligation • Insurance support available</p>
+          <div class="consent"><input id="ff_consent" type="checkbox" required /><label for="ff_consent">I agree to be contacted about prescription incontinence products. Consent can be withdrawn at any time.</label></div>
+          <button class="btn" type="submit">Submit prescription info</button>
+          <p class="form-note">Discreet • Insurance covered • Professional support</p>
         </form>
 
         <!-- Fast‑track (shown after any Step 1 submit) -->
         <div id="fastTrack" class="form-card" style="display:none;margin-top:18px">
-          <h3>Fast‑track (optional)</h3>
-          <p class="lead">Add a few details now so we can reach you faster and tailor your samples.</p>
+          <h3>Fast‑track approval (optional)</h3>
+          <p class="lead">Add details now to speed up your prescription processing.</p>
           <form id="fastForm" action="#" method="post" novalidate>
             <div class="row two">
-              <div><label for="rx">Do you have a prescription?</label>
-                <select id="rx" name="hasRx"><option value="">Select…</option><option>Yes</option><option>No</option></select>
+              <div><label for="insurance">Insurance fund name</label>
+                <input id="insurance" name="insuranceFund" placeholder="e.g. AOK, Barmer, TK..." />
               </div>
-              <div><label for="sev">Typical protection needed</label>
-                <select id="sev" name="severity"><option value="">Select…</option><option>Light</option><option>Moderate</option><option>Heavy</option></select>
+              <div><label for="product_pref">Product preference</label>
+                <select id="product_pref" name="productPreference">
+                  <option value="">No preference</option>
+                  <option>Pants</option>
+                  <option>Shaped pads</option>
+                  <option>All-in-ones</option>
+                  <option>Bed protection</option>
+                  <option>Mixed selection</option>
+                </select>
               </div>
             </div>
             <div class="row two">
-              <div><label for="when">When does it happen most?</label>
-                <select id="when" name="when"><option value="">Select…</option><option>During exercise</option><option>While coughing/laughing</option><option>At night</option><option>Randomly</option></select>
+              <div><label for="delivery_freq">Preferred delivery frequency</label>
+                <select id="delivery_freq" name="deliveryFreq">
+                  <option value="">No preference</option>
+                  <option>Monthly</option>
+                  <option>Every 6 weeks</option>
+                  <option>Every 2 months</option>
+                </select>
               </div>
-              <div><label for="pref">Preferred product type (optional)</label>
-                <select id="pref" name="pref"><option value="">No preference</option><option>Pads</option><option>Pants</option><option>Underpads</option></select>
+              <div><label for="upload_ready">Prescription ready to upload?</label>
+                <select id="upload_ready" name="uploadReady">
+                  <option value="">I'll decide later</option>
+                  <option>Yes, I can upload now</option>
+                  <option>I'll post it</option>
+                  <option>I need a prepaid envelope</option>
+                </select>
               </div>
             </div>
-            <label for="notes">Anything we should know to help you better? (optional)</label>
-            <input id="notes" name="notes" placeholder="e.g., sensitive skin, sizes, or daily routines" />
+            <label for="special_needs">Special requirements or medical notes (optional)</label>
+            <input id="special_needs" name="specialNeeds" placeholder="e.g., allergies, size requirements, mobility needs" />
             <div style="text-align:center;margin-top:10px"><button class="btn" type="submit">Send fast‑track details</button></div>
-            <p class="form-note">You can skip this step and we'll still contact you soon.</p>
+            <p class="form-note">This helps us process your prescription faster and more accurately.</p>
           </form>
         </div>
       </div>
@@ -578,7 +614,7 @@
 
   <!-- 12) STICKY CTA -->
   <div class="sticky-cta" aria-hidden="true">
-    <span class="muted" style="font-weight:600">Free sample box (€10 value)</span>
+    <span class="muted" style="font-weight:600">Prescription supplies, made easy</span>
     <a class="btn" href="#form-final">Get started</a>
   </div>
 
@@ -652,7 +688,7 @@
 
     // Fast‑track demo submit
     const fastForm = document.getElementById('fastForm');
-    if(fastForm){ fastForm.addEventListener('submit', function(e){ e.preventDefault(); alert('Thanks! We\'ll use these details to tailor your samples and contact you faster.'); }); }
+    if(fastForm){ fastForm.addEventListener('submit', function(e){ e.preventDefault(); alert('Thanks! We\'ll use these details to process your prescription faster and more accurately.'); }); }
   </script>
 </body>
 </html>

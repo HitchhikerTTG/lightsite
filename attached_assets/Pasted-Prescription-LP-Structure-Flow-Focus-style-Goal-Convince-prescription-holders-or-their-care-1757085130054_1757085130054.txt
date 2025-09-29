@@ -1,0 +1,103 @@
+Prescription LP — Structure & Flow (Focus-style)
+
+Goal: Convince prescription holders (or their caregivers) that sending the prescription to iD = the easiest, safest way to secure their supplies.
+Tone: Practical, relieving, authoritative but warm.
+Form strategy: Same as other pages → short Step-1 forms repeated, with Fast-Track after first submit.
+
+⸻
+
+1) Hero — “Prescription care, without the hassle”
+	•	Headline: “Prescription incontinence products — simple, discreet, taken care of.”
+	•	Subhead: “Send us your prescription once, and we’ll handle the rest: approvals, supplies, and discreet deliveries to your door.”
+	•	Trust chips: We handle paperwork · Covered by your insurance · Delivered discreetly · Reliable monthly supply
+	•	Form 1 (light, 3 fields): First name • Contact (Email/Phone) • Consent
+	•	Visual placeholder: Person holding envelope at the door / caregiver handing over form → everyday, calm.
+
+⸻
+
+2) Empathy — “We know the process feels heavy”
+	•	Copy: “Getting a prescription should bring relief. Instead, it often means more forms, more calls, more things to manage. You already have enough to deal with — the last thing you need is chasing supplies. That’s where we step in.”
+	•	Purpose: Validate frustration; position iD as simplifier.
+
+⸻
+
+3) Process Snapshot — “How it works”
+	•	4 clear steps:
+	1.	Get your prescription from your doctor.
+	2.	Send it to us (post, upload, or prepaid envelope).
+	3.	We handle approvals and set up your supply.
+	4.	You receive products discreetly at home, month after month.
+	•	Form 2 (process-framed): Headline: “Start Step 1 now”
+
+⸻
+
+4) Product Coverage Overview — “All prescription products available”
+	•	Cards:
+	•	Pants (various sizes)
+	•	Shaped pads
+	•	All-in-ones
+	•	Bed protection
+	•	Each card: short caption → “Approved for prescription coverage, reliable and comfortable.”
+	•	Purpose: Show breadth of coverage, reassure nothing is missing.
+
+⸻
+
+5) Two Options Module — “Different paths, same peace of mind”
+	•	Option 1: Send prescription now — we take over, supplies set up.
+	•	Option 2: Unsure? — start with self-pay samples, then switch when ready.
+	•	Purpose: Remove decision pressure.
+
+⸻
+
+6) Why it Matters — “Before / After prescription support”
+	•	Before: endless forms, repeated trips, uncertainty.
+	•	After: one-time setup, regular supplies, discreet delivery.
+	•	CTA button: “Take the first step — we’ll handle the rest.”
+
+⸻
+
+7) Discretion & Reliability — “What you can count on”
+	•	Copy bullets:
+	•	Plain, discreet packaging
+	•	Reliable monthly deliveries
+	•	Products covered by insurance
+	•	Support team to answer your questions
+	•	Form 3 (trust-framed): “Submit your prescription — discreet and simple.”
+
+⸻
+
+8) Testimonials — From prescription users
+	•	Quote 1: “I thought the paperwork would be endless. In reality, I sent it once, and everything just works.”
+	•	Quote 2: “Now the supplies arrive every month without me worrying — it’s one less burden.”
+
+⸻
+
+9) FAQ — Answering doubts
+	•	Do I need to send the original prescription?
+	•	How long does approval take?
+	•	What if my prescription changes?
+	•	Will delivery show what’s inside?
+	•	Can I switch supplier later?
+
+⸻
+
+10) Credibility (later module)
+	•	Copy: “Trusted by health insurers, with decades of expertise in incontinence care. With iD, you’re in safe hands.”
+	•	Purpose: Reassurance late in scroll.
+
+⸻
+
+11) Final Conversion Section — Full form + Fast-Track
+	•	Headline: “Submit your prescription, we’ll take care of the rest.”
+	•	Short intro: “Simple form, discreet contact. After you submit, you can upload or post your prescription, and add optional details to fast-track approval.”
+	•	Form 4 (final, complete):
+	•	First name
+	•	Contact (Email/Phone)
+	•	[Optional A/B: ZIP]
+	•	Consent
+	•	After submit: Fast-Track appears (upload prescription, insurance fund name, product preference, delivery frequency).
+
+⸻
+
+Sticky CTA (mobile)
+	•	Label: “Prescription supplies, made easy” + button → jumps to nearest form.

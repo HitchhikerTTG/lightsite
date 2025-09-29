@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>iD Men | Incontinence Solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #2D2D2D;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .range-badge {
+      font-size: 0.75rem;
+      padding: 0.3em 0.6em;
+      border-radius: 0.5em;
+      font-weight: 600;
+    }
+    .essential { background-color: #009FDB; color: white; }
+    .discreet { background-color: #7B5EA7; color: white; }
+    .sensitive { background-color: #FF9F45; color: white; }
+    .men { background-color: #003366; color: white; }
+    .subcategory-nav a {
+      margin-right: 1rem;
+    }
+    .subcategory-btn {
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 2px solid #6c757d;
+    }
+    .subcategory-btn:hover {
+      background-color: #003366;
+      border-color: #003366;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .subcategory-btn:hover small {
+      color: rgba(255,255,255,0.8) !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="/overview.html">Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav w-100 d-flex justify-content-between">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold" href="/women.html" id="navWomen" role="button" data-toggle="dropdown">Women</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/women.html#liners">Liners</a>
+            <a class="dropdown-item" href="/women.html#mini">Mini Pads</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold active" href="/men.html" id="navMen" role="button" data-toggle="dropdown">Men</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/men.html#pads">Guards & Pads</a>
+            <a class="dropdown-item" href="/men.html#shields">Shields</a>
+            <a class="dropdown-item" href="/men.html#pants">Underwear</a>
+            <a class="dropdown-item" href="/men.html#briefs">Protective Briefs</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold" href="/juniors.html" id="navJunior" role="button" data-toggle="dropdown">Juniors & Baby</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/juniors.html#diapers">Baby Diapers</a>
+            <a class="dropdown-item" href="/juniors.html#pants">Baby Pants</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold" href="/advanced.html" id="navAdvanced" role="button" data-toggle="dropdown">Advanced Needs</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/advanced.html#pants">Protective Pants</a>
+            <a class="dropdown-item" href="/advanced.html#slip">Slip-On</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle font-weight-bold" href="/complementary.html" id="navComplementary" role="button" data-toggle="dropdown">Complementary</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/complementary.html#underpads">Bed Protection</a>
+            <a class="dropdown-item" href="/complementary.html#wipes">Cleansing Wipes</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CATEGORY INTRO -->
+<section class="p-4 text-center">
+  <div class="container">
+    <h1>Products for Men</h1>
+    <p>Discover masculine protection designed for male anatomy and active lifestyle -- from discreet guards to full protection underwear.</p>
+
+    <!-- Enhanced Subcategory Navigation -->
+    <div class="subcategory-nav mt-4 mb-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-4 mb-3">
+          <a href="#guards" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="font-weight-bold">Guards & Pads</div>
+            <small class="text-muted d-block mt-1">Normal - Super</small>
+          </a>
+        </div>
+        <div class="col-12 col-md-4 mb-3">
+          <a href="#pants" class="btn btn-outline-secondary w-100 py-3 subcategory-btn">
+            <div class="font-weight-bold">Protective Pants</div>
+            <small class="text-muted d-block mt-1">Super Protection</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS TOGGLE FOR MOBILE -->
+<div class="container">
+  <button class="btn btn-outline-primary filter-toggle" onclick="document.getElementById('filters').classList.toggle('d-none')">
+    Toggle Filters
+  </button>
+</div>
+
+<!-- PRODUCT FILTERS + LISTING WRAPPER -->
+<section class="p-4" id="men-products">
+  <div class="container">
+    <div class="row">
+
+      <!-- Sidebar Filters (Desktop) -->
+      <aside class="col-md-3 d-none d-md-block" id="filters">
+        <h5>Filter By</h5>
+        <div class="mb-3">
+          <label for="filter-absorbency">Absorbency</label>
+          <select class="form-control" id="filter-absorbency">
+            <option>All</option>
+            <option>Normal</option>
+            <option>Extra Plus</option>
+            <option>Super</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="filter-size">Size</label>
+          <select class="form-control" id="filter-size">
+            <option>All</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="filter-type">Product Type</label>
+          <select class="form-control" id="filter-type">
+            <option>All</option>
+            <option>Guard</option>
+            <option>Pad</option>
+            <option>Pants</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- Product Cards -->
+      <div class="col-md-9">
+        <div class="row" id="product-grid">
+
+          <!-- Product 1: iD Discreet For Men Normal -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-For-Men/iD-Discreet-For-Men-Normal_IDD31111910.html" class="d-flex justify-content-center align-items-center h-100 w-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.fT5SD5hZ/ProductFamily-515.jpg" alt="iD Discreet For Men Normal" class="img-fluid" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title">iD Discreet For Men Normal</h5>
+                <div class="mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fYvEX8gZ/DropAbsorbency-105.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge men">Men's</span>
+                </div>
+                <div class="mt-auto">
+                  <h6 class="mb-1">Price: from <span>£</span><span>4.55</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-For-Men/iD-Discreet-For-Men-Normal_IDD31111910.html">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2: iD Discreet For Men Extra Plus -->
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4">
+            <div class="card h-100">
+              <div class="card-img-top d-flex justify-content-center align-items-center" style="height: 200px;">
+                <a href="https://www.id-direct.com/product/iD-Discreet-For-Men/iD-Discreet-For-Men-Extra-Plus_IDD31221910.html" class="d-flex justify-content-center align-items-center h-100 w-100">
+                  <img src="https://www.id-direct.com/media/ProductFamily/mainImage-detail/.f7ASb6hZ/ProductFamily-519.jpg" alt="iD Discreet For Men Extra Plus" class="img-fluid" style="max-height: 180px; object-fit: contain;">
+                </a>
+              </div>
+              <div class="card-body text-center d-flex flex-column">
+                <h5 class="card-title">iD Discreet For Men Extra Plus</h5>
+                <div class="mb-2">
+                  <img alt="absorbency drops" class="py-1" src="https://www.id-direct.com/media/DropAbsorbency/image/.fE6jX8gZ/DropAbsorbency-106.png" style="max-height: 30px;">
+                </div>
+                <div class="mb-2">
+                  <span class="badge men">Men's</span>
+                </div>
+                <div class="mt-auto">
+                  <h6 class="mb-1">Price: from <span>£</span><span>5.39</span></h6>
+                  <p class="text-muted small mb-3">VAT excl, Transport excl.</p>
+                  <a class="btn btn-primary btn-sm" href="https://www.id-direct.com/product/iD-Discreet-For-Men/iD-Discreet-For-Men-Extra-Plus_IDD31221910.html">Add to basket</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .badge.men {
+    background-color: #003366;
+    color: white;
+  }
+  .badge.essential {
+    background-color: #009FDB;
+    color: white;
+  }
+  .badge.sensitive {
+    background-color: #FF9F45;
+    color: white;
+  }
+  .card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #dee2e6;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
