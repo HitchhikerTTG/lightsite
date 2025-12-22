@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>iD Light – Ultra‑thin protection you forget you're wearing</title>
+  <meta name="description" content="Discreet, breathable pads for light leaks -- all‑day comfort and confidence. Free discreet delivery from £45.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --red:#E30613;           /* Kruidvat red */
+      --yellow:#FFD200;        /* Kruidvat yellow */
+      --ink:#111111;           /* Primary text */
+      --ink-2:#30343b;         /* Secondary text */
+      --bg:#fff7d6;            /* Soft yellow background wash */
+      --card:#ffffff;          /* Card background */
+      --muted:#f4f5f7;         /* Muted grey */
+      --accent:#0055ff;        /* Link focus */
+      --radius:18px;
+      --shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff}
+    a{color:var(--ink)}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+    header.top{
+      background:var(--red);color:#fff;position:sticky;top:0;z-index:99;
+      box-shadow:0 2px 0 rgba(0,0,0,.05)
+    }
+    .topbar{display:flex;align-items:center;gap:12px;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .logo-badge{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--red);font-weight:800}
+    .search{flex:1;display:flex;background:#fff;border-radius:999px;overflow:hidden}
+    .search input{flex:1;border:0;padding:12px 16px;font-size:15px;outline:none}
+    .search button{background:var(--yellow);border:0;padding:0 18px;font-weight:800;cursor:pointer}
+
+    /* TOOLKIT BAR - Sticky at top */
+    .toolkit-bar{
+      background:linear-gradient(135deg, var(--red) 0%, #c0050f 100%);
+      color:#fff;
+      padding:14px 0;
+      position:sticky;
+      top:60px;
+      z-index:98;
+      box-shadow:0 2px 8px rgba(0,0,0,.1);
+    }
+    .toolkit-bar .wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .toolkit-bar strong{
+      font-size:16px;
+      font-weight:800;
+    }
+    .toolkit-bar p{
+      margin:0;
+      font-size:14px;
+      opacity:.95;
+    }
+    .toolkit-bar .btn-toolkit{
+      background:var(--yellow);
+      color:var(--ink);
+      border:0;
+      border-radius:999px;
+      padding:10px 20px;
+      font-weight:800;
+      cursor:pointer;
+      white-space:nowrap;
+      transition:transform .2s;
+    }
+    .toolkit-bar .btn-toolkit:hover{
+      transform:scale(1.05);
+    }
+
+    /* HERO */
+    .hero{background:var(--bg);padding:28px 0 26px}
+    .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+    .hero-card{background:var(--ink);color:#fff;border-radius:var(--radius);padding:28px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:var(--ink);padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}
+    .hero h1{margin:.6rem 0 .5rem;font-size:42px;line-height:1.05;letter-spacing:-.3px}
+    .hero p{color:#f3f3f3;max-width:56ch}
+    .cta{display:flex;gap:10px;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:12px 18px;font-weight:800;border:3px solid transparent;text-decoration:none}
+    .btn-primary{background:var(--red);color:#fff}
+    .btn-secondary{background:#fff;color:var(--ink)}
+    .micro{margin-top:10px;font-size:13px;opacity:.9}
+    .hero-side{display:grid;gap:14px}
+    .promo{background:var(--yellow);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow)}
+    .promo h3{margin:0 0 6px}
+
+    /* BENEFITS */
+    .section{padding:26px 0}
+    .title{display:flex;align-items:center;gap:10px;margin:6px 0 16px}
+    .title .dot{width:8px;height:8px;border-radius:50%;background:var(--red)}
+    .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px 16px;box-shadow:var(--shadow)}
+    .card h4{margin:0 0 6px}
+    .card p{margin:0;color:var(--ink-2);font-size:14px}
+
+    /* CONTENT ARTICLES SECTION */
+    .content-section{
+      background:#fafafa;
+      padding:40px 0;
+    }
+    .content-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:24px;
+    }
+    .article-card{
+      background:#fff;
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:transform .2s,box-shadow .2s;
+      display:flex;
+      flex-direction:column;
+    }
+    .article-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 8px 24px rgba(0,0,0,.12);
+    }
+    .article-card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      margin-bottom:16px;
+    }
+    .article-card .tag{
+      display:inline-block;
+      background:var(--yellow);
+      color:var(--ink);
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .article-card h3{
+      margin:0 0 8px;
+      font-size:20px;
+      line-height:1.3;
+    }
+    .article-card p{
+      margin:0 0 12px;
+      color:var(--ink-2);
+      font-size:14px;
+      line-height:1.6;
+      flex:1;
+    }
+    .article-card .read-more{
+      color:var(--red);
+      font-weight:700;
+      text-decoration:none;
+      font-size:14px;
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+    }
+    .article-card .read-more:hover{
+      text-decoration:underline;
+    }
+
+    /* PRODUCT CHOOSER */
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+    .tab{border-radius:999px;padding:8px 12px;background:var(--muted);font-weight:700;cursor:pointer}
+    .tab.active{background:var(--yellow)}
+    .sku-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .sku{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:12px;display:flex;flex-direction:column}
+    .sku img{width:100%;height:160px;object-fit:contain;background:#fff;border-radius:12px}
+    .price-row{display:flex;align-items:center;justify-content:space-between;margin:8px 0}
+    .badge{background:var(--red);color:#fff;border-radius:10px;padding:4px 8px;font-weight:800;font-size:12px}
+    .price{display:flex;align-items:flex-end;gap:4px}
+    .price .big{font-size:26px;font-weight:800}
+    .price .small{font-size:12px}
+    .sku button{margin-top:auto;background:var(--red);color:#fff;border:0;border-radius:999px;padding:10px 12px;font-weight:800;cursor:pointer}
+    .sku .note{font-size:12px;color:var(--ink-2)}
+
+    /* SOCIAL PROOF */
+    .stars{color:#ffb400;font-size:16px}
+    blockquote{margin:0;padding:14px 16px;background:#fff;border-left:6px solid var(--yellow);border-radius:12px}
+
+    /* DELIVERY STRIP */
+    .strip{background:var(--yellow);padding:16px;border-radius:var(--radius);display:flex;gap:16px;align-items:center;justify-content:space-between;box-shadow:var(--shadow)}
+    .strip ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;font-weight:700}
+
+    /* FAQ */
+    details{background:#fff;border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:800}
+
+    /* FOOTER */
+    footer{margin-top:28px;background:#f0f0f0}
+    .foot{padding:22px 0;display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px}
+    .foot h5{margin:0 0 8px}
+
+    /* Responsive */
+    @media (max-width:1024px){
+      .hero .grid{grid-template-columns:1fr}
+      .card-grid,.sku-grid{grid-template-columns:repeat(2,1fr)}
+      .content-grid{grid-template-columns:repeat(2,1fr)}
+      .foot{grid-template-columns:1fr}
+      .toolkit-bar .wrap{flex-direction:column;text-align:center}
+    }
+    @media (max-width:560px){
+      .card-grid,.sku-grid,.content-grid{grid-template-columns:1fr}
+      .hero h1{font-size:32px}
+      .strip{flex-direction:column;align-items:flex-start}
+      .strip ul{flex-direction:column}
+      .toolkit-bar{top:0;position:relative}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap topbar">
+      <div class="logo"><span class="logo-badge">iD</span> <span>Light</span></div>
+      <div class="search"><input placeholder="What are you looking for?"/><button>Search</button></div>
+      <a class="btn btn-secondary" href="#cart" style="background:#fff;">Cart (0)</a>
+    </div>
+  </header>
+
+  <!-- TOOLKIT BAR -->
+  <div class="toolkit-bar">
+    <div class="wrap">
+      <div>
+        <strong>📦 Free Healthcare Professional Toolkit</strong>
+        <p>Download our comprehensive guide with product information, sizing charts, and patient resources</p>
+      </div>
+      <button class="btn-toolkit" onclick="window.location.href='#toolkit-download'">Download Toolkit</button>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div class="hero-card">
+          <span class="pill">NEW • Ultra‑thin</span>
+          <h1>Ultra‑thin protection you forget you're wearing</h1>
+          <p>Discreet, breathable pads for light leaks -- all‑day comfort and confidence. Dermatologically tested and unscented.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#products">Shop iD Light</a>
+            <a class="btn btn-secondary" href="#quiz">Find your fit</a>
+          </div>
+          <div class="micro">Discreet delivery • Free from £45 • Delivery in 3 working days</div>
+        </div>
+        <div class="hero-side">
+          <div class="promo">
+            <h3 style="margin:0 0 8px">All Women's Hygiene</h3>
+            <div style="display:flex;align-items:center;gap:10px"><span class="badge" style="background:var(--ink)">2+1 GRATIS</span><span>Mix & match across the range</span></div>
+          </div>
+          <div class="promo" style="background:#fff">
+            <h3 style="margin:0 0 6px">Until Wednesday</h3>
+            <p style="margin:0">Free discreet shipping from £45 + 30‑day returns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="title"><span class="dot"></span><h2 style="margin:0">Why you'll like it</h2></div>
+      <div class="card-grid">
+        <div class="card"><h4>Stays dry fast</h4><p>Fast‑acting top layer draws moisture away to keep skin comfortable.</p></div>
+        <div class="card"><h4>Ultra‑thin</h4><p>Low‑profile design that's invisible under clothing.</p></div>
+        <div class="card"><h4>Odour control</h4><p>Up to 10 hours of freshness -- unscented and discreet.</p></div>
+        <div class="card"><h4>Gentle on skin</h4><p>Soft topsheet, breathable backsheet, dermatologically tested.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW CONTENT SECTION WITH ARTICLES -->
+  <section class="content-section">
+    <div class="wrap">
+      <div class="title"><span class="dot"></span><h2 style="margin:0">Expert Insights & Resources</h2></div>
+      <div class="content-grid">
+        <article class="article-card">
+          <img src="https://dummyimage.com/600x400/f4f5f7/30343b&text=Understanding+Light+Incontinence" alt="Understanding Light Incontinence" />
+          <span class="tag">EDUCATION</span>
+          <h3>Understanding Light Incontinence: Causes and Solutions</h3>
+          <p>Learn about the common causes of light incontinence and discover effective management strategies. Our guide covers everything from lifestyle adjustments to product selection.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </article>
+        <article class="article-card">
+          <img src="https://dummyimage.com/600x400/f4f5f7/30343b&text=Choosing+the+Right+Product" alt="Choosing the Right Product" />
+          <span class="tag">GUIDE</span>
+          <h3>How to Choose the Right Protection Level</h3>
+          <p>Not sure which absorbency level is right for you? Our comprehensive guide helps you match your needs with the perfect product, ensuring comfort and confidence.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </article>
+        <article class="article-card">
+          <img src="https://dummyimage.com/600x400/f4f5f7/30343b&text=Lifestyle+Tips" alt="Lifestyle Tips" />
+          <span class="tag">LIFESTYLE</span>
+          <h3>Living Confidently: Tips for Daily Life</h3>
+          <p>Discover practical tips and strategies for managing light incontinence while maintaining an active lifestyle. From exercise routines to travel advice, we've got you covered.</p>
+          <a href="#" class="read-more">Read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section" style="background:#fff8e1">
+    <div class="wrap">
+      <div class="title"><span class="dot"></span><h2 style="margin:0">Find your iD Light</h2></div>
+      <div class="tabs">
+        <div class="tab active">Ultra Mini</div>
+        <div class="tab">Mini</div>
+        <div class="tab">Mini Plus</div>
+        <div class="tab">Normal</div>
+        <div class="tab">Extra</div>
+        <div class="tab">Maxi</div>
+        <div class="tab">Super</div>
+      </div>
+      <div class="sku-grid">
+        <!-- Example SKU card; replace images/prices with real data -->
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/ffffff/111&text=iD+Light+Ultra+Mini" alt="iD Light Ultra Mini" />
+          <h4 style="margin:8px 0 4px">Ultra Mini</h4>
+          <div class="price-row">
+            <span class="badge">NEW</span>
+            <div class="price"><span class="big">£3</span><span class="small">.99</span></div>
+          </div>
+          <p class="note">28 pads • For drips and sneezes</p>
+          <button>Add</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/ffffff/111&text=iD+Light+Mini" alt="iD Light Mini" />
+          <h4 style="margin:8px 0 4px">Mini</h4>
+          <div class="price-row">
+            <span class="badge" style="background:var(--yellow);color:var(--ink)">2 + 1</span>
+            <div class="price"><span class="big">£4</span><span class="small">.49</span></div>
+          </div>
+          <p class="note">20 pads • Light, occasional leaks</p>
+          <button>Add</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/ffffff/111&text=iD+Light+Normal" alt="iD Light Normal" />
+          <h4 style="margin:8px 0 4px">Normal</h4>
+          <div class="price-row">
+            <span class="badge">ACTION</span>
+            <div class="price"><span class="big">£4</span><span class="small">.99</span></div>
+          </div>
+          <p class="note">14 pads • Daily confidence</p>
+          <button>Add</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/ffffff/111&text=iD+Light+Super" alt="iD Light Super" />
+          <h4 style="margin:8px 0 4px">Super</h4>
+          <div class="price-row">
+            <span class="badge" style="background:#111">NEW</span>
+            <div class="price"><span class="big">£5</span><span class="small">.49</span></div>
+          </div>
+          <p class="note">10 pads • Extra assurance</p>
+          <button>Add</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="title"><span class="dot"></span><h2 style="margin:0">Real users, real confidence</h2></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <blockquote>
+          <div class="stars">★★★★★</div>
+          <p style="margin:6px 0 0">"Soft, thin, and reliable -- exactly what I needed."</p>
+        </blockquote>
+        <blockquote>
+          <div class="stars">★★★★☆</div>
+          <p style="margin:6px 0 0">"Invisible under leggings, great for gym days."</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap strip">
+      <strong>Discreet delivery, always</strong>
+      <ul>
+        <li>Neutral packaging</li>
+        <li>Free from £45</li>
+        <li>3‑day delivery</li>
+      </ul>
+      <a class="btn btn-primary" href="#products">Shop now</a>
+    </div>
+  </section>
+
+  <section id="quiz" class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="card" style="display:flex;align-items:center;justify-content:space-between;gap:16px">
+        <div>
+          <h3 style="margin:0 0 6px">Not sure which to choose?</h3>
+          <p style="margin:0">Find your perfect pad in 60 seconds with our quick quiz.</p>
+        </div>
+        <a class="btn btn-secondary" href="#">Start quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="title"><span class="dot"></span><h2 style="margin:0">FAQ</h2></div>
+      <details>
+        <summary>Which absorbency should I pick?</summary>
+        <p style="margin:8px 0 0">Start with the activity that matches your need: "Ultra Mini / Mini" for drips and sneezes, "Normal / Extra" for daily protection, "Maxi / Super" for longer days. You can always size up or down.</p>
+      </details>
+      <details>
+        <summary>Are the pads scented?</summary>
+        <p style="margin:8px 0 0">No. iD Light pads are unscented and dermatologically tested.</p>
+      </details>
+      <details>
+        <summary>Is the packaging discreet?</summary>
+        <p style="margin:8px 0 0">Yes. All orders arrive in neutral packaging with no product names on the outside.</p>
+      </details>
+      <details>
+        <summary>What's your delivery & returns policy?</summary>
+        <p style="margin:8px 0 0">Free delivery from £45 and 30‑day returns on unopened packs.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <h5>About iD</h5>
+        <p style="margin:6px 0 0;color:var(--ink-2)">Trusted protection developed with healthcare professionals to support everyday confidence.</p>
+      </div>
+      <div>
+        <h5>Need help?</h5>
+        <p style="margin:6px 0 0">Call 0800 389 6185 or <a href="#" style="color:var(--accent);text-decoration:underline">contact us</a></p>
+      </div>
+      <div>
+        <h5>Stay in the loop</h5>
+        <form style="display:flex;gap:8px"><input placeholder="Your email" style="flex:1;border-radius:10px;border:1px solid #ddd;padding:10px 12px"><button class="btn btn-primary" type="button">Sign up</button></form>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
