@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iD Essential | Reliable and reassuring protection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #2D2D2D;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, #003366 0%, #009FDB 100%);
+      color: white;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="40" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="70" cy="20" r="0.8" fill="rgba(255,255,255,0.06)"/><circle cx="90" cy="60" r="1.2" fill="rgba(255,255,255,0.04)"/></svg>') repeat;
+      pointer-events: none;
+    }
+    
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .product-badge {
+      display: inline-block;
+      background-color: #009FDB;
+      color: white;
+      padding: 6px 40px 6px 12px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 1rem;
+    }
+    
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    
+    @media (min-width: 768px) {
+      .product-image {
+        max-width: 200px;
+        margin-right: 1rem;
+      }
+    }
+    
+    .section-alt {
+      background-color: #F5F5F5;
+    }
+    
+    .section-light {
+      background-color: #E6F7FB;
+    }
+    
+    .section-warm {
+      background-color: #FFF5F0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #009FDB 0%, #7B5EA7 100%);
+      color: white;
+      padding: 80px 0;
+    }
+    
+    .btn-custom {
+      background-color: white;
+      color: #009FDB;
+      border: 2px solid white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-custom:hover {
+      background-color: transparent;
+      color: white;
+      border-color: white;
+    }
+    
+    .badge-absorbency {
+      padding: 0.4em 0.8em;
+      border-radius: 0.5em;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+    
+    .badge-normal { background-color: #f6ab72; color: white; }
+    .badge-extra { background-color: #0057a5; color: white; }
+    .badge-super { background-color: #009679; color: white; }
+  </style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <img src="cat/IDEssentials.png" alt="iD Essential Logo" style="max-width: 200px; width: 100%; height: auto; margin-bottom: 2rem; filter: brightness(0) invert(1);">
+        <h1 class="display-4 fw-bold mb-4">Reliable and Reassuring Protection</h1>
+        <p class="lead mb-4">If you value straightforward performance and safety, the iD Essential range is tailored for you. It offers reliable protection across various levels of incontinence, focusing on eliminating unnecessary complexities to enhance your confidence and ease, day or night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4-IN-1 PROTECTION SECTION -->
+<section class="py-5">
+  <div class="container" style="max-width: 900px;">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold mb-3" style="color: #003366;">Effortless Efficiency with 4-in-1 Protection</h2>
+      <p class="lead">We've designed our 4-in-1 protection system to address all your needs, giving you comfort, safety, and peace of mind.</p>
+    </div>
+    <div class="text-center my-4">
+      <img src="cat/4in1LP.png" alt="4-in-1 Protection" style="max-width: 300px; width: 100%; height: auto;">
+    </div>
+    <div class="row text-center mt-4">
+      <div class="col-md-3 mb-4">
+        <div class="product-card" style="padding: 1.5rem;">
+          <h4 style="font-size:1.1rem; color:#003366; font-weight: bold;">Fast Absorption</h4>
+          <p style="font-size:0.95rem; margin-bottom: 0;">Quickly absorbs moisture, ensuring you stay dry day and night.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="product-card" style="padding: 1.5rem;">
+          <h4 style="font-size:1.1rem; color:#003366; font-weight: bold;">Leakage Protection</h4>
+          <p style="font-size:0.95rem; margin-bottom: 0;">Provides safety and confidence throughout the day, freeing you from worries about leaks.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="product-card" style="padding: 1.5rem;">
+          <h4 style="font-size:1.1rem; color:#003366; font-weight: bold;">Dryness</h4>
+          <p style="font-size:0.95rem; margin-bottom: 0;">Keeps you dry, avoiding discomfort associated with dampness.</p>
+        </div>
+      </div>
+      <div class="col-md-3 mb-4">
+        <div class="product-card" style="padding: 1.5rem;">
+          <h4 style="font-size:1.1rem; color:#003366; font-weight: bold;">Odour Control</h4>
+          <p style="font-size:0.95rem; margin-bottom: 0;">Maintains discretion and enhances your experience by effectively managing odors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT RANGES HEADER -->
+<section class="py-4 text-center">
+  <div class="container">
+    <h2 class="display-5 fw-bold mb-3" style="color: #003366;">Discover Our iD Essential Range</h2>
+    <p class="lead">Each solution is designed for your specific needs, combining performance with comfort in a mobile-friendly, easy-to-explore layout.</p>
+  </div>
+</section>
+
+<!-- Light Pads Section -->
+<section class="py-5 section-alt">
+  <div class="container">
+    <div class="product-card">
+      <div class="row align-items-center">
+        <div class="col-md-4 order-md-2 text-center">
+          <img src="cat/IDEL.png" alt="Light Pads Packaging" class="product-image">
+        </div>
+        <div class="col-md-8 order-md-1">
+          <span class="product-badge">LIGHT PADS</span>
+          <p class="mb-3">Reliable protection and comfort for light incontinence. iD Essential Light Pads feature a unisex design, thicker and more absorbent than standard liners, ensuring confidence and safety all day long.</p>
+          <ul class="mb-4">
+            <li><b>Designed for practicality:</b> Wide adhesive strip, printed absorption levels, bulk packaging ideal for home or institutions.</li>
+            <li><b>Comfort & discretion:</b> Anatomically shaped to fit snugly inside close-fitting underwear despite thicker material.</li>
+            <li><b>Odour control system:</b> Integrated odour protection for an active lifestyle without worry.</li>
+            <li><b>Skin-friendly:</b> 100% breathable and dermatologist-approved, gentle on skin.</li>
+          </ul>
+          <div class="mb-3">
+            <strong>Absorbency:</strong>
+            <span class="badge badge-absorbency badge-normal">Normal</span>
+            <span class="badge badge-absorbency badge-extra">Extra Plus</span>
+            <span class="badge badge-absorbency badge-super">Super</span>
+          </div>
+          <a href="shop/light-pads" class="btn btn-custom">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Unisex Pants Section -->
+<section class="py-5 section-light">
+  <div class="container">
+    <div class="product-card">
+      <div class="row align-items-center">
+        <div class="col-md-4 order-md-2 text-center">
+          <img src="cat/IDEPants.png" alt="Unisex Pants Packaging" class="product-image">
+        </div>
+        <div class="col-md-8 order-md-1">
+          <span class="product-badge">UNISEX PANTS</span>
+          <p class="mb-3">Advanced 4-in-1 hyper protection system with Y-Core channel ensures rapid fluid distribution, optimizing comfort and performance.</p>
+          <ul class="mb-4">
+            <li><b>Faster absorption:</b> Prevents pooling and discomfort</li>
+            <li><b>Sustained dryness:</b> Keeps you dry all day and night</li>
+            <li><b>Leakage protection:</b> Extended design increases back security</li>
+            <li><b>Odour control:</b> Maintains discretion and comfort</li>
+          </ul>
+          <div class="mb-3">
+            <strong>Absorbency:</strong>
+            <span class="badge badge-absorbency badge-normal">Normal</span>
+            <span class="badge badge-absorbency badge-extra">Extra Plus</span>
+            <span class="badge badge-absorbency badge-super">Super</span>
+          </div>
+          <div class="mb-3">
+            <strong>Sizes:</strong>
+            <span class="badge bg-secondary">M</span>
+            <span class="badge bg-secondary">L</span>
+            <span class="badge bg-secondary">XL</span>
+          </div>
+          <a href="shop/unisex-pants" class="btn btn-custom">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Underpads Section -->
+<section class="py-5 section-warm">
+  <div class="container">
+    <div class="product-card">
+      <div class="row align-items-center">
+        <div class="col-md-4 order-md-2 text-center">
+          <img src="cat/IDEU.png" alt="Underpads Packaging" class="product-image">
+        </div>
+        <div class="col-md-8 order-md-1">
+          <span class="product-badge">UNDERPADS</span>
+          <p class="mb-3">Reliable protection for beds and chairs, combining fast absorption, dryness, and waterproof security for everyday peace of mind.</p>
+          <ul class="mb-4">
+            <li><b>Fast absorption:</b> Keeps surface dry and comfortable</li>
+            <li><b>Dryness:</b> Reduces discomfort from dampness</li>
+            <li><b>Leakage protection:</b> Provides reliable day/night security</li>
+            <li><b>Waterproof backsheet:</b> Protects bedding and furniture</li>
+          </ul>
+          <div class="mb-3">
+            <strong>Absorbency:</strong>
+            <span class="badge badge-absorbency badge-extra">Extra Plus</span>
+            <span class="badge badge-absorbency badge-super">Super</span>
+          </div>
+          <div class="mb-3">
+            <strong>Sizes:</strong>
+            <span class="badge bg-secondary">40×60 cm</span>
+            <span class="badge bg-secondary">60×60 cm</span>
+            <span class="badge bg-secondary">60×90 cm</span>
+            <span class="badge bg-secondary">90×180 cm</span>
+          </div>
+          <a href="shop/underpads" class="btn btn-custom">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="display-5 fw-bold mb-4">Need Help Choosing?</h2>
+        <p class="lead mb-4">Try our product finder and get personalized recommendations based on your needs.</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <a href="https://blog.id-direct.com/find-my-solution/" class="btn btn-custom btn-lg">Start Product Finder</a>
+          <a href="tel:08003896185" class="btn btn-outline-light btn-lg">
+            📞 Get Expert Advice
+          </a>
+        </div>
+        <div class="mt-4">
+          <small class="opacity-75">Free consultation: 0800 389 6185</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="fw-bold mb-3">iD Essential by Ontex</h5>
+        <p class="mb-3">Reliable and reassuring protection designed for straightforward performance and safety. Trusted incontinence solutions for over 45 years.</p>
+        <div class="d-flex gap-3">
+          <span class="badge" style="background-color: #009FDB; color: white;">Essential</span>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="overview.html" class="text-light text-decoration-none">Product Overview</a></li>
+          <li><a href="discreet.html" class="text-light text-decoration-none">Discreet Range</a></li>
+          <li><a href="sensitive.html" class="text-light text-decoration-none">Sensitive Range</a></li>
+          <li><a href="complementary.html" class="text-light text-decoration-none">Complementary</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="fw-bold mb-3">Support</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://blog.id-direct.com/find-my-solution/" class="text-light text-decoration-none">Product Finder</a></li>
+          <li><a href="about.html" class="text-light text-decoration-none">About iD</a></li>
+          <li><a href="tel:08003896185" class="text-light text-decoration-none">Contact: 0800 389 6185</a></li>
+          <li><a href="https://www.id-direct.com" class="text-light text-decoration-none">www.id-direct.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="mb-0">&copy; 2024 iD by Ontex. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small class="text-muted">Korte Keppestraat 21, 9320 Aalst, Belgium</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
