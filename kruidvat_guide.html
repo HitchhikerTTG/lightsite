@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kruidvat – Find the right protection</title>
+
+<style>
+/* ========== RESET & TOKENS ========== */
+* { box-sizing: border-box; }
+
+:root {
+  --kv-red: #e30613;
+  --ink: #1a1a1a;
+  --muted: #555;
+
+  --bg: #ffffff;
+  --light: #f5f7fb;
+  --medium: #fff6ec;
+  --night: #f4f1fb;
+  --pants: #eefaf3;
+  --extra: #f7f7f7;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin: 0 0 .5rem;
+  font-weight: 800;
+}
+h2 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: .25rem 0 .5rem;
+  font-weight: 800;
+}
+p {
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: .25rem 0;
+}
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ========== LAYOUT ========== */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+section {
+  margin: 0 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* ========== HERO ========== */
+.hero {
+  padding: 1.25rem 1rem 1rem;
+}
+.hero p {
+  max-width: 32rem;
+  color: var(--muted);
+}
+
+/* ========== TABS / ETIQUETTES ========== */
+.tab {
+  display: inline-block;
+  background: var(--kv-red);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== BULLETS ========== */
+ul {
+  padding-left: 1rem;
+  margin: .5rem 0;
+}
+li {
+  margin-bottom: .35rem;
+  font-size: 0.95rem;
+}
+
+/* ========== PRODUCTS ========== */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.product {
+  display: flex;
+  gap: 0.75rem;
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+.pack {
+  width: 56px;
+  height: 56px;
+  background: #eee;
+  border-radius: 0.6rem;
+  flex-shrink: 0;
+}
+
+.product strong {
+  display: block;
+  font-size: 0.95rem;
+}
+.product span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ========== SECTION COLORS ========== */
+.light { background: var(--light); }
+.medium { background: var(--medium); }
+.night { background: var(--night); }
+.pants { background: var(--pants); }
+.extra { background: var(--extra); }
+
+/* ========== FOOTER ========== */
+footer {
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Find the protection that fits your day</h1>
+    <p>
+      Many people use different products for different moments.
+      There is no single "right" choice -- only what feels right for you.
+    </p>
+  </header>
+
+  <!-- LIGHT -->
+  <section class="light">
+    <span class="tab">Small, occasional leaks</span>
+    <h2>I want to feel secure, without anyone noticing</h2>
+
+    <ul>
+      <li>It happens when you laugh, sneeze or cough</li>
+      <li>You notice it during everyday activities</li>
+      <li>Discretion matters most to you</li>
+    </ul>
+
+    <p class="note">Thin, discreet protection that fits easily into your day.</p>
+
+    <div class="products">
+      <div class="product">
+        <div class="pack"></div>
+        <div>
+          <strong>Ultra Mini</strong>
+          <span>Very light • ultra discreet</span>
+        </div>
+      </div>
+      <div class="product">
+        <div class="pack"></div>
+        <div>
+          <strong>Ultra Mini Plus</strong>
+          <span>Light daily • more security</span>
+        </div>
+      </div>
+      <div class="product">
+        <div class="pack"></div>
+        <div>
+          <strong>Mini Plus</strong>
+          <span>Light–medium • extra confidence</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIUM -->
+  <section class="medium">
+    <span class="tab">Regular, noticeable leaks</span>
+    <h2>I need protection I can rely on during the day</h2>
+
+    <ul>
+      <li>You notice leakage regularly</li>
+      <li>You want to feel secure for several hours</li>
+      <li>You don’t want to think about changing</li>
+    </ul>
+
+    <div class="products">
+      <div class="product"><div class="pack"></div><div><strong>Normal</strong><span>Everyday protection</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Extra</strong><span>More absorbency</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Extra Plus</strong><span>Extra security</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Men Level 2</strong><span>Shaped for men</span></div></div>
+    </div>
+
+    <p class="note">
+      If you hesitate, slightly more absorbency often brings peace of mind.
+    </p>
+  </section>
+
+  <!-- NIGHT -->
+  <section class="night">
+    <span class="tab">Night or demanding moments</span>
+    <h2>I want maximum peace of mind</h2>
+
+    <ul>
+      <li>You want to sleep without worrying</li>
+      <li>You move a lot or are very active</li>
+      <li>Changing is not always easy</li>
+    </ul>
+
+    <div class="products">
+      <div class="product"><div class="pack"></div><div><strong>Night Extra Plus</strong><span>Maximum night protection</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Pants (M / L)</strong><span>Secure, underwear-like fit</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Black Pants</strong><span>Extra discreet look</span></div></div>
+      <div class="product"><div class="pack"></div><div><strong>Large Plus Pants</strong><span>Extra absorbent</span></div></div>
+    </div>
+  </section>
+
+  <!-- PANTS PREFERENCE -->
+  <section class="pants">
+    <span class="tab">Preference</span>
+    <h2>Some people simply prefer pants</h2>
+
+    <p class="note">
+      Pants feel like underwear, stay in place when moving,
+      and remove the need to think about changing.
+    </p>
+  </section>
+
+  <!-- UNDERPADS -->
+  <section class="extra">
+    <span class="tab">Extra protection</span>
+    <h2>Underpads</h2>
+
+    <p class="note">
+      Underpads protect beds, chairs and sofas.
+      They are used together with pads or pants.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  It’s normal to try different products before finding what suits you best.<br>
+  Comfort and confidence are the best indicators.
+</footer>
+
+</body>
+</html>
