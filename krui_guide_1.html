@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kruidvat – Incontinence Product Guide (A5)</title>
+
+<style>
+@page { size: A5; margin: 10mm; }
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet {
+  width: 148mm;
+  height: 210mm;
+  padding: 10mm;
+  display: flex;
+  flex-direction: column;
+  gap: 7mm;
+}
+
+/* Typography */
+h1 {
+  font-size: 18pt;
+  margin: 0;
+}
+h2 {
+  font-size: 13pt;
+  margin: 0 0 2mm;
+}
+h3 {
+  font-size: 11pt;
+  margin: 0;
+}
+p {
+  font-size: 9.5pt;
+  line-height: 1.3;
+  margin: 0;
+}
+.small {
+  font-size: 8.5pt;
+  color: #555;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8mm;
+}
+.header-text p {
+  max-width: 90mm;
+}
+.qr {
+  width: 26mm;
+  height: 26mm;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+
+/* Severity blocks */
+.levels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4mm;
+}
+
+.level {
+  padding: 4mm;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.light { background: #f3f7ff; }
+.medium { background: #fff5ea; }
+.night { background: #f2f0ff; }
+
+.level ul {
+  padding-left: 4mm;
+  margin: 2mm 0 0;
+  font-size: 9pt;
+}
+.level li {
+  margin-bottom: 1mm;
+}
+
+/* Product sections */
+.section {
+  border-top: 1px solid #ddd;
+  padding-top: 4mm;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+}
+
+.block {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 4mm;
+}
+
+.block ul {
+  padding-left: 4mm;
+  margin: 2mm 0 0;
+  font-size: 9pt;
+}
+
+/* Use cases */
+.usecases {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2mm;
+}
+
+.use {
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 1.5mm 2mm;
+  font-size: 8.5pt;
+  text-align: center;
+}
+
+/* Footer / complementary */
+.footer {
+  border-top: 1px dashed #ccc;
+  padding-top: 4mm;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6mm;
+}
+
+.underpad {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 4mm;
+  border: 1px solid #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sheet">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-text">
+      <h1>Choose the right protection</h1>
+      <p class="small">
+        A simple guide to help you choose the right incontinence product
+        from the <strong>Kruidvat</strong> range.
+      </p>
+    </div>
+    <div class="qr">QR<br>more help</div>
+  </header>
+
+  <section>
+  <h2>Step 1 -- Start with your everyday situation</h2>
+
+  <div class="levels">
+
+    <div class="level light">
+      <h3>Light leakage</h3>
+      <p class="small">Small leaks that happen now and then</p>
+      <ul>
+        <li>When you laugh, sneeze or cough</li>
+        <li>During exercise or daily activities</li>
+        <li>You mainly want to feel dry and discreet</li>
+      </ul>
+    </div>
+
+    <div class="level medium">
+      <h3>Medium leakage</h3>
+      <p class="small">Leaks you notice regularly</p>
+      <ul>
+        <li>You need protection you can rely on</li>
+        <li>You may wear it for several hours</li>
+        <li>Feeling secure matters more than being ultra-thin</li>
+      </ul>
+    </div>
+
+    <div class="level night">
+      <h3>Night-time or heavier leakage</h3>
+      <p class="small">When protection needs to last longer</p>
+      <ul>
+        <li>During the night or long rest periods</li>
+        <li>When changing is not always possible</li>
+        <li>You want maximum peace of mind</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+ <section class="section">
+  <h2>Step 2 -- Choose what feels right to wear</h2>
+
+  <div class="columns">
+
+    <div class="block">
+      <h3>Pads</h3>
+      <p class="small">Discreet protection you change when needed</p>
+      <ul>
+        <li>You prefer something light and flexible</li>
+        <li>You want to change protection during the day</li>
+        <li>You wear your own underwear</li>
+        <li>Available options include male-specific pads for a better fit</li>
+      </ul>
+      <p class="small">
+        Pads are a good choice if you want control, discretion and easy changing.
+      </p>
+    </div>
+
+    <div class="block">
+      <h3>Pants (pull-up underwear)</h3>
+      <p class="small">Protection that feels like regular underwear</p>
+      <ul>
+        <li>You want an all-in-one solution</li>
+        <li>You move a lot or prefer a secure fit</li>
+        <li>You don’t want to think about changing during the day</li>
+        <li>Available in unisex sizes and discreet black options</li>
+      </ul>
+      <p class="small">
+        Pants are ideal if comfort, confidence and freedom of movement matter most.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- STEP 3: USE CASE -->
+  <section class="section">
+    <h2>Step 3 -- What should you look for?</h2>
+
+    <div class="usecases">
+      <div class="use">Day</div>
+      <div class="use">Night</div>
+      <div class="use">Discreet</div>
+      <div class="use">Active</div>
+      <div class="use">Male-specific</div>
+    </div>
+
+    <p class="small" style="margin-top:3mm;">
+      Higher absorbency offers more security, but may feel bulkier.
+      Start with the lowest level that meets your needs.
+    </p>
+  </section>
+
+  <!-- COMPLEMENTARY -->
+  <section class="footer">
+    <div>
+      <p class="small">
+        <strong>Not sure?</strong><br>
+        Choosing the right protection can take a bit of trial.
+        Comfort and confidence are the best indicators.
+      </p>
+    </div>
+
+    <div class="underpad">
+      <h3>Extra protection: Underpads</h3>
+      <p class="small">
+        Underpads protect beds, chairs and sofas.
+        They are used <strong>together with pads or pants</strong>,
+        especially at night or at home.
+      </p>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
