@@ -106,6 +106,36 @@ li {
   font-size: 0.95rem;
 }
 
+/* ===== Product expand interaction ===== */
+
+.product {
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.product-main {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.product-expanded {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.product-expanded img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0.75rem auto 0;
+  display: block;
+}
+
+/* Expanded state */
+.product.is-open .product-expanded {
+  max-height: 300px;
+}
+
 /* ================= PRODUCTS ================= */
 .products {
   display: flex;
@@ -299,6 +329,12 @@ footer {
   It’s normal to try different products before finding what suits you best.<br>
   Comfort and confidence are the best indicators.
 </footer>
-
+<script>
+  document.querySelectorAll('.js-expand').forEach(product => {
+    product.addEventListener('click', () => {
+      product.classList.toggle('is-open');
+    });
+  });
+</script>
 </body>
 </html>
