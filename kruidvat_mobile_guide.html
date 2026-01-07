@@ -106,36 +106,6 @@ li {
   font-size: 0.95rem;
 }
 
-/* ===== Product expand interaction ===== */
-
-.product {
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.product-main {
-  display: flex;
-  gap: 0.75rem;
-}
-
-.product-expanded {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.25s ease;
-}
-
-.product-expanded img {
-  width: 100%;
-  max-width: 220px;
-  margin: 0.75rem auto 0;
-  display: block;
-}
-
-/* Expanded state */
-.product.is-open .product-expanded {
-  max-height: 300px;
-}
-
 /* ================= PRODUCTS ================= */
 .products {
   display: flex;
@@ -145,12 +115,16 @@ li {
 }
 
 .product {
-  display: flex;
-  gap: 0.75rem;
   background: #fff;
   padding: 0.75rem;
   border-radius: 0.85rem;
   box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  cursor: pointer;
+}
+
+.product-main {
+  display: flex;
+  gap: 0.75rem;
 }
 
 .pack {
@@ -177,6 +151,24 @@ li {
 .product span {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+/* ===== Expand interaction ===== */
+.product-expanded {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.product-expanded img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0.75rem auto 0;
+  display: block;
+}
+
+.product.is-open .product-expanded {
+  max-height: 300px;
 }
 
 /* ================= SECTION COLORS ================= */
@@ -215,23 +207,12 @@ footer {
     <h2>3 simple steps to get started</h2>
 
     <ul>
-      <li>
-        <strong>Start with your situation</strong><br>
-        Small leaks, regular leaks, or night-time needs
-      </li>
-      <li>
-        <strong>Choose what feels right to wear</strong><br>
-        Pads for flexibility, pants for all-in-one comfort
-      </li>
-      <li>
-        <strong>Think about when you need it most</strong><br>
-        During the day, at night, while active, or discreetly
-      </li>
+      <li><strong>Start with your situation</strong><br>Small leaks, regular leaks, or night-time needs</li>
+      <li><strong>Choose what feels right to wear</strong><br>Pads for flexibility, pants for all-in-one comfort</li>
+      <li><strong>Think about when you need it most</strong><br>Day, night, active or discreet</li>
     </ul>
 
-    <p class="note">
-      Scroll down to explore products organised by everyday situations.
-    </p>
+    <p class="note">Scroll down to explore products organised by everyday situations.</p>
   </section>
 
   <!-- LIGHT -->
@@ -239,88 +220,39 @@ footer {
     <span class="tab">Small, occasional leaks</span>
     <h2>I want to feel secure, without anyone noticing</h2>
 
-    <ul>
-      <li>It happens when you laugh, sneeze or cough</li>
-      <li>You notice it during everyday activities</li>
-      <li>Discretion matters most to you</li>
-    </ul>
-
-    <p class="note">Thin, discreet protection that fits easily into your day.</p>
-
     <div class="products">
-      <div class="product">
-        <div class="pack"><img src="krui/packs/Ultra_mini.jpg" alt=""></div>
-        <div><strong>Ultra Mini</strong><span>Very light • ultra discreet</span></div>
+
+      <div class="product js-expand">
+        <div class="product-main">
+          <div class="pack"><img src="krui/packs/Ultra_mini.jpg" alt=""></div>
+          <div><strong>Ultra Mini</strong><span>Very light • ultra discreet</span></div>
+        </div>
+        <div class="product-expanded">
+          <img src="krui/packs/Ultra_mini.jpg" alt="">
+        </div>
       </div>
-      <div class="product">
-        <div class="pack"><img src="krui/packs/Ultra_plus.jpg" alt=""></div>
-        <div><strong>Ultra Mini Plus</strong><span>Light daily • more security</span></div>
+
+      <div class="product js-expand">
+        <div class="product-main">
+          <div class="pack"><img src="krui/packs/Ultra_plus.jpg" alt=""></div>
+          <div><strong>Ultra Mini Plus</strong><span>Light daily • more security</span></div>
+        </div>
+        <div class="product-expanded">
+          <img src="krui/packs/Ultra_plus.jpg" alt="">
+        </div>
       </div>
-      <div class="product">
-        <div class="pack"><img src="krui/packs/Mini_plus.jpg" alt=""></div>
-        <div><strong>Mini Plus</strong><span>Light–medium • extra confidence</span></div>
+
+      <div class="product js-expand">
+        <div class="product-main">
+          <div class="pack"><img src="krui/packs/Mini_plus.jpg" alt=""></div>
+          <div><strong>Mini Plus</strong><span>Light–medium • extra confidence</span></div>
+        </div>
+        <div class="product-expanded">
+          <img src="krui/packs/Mini_plus.jpg" alt="">
+        </div>
       </div>
+
     </div>
-  </section>
-
-  <!-- MEDIUM -->
-  <section class="medium">
-    <span class="tab">Regular, noticeable leaks</span>
-    <h2>I need protection I can rely on during the day</h2>
-
-    <ul>
-      <li>You notice leakage regularly</li>
-      <li>You want to feel secure for several hours</li>
-      <li>You don’t want to think about changing</li>
-    </ul>
-
-    <div class="products">
-      <div class="product"><div class="pack"><img src="krui/packs/Normal.jpg" alt=""></div><div><strong>Normal</strong><span>Everyday protection</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/packs/Extra.jpg" alt=""></div><div><strong>Extra</strong><span>More absorbency</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/packs/Extra_plus.jpg" alt=""></div><div><strong>Extra Plus</strong><span>Extra security</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/men.jpg" alt=""></div><div><strong>Men Level 2</strong><span>Shaped for men</span></div></div>
-    </div>
-
-    <p class="note">If you hesitate, slightly more absorbency often brings peace of mind.</p>
-  </section>
-
-  <!-- NIGHT -->
-  <section class="night">
-    <span class="tab">Night or demanding moments</span>
-    <h2>I want maximum peace of mind</h2>
-
-    <ul>
-      <li>You want to sleep without worrying</li>
-      <li>You move a lot or are very active</li>
-      <li>Changing is not always easy</li>
-    </ul>
-
-    <div class="products">
-      <div class="product"><div class="pack"><img src="krui/packs/Night_extra_plus.jpg" alt=""></div><div><strong>Night Extra Plus</strong><span>Maximum night protection</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/packs/Discreet_pants.jpg" alt=""></div><div><strong>Pants (M / L)</strong><span>Secure, underwear-like fit</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/packs/Unisex_pants_black.jpg" alt=""></div><div><strong>Black Pants</strong><span>Extra discreet look</span></div></div>
-      <div class="product"><div class="pack"><img src="krui/packs/Unisex_pants_large_plus.jpg" alt=""></div><div><strong>Large Plus Pants</strong><span>Extra absorbent</span></div></div>
-    </div>
-  </section>
-
-  <!-- PANTS PREFERENCE -->
-  <section class="pants">
-    <span class="tab">Preference</span>
-    <h2>Some people simply prefer pants</h2>
-    <p class="note">
-      Pants feel like underwear, stay in place when moving,
-      and remove the need to think about changing.
-    </p>
-  </section>
-
-  <!-- UNDERPADS -->
-  <section class="extra">
-    <span class="tab">Extra protection</span>
-    <h2>Underpads</h2>
-    <p class="note">
-      Underpads protect beds, chairs and sofas.
-      They are used together with pads or pants.
-    </p>
   </section>
 
 </main>
@@ -329,12 +261,16 @@ footer {
   It’s normal to try different products before finding what suits you best.<br>
   Comfort and confidence are the best indicators.
 </footer>
+
 <script>
   document.querySelectorAll('.js-expand').forEach(product => {
     product.addEventListener('click', () => {
+      document.querySelectorAll('.js-expand.is-open')
+        .forEach(open => open !== product && open.classList.remove('is-open'));
       product.classList.toggle('is-open');
     });
   });
 </script>
+
 </body>
 </html>
