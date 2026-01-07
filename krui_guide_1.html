@@ -5,103 +5,154 @@
 <title>Kruidvat – Incontinence Product Guide (A5)</title>
 
 <style>
+<style>
 @page { size: A5; margin: 10mm; }
 * { box-sizing: border-box; }
 
-/* ===== Kruidvat Look & Feel Layer ===== */
-
-:root {
-  --kv-red: #e30613;          /* Kruidvat-style accent */
-  --kv-red-soft: #fde8ea;     /* very light red tint */
-
-  --kv-light: #f5f7fb;
-  --kv-medium: #fff6ec;
-  --kv-night: #f4f1fb;
-  --kv-extra: #f7f7f7;
-
-  --ink: #1a1a1a;
-  --muted: #555;
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111;
+  background: #fff;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 }
 
-/* Headings feel more retail */
-h1, h2 {
-  font-weight: 800;
-  letter-spacing: -0.3px;
+.sheet {
+  width: 148mm;
+  height: 210mm;
+  padding: 10mm;
+  display: flex;
+  flex-direction: column;
+  gap: 7mm;
 }
 
+/* Typography */
+h1 {
+  font-size: 18pt;
+  margin: 0;
+}
 h2 {
-  font-size: 13.5pt;
+  font-size: 13pt;
+  margin: 0 0 2mm;
 }
-
-/* Section blocks */
-.block {
-  border: none;
-  border-radius: 18px;
-  padding: 6mm;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+h3 {
+  font-size: 11pt;
+  margin: 0;
 }
-
-/* Situation backgrounds */
-.block.light   { background: var(--kv-light); }
-.block.medium  { background: var(--kv-medium); }
-.block.night   { background: var(--kv-night); }
-.block.extra   { background: var(--kv-extra); }
-
-/* Etiquette / tab */
-.tab {
-  display: inline-block;
-  background: var(--kv-red);
-  color: #fff;
+p {
+  font-size: 9.5pt;
+  line-height: 1.3;
+  margin: 0;
+}
+.small {
   font-size: 8.5pt;
-  font-weight: 700;
-  padding: 1.5mm 4mm;
-  border-radius: 999px;
-  margin-bottom: 3mm;
-  text-transform: none;
-  letter-spacing: 0.2px;
+  color: #555;
 }
 
-/* Bullets: less medical, more lifestyle */
-.bullets {
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8mm;
+}
+.header-text p {
+  max-width: 90mm;
+}
+.qr {
+  width: 26mm;
+  height: 26mm;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+}
+
+/* Severity blocks */
+.levels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4mm;
+}
+
+.level {
+  padding: 4mm;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.light { background: #f3f7ff; }
+.medium { background: #fff5ea; }
+.night { background: #f2f0ff; }
+
+.level ul {
   padding-left: 4mm;
+  margin: 2mm 0 0;
+  font-size: 9pt;
+}
+.level li {
+  margin-bottom: 1mm;
 }
 
-.bullets li {
-  margin-bottom: 1.5mm;
+/* Product sections */
+.section {
+  border-top: 1px solid #ddd;
+  padding-top: 4mm;
 }
 
-/* Product cards */
-.product {
-  background: #fff;
-  border-radius: 14px;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  padding: 3mm;
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
 }
 
-/* Product name emphasis */
-.pname {
-  font-weight: 800;
+.block {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 4mm;
 }
 
-/* Pack placeholder (Canva replaces this) */
-.pack {
-  background: #fff;
-  border: 1px dashed #ddd;
-  border-radius: 10px;
+.block ul {
+  padding-left: 4mm;
+  margin: 2mm 0 0;
+  font-size: 9pt;
 }
 
-/* Notes & reassurance */
-.note {
-  font-size: 8.8pt;
-  color: var(--muted);
+/* Use cases */
+.usecases {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2mm;
 }
 
-/* Footer reassurance */
-footer {
-  color: var(--muted);
+.use {
+  border: 1px solid #ddd;
+  border-radius: 999px;
+  padding: 1.5mm 2mm;
   font-size: 8.5pt;
+  text-align: center;
 }
+
+/* Footer / complementary */
+.footer {
+  border-top: 1px dashed #ccc;
+  padding-top: 4mm;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 6mm;
+}
+
+.underpad {
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 4mm;
+  border: 1px solid #ddd;
+}
+</style>
+
 </style>
 </head>
 

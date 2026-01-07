@@ -6,114 +6,190 @@
 <title>Kruidvat – Exhibition Copy (A5 / Landing)</title>
 
 <style>
-
-/* ===== Kruidvat Look & Feel Layer ===== */
-
-:root {
-  --kv-red: #e30613;          /* Kruidvat-style accent */
-  --kv-red-soft: #fde8ea;     /* very light red tint */
-
-  --kv-light: #f5f7fb;
-  --kv-medium: #fff6ec;
-  --kv-night: #f4f1fb;
-  --kv-extra: #f7f7f7;
-
-  --ink: #1a1a1a;
-  --muted: #555;
-}
-
-/* Headings feel more retail */
-h1, h2 {
-  font-weight: 800;
-  letter-spacing: -0.3px;
-}
-
-h2 {
-  font-size: 13.5pt;
-}
-
-/* Section blocks */
-.block {
-  border: none;
-  border-radius: 18px;
-  padding: 6mm;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.04);
-}
-
-/* Situation backgrounds */
-.block.light   { background: var(--kv-light); }
-.block.medium  { background: var(--kv-medium); }
-.block.night   { background: var(--kv-night); }
-.block.extra   { background: var(--kv-extra); }
-
-/* Etiquette / tab */
-.tab {
-  display: inline-block;
-  background: var(--kv-red);
-  color: #fff;
-  font-size: 8.5pt;
-  font-weight: 700;
-  padding: 1.5mm 4mm;
-  border-radius: 999px;
-  margin-bottom: 3mm;
-  text-transform: none;
-  letter-spacing: 0.2px;
-}
-
-/* Bullets: less medical, more lifestyle */
-.bullets {
-  padding-left: 4mm;
-}
-
-.bullets li {
-  margin-bottom: 1.5mm;
-}
-
-/* Product cards */
-.product {
-  background: #fff;
-  border-radius: 14px;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  padding: 3mm;
-}
-
-/* Product name emphasis */
-.pname {
-  font-weight: 800;
-}
-
-/* Pack placeholder (Canva replaces this) */
-.pack {
-  background: #fff;
-  border: 1px dashed #ddd;
-  border-radius: 10px;
-}
-
-/* Notes & reassurance */
-.note {
-  font-size: 8.8pt;
-  color: var(--muted);
-}
-
-/* Footer reassurance */
-footer {
-  color: var(--muted);
-  font-size: 8.5pt;
-}
-
-
   @page { size: A5; margin: 10mm; }
   * { box-sizing: border-box; }
 
+  :root{
+    --ink:#111;
+    --muted:#555;
+    --line:#e2e2e2;
 
+    --light:#f3f7ff;   /* blue-ish */
+    --medium:#fff5ea;  /* warm */
+    --night:#f2f0ff;   /* violet */
+    --pants:#eefaf3;   /* green */
+    --extra:#f7f7f7;   /* grey */
+    --radius:14px;
+  }
+
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--ink);
+    background:#fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* A5 canvas */
+  .sheet{
+    width:148mm;
+    min-height:210mm;
+    padding:10mm;
+    display:flex;
+    flex-direction:column;
+    gap:6mm;
+  }
+
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:8mm;
+    padding-bottom:4mm;
+    border-bottom:1px solid var(--line);
+  }
+  h1{
+    margin:0;
+    font-size:18pt;
+    line-height:1.05;
+    letter-spacing:-0.2px;
+  }
+  .intro{
+    margin-top:2.5mm;
+    font-size:9.5pt;
+    line-height:1.35;
+    color:var(--muted);
+    max-width:95mm;
+  }
+  .qr{
+    width:26mm;
+    height:26mm;
+    border:1px solid var(--line);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:8pt;
+    color:var(--muted);
+    background:linear-gradient(135deg,#fafafa,#f3f3f3);
+    text-align:center;
+    padding:2mm;
+    flex:0 0 auto;
+  }
+
+  /* Section blocks */
+  .block{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:5mm;
+    display:flex;
+    flex-direction:column;
+    gap:3mm;
+  }
+
+  .light{ background:var(--light); }
+  .medium{ background:var(--medium); }
+  .night{ background:var(--night); }
+  .pants{ background:var(--pants); }
+  .extra{ background:var(--extra); }
+
+  h2{
+    margin:0;
+    font-size:12.5pt;
+    letter-spacing:-0.15px;
+    line-height:1.15;
+  }
+  .kicker{
+    margin:0;
+    font-size:9.2pt;
+    color:var(--muted);
+    line-height:1.25;
+  }
+
+  .cols{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:6mm;
+  }
+
+  .bullets{
+    margin:0;
+    padding-left:4mm;
+    font-size:9.5pt;
+    line-height:1.35;
+  }
+  .bullets li{ margin:0 0 1.5mm; }
+
+  .label{
+    font-size:9pt;
+    color:var(--muted);
+    margin:0;
+  }
+
+  .products{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:3mm 5mm;
+  }
+  .product{
+    display:grid;
+    grid-template-columns: 16mm 1fr;
+    gap:3mm;
+    align-items:center;
+    padding:2.5mm;
+    border:1px solid rgba(0,0,0,0.06);
+    border-radius:12px;
+    background:#fff;
+  }
+  .pack{
+    width:16mm;
+    height:16mm;
+    border:1px dashed #cfcfcf;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:7.5pt;
+    color:var(--muted);
+    background:#fafafa;
+    text-align:center;
+  }
+  .pname{
+    margin:0;
+    font-size:9.7pt;
+    font-weight:700;
+    line-height:1.1;
+  }
+  .phint{
+    margin:1mm 0 0;
+    font-size:8.6pt;
+    color:var(--muted);
+    line-height:1.2;
+  }
+
+  .note{
+    margin:0;
+    font-size:8.8pt;
+    color:var(--muted);
+    line-height:1.3;
+  }
+
+  footer{
+    margin-top:auto;
+    border-top:1px dashed var(--line);
+    padding-top:4mm;
+    font-size:8.8pt;
+    color:var(--muted);
+    line-height:1.3;
+  }
 
   /* Print/screen tweaks */
   @media print{
     .sheet{ padding:0; }
     header{ border-bottom:1px solid var(--line); }
   }
-</style>
+</style
 </head>
 
 <body>
