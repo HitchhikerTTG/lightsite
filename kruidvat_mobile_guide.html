@@ -219,11 +219,18 @@ footer {
   text-align: center;
 }
 
-/* Arrows */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 5;
+
   background: rgba(255,255,255,0.9);
   border: none;
   border-radius: 999px;
@@ -236,13 +243,8 @@ footer {
   box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
-.carousel-arrow.prev { left: 4px; }
-.carousel-arrow.next { right: 4px; }
-
-.carousel-arrow:disabled {
-  opacity: 0.3;
-  cursor: default;
-}
+.carousel-arrow.prev { left: 8px; }
+.carousel-arrow.next { right: 8px; }
 
 </style>
 </head>
