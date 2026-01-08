@@ -186,9 +186,10 @@ footer {
   text-align: center;
 }
 
-/* ===== Carousel mockup ===== */
+/* ===== Arrow carousel ===== */
 
 .carousel {
+  position: relative;
   overflow: hidden;
   margin-top: 0.75rem;
 }
@@ -218,27 +219,29 @@ footer {
   text-align: center;
 }
 
-.slide.info strong {
-  display: block;
-  margin-bottom: 0.25rem;
+/* Arrows */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--kv-red);
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
 
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 0.5rem;
-}
+.carousel-arrow.prev { left: 4px; }
+.carousel-arrow.next { right: 4px; }
 
-.dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #ccc;
-}
-
-.dot.active {
-  background: var(--kv-red);
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 </style>
@@ -286,8 +289,10 @@ footer {
 <div class="product-expanded">
 
   <div class="carousel">
-    <div class="carousel-track">
 
+    <button class="carousel-arrow prev" aria-label="Previous">&#10094;</button>
+
+    <div class="carousel-track">
       <!-- Slide 1: pack -->
       <div class="slide">
         <img src="krui/packs/Ultra_mini.jpg" alt="">
@@ -302,16 +307,12 @@ footer {
       <!-- Slide 3: when to use -->
       <div class="slide info">
         <strong>When it works best</strong>
-        <p>Everyday use, at work or when you want to stay discreet.</p>
+        <p>Everyday use, at work, or when you want to stay discreet.</p>
       </div>
-
     </div>
-  </div>
 
-  <div class="carousel-dots">
-    <span class="dot active"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
+    <button class="carousel-arrow next" aria-label="Next">&#10095;</button>
+
   </div>
 
 </div>
@@ -450,16 +451,31 @@ footer {
 <script>
 document.querySelectorAll('.carousel').forEach(carousel => {
   const track = carousel.querySelector('.carousel-track');
-  const dots = carousel.parentElement.querySelectorAll('.dot');
+  const slides = carousel.querySelectorAll('.slide');
+  const prev = carousel.querySelector('.prev');
+  const next = carousel.querySelector('.next');
 
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', e => {
-      e.stopPropagation(); // don’t collapse product
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach(d => d.classList.remove('active'));
-      dot.classList.add('active');
-    });
+  let index = 0;
+
+  function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    prev.disabled = index === 0;
+    next.disabled = index === slides.length - 1;
+  }
+
+  prev.addEventListener('click', e => {
+    e.stopPropagation(); // prevent product collapse
+    if (index > 0) index--;
+    update();
   });
+
+  next.addEventListener('click', e => {
+    e.stopPropagation();
+    if (index < slides.length - 1) index++;
+    update();
+  });
+
+  update();
 });
 </script>
 </body>
