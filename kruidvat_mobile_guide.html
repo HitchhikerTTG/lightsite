@@ -185,6 +185,62 @@ footer {
   color: var(--muted);
   text-align: center;
 }
+
+/* ===== Carousel mockup ===== */
+
+.carousel {
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  min-width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  display: block;
+}
+
+.slide.info {
+  background: #f7f7f7;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.slide.info strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.dot.active {
+  background: var(--kv-red);
+}
+
 </style>
 </head>
 
@@ -227,9 +283,38 @@ footer {
           <div class="pack"><img src="krui/packs/Ultra_mini.jpg" alt=""></div>
           <div><strong>Ultra Mini</strong><span>Very light • ultra discreet</span></div>
         </div>
-        <div class="product-expanded">
-          <img src="krui/packs/Ultra_mini.jpg" alt="">
-        </div>
+<div class="product-expanded">
+
+  <div class="carousel">
+    <div class="carousel-track">
+
+      <!-- Slide 1: pack -->
+      <div class="slide">
+        <img src="krui/packs/Ultra_mini.jpg" alt="">
+      </div>
+
+      <!-- Slide 2: absorbency -->
+      <div class="slide info">
+        <strong>Absorbency</strong>
+        <p>Very light protection for small, occasional leaks.</p>
+      </div>
+
+      <!-- Slide 3: when to use -->
+      <div class="slide info">
+        <strong>When it works best</strong>
+        <p>Everyday use, at work or when you want to stay discreet.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</div>
       </div>
 
       <div class="product js-expand">
@@ -271,6 +356,20 @@ footer {
     });
   });
 </script>
+<script>
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const dots = carousel.parentElement.querySelectorAll('.dot');
 
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', e => {
+      e.stopPropagation(); // don’t collapse product
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    });
+  });
+});
+</script>
 </body>
 </html>
