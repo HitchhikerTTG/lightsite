@@ -2,263 +2,224 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kruidvat – Find the right protection</title>
+<title>Kruidvat – Incontinence Product Overview</title>
 
 <style>
-/* ===== RESET ===== */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --kv-red: #e30613;
-  --ink: #1a1a1a;
-  --muted: #666;
-
-  --low: #f3f7ff;
-  --medium: #fff6ec;
-  --high: #f4f1fb;
-  --extra: #ececff;
-}
+* { box-sizing: border-box; }
 
 body {
+  margin: 0;
+  padding: 24px;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #ffffff;
-  color: var(--ink);
+  background: #fff;
+  color: #1a1a1a;
 }
 
-/* ===== FULL SCREEN ===== */
-.screen {
-  min-height: 100vh;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* ===== HEADER ===== */
-.header {
-  margin-bottom: 14px;
-}
-
-.kv-pill {
-  display: inline-block;
-  background: var(--kv-red);
-  color: #fff;
-  font-size: 0.65rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-}
-
-.header h1 {
-  font-size: 1.4rem;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
-.header p {
-  font-size: 0.9rem;
-  color: var(--muted);
-  margin-top: 4px;
-}
-
-/* ===== MATRIX ===== */
+/* ===== GRID ===== */
 .matrix {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* ===== ROW ===== */
-.row {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.08);
-}
-
-.row-title {
-  margin-bottom: 10px;
-}
-
-.row-title strong {
-  display: block;
-  font-size: 1rem;
-}
-
-.row-title span {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* ===== SCALE ===== */
-.scale {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
 }
 
-.cell {
-  border-radius: 12px;
-  padding: 8px;
+/* ===== COLUMN HEADERS ===== */
+.headers {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 8px;
+  padding-left: 160px;
+  margin-bottom: 8px;
+}
+
+.header-group {
+  grid-column: span 3;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.subheader {
   text-align: center;
   font-size: 0.75rem;
-}
-
-/* Absorbency label */
-.level {
-  display: block;
-  font-size: 0.65rem;
-  font-weight: 800;
   color: #555;
-  margin-bottom: 6px;
 }
 
-/* Product visual placeholder */
-.pack {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 10px;
-  background: #ffffff;
-  border: 1px solid #ddd;
+/* ===== ROW LABEL ===== */
+.row-label {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: #999;
-  margin-bottom: 6px;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.level {
+  background: #e30613;
+  color: #fff;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  font-size: 0.85rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* ===== ROW CONTENT ===== */
+.row-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+}
+
+/* Red band */
+.row-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 18px;
+  background: rgba(227,6,19,0.15);
+  transform: translateY(-50%);
+  border-radius: 999px;
+  z-index: 0;
+}
+
+/* Cells */
+.cell {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/* Yellow marker */
+.marker {
+  width: 18px;
+  height: 18px;
+  background: #f2c94c;
+  border-radius: 4px;
+  margin: 0 auto 4px;
+  transform: rotate(45deg);
 }
 
 /* Product name */
 .product {
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
-/* Colour coding */
-.low    { background: var(--low); }
-.medium { background: var(--medium); }
-.high   { background: var(--high); }
-.extra  { background: var(--extra); }
-
-/* ===== FOOTER ===== */
-.footer {
-  margin-top: 12px;
-  font-size: 0.8rem;
-  color: var(--muted);
-  text-align: center;
+/* ===== LEGEND ===== */
+.legend {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: #555;
 }
 </style>
 </head>
 
 <body>
 
-<div class="screen">
+<!-- COLUMN HEADERS -->
+<div class="headers">
+  <div class="header-group">Liners</div>
+  <div class="header-group">Pads</div>
+  <div class="header-group">Pants</div>
 
-  <!-- HEADER -->
-  <div class="header">
-    <span class="kv-pill">Kruidvat guide</span>
-    <h1>Find the right protection</h1>
-    <p>Choose your situation, then the absorbency that feels right.</p>
+  <div class="subheader">Ultra Mini</div>
+  <div class="subheader">Ultra Mini Plus</div>
+  <div class="subheader">Mini Plus</div>
+
+  <div class="subheader">Normal</div>
+  <div class="subheader">Extra</div>
+  <div class="subheader">Extra Plus</div>
+
+  <div class="subheader">Night</div>
+  <div class="subheader">Medium</div>
+  <div class="subheader">Extra</div>
+</div>
+
+<!-- MATRIX -->
+<div class="matrix">
+
+  <!-- LIGHT -->
+  <div class="row-label">
+    <div class="level">Light</div>
+    <div class="description">
+      Small, occasional leaks<br>
+      Discretion is most important
+    </div>
   </div>
 
-  <!-- MATRIX -->
-  <div class="matrix">
+  <div class="row-content">
+    <div class="cell"><div class="marker"></div><div class="product">Ultra Mini</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">Ultra Mini Plus</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">Mini Plus</div></div>
 
-    <!-- LIGHT -->
-    <div class="row">
-      <div class="row-title">
-        <strong>Light leakage</strong>
-        <span>Small leaks that happen now and then</span>
-      </div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
 
-      <div class="scale">
-        <div class="cell low">
-          <span class="level">LOW</span>
-          <div class="pack">Pack</div>
-          <div class="product">Ultra Mini</div>
-        </div>
-
-        <div class="cell medium">
-          <span class="level">MEDIUM</span>
-          <div class="pack">Pack</div>
-          <div class="product">Ultra Mini Plus</div>
-        </div>
-
-        <div class="cell high">
-          <span class="level">HIGH</span>
-          <div class="pack">Pack</div>
-          <div class="product">Mini Plus</div>
-        </div>
-
-        <div class="cell"></div>
-      </div>
-    </div>
-
-    <!-- MEDIUM -->
-    <div class="row">
-      <div class="row-title">
-        <strong>Medium leakage</strong>
-        <span>Leaks you notice regularly during the day</span>
-      </div>
-
-      <div class="scale">
-        <div class="cell medium">
-          <span class="level">MEDIUM</span>
-          <div class="pack">Pack</div>
-          <div class="product">Normal</div>
-        </div>
-
-        <div class="cell high">
-          <span class="level">HIGH</span>
-          <div class="pack">Pack</div>
-          <div class="product">Extra</div>
-        </div>
-
-        <div class="cell extra">
-          <span class="level">EXTRA HIGH</span>
-          <div class="pack">Pack</div>
-          <div class="product">Extra Plus</div>
-          <div class="product">Men Level 2</div>
-        </div>
-
-        <div class="cell"></div>
-      </div>
-    </div>
-
-    <!-- NIGHT -->
-    <div class="row">
-      <div class="row-title">
-        <strong>Night / heavier leakage</strong>
-        <span>When protection needs to last longer</span>
-      </div>
-
-      <div class="scale">
-        <div class="cell extra">
-          <span class="level">EXTRA HIGH</span>
-          <div class="pack">Pack</div>
-          <div class="product">Night Extra Plus</div>
-          <div class="product">Pants (M / L)</div>
-          <div class="product">Large Plus Pants</div>
-        </div>
-
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-    </div>
-
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    Start with the lowest absorbency that makes you feel confident.
+  <!-- MODERATE -->
+  <div class="row-label">
+    <div class="level">Moderate</div>
+    <div class="description">
+      Regular leakage<br>
+      Reliable day protection
+    </div>
   </div>
 
+  <div class="row-content">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"><div class="marker"></div><div class="product">Normal</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">Extra</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">Extra Plus<br>+ Men</div></div>
+
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+  </div>
+
+  <!-- HEAVY -->
+  <div class="row-label">
+    <div class="level">Heavy</div>
+    <div class="description">
+      Night-time or long periods<br>
+      Maximum security
+    </div>
+  </div>
+
+  <div class="row-content">
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"></div>
+
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <div class="cell"><div class="marker"></div><div class="product">Night Extra Plus</div></div>
+
+    <div class="cell"><div class="marker"></div><div class="product">Pants</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">+ Black</div></div>
+    <div class="cell"><div class="marker"></div><div class="product">Unisex</div></div>
+  </div>
+
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  Yellow markers indicate suitable products for each level of leakage.
 </div>
 
 </body>
