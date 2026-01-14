@@ -3,20 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Kruidvat – Find the right protection</title>
 
 <style>
 /* ===== RESET ===== */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --kv-red: #e30613;
+  --ink: #1a1a1a;
+  --muted: #666;
+
+  --low: #f3f7ff;
+  --medium: #fff6ec;
+  --high: #f4f1fb;
+  --extra: #ececff;
+}
+
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: #ffffff;
-  color: #1a1a1a;
+  color: var(--ink);
 }
 
-/* ===== FULL SCREEN WRAPPER ===== */
+/* ===== FULL SCREEN ===== */
 .screen {
   min-height: 100vh;
   padding: 16px;
@@ -26,7 +36,20 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.kv-pill {
+  display: inline-block;
+  background: var(--kv-red);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 .header h1 {
@@ -37,7 +60,7 @@ body {
 
 .header p {
   font-size: 0.9rem;
-  color: #555;
+  color: var(--muted);
   margin-top: 4px;
 }
 
@@ -51,14 +74,14 @@ body {
 
 /* ===== ROW ===== */
 .row {
-  background: #f7f7f7;
-  border-radius: 14px;
-  padding: 12px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* Row labels */
 .row-title {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .row-title strong {
@@ -68,55 +91,65 @@ body {
 
 .row-title span {
   font-size: 0.85rem;
-  color: #555;
+  color: var(--muted);
 }
 
-/* ===== ABSORBENCY SCALE ===== */
+/* ===== SCALE ===== */
 .scale {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
+  gap: 8px;
 }
 
-/* Cells */
 .cell {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 6px;
+  border-radius: 12px;
+  padding: 8px;
   text-align: center;
   font-size: 0.75rem;
 }
 
 /* Absorbency label */
-.cell .level {
+.level {
   display: block;
   font-size: 0.65rem;
+  font-weight: 800;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Product visual placeholder */
+.pack {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: #777;
-  margin-bottom: 4px;
+  color: #999;
+  margin-bottom: 6px;
 }
 
-/* Product chips */
+/* Product name */
 .product {
-  background: #f2f2f2;
-  border-radius: 6px;
-  padding: 4px;
-  margin-top: 4px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-/* Emphasis by absorbency */
-.low    { background: #f3f7ff; }
-.medium { background: #fff6ec; }
-.high   { background: #f4f1fb; }
-.extra  { background: #ececff; }
+/* Colour coding */
+.low    { background: var(--low); }
+.medium { background: var(--medium); }
+.high   { background: var(--high); }
+.extra  { background: var(--extra); }
 
-/* ===== FOOT NOTE ===== */
+/* ===== FOOTER ===== */
 .footer {
   margin-top: 12px;
   font-size: 0.8rem;
-  color: #555;
+  color: var(--muted);
   text-align: center;
 }
 </style>
@@ -128,8 +161,9 @@ body {
 
   <!-- HEADER -->
   <div class="header">
+    <span class="kv-pill">Kruidvat guide</span>
     <h1>Find the right protection</h1>
-    <p>Match your everyday situation with the absorbency you need.</p>
+    <p>Choose your situation, then the absorbency that feels right.</p>
   </div>
 
   <!-- MATRIX -->
@@ -145,22 +179,23 @@ body {
       <div class="scale">
         <div class="cell low">
           <span class="level">LOW</span>
+          <div class="pack">Pack</div>
           <div class="product">Ultra Mini</div>
         </div>
 
         <div class="cell medium">
           <span class="level">MEDIUM</span>
+          <div class="pack">Pack</div>
           <div class="product">Ultra Mini Plus</div>
         </div>
 
         <div class="cell high">
           <span class="level">HIGH</span>
+          <div class="pack">Pack</div>
           <div class="product">Mini Plus</div>
         </div>
 
-        <div class="cell">
-          <span class="level">&nbsp;</span>
-        </div>
+        <div class="cell"></div>
       </div>
     </div>
 
@@ -174,23 +209,24 @@ body {
       <div class="scale">
         <div class="cell medium">
           <span class="level">MEDIUM</span>
+          <div class="pack">Pack</div>
           <div class="product">Normal</div>
         </div>
 
         <div class="cell high">
           <span class="level">HIGH</span>
+          <div class="pack">Pack</div>
           <div class="product">Extra</div>
         </div>
 
         <div class="cell extra">
           <span class="level">EXTRA HIGH</span>
+          <div class="pack">Pack</div>
           <div class="product">Extra Plus</div>
           <div class="product">Men Level 2</div>
         </div>
 
-        <div class="cell">
-          <span class="level">&nbsp;</span>
-        </div>
+        <div class="cell"></div>
       </div>
     </div>
 
@@ -204,6 +240,7 @@ body {
       <div class="scale">
         <div class="cell extra">
           <span class="level">EXTRA HIGH</span>
+          <div class="pack">Pack</div>
           <div class="product">Night Extra Plus</div>
           <div class="product">Pants (M / L)</div>
           <div class="product">Large Plus Pants</div>
