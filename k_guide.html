@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Kruidvat – Find the right protection</title>
+
+<style>
+/* ===== RESET ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* ===== FULL SCREEN WRAPPER ===== */
+.screen {
+  min-height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.header {
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.header p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* ===== MATRIX ===== */
+.matrix {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== ROW ===== */
+.row {
+  background: #f7f7f7;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+/* Row labels */
+.row-title {
+  margin-bottom: 8px;
+}
+
+.row-title strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.row-title span {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ===== ABSORBENCY SCALE ===== */
+.scale {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+/* Cells */
+.cell {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* Absorbency label */
+.cell .level {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+/* Product chips */
+.product {
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 4px;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Emphasis by absorbency */
+.low    { background: #f3f7ff; }
+.medium { background: #fff6ec; }
+.high   { background: #f4f1fb; }
+.extra  { background: #ececff; }
+
+/* ===== FOOT NOTE ===== */
+.footer {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #555;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="screen">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Find the right protection</h1>
+    <p>Match your everyday situation with the absorbency you need.</p>
+  </div>
+
+  <!-- MATRIX -->
+  <div class="matrix">
+
+    <!-- LIGHT -->
+    <div class="row">
+      <div class="row-title">
+        <strong>Light leakage</strong>
+        <span>Small leaks that happen now and then</span>
+      </div>
+
+      <div class="scale">
+        <div class="cell low">
+          <span class="level">LOW</span>
+          <div class="product">Ultra Mini</div>
+        </div>
+
+        <div class="cell medium">
+          <span class="level">MEDIUM</span>
+          <div class="product">Ultra Mini Plus</div>
+        </div>
+
+        <div class="cell high">
+          <span class="level">HIGH</span>
+          <div class="product">Mini Plus</div>
+        </div>
+
+        <div class="cell">
+          <span class="level">&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEDIUM -->
+    <div class="row">
+      <div class="row-title">
+        <strong>Medium leakage</strong>
+        <span>Leaks you notice regularly during the day</span>
+      </div>
+
+      <div class="scale">
+        <div class="cell medium">
+          <span class="level">MEDIUM</span>
+          <div class="product">Normal</div>
+        </div>
+
+        <div class="cell high">
+          <span class="level">HIGH</span>
+          <div class="product">Extra</div>
+        </div>
+
+        <div class="cell extra">
+          <span class="level">EXTRA HIGH</span>
+          <div class="product">Extra Plus</div>
+          <div class="product">Men Level 2</div>
+        </div>
+
+        <div class="cell">
+          <span class="level">&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NIGHT -->
+    <div class="row">
+      <div class="row-title">
+        <strong>Night / heavier leakage</strong>
+        <span>When protection needs to last longer</span>
+      </div>
+
+      <div class="scale">
+        <div class="cell extra">
+          <span class="level">EXTRA HIGH</span>
+          <div class="product">Night Extra Plus</div>
+          <div class="product">Pants (M / L)</div>
+          <div class="product">Large Plus Pants</div>
+        </div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Start with the lowest absorbency that makes you feel confident.
+  </div>
+
+</div>
+
+</body>
+</html>
