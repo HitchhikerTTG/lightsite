@@ -540,46 +540,33 @@ body {
   <svg viewBox="0 0 24 24" focusable="false">
 
     <defs>
-      <!-- mask that follows the droplet shape -->
-      <mask id="half-left-mask-fixed">
-        <!-- left half of the droplet path -->
-        <path
-          d="
-            M12 22
-            C12 22 5 14 5 8.5
-            C5 4 8.8 2 12 2
-            L12 22 Z
-          "
-          fill="white"
-        />
-      </mask>
+      <clipPath id="half-left" clipPathUnits="objectBoundingBox">
+        <!-- left 50% of the shape -->
+        <rect x="0" y="0" width="0.5" height="1" />
+      </clipPath>
     </defs>
 
     <!-- empty droplet -->
     <path
-      d="
-        M12 22
-        C12 22 5 14 5 8.5
-        C5 4 8.8 2 12 2
-        C15.2 2 19 4 19 8.5
-        C19 14 12 22 12 22
-        Z
-      "
+      d="M12 2
+         C12 2 5 10 5 15.5
+         C5 20 8.8 22 12 22
+         C15.2 22 19 20 19 15.5
+         C19 10 12 2 12 2
+         Z"
       fill="#e9e9e9"
     />
 
     <!-- left half filled -->
     <path
-      d="
-        M12 22
-        C12 22 5 14 5 8.5
-        C5 4 8.8 2 12 2
-        C15.2 2 19 4 19 8.5
-        C19 14 12 22 12 22
-        Z
-      "
+      d="M12 2
+         C12 2 5 10 5 15.5
+         C5 20 8.8 22 12 22
+         C15.2 22 19 20 19 15.5
+         C19 10 12 2 12 2
+         Z"
       fill="#e30613"
-      mask="url(#half-left-mask-fixed)"
+      clip-path="url(#half-left)"
     />
 
   </svg>
