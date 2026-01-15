@@ -136,6 +136,19 @@ body {
   display: block;
 }
 
+/* two images inside */
+.pack.dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* vertical split */
+}
+
+.pack.dual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  }
+
 /* Product name */
 .product {
   font-size: 0.7rem;
@@ -222,7 +235,7 @@ body {
     <div class="cell"></div>
     <div class="cell"></div>
 
-    <div class="cell"><div class="pack"><img src="krui/packs/Normal.jpg" alt=""></div></div>
+    <div class="cell"><div class="pack dual"><img src="krui/packs/Normal.jpg" alt=""><img src="krui/men.jpg" alt=""></div></div>
     <div class="cell"><div class="pack"><img src="krui/packs/Extra.jpg" alt=""></div></div>
     <div class="cell"><div class="pack"><img src="krui/packs/Extra_plus.jpg" alt=""></div></div>
     <div class="cell"><div class="pack"><img src="krui/packs/Night_extra_plus.jpg" alt=""></div></div>
@@ -251,7 +264,7 @@ body {
     <div class="cell"></div>
 
     <div class="cell"><div class="pack"><img src="krui/packs/Discreet_pants.jpg" alt=""></div></div>
-    <div class="cell"><div class="pack"><img src="krui/packs/Unisex_pants_large.jpg" alt=""></div></div>
+    <div class="cell"><div class="pack dual"><img src="krui/packs/Unisex_pants_large.jpg" alt=""><img src="krui/packs/Unisex_pants_black.jpg" alt=""></div></div>
     <div class="cell"><div class="pack"><img src="krui/packs/Unisex_pants_large.jpg" alt=""></div></div>
   </div>
 
