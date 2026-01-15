@@ -204,10 +204,20 @@ body {
 
 /* ===== DROPLET SCALE (SVG) ===== */
 .droplets {
-  display: flex;
+  display: grid;
   justify-content: center;
   gap: 1px;
   align-items: center;
+}
+
+/* 6 total droplets → 3 over 3 */
+.droplets.scale-6 {
+  grid-template-columns: repeat(3, 16px);
+}
+
+/* 8 total droplets → 4 over 4 */
+.droplets.scale-8 {
+  grid-template-columns: repeat(4, 16px);
 }
 
 .drop {
@@ -248,7 +258,7 @@ body {
 
 <!-- SUBHEADERS: ABSORBENCY SCALE -->
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-6">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -283,7 +293,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -328,7 +338,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -373,7 +383,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -419,7 +429,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
   <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -464,7 +474,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -510,7 +520,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-6">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -575,7 +585,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
@@ -620,7 +630,7 @@ body {
 </div>
 
 <div class="subheader">
-  <div class="droplets">
+  <div class="droplets scale-8">
 <span class="drop filled" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
     <path d="M12 2 C12 2 5 10 5 15.5 C5 20 8.8 22 12 22 C15.2 22 19 20 19 15.5 C19 10 12 2 12 2 Z"></path>
