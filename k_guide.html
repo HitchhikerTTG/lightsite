@@ -162,6 +162,37 @@ body {
   font-size: 0.75rem;
   color: #555;
 }
+
+/* ===== ABSORBENCY DIRECTION ARROW ===== */
+.absorbency-arrow {
+  margin-top: 28px;
+  padding-left: 160px; /* aligns with product columns */
+}
+
+.absorbency-line {
+  position: relative;
+  height: 1px;
+  background: #ccc;
+}
+
+.absorbency-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-left: 6px solid #ccc;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.absorbency-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: #888;
+  margin-top: 6px;
+}
+
 </style>
 </head>
 
@@ -262,6 +293,7 @@ body {
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
+    <div class="cell"></div>
 
     <div class="cell"><div class="pack"><img src="krui/packs/Discreet_pants.jpg" alt=""></div></div>
     <div class="cell"><div class="pack dual"><img src="krui/packs/Unisex_pants_large.jpg" alt=""><img src="krui/packs/Unisex_pants_black.jpg" alt=""></div></div>
@@ -270,8 +302,13 @@ body {
 
 </div>
 
-<div class="legend">
-  Grey squares represent product packs (visuals can be added later).
+<!-- ABSORBENCY DIRECTION -->
+<div class="absorbency-arrow">
+  <div class="absorbency-line"></div>
+  <div class="absorbency-labels">
+    <span>Lower absorbency</span>
+    <span>Higher absorbency</span>
+  </div>
 </div>
 
 </body>
