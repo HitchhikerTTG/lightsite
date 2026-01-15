@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kruidvat – Find the right protection</title>
+
+<style>
+* { box-sizing: border-box; }
+
+:root {
+  --kv-red: #e30613;
+  --ink: #1a1a1a;
+  --muted: #666;
+  --bg-soft: #fafafa;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: var(--ink);
+}
+
+/* ===== GLOBAL ===== */
+h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  font-size: 0.95rem;
+  color: var(--muted);
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== SECTION ===== */
+.section {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border-radius: 16px;
+  background: var(--bg-soft);
+}
+
+/* ===== SEVERITY HEADER ===== */
+.severity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  background: var(--kv-red);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.severity p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+  max-width: 32rem;
+}
+
+/* ===== PRODUCT GROUP ===== */
+.group {
+  margin-top: 1rem;
+}
+
+.group-title {
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.product {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+}
+
+.pack {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f2f2f2;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pack img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.product-name {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ===== ABSORBENCY NOTE ===== */
+.absorbency {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.absorbency-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #ccc, #999);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Find the protection that fits your situation</h1>
+<p class="intro">
+Start with how strong your leakage is.  
+Within each level, products go from lighter to more absorbent.
+</p>
+
+<!-- LIGHT -->
+<section class="section">
+  <div class="severity">
+    <span class="badge">Light</span>
+    <p>
+      Small, occasional leaks.  
+      Discretion and comfort are most important.
+    </p>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Liners</div>
+
+    <div class="products">
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Ultra_mini.jpg" alt=""></div>
+        <div class="product-name">Ultra Mini</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Ultra_plus.jpg" alt=""></div>
+        <div class="product-name">Ultra Mini Plus</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Mini_plus.jpg" alt=""></div>
+        <div class="product-name">Mini Plus</div>
+      </div>
+    </div>
+
+    <div class="absorbency">
+      <span>Lower</span>
+      <div class="absorbency-line"></div>
+      <span>Higher</span>
+    </div>
+  </div>
+</section>
+
+<!-- MODERATE -->
+<section class="section">
+  <div class="severity">
+    <span class="badge">Moderate</span>
+    <p>
+      Regular leakage during the day.  
+      You want reliable protection for several hours.
+    </p>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Pads</div>
+
+    <div class="products">
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Normal.jpg" alt=""></div>
+        <div class="product-name">Normal</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Extra.jpg" alt=""></div>
+        <div class="product-name">Extra</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Extra_plus.jpg" alt=""></div>
+        <div class="product-name">Extra Plus</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Night_extra_plus.jpg" alt=""></div>
+        <div class="product-name">Night</div>
+      </div>
+    </div>
+
+    <div class="absorbency">
+      <span>Lower</span>
+      <div class="absorbency-line"></div>
+      <span>Higher</span>
+    </div>
+  </div>
+</section>
+
+<!-- HEAVY -->
+<section class="section">
+  <div class="severity">
+    <span class="badge">Heavy</span>
+    <p>
+      Night-time or long periods without changing.  
+      Maximum security and peace of mind.
+    </p>
+  </div>
+
+  <div class="group">
+    <div class="group-title">Pants</div>
+
+    <div class="products">
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Discreet_pants.jpg" alt=""></div>
+        <div class="product-name">Medium</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Unisex_pants_large.jpg" alt=""></div>
+        <div class="product-name">Normal</div>
+      </div>
+      <div class="product">
+        <div class="pack"><img src="krui/packs/Unisex_pants_large_plus.jpg" alt=""></div>
+        <div class="product-name">Extra</div>
+      </div>
+    </div>
+
+    <div class="absorbency">
+      <span>Lower</span>
+      <div class="absorbency-line"></div>
+      <span>Higher</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
