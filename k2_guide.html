@@ -202,41 +202,42 @@ body {
   color: #555;
 }
 
-/* ===== DROPLET SCALE ===== */
+/* ===== DROPLETS ===== */
 .droplets {
   display: flex;
   justify-content: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .drop {
-  width: 10px;
-  height: 14px;
+  width: 12px;
+  height: 16px;
   background: #ddd;
-  border-radius: 50% 50% 50% 50%;
+  border-radius: 50% 50% 60% 60%;
   position: relative;
+  transform: rotate(180deg); /* point up */
 }
 
+/* droplet tip */
 .drop::after {
   content: "";
   position: absolute;
-  bottom: -3px;
+  top: -4px;
   left: 50%;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background: inherit;
   transform: translateX(-50%) rotate(45deg);
+  border-radius: 2px;
 }
 
+/* filled vs empty */
 .drop.filled {
   background: #e30613;
 }
 
-.scale-label {
-  margin-top: 4px;
-  font-size: 0.65rem;
-  color: #666;
-  text-align: center;
+.drop.empty {
+  background: #eee;
 }
 
 
@@ -259,6 +260,11 @@ body {
 <div class="subheader">
   <div class="droplets">
     <span class="drop filled"></span>
+    <span class="drop empty"></span>
+    <span class="drop empty"></span>
+    <span class="drop empty"></span>
+    <span class="drop empty"></span>
+    <span class="drop empty"></span>
   </div>
   <div class="scale-label">1 / 6</div>
 </div>
