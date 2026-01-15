@@ -538,36 +538,50 @@ body {
 </span>
 <span class="drop half" aria-hidden="true">
   <svg viewBox="0 0 24 24" focusable="false">
+
     <defs>
-      <!-- LEFT HALF VISIBLE -->
-      <mask id="half-left-mask">
-        <rect x="0" y="0" width="12" height="24" fill="white"/>
-        <rect x="12" y="0" width="12" height="24" fill="black"/>
+      <!-- mask that follows the droplet shape -->
+      <mask id="half-left-mask-fixed">
+        <!-- left half of the droplet path -->
+        <path
+          d="
+            M12 22
+            C12 22 5 14 5 8.5
+            C5 4 8.8 2 12 2
+            L12 22 Z
+          "
+          fill="white"
+        />
       </mask>
     </defs>
 
-    <!-- empty base -->
+    <!-- empty droplet -->
     <path
-      d="M12 22
-         C12 22 5 14 5 8.5
-         C5 4 8.8 2 12 2
-         C15.2 2 19 4 19 8.5
-         C19 14 12 22 12 22
-         Z"
+      d="
+        M12 22
+        C12 22 5 14 5 8.5
+        C5 4 8.8 2 12 2
+        C15.2 2 19 4 19 8.5
+        C19 14 12 22 12 22
+        Z
+      "
       fill="#e9e9e9"
     />
 
-    <!-- left-half fill -->
+    <!-- left half filled -->
     <path
-      d="M12 22
-         C12 22 5 14 5 8.5
-         C5 4 8.8 2 12 2
-         C15.2 2 19 4 19 8.5
-         C19 14 12 22 12 22
-         Z"
+      d="
+        M12 22
+        C12 22 5 14 5 8.5
+        C5 4 8.8 2 12 2
+        C15.2 2 19 4 19 8.5
+        C19 14 12 22 12 22
+        Z
+      "
       fill="#e30613"
-      mask="url(#half-left-mask)"
+      mask="url(#half-left-mask-fixed)"
     />
+
   </svg>
 </span>
   </div>
