@@ -201,6 +201,45 @@ body {
   font-size: 0.75rem;
   color: #555;
 }
+
+/* ===== DROPLET SCALE ===== */
+.droplets {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.drop {
+  width: 10px;
+  height: 14px;
+  background: #ddd;
+  border-radius: 50% 50% 50% 50%;
+  position: relative;
+}
+
+.drop::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: inherit;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.drop.filled {
+  background: #e30613;
+}
+
+.scale-label {
+  margin-top: 4px;
+  font-size: 0.65rem;
+  color: #666;
+  text-align: center;
+}
+
+
 </style>
 </head>
 
@@ -216,18 +255,97 @@ body {
   <div class="header-group pads">Pads</div>
   <div class="header-group pants">Pants</div>
 
-  <div class="subheader">Ultra Mini</div>
-  <div class="subheader">Ultra Mini Plus</div>
-  <div class="subheader">Mini Plus</div>
+<!-- SUBHEADERS: ABSORBENCY SCALE -->
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">1 / 6</div>
+</div>
 
-  <div class="subheader">Normal</div>
-  <div class="subheader">Extra</div>
-  <div class="subheader">Extra Plus</div>
-  <div class="subheader">Night</div>
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">2 / 8</div>
+</div>
 
-  <div class="subheader">Medium</div>
-  <div class="subheader">Normal</div>
-  <div class="subheader">Extra</div>
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">3 / 8</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">4 / 8</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">5 / 8</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">6 / 8</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">5.5 / 6</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">5 / 8</div>
+</div>
+
+<div class="subheader">
+  <div class="droplets">
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+    <span class="drop filled"></span>
+  </div>
+  <div class="scale-label">6 / 6</div>
+</div>
 </div>
 
 <div class="matrix">
