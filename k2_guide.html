@@ -202,36 +202,33 @@ body {
   color: #555;
 }
 
-/* ===== DROPLETS ===== */
+/* ===== DROPLET SCALE (SVG) ===== */
 .droplets {
   display: flex;
   justify-content: center;
   gap: 6px;
+  align-items: center;
 }
 
 .drop {
-  width: 14px;
-  height: 18px;
-  background: #eee;
-  border-radius: 50% 50% 60% 60%;
-  position: relative;
-  transform: rotate(180deg);
-  clip-path: path(
-    "M7 0
-     C10 5, 14 8, 14 12
-     C14 16, 11 18, 7 18
-     C3 18, 0 16, 0 12
-     C0 8, 4 5, 7 0
-     Z"
-  );
+  width: 16px;
+  height: 20px;
+  display: inline-flex;
 }
 
-.drop.filled {
-  background: #e30613;
+.drop.filled svg path {
+  fill: #e30613;
 }
 
-.drop.empty {
-  background: #eee;
+.drop.empty svg path {
+  fill: #e9e9e9;
+}
+
+.drop svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(180deg); /* sharp part up */
 }
 
 </style>
