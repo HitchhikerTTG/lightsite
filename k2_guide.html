@@ -206,32 +206,26 @@ body {
 .droplets {
   display: flex;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .drop {
-  width: 12px;
-  height: 16px;
-  background: #ddd;
+  width: 14px;
+  height: 18px;
+  background: #eee;
   border-radius: 50% 50% 60% 60%;
   position: relative;
-  transform: rotate(180deg); /* point up */
+  transform: rotate(180deg);
+  clip-path: path(
+    "M7 0
+     C10 5, 14 8, 14 12
+     C14 16, 11 18, 7 18
+     C3 18, 0 16, 0 12
+     C0 8, 4 5, 7 0
+     Z"
+  );
 }
 
-/* droplet tip */
-.drop::after {
-  content: "";
-  position: absolute;
-  top: -4px;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  background: inherit;
-  transform: translateX(-50%) rotate(45deg);
-  border-radius: 2px;
-}
-
-/* filled vs empty */
 .drop.filled {
   background: #e30613;
 }
@@ -239,7 +233,6 @@ body {
 .drop.empty {
   background: #eee;
 }
-
 
 </style>
 </head>
