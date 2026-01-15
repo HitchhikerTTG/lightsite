@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kruidvat – Incontinence Product Overview</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 28px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* ===== TOP INFO ===== */
+.info {
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.info strong {
+  font-weight: 800;
+}
+
+/* ===== GRID LAYOUT ===== */
+.matrix {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 20px;
+}
+
+/* ===== COLUMN HEADERS ===== */
+.headers {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  padding-left: 190px;
+  margin-bottom: 10px;
+}
+
+.header-group {
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.header-group.liners { grid-column: span 3; }
+.header-group.pads   { grid-column: span 4; }
+.header-group.pants  { grid-column: span 3; }
+
+.subheader {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+
+/* ===== LEFT RAIL ===== */
+.row-label {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.level {
+  background: #e30613;
+  color: #fff;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 999px;
+  width: fit-content;
+  font-size: 0.85rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== ROW CONTENT ===== */
+.row-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  padding: 18px 0;
+}
+
+/* Softer severity band */
+.row-content::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 14px;
+  background: rgba(227,6,19,0.10);
+  transform: translateY(-50%);
+  border-radius: 999px;
+  z-index: 0;
+}
+
+/* ===== CELLS ===== */
+.cell {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.7rem;
+  min-height: 140px;
+}
+
+/* Empty cells look intentional */
+.cell:empty {
+  background: linear-gradient(
+    to right,
+    transparent 45%,
+    #eee 50%,
+    transparent 55%
+  );
+  opacity: 0.25;
+}
+
+/* ===== PRODUCT PACK ===== */
+.pack {
+  width: 110px;
+  height: 110px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pack img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Dual pack */
+.pack.dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+/* ===== PRODUCT NAME ===== */
+.product {
+  margin-top: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.25;
+}
+
+/* ===== ABSORBENCY ARROW ===== */
+.absorbency-arrow {
+  margin-top: 26px;
+  padding-left: 190px;
+}
+
+.absorbency-line {
+  position: relative;
+  height: 1px;
+  background: #ccc;
+}
+
+.absorbency-line::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border-left: 6px solid #ccc;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.absorbency-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* ===== LEGEND ===== */
+.legend {
+  margin-top: 28px;
+  font-size: 0.75rem;
+  color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="info">
+  <strong>Absorbency increases from left to right.</strong><br>
+  Start with the lowest level that makes you feel confident.
+</div>
+
+<div class="headers">
+  <div class="header-group liners">Liners</div>
+  <div class="header-group pads">Pads</div>
+  <div class="header-group pants">Pants</div>
+
+  <div class="subheader">Ultra Mini</div>
+  <div class="subheader">Ultra Mini Plus</div>
+  <div class="subheader">Mini Plus</div>
+
+  <div class="subheader">Normal</div>
+  <div class="subheader">Extra</div>
+  <div class="subheader">Extra Plus</div>
+  <div class="subheader">Night</div>
+
+  <div class="subheader">Medium</div>
+  <div class="subheader">Normal</div>
+  <div class="subheader">Extra</div>
+</div>
+
+<div class="matrix">
+
+  <!-- LIGHT -->
+  <div class="row-label">
+    <div class="level">Light</div>
+    <div class="description">
+      Small, occasional leaks.<br>
+      Discretion is most important.
+    </div>
+  </div>
+
+  <div class="row-content">
+    <div class="cell"><div class="pack"><img src="krui/packs/Ultra_mini.jpg"></div><div class="product">Ultra Mini</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Ultra_plus.jpg"></div><div class="product">Ultra Mini Plus</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Mini_plus.jpg"></div><div class="product">Mini Plus</div></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+
+  <!-- MODERATE -->
+  <div class="row-label">
+    <div class="level">Moderate</div>
+    <div class="description">
+      Regular leakage.<br>
+      Reliable daytime protection.
+    </div>
+  </div>
+
+  <div class="row-content">
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"><div class="pack dual"><img src="krui/packs/Normal.jpg"><img src="krui/men.jpg"></div><div class="product">Normal + Men</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Extra.jpg"></div><div class="product">Extra</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Extra_plus.jpg"></div><div class="product">Extra Plus</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Night_extra_plus.jpg"></div><div class="product">Night Extra Plus</div></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+
+  <!-- HEAVY -->
+  <div class="row-label">
+    <div class="level">Heavy</div>
+    <div class="description">
+      Night-time or long periods.<br>
+      Maximum security.
+    </div>
+  </div>
+
+  <div class="row-content">
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Discreet_pants.jpg"></div><div class="product">Pants</div></div>
+    <div class="cell"><div class="pack dual"><img src="krui/packs/Unisex_pants_large.jpg"><img src="krui/packs/Unisex_pants_black.jpg"></div><div class="product">Large / Black</div></div>
+    <div class="cell"><div class="pack"><img src="krui/packs/Unisex_pants_large.jpg"></div><div class="product">Large Plus</div></div>
+  </div>
+
+</div>
+
+<div class="absorbency-arrow">
+  <div class="absorbency-line"></div>
+  <div class="absorbency-labels">
+    <span>Lower absorbency</span>
+    <span>Higher absorbency</span>
+  </div>
+</div>
+
+<div class="legend">
+  Empty spaces indicate that no product exists at that level.
+</div>
+
+</body>
+</html>
