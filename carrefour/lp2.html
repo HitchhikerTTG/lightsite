@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Protection incontinence – Carrefour Services à la personne</title>
+  <meta name="description" content="Protection ultra-fine pour fuites légères. Confort toute la journée. Livraison discrète gratuite à partir de 45€.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#254F9B;
+      --blue-dark:#1a3d7a;
+      --orange:#f67828;
+      --orange-light:#ff9f5a;
+      --ink:#111111;
+      --ink-2:#4a4a4a;
+      --bg:#f8f9fb;
+      --card:#ffffff;
+      --teal:#00838f;
+      --radius:8px;
+      --radius-lg:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff}
+    a{color:var(--ink);text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+    /* HEADER - Services style: clean, no top bar */
+    header.main-header{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:99}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 0;flex-wrap:wrap;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;color:var(--blue)}
+    .logo-badge{width:40px;height:40px;border-radius:6px;background:var(--blue);display:grid;place-items:center;color:#fff;font-weight:800;font-size:20px}
+    .logo-sub{font-size:12px;font-weight:600;color:var(--ink-2);margin-top:2px}
+    .nav-main{display:flex;gap:4px;flex-wrap:wrap}
+    .nav-main a{padding:10px 16px;font-weight:600;font-size:14px;color:var(--ink)}
+    .nav-main a:hover{color:var(--blue)}
+    .btn-connect{background:var(--blue);color:#fff!important;padding:10px 20px;border-radius:var(--radius);font-weight:700}
+    .btn{display:inline-flex;align-items:center;gap:8px;border-radius:var(--radius);padding:12px 24px;font-weight:700;text-decoration:none}
+    .btn-primary{background:var(--blue);color:#fff}
+    .btn-secondary{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+
+    /* HERO - Image overlay style */
+    .hero-banner{position:relative;min-height:420px;display:flex;align-items:center;background:linear-gradient(135deg,#d4e8f7 0%,#b8d4e8 50%,#e8f4fc 100%)}
+    .hero-overlay{position:relative;z-index:1;max-width:520px;background:rgba(255,255,255,.95);padding:40px 36px;border-radius:var(--radius-lg);box-shadow:0 8px 32px rgba(0,0,0,.08);margin:40px 0}
+    .hero-overlay h1{font-size:32px;line-height:1.25;margin:0 0 16px;color:var(--blue)}
+    .hero-overlay p{font-size:16px;color:var(--ink-2);line-height:1.6;margin:0 0 24px}
+    .hero-services{list-style:none;margin:0;padding:0}
+    .hero-services li{margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:15px;color:var(--ink)}
+    .hero-services li::before{content:'→';color:var(--orange);font-weight:800}
+    .hero-overlay .btn{margin-top:8px}
+
+    /* PROMO BANNER - Light blue */
+    .promo-banner{background:linear-gradient(90deg,#b8d4e8,#d4e8f5);color:var(--blue-dark);padding:16px 24px;text-align:center;font-weight:700;font-size:15px}
+    .promo-banner strong{display:block;font-size:18px;margin-bottom:4px}
+
+    /* POURQUOI CHOISIR - 3 benefit cards with icons */
+    .section{padding:48px 0}
+    .section-title{text-align:center;margin-bottom:36px}
+    .section-title h2{font-size:28px;margin:0 0 8px;color:var(--blue)}
+    .section-title p{font-size:15px;color:var(--ink-2);margin:0}
+    .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:900px;margin:0 auto}
+    .benefit-card{text-align:center;padding:32px 24px}
+    .benefit-icon{width:80px;height:80px;margin:0 auto 20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:36px}
+    .benefit-icon.yellow{background:#fff3cd;color:#856404}
+    .benefit-icon.blue{background:#cce5ff;color:var(--blue)}
+    .benefit-icon.orange{background:#ffe5d4;color:var(--orange)}
+    .benefit-card h4{font-size:18px;margin:0 0 8px;color:var(--blue)}
+    .benefit-card p{margin:0;font-size:14px;color:var(--ink-2);line-height:1.5}
+    .section-cta{text-align:center;margin-top:32px}
+    .section-cta .btn{font-size:16px;padding:14px 28px}
+
+    /* COMMENT ÇA MARCHE - 4 steps */
+    .steps-section{background:var(--bg);padding:48px 0}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:32px;position:relative}
+    .steps-grid::before{content:'';position:absolute;top:40px;left:12.5%;right:12.5%;height:2px;background:#ddd;z-index:0}
+    .step-item{text-align:center;position:relative;z-index:1}
+    .step-num{width:80px;height:80px;margin:0 auto 16px;background:var(--blue);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800}
+    .step-item h4{font-size:16px;margin:0 0 8px;color:var(--blue)}
+    .step-item p{margin:0;font-size:13px;color:var(--ink-2);line-height:1.5}
+
+    /* Products, chooser, etc - reuse from lp */
+    .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .card{background:var(--card);border-radius:var(--radius);padding:24px 20px;box-shadow:0 2px 8px rgba(0,0,0,.06);border:1px solid #f0f0f0}
+    .card h4{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.5}
+    .content-section{background:var(--bg);padding:48px 0}
+    .content-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .article-card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .2s}
+    .article-card:hover{transform:translateY(-4px)}
+    .article-card img{width:100%;height:160px;object-fit:cover;border-radius:var(--radius);margin-bottom:16px}
+    .article-card .tag{display:inline-block;background:var(--blue);color:#fff;padding:4px 10px;border-radius:999px;font-size:11px;font-weight:800;margin-bottom:10px}
+    .article-card h3{margin:0 0 8px;font-size:18px;line-height:1.3}
+    .article-card p{margin:0 0 12px;color:var(--ink-2);font-size:14px;line-height:1.6}
+    .article-card .read-more{color:var(--blue);font-weight:700;font-size:14px}
+    .chooser-section,.resource-section{background:#fff;padding:48px 0}
+    .chooser-steps{display:flex;gap:8px;margin-bottom:24px;justify-content:center;flex-wrap:wrap}
+    .chooser-step-indicator{padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px;background:#eee;color:var(--ink-2)}
+    .chooser-step-indicator.active{background:var(--blue);color:#fff}
+    .chooser-step-indicator.done{background:var(--blue);color:#fff;opacity:.7}
+    .chooser-panel{display:none;background:#fff;border-radius:var(--radius);padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);max-width:900px;margin:0 auto}
+    .chooser-panel.active{display:block}
+    .chooser-panel h3{margin:0 0 8px;font-size:20px;color:var(--blue)}
+    .chooser-panel .subtitle{margin:0 0 24px;color:var(--ink-2);font-size:14px}
+    .chooser-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+    .chooser-option{background:#fff;border:2px solid #eee;border-radius:var(--radius);padding:20px;cursor:pointer;transition:all .2s;text-align:center}
+    .chooser-option:hover,.chooser-option.selected{border-color:var(--blue);background:#f8fafc}
+    .chooser-option .icon{font-size:32px;margin-bottom:8px}
+    .chooser-option h4{margin:0 0 4px;font-size:16px}
+    .chooser-option p{margin:0;font-size:13px;color:var(--ink-2)}
+    .chooser-nav{display:flex;gap:12px;margin-top:24px;justify-content:space-between}
+    .chooser-nav .btn-back{background:#eee;color:var(--ink)}
+    .chooser-results{margin-top:32px;padding-top:24px;border-top:1px solid #eee}
+    .chooser-results h4{margin:0 0 16px;font-size:18px}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+    .tab{border-radius:999px;padding:8px 14px;background:#eee;font-weight:700;cursor:pointer;font-size:14px}
+    .tab.active{background:var(--blue);color:#fff}
+    .sku-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .sku{background:#fff;border-radius:var(--radius);padding:16px;box-shadow:0 2px 8px rgba(0,0,0,.06);display:flex;flex-direction:column}
+    .sku img{width:100%;height:140px;object-fit:contain;background:#fafafa;border-radius:var(--radius)}
+    .price-row{display:flex;align-items:center;justify-content:space-between;margin:10px 0}
+    .badge{background:var(--orange);color:#fff;border-radius:6px;padding:4px 8px;font-weight:800;font-size:11px}
+    .price{display:flex;align-items:flex-end;gap:2px}
+    .price .big{font-size:22px;font-weight:800}
+    .price .small{font-size:12px}
+    .sku button{margin-top:auto;background:var(--blue);color:#fff;border:0;border-radius:var(--radius);padding:10px 16px;font-weight:700;cursor:pointer}
+    .sku .note{font-size:12px;color:var(--ink-2)}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .resource-card{background:var(--blue);color:#fff;border-radius:var(--radius);padding:28px 24px;text-align:center;text-decoration:none;transition:transform .2s}
+    .resource-card:hover{transform:translateY(-4px)}
+    .resource-card .icon{font-size:40px;margin-bottom:12px}
+    .resource-card h3{margin:0 0 8px;font-size:18px}
+    .resource-card p{margin:0;font-size:14px;opacity:.95}
+    .strip{background:var(--blue);color:#fff;padding:20px 24px;border-radius:var(--radius);display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .strip ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-weight:700}
+    .strip .btn{background:var(--orange);color:#fff}
+    details{background:#fff;border-radius:var(--radius);padding:16px 20px;box-shadow:0 2px 8px rgba(0,0,0,.06);margin-bottom:10px}
+    summary{cursor:pointer;font-weight:700}
+    .footer-main{margin-top:48px;background:#f5f6f8;padding:48px 0 32px}
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-bottom:32px}
+    .footer-col h5{font-size:13px;font-weight:800;margin:0 0 16px;color:var(--blue);text-transform:uppercase;letter-spacing:.5px}
+    .footer-col ul{list-style:none;margin:0;padding:0}
+    .footer-col li{margin-bottom:10px}
+    .footer-col a{color:var(--ink-2);font-size:14px}
+    .footer-col a:hover{color:var(--blue)}
+    .footer-bottom{border-top:1px solid #ddd;padding-top:24px;margin-top:24px}
+    .footer-bottom p{margin:0;font-size:12px;color:var(--ink-2)}
+    blockquote{margin:0;padding:20px;background:#fff;border-left:4px solid var(--orange);border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+    .stars{color:#f5a623;font-size:16px}
+    @media (max-width:1024px){.benefit-grid,.steps-grid{grid-template-columns:repeat(2,1fr)}.steps-grid::before{display:none}.card-grid,.sku-grid{grid-template-columns:repeat(2,1fr)}.content-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.hero-overlay{padding:24px 20px}.hero-overlay h1{font-size:24px}.benefit-grid,.steps-grid,.card-grid,.sku-grid,.content-grid,.resource-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}.strip{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="wrap header-inner">
+      <a href="lp2.html" class="logo">
+        <span class="logo-badge">C</span>
+        <div><span>Carrefour</span><div class="logo-sub">Services à la personne</div></div>
+      </a>
+      <nav class="nav-main">
+        <a href="#products">Nos services</a>
+        <a href="#pourquoi">Qui sommes-nous ?</a>
+        <a href="#pourquoi">Pourquoi nous choisir ?</a>
+        <a href="#comment">Comment ça marche ?</a>
+        <a href="#faq">Foire aux questions</a>
+        <a href="#products" class="btn-connect">Me connecter</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="wrap">
+      <div class="hero-overlay">
+        <h1>Protection incontinence : des solutions pour simplifier la vie des seniors et de leurs proches</h1>
+        <p>Facilitez-vous la vie grâce aux protections iD Light. Offrez confort et discrétion à vos parents ou proches : ultra-fines, respirantes et testées dermatologiquement. Livraison discrète à domicile.</p>
+        <ul class="hero-services">
+          <li><a href="#products">Protections légères pour fuites occasionnelles</a></li>
+          <li><a href="#chooser">Trouver la protection adaptée en 2 étapes</a></li>
+          <li><a href="#articles">Conseils et ressources pour les aidants</a></li>
+        </ul>
+        <a class="btn btn-primary" href="#products">Obtenir un devis</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="promo-banner">
+    <strong>Livraison discrète gratuite à partir de 45€</strong>
+    Emballage neutre • Livraison sous 3 jours • Retours sous 30 jours
+  </div>
+
+  <section id="pourquoi" class="section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Pourquoi choisir Carrefour Services à la personne ?</h2>
+        <p>Avantages Carrefour rien que pour vous</p>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon yellow">📁</div>
+          <h4>0€ de frais de dossier</h4>
+          <p>Commandez en toute simplicité, sans frais cachés.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon blue">🎁</div>
+          <h4>50€ offerts en carte cadeau Carrefour*</h4>
+          <p>Profitez d'avantages exclusifs sur votre première commande.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon orange">🤝</div>
+          <h4>Des partenaires de confiance</h4>
+          <p>Produits développés avec des professionnels de santé.</p>
+        </div>
+      </div>
+      <div class="section-cta">
+        <a class="btn btn-primary" href="#products">Découvrir tous les services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="section" style="background:var(--bg)">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>La sélection du moment</h2>
+        <p>Trouvez votre solution</p>
+      </div>
+      <div class="tabs">
+        <div class="tab active">Ultra Mini</div>
+        <div class="tab">Mini</div>
+        <div class="tab">Normal</div>
+        <div class="tab">Extra</div>
+        <div class="tab">Maxi</div>
+      </div>
+      <div class="sku-grid">
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Ultra+Mini" alt="Ultra Mini" />
+          <h4 style="margin:8px 0 4px">Protection discrète Ultra Mini</h4>
+          <div class="price-row"><span class="badge">NOUVEAU</span><div class="price"><span class="big">3</span><span class="small">,99 €</span></div></div>
+          <p class="note">28 protections • Gouttes et éternuements</p>
+          <button>Ajouter</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Normal" alt="Normal" />
+          <h4 style="margin:8px 0 4px">Protection discrète Normal</h4>
+          <div class="price-row"><span class="badge">2+1</span><div class="price"><span class="big">4</span><span class="small">,49 €</span></div></div>
+          <p class="note">20 protections • Fuites légères</p>
+          <button>Ajouter</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Culotte" alt="Culotte" />
+          <h4 style="margin:8px 0 4px">Protection discrète Culotte Large</h4>
+          <div class="price-row"><div class="price"><span class="big">4</span><span class="small">,99 €</span></div></div>
+          <p class="note">14 protections • Confiance quotidienne</p>
+          <button>Ajouter</button>
+        </article>
+        <article class="sku">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Homme" alt="Homme" />
+          <h4 style="margin:8px 0 4px">Protection discrète Homme</h4>
+          <div class="price-row"><span class="badge">NOUVEAU</span><div class="price"><span class="big">5</span><span class="small">,49 €</span></div></div>
+          <p class="note">10 protections • Assurance renforcée</p>
+          <button>Ajouter</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="chooser" class="chooser-section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Choisissez votre produit</h2>
+        <p>Répondez à deux questions pour trouver la protection adaptée à votre situation.</p>
+      </div>
+      <div class="chooser-steps">
+        <span class="chooser-step-indicator active" id="step-ind-1">Étape 1 : Fréquence & Sévérité</span>
+        <span class="chooser-step-indicator" id="step-ind-2">Étape 2 : Type d'activité</span>
+      </div>
+      <div class="chooser-panel active" id="panel-1">
+        <h3>Quelle est la fréquence et la sévérité de vos fuites ?</h3>
+        <p class="subtitle">Sélectionnez l'option qui correspond le mieux</p>
+        <div class="chooser-options" id="options-severity">
+          <div class="chooser-option" data-value="leger"><div class="icon">💧</div><h4>Légères</h4><p>Quelques gouttes occasionnelles</p></div>
+          <div class="chooser-option" data-value="modere"><div class="icon">💧💧</div><h4>Modérées</h4><p>Fuites régulières</p></div>
+          <div class="chooser-option" data-value="frequentes"><div class="icon">💧💧💧</div><h4>Fréquentes</h4><p>Fuites quotidiennes</p></div>
+          <div class="chooser-option" data-value="severes"><div class="icon">💧💧💧💧</div><h4>Sévères</h4><p>Fuites importantes</p></div>
+        </div>
+        <div class="chooser-nav"><span></span><button class="btn btn-primary" id="btn-next-1" disabled>Continuer →</button></div>
+      </div>
+      <div class="chooser-panel" id="panel-2">
+        <h3>Quel est votre type d'activité au quotidien ?</h3>
+        <p class="subtitle">Cela nous aide à recommander le format adapté</p>
+        <div class="chooser-options" id="options-activity">
+          <div class="chooser-option" data-value="tres-actif"><div class="icon">🏃</div><h4>Très actif</h4><p>Sport, déplacements fréquents</p></div>
+          <div class="chooser-option" data-value="actif-modere"><div class="icon">🚶</div><h4>Actif modéré</h4><p>Marche, sorties régulières</p></div>
+          <div class="chooser-option" data-value="principalement-maison"><div class="icon">🏠</div><h4>À la maison</h4><p>Peu de déplacements</p></div>
+          <div class="chooser-option" data-value="sedentaire"><div class="icon">🪑</div><h4>Sédentaire</h4><p>Faible mobilité</p></div>
+        </div>
+        <div class="chooser-nav"><button class="btn btn-secondary" id="btn-back-2">← Retour</button><button class="btn btn-primary" id="btn-next-2" disabled>Voir mes recommandations</button></div>
+      </div>
+      <div class="chooser-panel" id="panel-results">
+        <h3>Nos recommandations pour vous</h3>
+        <p class="subtitle" id="results-summary"></p>
+        <div class="chooser-results"><h4>Produits suggérés</h4><div class="sku-grid" id="chooser-sku-grid"></div></div>
+        <div class="chooser-nav" style="margin-top:24px"><button class="btn btn-secondary" id="btn-restart">Recommencer</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="comment" class="steps-section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Comment ça marche ?</h2>
+        <p>Obtenez la protection adaptée en quelques étapes</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-item"><div class="step-num">1</div><h4>Vous choisissez</h4><p>Le niveau de protection qui vous correspond</p></div>
+        <div class="step-item"><div class="step-num">2</div><h4>Vous renseignez</h4><p>Votre code postal pour la livraison</p></div>
+        <div class="step-item"><div class="step-num">3</div><h4>Un conseiller vous recontacte</h4><p>Pour valider votre commande</p></div>
+        <div class="step-item"><div class="step-num">4</div><h4>Vous validez</h4><p>Le devis personnalisé</p></div>
+      </div>
+      <div class="section-cta"><a class="btn btn-primary" href="#products">Obtenir un devis</a></div>
+    </div>
+  </section>
+
+  <section id="articles" class="content-section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Conseils d'experts & Ressources</h2>
+        <p>Articles et guides pour vous accompagner</p>
+      </div>
+      <div class="content-grid">
+        <article class="article-card">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Incontinence" alt="Incontinence" />
+          <span class="tag">POUR AIDANTS</span>
+          <h3>Pourquoi l'incontinence reste tabou et son impact sur la santé mentale</h3>
+          <p>Malgré des centaines de millions de personnes concernées, les fuites urinaires restent l'une des conditions les plus cachées.</p>
+          <a href="article2.html?slug=incontinence-tabou" class="read-more">En savoir plus →</a>
+        </article>
+        <article class="article-card">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Masculine" alt="Incontinence masculine" />
+          <span class="tag">INCONTINENCE</span>
+          <h3>L'incontinence masculine : un problème que je n'aurais jamais imaginé</h3>
+          <p>Homme de 54 ans, actif et fier de mon indépendance. Pourtant, ces dernières années m'ont appris ce que signifie vivre avec l'incontinence masculine.</p>
+          <a href="article2.html?slug=incontinence-masculine" class="read-more">En savoir plus →</a>
+        </article>
+        <article class="article-card">
+          <img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text=Choisir" alt="Choisir" />
+          <span class="tag">CONSEILS</span>
+          <h3>Comment choisir la bonne protection selon votre niveau d'activité</h3>
+          <p>En comprenant vos besoins — fréquence des fuites, type d'activité — vous pouvez trouver le produit idéal.</p>
+          <a href="article2.html?slug=choisir-protection" class="read-more">En savoir plus →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="resource-section">
+    <div class="wrap">
+      <div class="section-title"><h2>Nos services</h2><p>Explorez nos ressources</p></div>
+      <div class="resource-grid">
+        <a href="#videos" class="resource-card"><div class="icon">🎥</div><h3>Vidéos</h3><p>Démonstrations et conseils</p></a>
+        <a href="#e-learning" class="resource-card"><div class="icon">📚</div><h3>E-Learning</h3><p>Formations pour aidants</p></a>
+        <a href="#chooser" class="resource-card"><div class="icon">🔍</div><h3>Sélection de produits</h3><p>Trouvez la protection adaptée</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-title"><h2>Témoignages clients</h2></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <blockquote><div class="stars">★★★★★</div><p style="margin:8px 0 0">« Doux, fin et fiable — exactement ce dont j'avais besoin. »</p></blockquote>
+        <blockquote><div class="stars">★★★★☆</div><p style="margin:8px 0 0">« Invisible sous legging, parfait pour la salle de sport. »</p></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap strip">
+      <strong>Livraison discrète, toujours</strong>
+      <ul><li>Emballage neutre</li><li>Gratuit à partir de 45€</li><li>Livraison sous 3 jours</li></ul>
+      <a class="btn btn-primary" href="#products">Obtenir un devis</a>
+    </div>
+  </section>
+
+  <section id="faq" class="section" style="background:var(--bg)">
+    <div class="wrap">
+      <div class="section-title"><h2>Foire aux questions</h2></div>
+      <details><summary>Quelle absorption choisir ?</summary><p style="margin:8px 0 0">Ultra Mini / Mini pour gouttes et éternuements, Normal / Extra pour protection quotidienne, Maxi / Super pour journées longues.</p></details>
+      <details><summary>Les protections sont-elles parfumées ?</summary><p style="margin:8px 0 0">Non. Sans parfum et testées dermatologiquement.</p></details>
+      <details><summary>L'emballage est-il discret ?</summary><p style="margin:8px 0 0">Oui. Colis neutre sans mention du produit.</p></details>
+      <details><summary>Politique de livraison et retours ?</summary><p style="margin:8px 0 0">Livraison gratuite à partir de 45€ et retours sous 30 jours sur paquets non ouverts.</p></details>
+    </div>
+  </section>
+
+  <footer class="footer-main">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col"><h5>Carrefour Services à la personne</h5><ul><li><a href="lp2.html">Protections incontinence</a></li><li><a href="#chooser">Trouver ma protection</a></li><li><a href="#articles">Conseils</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Mentions légales</a></li><li><a href="#">Politique de confidentialité</a></li></ul></div>
+        <div class="footer-col"><h5>Les services</h5><ul><li><a href="#products">Protections légères</a></li><li><a href="#products">Protections homme</a></li><li><a href="#products">Protections femme</a></li><li><a href="#chooser">Trouver ma protection</a></li></ul></div>
+        <div class="footer-col"><h5>Carrefour</h5><ul><li><a href="#">Carrefour banque</a></li><li><a href="#">Carrefour assurance</a></li><li><a href="#">Carrefour Pro</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li><a href="#">Contactez-nous</a></li><li><a href="#">0 800 389 618</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>© Carrefour Services à la personne. Protection de confiance développée avec des professionnels de santé.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var severity='',activity='';
+      var severityLabels={leger:'Légères',modere:'Modérées',frequentes:'Fréquentes',severes:'Sévères'};
+      var activityLabels={'tres-actif':'Très actif','actif-modere':'Actif modéré','principalement-maison':'À la maison','sedentaire':'Sédentaire'};
+      function selectOpt(c,k,v){c.querySelectorAll('.chooser-option').forEach(function(el){el.classList.toggle('selected',el.dataset.value===v)});return v}
+      document.getElementById('options-severity').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){severity=selectOpt(this,'s',o.dataset.value);document.getElementById('btn-next-1').disabled=!severity}}
+      document.getElementById('options-activity').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){activity=selectOpt(this,'a',o.dataset.value);document.getElementById('btn-next-2').disabled=!activity}}
+      document.getElementById('btn-next-1').onclick=function(){document.getElementById('panel-1').classList.remove('active');document.getElementById('panel-2').classList.add('active');document.getElementById('step-ind-1').classList.remove('active');document.getElementById('step-ind-1').classList.add('done');document.getElementById('step-ind-2').classList.add('active')}
+      document.getElementById('btn-back-2').onclick=function(){document.getElementById('panel-2').classList.remove('active');document.getElementById('panel-1').classList.add('active');document.getElementById('step-ind-2').classList.remove('active');document.getElementById('step-ind-1').classList.remove('done');document.getElementById('step-ind-1').classList.add('active')}
+      document.getElementById('btn-next-2').onclick=function(){
+        document.getElementById('panel-2').classList.remove('active');document.getElementById('panel-results').classList.add('active');
+        document.getElementById('step-ind-2').classList.remove('active');document.getElementById('step-ind-2').classList.add('done');
+        document.getElementById('results-summary').textContent='Fuites '+severityLabels[severity]+' • '+activityLabels[activity];
+        var skus=[{n:'Protection Ultra Mini',b:'3',s:'99 €',note:'28 protections',img:'Ultra+Mini'},{n:'Protection Normal',b:'4',s:'49 €',note:'20 protections',img:'Normal'},{n:'Protection Culotte Large',b:'4',s:'99 €',note:'14 protections',img:'Culotte'}];
+        document.getElementById('chooser-sku-grid').innerHTML=skus.map(function(x){return '<article class="sku"><img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text='+x.img+'" alt="'+x.n+'"/><h4 style="margin:8px 0 4px">'+x.n+'</h4><div class="price-row"><div class="price"><span class="big">'+x.b+'</span><span class="small">,'+x.s+'</span></div></div><p class="note">'+x.note+'</p><button>Ajouter</button></article>'}).join('')
+      }
+      document.getElementById('btn-restart').onclick=function(){severity='';activity='';document.getElementById('panel-results').classList.remove('active');document.getElementById('panel-1').classList.add('active');document.getElementById('step-ind-1').classList.add('active');document.getElementById('step-ind-1').classList.remove('done');document.getElementById('step-ind-2').classList.remove('active','done');document.getElementById('btn-next-1').disabled=true;document.querySelectorAll('.chooser-option').forEach(function(el){el.classList.remove('selected')})}
+    })();
+  </script>
+</body>
+</html>
