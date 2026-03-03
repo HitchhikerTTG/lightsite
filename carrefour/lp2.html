@@ -177,7 +177,7 @@
         <p>Facilitez-vous la vie grâce aux protections iD Light. Offrez confort et discrétion à vos parents ou proches : ultra-fines, respirantes et testées dermatologiquement. Livraison discrète à domicile.</p>
         <ul class="hero-services">
           <li><a href="#products">Protections légères pour fuites occasionnelles</a></li>
-          <li><a href="#chooser">Trouver la protection adaptée en 2 étapes</a></li>
+          <li><a href="#chooser">Trouver la protection adaptée</a></li>
           <li><a href="#articles">Conseils et ressources pour les aidants</a></li>
         </ul>
         <a class="btn btn-primary" href="#products">Obtenir un devis</a>
@@ -269,33 +269,34 @@
     <div class="wrap">
       <div class="section-title">
         <h2>Choisissez votre produit</h2>
-        <p>Répondez à deux questions pour trouver la protection adaptée à votre situation.</p>
+        <p>Répondez à quelques questions pour trouver la protection adaptée à votre situation.</p>
       </div>
       <div class="chooser-steps">
-        <span class="chooser-step-indicator active" id="step-ind-1">Étape 1 : Fréquence & Sévérité</span>
-        <span class="chooser-step-indicator" id="step-ind-2">Étape 2 : Type d'activité</span>
+        <span class="chooser-step-indicator active" id="step-ind-1">Étape 1</span>
+        <span class="chooser-step-indicator" id="step-ind-2">Étape 2</span>
+        <span class="chooser-step-indicator" id="step-ind-3" style="display:none">Étape 3</span>
       </div>
       <div class="chooser-panel active" id="panel-1">
-        <h3>Quelle est la fréquence et la sévérité de vos fuites ?</h3>
-        <p class="subtitle">Sélectionnez l'option qui correspond le mieux</p>
-        <div class="chooser-options" id="options-severity">
-          <div class="chooser-option" data-value="leger"><div class="icon">💧</div><h4>Légères</h4><p>Quelques gouttes occasionnelles</p></div>
-          <div class="chooser-option" data-value="modere"><div class="icon">💧💧</div><h4>Modérées</h4><p>Fuites régulières</p></div>
-          <div class="chooser-option" data-value="frequentes"><div class="icon">💧💧💧</div><h4>Fréquentes</h4><p>Fuites quotidiennes</p></div>
-          <div class="chooser-option" data-value="severes"><div class="icon">💧💧💧💧</div><h4>Sévères</h4><p>Fuites importantes</p></div>
+        <h3>Quelle situation vous correspond le mieux ?</h3>
+        <p class="subtitle">Sélectionnez la catégorie qui décrit votre situation</p>
+        <div class="chooser-options" id="options-category">
+          <div class="chooser-option" data-value="petits-inconforts"><div class="icon">💧</div><h4>Petits inconforts</h4><p>Légères pertes lors d'éternuements, rires, toux ou efforts</p></div>
+          <div class="chooser-option" data-value="faiblesses-vessie"><div class="icon">💧💧</div><h4>Faiblesses de vessie</h4><p>Fuites minimes, accidents, difficulté à se retenir jusqu'aux toilettes</p></div>
+          <div class="chooser-option" data-value="incontinence"><div class="icon">💧💧💧</div><h4>Incontinence</h4><p>Contrôle très limité, accidents parfois la nuit</p></div>
         </div>
         <div class="chooser-nav"><span></span><button class="btn btn-primary" id="btn-next-1" disabled>Continuer →</button></div>
       </div>
       <div class="chooser-panel" id="panel-2">
-        <h3>Quel est votre type d'activité au quotidien ?</h3>
-        <p class="subtitle">Cela nous aide à recommander le format adapté</p>
-        <div class="chooser-options" id="options-activity">
-          <div class="chooser-option" data-value="tres-actif"><div class="icon">🏃</div><h4>Très actif</h4><p>Sport, déplacements fréquents</p></div>
-          <div class="chooser-option" data-value="actif-modere"><div class="icon">🚶</div><h4>Actif modéré</h4><p>Marche, sorties régulières</p></div>
-          <div class="chooser-option" data-value="principalement-maison"><div class="icon">🏠</div><h4>À la maison</h4><p>Peu de déplacements</p></div>
-          <div class="chooser-option" data-value="sedentaire"><div class="icon">🪑</div><h4>Sédentaire</h4><p>Faible mobilité</p></div>
-        </div>
-        <div class="chooser-nav"><button class="btn btn-secondary" id="btn-back-2">← Retour</button><button class="btn btn-primary" id="btn-next-2" disabled>Voir mes recommandations</button></div>
+        <h3 id="panel-2-title">Précisez votre situation</h3>
+        <p class="subtitle" id="panel-2-subtitle">Sélectionnez l'option qui correspond le mieux</p>
+        <div class="chooser-options" id="options-sub"></div>
+        <div class="chooser-nav"><button class="btn btn-secondary" id="btn-back-2">← Retour</button><button class="btn btn-primary" id="btn-next-2" disabled>Continuer →</button></div>
+      </div>
+      <div class="chooser-panel" id="panel-3" style="display:none">
+        <h3>Quel format préférez-vous ?</h3>
+        <p class="subtitle">Choisissez le type de protection adapté</p>
+        <div class="chooser-options" id="options-format"></div>
+        <div class="chooser-nav"><button class="btn btn-secondary" id="btn-back-3">← Retour</button><button class="btn btn-primary" id="btn-next-3" disabled>Voir mes recommandations</button></div>
       </div>
       <div class="chooser-panel" id="panel-results">
         <h3>Nos recommandations pour vous</h3>
@@ -407,22 +408,37 @@
 
   <script>
     (function(){
-      var severity='',activity='';
-      var severityLabels={leger:'Légères',modere:'Modérées',frequentes:'Fréquentes',severes:'Sévères'};
-      var activityLabels={'tres-actif':'Très actif','actif-modere':'Actif modéré','principalement-maison':'À la maison','sedentaire':'Sédentaire'};
-      function selectOpt(c,k,v){c.querySelectorAll('.chooser-option').forEach(function(el){el.classList.toggle('selected',el.dataset.value===v)});return v}
-      document.getElementById('options-severity').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){severity=selectOpt(this,'s',o.dataset.value);document.getElementById('btn-next-1').disabled=!severity}}
-      document.getElementById('options-activity').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){activity=selectOpt(this,'a',o.dataset.value);document.getElementById('btn-next-2').disabled=!activity}}
-      document.getElementById('btn-next-1').onclick=function(){document.getElementById('panel-1').classList.remove('active');document.getElementById('panel-2').classList.add('active');document.getElementById('step-ind-1').classList.remove('active');document.getElementById('step-ind-1').classList.add('done');document.getElementById('step-ind-2').classList.add('active')}
-      document.getElementById('btn-back-2').onclick=function(){document.getElementById('panel-2').classList.remove('active');document.getElementById('panel-1').classList.add('active');document.getElementById('step-ind-2').classList.remove('active');document.getElementById('step-ind-1').classList.remove('done');document.getElementById('step-ind-1').classList.add('active')}
-      document.getElementById('btn-next-2').onclick=function(){
-        document.getElementById('panel-2').classList.remove('active');document.getElementById('panel-results').classList.add('active');
-        document.getElementById('step-ind-2').classList.remove('active');document.getElementById('step-ind-2').classList.add('done');
-        document.getElementById('results-summary').textContent='Fuites '+severityLabels[severity]+' • '+activityLabels[activity];
-        var skus=[{n:'Protection Ultra Mini',b:'3',s:'99 €',note:'28 protections',img:'Ultra+Mini'},{n:'Protection Normal',b:'4',s:'49 €',note:'20 protections',img:'Normal'},{n:'Protection Culotte Large',b:'4',s:'99 €',note:'14 protections',img:'Culotte'}];
-        document.getElementById('chooser-sku-grid').innerHTML=skus.map(function(x){return '<article class="sku"><img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text='+x.img+'" alt="'+x.n+'"/><h4 style="margin:8px 0 4px">'+x.n+'</h4><div class="price-row"><div class="price"><span class="big">'+x.b+'</span><span class="small">,'+x.s+'</span></div></div><p class="note">'+x.note+'</p><button>Ajouter</button></article>'}).join('')
-      }
-      document.getElementById('btn-restart').onclick=function(){severity='';activity='';document.getElementById('panel-results').classList.remove('active');document.getElementById('panel-1').classList.add('active');document.getElementById('step-ind-1').classList.add('active');document.getElementById('step-ind-1').classList.remove('done');document.getElementById('step-ind-2').classList.remove('active','done');document.getElementById('btn-next-1').disabled=true;document.querySelectorAll('.chooser-option').forEach(function(el){el.classList.remove('selected')})}
+      var category='', sub='', format='';
+      var CHOOSER_DATA={
+        'petits-inconforts':{label:'Petits inconforts',options:[
+          {value:'irregulier',label:'Très irrégulier',desc:'Je cherche la meilleure solution',products:[{name:'Absodys Discreet - Protège-Slip Mini',img:'Protège-Slip'},{name:'Absodys Discreet - Protège-Slip Long',img:'Protège-Slip'}]},
+          {value:'regulier',label:'Régulier',desc:'Plusieurs fuites par jour',products:[{name:'Absodys Discreet - Serviette Mini',img:'Serviette'},{name:'Absodys Discreet - Serviette Normal',img:'Serviette'},{name:'Carrefour Men - Absodys - Security Medium',img:'Security'}],format:null}
+        ]},
+        'faiblesses-vessie':{label:'Faiblesses de vessie',options:[
+          {value:'accidents-reguliers',label:'Accidents réguliers',desc:'',format:[{value:'anatomiques',label:'Anatomiques',products:[{name:'Absodys Discreet - Serviette Super',img:'Serviette'}]},{value:'sous-vetements',label:'Sous-vêtements absorbants',products:[{name:'Absodys Discreet - Sous-vêtements féminins absorbants',img:'Sous-vêtements'}]}]},
+          {value:'quelques-gouttes',label:'Quelques gouttes par jour',desc:'Protection à insérer',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 1',img:'Anatomy'}],format:null},
+          {value:'deplacement',label:'En déplacement',desc:'Pas d\'accès facile aux toilettes, accidents jour/nuit',products:[{name:'Absodys - Active Dry Pants',img:'Active'}],format:null},
+          {value:'fuites-augmentent',label:'Mes fuites augmentent',desc:'Petits accidents',format:[{value:'anatomiques',label:'Anatomiques',products:[{name:'Absodys Discreet - Serviette Maxi',img:'Maxi'},{name:'Absodys Discreet - Serviette Maxi Nuit',img:'Maxi'}]},{value:'sous-vetement',label:'Sous-vêtement',products:[{name:'Absodys - Pants - Day/Jour',img:'Pants'}]},{value:'anatomiques-homme',label:'Anatomiques (homme)',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 2',img:'Anatomy'}]},{value:'culottes',label:'Culottes absorbantes',products:[{name:'Absodys - Pants - Day/Jour',img:'Pants'}]}]}
+        ]},
+        'incontinence':{label:'Incontinence',options:[
+          {value:'actif-toilettes',label:'Toujours actif, je peux aller aux toilettes seul',desc:'Sous-vêtement pour aller aux toilettes',products:[{name:'Absodys - Pants - Night/Nuit',img:'Pants'}],format:null},
+          {value:'aidant',label:'Je prends soin de quelqu\'un',desc:'Très absorbant',products:[{name:'Absodys - All In One Day',img:'AllInOne'},{name:'Absodys - All In One Nuit',img:'AllInOne'}],format:null},
+          {value:'literie',label:'Protéger literie et sièges',desc:'',products:[{name:'Absodys - Protection - Alèses',img:'Alèses'}],format:null}
+        ]}
+      };
+      function selectOption(container,val){container.querySelectorAll('.chooser-option').forEach(function(el){el.classList.toggle('selected',el.dataset.value===val)});return val}
+      function renderOptions(containerId,items){var c=document.getElementById(containerId);c.innerHTML=items.map(function(it){var d=it.desc?'<p>'+it.desc+'</p>':'';return '<div class="chooser-option" data-value="'+it.value+'"><div class="icon">💧</div><h4>'+it.label+'</h4>'+d+'</div>'}).join('')}
+      function showPanel(n){[1,2,3].forEach(function(i){var p=document.getElementById('panel-'+i);var s=document.getElementById('step-ind-'+i);if(i<=n){p.style.display='';p.classList.toggle('active',i===n)}else{p.style.display='none'}if(s){s.style.display=i<=3?'':'none';s.classList.toggle('active',i===n);s.classList.toggle('done',i<n)}})}
+      document.getElementById('options-category').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){category=selectOption(this,o.dataset.value);document.getElementById('btn-next-1').disabled=!category}}
+      document.getElementById('options-sub').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){sub=selectOption(this,o.dataset.value);document.getElementById('btn-next-2').disabled=!sub;var d=CHOOSER_DATA[category];var so=d&&d.options?d.options.find(function(x){return x.value===sub}):null;var hf=so&&so.format&&so.format.length>0;document.getElementById('btn-next-2').textContent=hf?'Continuer →':'Voir mes recommandations'}}
+      document.getElementById('options-format').onclick=function(e){var o=e.target.closest('.chooser-option');if(o){format=selectOption(this,o.dataset.value);document.getElementById('btn-next-3').disabled=!format}}
+      document.getElementById('btn-next-1').onclick=function(){var d=CHOOSER_DATA[category];var opts=d.options.map(function(o){return{value:o.value,label:o.label,desc:o.desc}});renderOptions('options-sub',opts);sub='';format='';document.getElementById('btn-next-2').disabled=true;showPanel(2);document.getElementById('panel-2').classList.add('active');document.getElementById('panel-3').style.display='none';document.getElementById('step-ind-3').style.display='none'}
+      document.getElementById('btn-back-2').onclick=function(){showPanel(1);document.getElementById('panel-1').classList.add('active')}
+      document.getElementById('btn-next-2').onclick=function(){var d=CHOOSER_DATA[category];var opt=d.options.find(function(o){return o.value===sub});if(opt&&opt.format&&opt.format.length>0){var fo=opt.format.map(function(f){return{value:f.value,label:f.label,desc:''}});renderOptions('options-format',fo);format='';document.getElementById('btn-next-3').disabled=true;document.getElementById('panel-3').style.display='';document.getElementById('step-ind-3').style.display='';showPanel(3);document.getElementById('panel-3').classList.add('active')}else{showResults(opt?opt.products:[])}}
+      document.getElementById('btn-back-3').onclick=function(){showPanel(2);document.getElementById('panel-2').classList.add('active')}
+      document.getElementById('btn-next-3').onclick=function(){var d=CHOOSER_DATA[category];var opt=d.options.find(function(o){return o.value===sub});var fmt=opt&&opt.format?opt.format.find(function(f){return f.value===format}):null;showResults(fmt?fmt.products:[])}
+      function showResults(products){document.getElementById('panel-1').classList.remove('active');document.getElementById('panel-2').classList.remove('active');document.getElementById('panel-3').classList.remove('active');document.getElementById('panel-results').classList.add('active');document.getElementById('step-ind-2').classList.remove('active');document.getElementById('step-ind-2').classList.add('done');document.getElementById('step-ind-3').classList.remove('active');document.getElementById('step-ind-3').classList.add('done');var cl=CHOOSER_DATA[category]?CHOOSER_DATA[category].label:'';var so=CHOOSER_DATA[category]?CHOOSER_DATA[category].options.find(function(o){return o.value===sub}):null;var sl=so?so.label:'';document.getElementById('results-summary').textContent=cl+(sl?' • '+sl:'');var skus=products.length?products:[{name:'Produits adaptés',img:'Protection'}];document.getElementById('chooser-sku-grid').innerHTML=skus.map(function(s){var im=(s.img||s.name).replace(/\s+/g,'+');return '<article class="sku"><img src="https://dummyimage.com/480x320/f0f4f8/254F9B&text='+im+'" alt="'+s.name+'"/><h4 style="margin:8px 0 4px">'+s.name+'</h4><p class="note">Protection adaptée</p><button>Ajouter</button></article>'}).join('')}
+      document.getElementById('btn-restart').onclick=function(){category='';sub='';format='';document.getElementById('panel-results').classList.remove('active');document.getElementById('panel-1').classList.add('active');showPanel(1);document.getElementById('btn-next-1').disabled=true;document.getElementById('options-category').querySelectorAll('.chooser-option').forEach(function(el){el.classList.remove('selected')})}
     })();
   </script>
 </body>
