@@ -180,11 +180,15 @@
     .chooser-results h4{margin:0 0 16px;font-size:18px}
 
     /* SKU GRID */
-    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-    .tab{border-radius:999px;padding:8px 12px;background:var(--muted);font-weight:700;cursor:pointer}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+    .tab{border-radius:999px;padding:8px 16px;background:var(--muted);font-weight:700;cursor:pointer;transition:background .2s}
+    .tab:hover{background:#ddd}
     .tab.active{background:var(--blue);color:#fff}
-    .sku-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .product-panel{display:none}
+    .product-panel.active{display:block}
+    .sku-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
     .sku{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:12px;display:flex;flex-direction:column}
+    .sku h4{margin:8px 0 4px;font-size:15px;line-height:1.3}
     .sku img{width:100%;height:160px;object-fit:contain;background:#fff;border-radius:12px}
     .price-row{display:flex;align-items:center;justify-content:space-between;margin:8px 0}
     .badge{background:var(--red);color:#fff;border-radius:10px;padding:4px 8px;font-weight:800;font-size:12px}
@@ -320,59 +324,59 @@
   <section id="products" class="section" style="background:#f5f8fc">
     <div class="wrap">
       <div class="section-title">
-        <h2>La sélection du moment</h2>
-        <p>Trouvez votre solution</p>
+        <h2>Notre gamme Absodys</h2>
+        <p>24 produits pour une protection adaptée à chaque besoin</p>
       </div>
-      <div class="tabs">
-        <div class="tab active">Ultra Mini</div>
-        <div class="tab">Mini</div>
-        <div class="tab">Mini Plus</div>
-        <div class="tab">Normal</div>
-        <div class="tab">Extra</div>
-        <div class="tab">Maxi</div>
-        <div class="tab">Super</div>
+      <div class="tabs product-tabs">
+        <div class="tab active" data-cat="serviettes">Serviettes</div>
+        <div class="tab" data-cat="pants">Culottes</div>
+        <div class="tab" data-cat="allin">Changes complets</div>
+        <div class="tab" data-cat="alese">Alèses</div>
+        <div class="tab" data-cat="homme">Homme</div>
       </div>
-      <div class="sku-grid">
-        <article class="sku">
-          <img src="https://dummyimage.com/480x320/ffffff/254F9B&text=Ultra+Mini" alt="Ultra Mini" />
-          <h4 style="margin:8px 0 4px">Protection discrète Ultra Mini</h4>
-          <div class="price-row">
-            <span class="badge">NOUVEAU</span>
-            <div class="price"><span class="big">3</span><span class="small">,99 €</span></div>
-          </div>
-          <p class="note">28 protections • Gouttes et éternuements</p>
-          <button>Ajouter</button>
-        </article>
-        <article class="sku">
-          <img src="https://dummyimage.com/480x320/ffffff/254F9B&text=Normal" alt="Normal" />
-          <h4 style="margin:8px 0 4px">Protection discrète Normal</h4>
-          <div class="price-row">
-            <span class="badge" style="background:var(--blue);color:#fff">2 + 1</span>
-            <div class="price"><span class="big">4</span><span class="small">,49 €</span></div>
-          </div>
-          <p class="note">20 protections • Fuites légères occasionnelles</p>
-          <button>Ajouter</button>
-        </article>
-        <article class="sku">
-          <img src="https://dummyimage.com/480x320/ffffff/254F9B&text=Culotte" alt="Culotte Large" />
-          <h4 style="margin:8px 0 4px">Protection discrète Culotte Large</h4>
-          <div class="price-row">
-            <span class="badge">ACTION</span>
-            <div class="price"><span class="big">4</span><span class="small">,99 €</span></div>
-          </div>
-          <p class="note">14 protections • Confiance quotidienne</p>
-          <button>Ajouter</button>
-        </article>
-        <article class="sku">
-          <img src="https://dummyimage.com/480x320/ffffff/254F9B&text=Homme" alt="Protection Homme" />
-          <h4 style="margin:8px 0 4px">Protection discrète Homme</h4>
-          <div class="price-row">
-            <span class="badge" style="background:#111">NOUVEAU</span>
-            <div class="price"><span class="big">5</span><span class="small">,49 €</span></div>
-          </div>
-          <p class="note">10 protections • Assurance renforcée</p>
-          <button>Ajouter</button>
-        </article>
+      <div class="product-panel active" id="panel-serviettes">
+        <div class="sku-grid">
+          <article class="sku"><img src="img/Absodys_Maxi_Night.webp" alt="Serviettes Nuit Maxi"/><h4>Serviettes fuite urinaire Nuit Maxi Absodys</h4><div class="price-row"><div class="price"><span class="big">3</span><span class="small">,99 €</span></div></div><p class="note">12 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Maxi.webp" alt="Serviettes Maxi Mixte"/><h4>Serviettes fuite urinaire Maxi Mixte Absodys</h4><div class="price-row"><div class="price"><span class="big">3</span><span class="small">,99 €</span></div></div><p class="note">28 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Maxi.webp" alt="Serviettes Maxi Discreet"/><h4>Serviettes fuite urinaire Maxi Discreet</h4><div class="price-row"><div class="price"><span class="big">4</span><span class="small">,89 €</span></div></div><p class="note">16 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Super.webp" alt="Serviettes Super Discreet"/><h4>Serviettes fuite urinaire Super Discreet</h4><div class="price-row"><div class="price"><span class="big">4</span><span class="small">,49 €</span></div></div><p class="note">20 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Super.webp" alt="Serviettes Super Discreet petit pack"/><h4>Serviettes Super Discreet (petit pack)</h4><div class="price-row"><div class="price"><span class="big">2</span><span class="small">,69 €</span></div></div><p class="note">10 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Normal.webp" alt="Serviettes Normal Discreet"/><h4>Serviettes fuite urinaire Normal Discreet</h4><div class="price-row"><div class="price"><span class="big">2</span><span class="small">,69 €</span></div></div><p class="note">12 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Normal.webp" alt="Serviettes Normal Discreet grand pack"/><h4>Serviettes Normal Discreet (grand pack)</h4><div class="price-row"><div class="price"><span class="big">4</span><span class="small">,49 €</span></div></div><p class="note">24 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Maxi.webp" alt="Serviettes Maxi Absodys Discreet"/><h4>Serviettes Maxi Absodys Discreet</h4><div class="price-row"><div class="price"><span class="big">4</span><span class="small">,89 €</span></div></div><p class="note">16 serviettes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Discreet_Maxi.webp" alt="Serviettes Maxi Absodys Discreet variant"/><h4>Serviettes Maxi Absodys Discreet (variant)</h4><div class="price-row"><div class="price"><span class="big">4</span><span class="small">,49 €</span></div></div><p class="note">16 serviettes</p><button>Ajouter</button></article>
+        </div>
+      </div>
+      <div class="product-panel" id="panel-pants">
+        <div class="sku-grid">
+          <article class="sku"><img src="img/Absodys_Pants_Night_M.jpg" alt="Pants Night M"/><h4>Absodys Pants Night – M</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,99 €</span></div></div><p class="note">14 culottes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Night.jpg" alt="Pants Night L"/><h4>Absodys Pants Night – L</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,99 €</span></div></div><p class="note">14 culottes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Day_M.jpg" alt="Pants Day M"/><h4>Absodys Pants Day – M</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,99 €</span></div></div><p class="note">14 culottes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Day_L.jpg" alt="Pants Day L"/><h4>Absodys Pants Day – L</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,99 €</span></div></div><p class="note">14 culottes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Day_L.jpg" alt="Pants Active Dry L"/><h4>Absodys Pants Active Dry – L</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,85 €</span></div></div><p class="note">8 culottes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Day_M.jpg" alt="Pants Active Dry M"/><h4>Absodys Pants Active Dry – M</h4><div class="price-row"><div class="price"><span class="big">9</span><span class="small">,85 €</span></div></div><p class="note">8 culottes</p><button>Ajouter</button></article>
+        </div>
+      </div>
+      <div class="product-panel" id="panel-allin">
+        <div class="sku-grid">
+          <article class="sku"><img src="img/Absodys_AIO_Night_L.jpg" alt="All-in Night M"/><h4>Absodys All-in Night M</h4><div class="price-row"><div class="price"><span class="big">13</span><span class="small">,15 €</span></div></div><p class="note">20 changes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_AIO_Night_L.jpg" alt="All-in Night L"/><h4>Absodys All-in Night L</h4><div class="price-row"><div class="price"><span class="big">13</span><span class="small">,15 €</span></div></div><p class="note">20 changes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_AIO_Day_L.jpg" alt="All-in Day M"/><h4>Absodys All-in Day M</h4><div class="price-row"><div class="price"><span class="big">11</span><span class="small">,69 €</span></div></div><p class="note">20 changes</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_AIO_M.webp" alt="All-in Day M variant"/><h4>Absodys All-in Day M (variant)</h4><div class="price-row"><div class="price"><span class="big">11</span><span class="small">,69 €</span></div></div><p class="note">20 changes</p><button>Ajouter</button></article>
+        </div>
+      </div>
+      <div class="product-panel" id="panel-alese">
+        <div class="sku-grid">
+          <article class="sku"><img src="https://dummyimage.com/480x320/f5f8fc/254F9B&text=Al%C3%A8ses+60%C3%9790" alt="Alèses"/><h4>Absodys Alèses 60×90 cm</h4><div class="price-row"><div class="price"><span class="big">8</span><span class="small">,85 €</span></div></div><p class="note">20 protections • Protection literie</p><button>Ajouter</button></article>
+        </div>
+      </div>
+      <div class="product-panel" id="panel-homme">
+        <div class="sku-grid">
+          <article class="sku"><img src="img/Absodys_Men_Medium.jpg" alt="Security Men Medium"/><h4>Absodys Security Men Medium</h4><div class="price-row"><div class="price"><span class="big">5</span><span class="small">,55 €</span></div></div><p class="note">20 protections</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Men_Medium.jpg" alt="Anatomy Men Level 1"/><h4>Absodys Anatomy Men Level 1</h4><div class="price-row"><div class="price"><span class="big">5</span><span class="small">,55 €</span></div></div><p class="note">20 protections</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Men_Medium.jpg" alt="Anatomy Men Level 2"/><h4>Absodys Anatomy Men Level 2 Medium</h4><div class="price-row"><div class="price"><span class="big">5</span><span class="small">,55 €</span></div></div><p class="note">20 protections</p><button>Ajouter</button></article>
+          <article class="sku"><img src="img/Absodys_Pants_Day_M.jpg" alt="Active Dry Pants Men M"/><h4>Absodys Active Dry Pants Men M</h4><div class="price-row"><div class="price"><span class="big">11</span><span class="small">,99 €</span></div></div><p class="note">14 culottes</p><button>Ajouter</button></article>
+        </div>
       </div>
     </div>
   </section>
@@ -629,6 +633,20 @@
     </div>
   </footer>
 
+  <script>
+    (function(){
+      document.querySelectorAll('.product-tabs .tab').forEach(function(tab){
+        tab.addEventListener('click',function(){
+          var cat=this.dataset.cat;
+          document.querySelectorAll('.product-tabs .tab').forEach(function(t){t.classList.remove('active');});
+          document.querySelectorAll('.product-panel').forEach(function(p){p.classList.remove('active');});
+          this.classList.add('active');
+          var panel=document.getElementById('panel-'+cat);
+          if(panel)panel.classList.add('active');
+        });
+      });
+    })();
+  </script>
   <script>
     (function(){
       var category='', sub='', format='';
