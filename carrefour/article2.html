@@ -51,11 +51,14 @@
     .footer-bottom{border-top:1px solid #ddd;padding-top:20px}
     .footer-bottom p{margin:0;font-size:12px;color:var(--ink-2)}
     @media (max-width:900px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}}
-    .expert-banner{text-align:center;padding:28px 32px;background:linear-gradient(180deg,#e8eef6 0%,#f5f8fc 100%);border:1px solid #d0dae8;border-radius:12px;margin:0 auto 32px;max-width:1200px;box-shadow:0 4px 16px rgba(37,79,155,.1)}
-    .expert-banner p{margin:0 0 16px;font-size:15px;font-weight:600;color:#254F9B}
-    .expert-banner a{display:inline-block;max-width:100%;transition:opacity .2s,transform .2s}
-    .expert-banner a:hover{opacity:.95;transform:scale(1.01)}
-    .expert-banner img{width:100%;height:auto;max-height:140px;object-fit:contain;display:block}
+    .expert-banner{text-align:center;padding:36px 24px;background:linear-gradient(135deg,#254F9B 0%,#1a3d7a 100%);border-radius:0;margin:0 0 40px;box-shadow:0 8px 32px rgba(37,79,155,.25)}
+    .expert-banner p{margin:0 0 20px;font-size:18px;font-weight:700;color:#fff;line-height:1.4}
+    .expert-banner .banner-inner{max-width:900px;margin:0 auto;padding:0 20px}
+    .expert-banner a.banner-link{display:block;transition:opacity .2s}
+    .expert-banner a.banner-link:hover{opacity:.95}
+    .expert-banner img{width:100%;height:auto;max-height:220px;object-fit:contain;display:block;margin:0 auto 20px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+    .expert-banner .btn-cta{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#254F9B;padding:14px 28px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.15);transition:transform .2s,box-shadow .2s}
+    .expert-banner .btn-cta:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.2)}
     @media (max-width:560px){.header-inner{flex-wrap:wrap}.nav-main{order:3;width:100%}.article-header h1{font-size:24px}.footer-grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -97,14 +100,15 @@
       </aside>
     </article>
   </main>
-  <div class="wrap">
-    <div class="expert-banner">
+  <section class="expert-banner">
+    <div class="banner-inner">
       <p>Découvrez votre assistant personnalisé — conseils et accompagnement au quotidien</p>
-      <a href="https://expert-care-insight.lovable.app/" target="_blank" rel="noopener" title="Découvrir Expert Care Insight">
+      <a href="https://expert-care-insight.lovable.app/" target="_blank" rel="noopener" class="banner-link" title="Découvrir Expert Care Insight">
         <img src="img/companion.png" alt="Expert Care Insight — conseils et accompagnement personnalisés" />
       </a>
+      <a href="https://expert-care-insight.lovable.app/" target="_blank" rel="noopener" class="btn-cta">Poser une question →</a>
     </div>
-  </div>
+  </section>
   <footer class="footer-main">
     <div class="wrap">
       <div class="footer-grid">
