@@ -51,10 +51,11 @@
     .footer-bottom{border-top:1px solid #ddd;padding-top:20px}
     .footer-bottom p{margin:0;font-size:12px;color:var(--ink-2)}
     @media (max-width:900px){.article-layout{grid-template-columns:1fr}.article-sidebar{position:static}}
-    .expert-banner{text-align:center;padding:16px 20px;background:#f8fafc;border-top:1px solid #eee}
-    .expert-banner a{display:inline-block;max-width:320px;opacity:.9;transition:opacity .2s}
-    .expert-banner a:hover{opacity:1}
-    .expert-banner img{width:100%;height:auto;max-height:60px;object-fit:contain}
+    .expert-banner{text-align:center;padding:28px 32px;background:linear-gradient(180deg,#e8eef6 0%,#f5f8fc 100%);border:1px solid #d0dae8;border-radius:12px;margin:0 auto 32px;max-width:1200px;box-shadow:0 4px 16px rgba(37,79,155,.1)}
+    .expert-banner p{margin:0 0 16px;font-size:15px;font-weight:600;color:#254F9B}
+    .expert-banner a{display:inline-block;max-width:100%;transition:opacity .2s,transform .2s}
+    .expert-banner a:hover{opacity:.95;transform:scale(1.01)}
+    .expert-banner img{width:100%;height:auto;max-height:140px;object-fit:contain;display:block}
     @media (max-width:560px){.header-inner{flex-wrap:wrap}.nav-main{order:3;width:100%}.article-header h1{font-size:24px}.footer-grid{grid-template-columns:1fr}}
   </style>
 </head>
@@ -96,10 +97,13 @@
       </aside>
     </article>
   </main>
-  <div class="expert-banner">
-    <a href="https://expert-care-insight.lovable.app/" target="_blank" rel="noopener" title="Découvrir Expert Care Insight">
-      <img src="img/companion.png" alt="Découvrez Expert Care Insight — conseils et accompagnement personnalisés" />
-    </a>
+  <div class="wrap">
+    <div class="expert-banner">
+      <p>Découvrez votre assistant personnalisé — conseils et accompagnement au quotidien</p>
+      <a href="https://expert-care-insight.lovable.app/" target="_blank" rel="noopener" title="Découvrir Expert Care Insight">
+        <img src="img/companion.png" alt="Expert Care Insight — conseils et accompagnement personnalisés" />
+      </a>
+    </div>
   </div>
   <footer class="footer-main">
     <div class="wrap">
