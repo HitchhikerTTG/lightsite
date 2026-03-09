@@ -675,25 +675,36 @@
         'petits-inconforts':{
           label:'Petits inconforts',
           options:[
-            {value:'irregulier',label:'Très irrégulier',desc:'Je cherche la meilleure solution',products:[{name:'Absodys Discreet - Protège-Slip Mini',img:'Protège-Slip'},{name:'Absodys Discreet - Protège-Slip Long',img:'Protège-Slip'}]},
-            {value:'regulier',label:'Régulier',desc:'Plusieurs fuites par jour',products:[{name:'Absodys Discreet - Serviette Mini',img:'Serviette'},{name:'Absodys Discreet - Serviette Normal',img:'Serviette'},{name:'Carrefour Men - Absodys - Security Medium',img:'Security'}],format:null}
+            {value:'irregulier',label:'Très irrégulier',desc:'J\'utilise parfois des protections féminines',products:[{name:'Absodys Discreet - Protège-Slip Mini',img:'img/Absodys_Discreet_L.webp'},{name:'Absodys Discreet - Protège-Slip Long',img:'img/Absodys_Discreet_Long.webp'}]},
+            {value:'regulier',label:'Régulier',desc:'Plusieurs fuites par jour',format:[
+              {value:'femme',label:'Femme',desc:'',products:[{name:'Absodys Discreet - Serviette Mini',img:'img/Absodys_Discreet_L.webp'},{name:'Absodys Discreet - Serviette Normal',img:'img/Absodys_Discreet_Normal.webp'}]},
+              {value:'homme',label:'Homme',desc:'',products:[{name:'Carrefour Men - Absodys - Security Medium',img:'img/Absodys_Men_Medium.jpg'}]}
+            ]}
           ]
         },
         'faiblesses-vessie':{
           label:'Faiblesses de vessie',
           options:[
-            {value:'accidents-reguliers',label:'Accidents réguliers',desc:'',format:[{value:'anatomiques',label:'Anatomiques',products:[{name:'Absodys Discreet - Serviette Super',img:'Serviette'}]},{value:'sous-vetements',label:'Sous-vêtements absorbants',products:[{name:'Absodys Discreet - Sous-vêtements féminins absorbants',img:'Sous-vêtements'}]}]},
-            {value:'quelques-gouttes',label:'Quelques gouttes par jour',desc:'Protection à insérer',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 1',img:'Anatomy'}],format:null},
-            {value:'deplacement',label:'En déplacement',desc:'Pas d\'accès facile aux toilettes, accidents jour/nuit',products:[{name:'Absodys - Active Dry Pants',img:'Active'}],format:null},
-            {value:'fuites-augmentent',label:'Mes fuites augmentent',desc:'Petits accidents',format:[{value:'anatomiques',label:'Anatomiques',products:[{name:'Absodys Discreet - Serviette Maxi',img:'Maxi'},{name:'Absodys Discreet - Serviette Maxi Nuit',img:'Maxi'}]},{value:'sous-vetement',label:'Sous-vêtement',products:[{name:'Absodys - Pants - Day/Jour',img:'Pants'}]},{value:'anatomiques-homme',label:'Anatomiques (homme)',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 2',img:'Anatomy'}]},{value:'culottes',label:'Culottes absorbantes',products:[{name:'Absodys - Pants - Day/Jour',img:'Pants'}]}]}
+            {value:'accidents-reguliers',label:'Vos accidents sont réguliers',desc:'',format:[
+              {value:'anatomiques-f',label:'Protections anatomiques (femme)',desc:'À mettre dans un sous-vêtement',products:[{name:'Absodys Discreet - Serviette Super',img:'img/Absodys_Discreet_Super.webp'}]},
+              {value:'sous-vetements-f',label:'Sous-vêtements absorbants (femme)',desc:'',products:[{name:'Absodys Discreet - Sous-vêtements féminins absorbants',img:'img/Absodys_Discreet_L.webp'}]},
+              {value:'gouttes-h',label:'Quelques gouttes par jour (homme)',desc:'Protection à insérer',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 1',img:'img/Absodys_Men_Medium.jpg'}]},
+              {value:'deplacement-h',label:'En déplacement (homme)',desc:'Pas d\'accès facile aux toilettes',products:[{name:'Absodys - Active Dry Pants',img:'img/Absodys_Pants_Day_L.jpg'}]}
+            ]},
+            {value:'fuites-augmentent',label:'Mes fuites augmentent',desc:'De plus en plus de petits accidents',format:[
+              {value:'anatomiques-f',label:'Protections anatomiques (femme)',desc:'Serviette Maxi pour sécurité et confort',products:[{name:'Absodys Discreet - Serviette Maxi',img:'img/Absodys_Discreet_Maxi.webp'},{name:'Absodys Discreet - Serviette Maxi Nuit',img:'img/Absodys_Maxi_Night.webp'}]},
+              {value:'sous-vetement-mix',label:'Protection type sous-vêtement',desc:'Discrétion et féminité',products:[{name:'Absodys - Pants - Day/Jour',img:'img/Absodys_Pants_Day_L.jpg'}]},
+              {value:'anatomiques-h',label:'Protections anatomiques (homme)',desc:'',products:[{name:'Carrefour Men - Absodys - Anatomy niveau 2',img:'img/Absodys_Men_Medium.jpg'}]},
+              {value:'culottes-mix',label:'Culottes absorbantes',desc:'Pratiques et confortables',products:[{name:'Absodys - Pants - Day/Jour',img:'img/Absodys_Pants_Day_L.jpg'}]}
+            ]}
           ]
         },
         'incontinence':{
           label:'Incontinence',
           options:[
-            {value:'actif-toilettes',label:'Toujours actif, je peux aller aux toilettes seul',desc:'Sous-vêtement pour aller aux toilettes',products:[{name:'Absodys - Pants - Night/Nuit',img:'Pants'}],format:null},
-            {value:'aidant',label:'Je prends soin de quelqu\'un',desc:'Très absorbant',products:[{name:'Absodys - All In One Day',img:'AllInOne'},{name:'Absodys - All In One Nuit',img:'AllInOne'}],format:null},
-            {value:'literie',label:'Protéger literie et sièges',desc:'',products:[{name:'Absodys - Protection - Alèses',img:'Alèses'}],format:null}
+            {value:'actif-toilettes',label:'Toujours actif(ve), je vais aux toilettes seul(e)',desc:'Protection type sous-vêtement',products:[{name:'Absodys - Pants - Night/Nuit',img:'img/Absodys_Pants_Night.jpg'}]},
+            {value:'aidant',label:'Je prends soin de quelqu\'un d\'incontinent',desc:'Produit hautement absorbant',products:[{name:'Absodys - All In One Day - Changes complets Jour',img:'img/Absodys_AIO_Day_L.jpg'},{name:'Absodys - All In One Day - Changes complets Nuit',img:'img/Absodys_AIO_Night_L.jpg'}]},
+            {value:'literie',label:'Protéger la literie, les sièges et fauteuils',desc:'',products:[{name:'Absodys - Protection - Alèses',img:'img/Absodys_Discreet_L.webp'}]}
           ]
         }
       };
@@ -809,10 +820,9 @@
         var subLabel=subOpt?subOpt.label:'';
         document.getElementById('results-summary').textContent=catLabel+(subLabel?' • '+subLabel:'');
 
-        var skus=products.length?products:[{name:'Produits adaptés',img:'Protection'}];
+        var skus=products.length?products:[{name:'Produits adaptés',img:'img/Absodys_Discreet_L.webp'}];
         var html=skus.map(function(s){
-          var imgName=(s.img||s.name).replace(/\s+/g,'+');
-          return '<article class="sku"><img src="https://dummyimage.com/480x320/ffffff/254F9B&text='+imgName+'" alt="'+s.name+'"/><h4 style="margin:8px 0 4px">'+s.name+'</h4><p class="note">Protection adaptée</p><button>Ajouter</button></article>';
+          return '<article class="sku"><img src="'+s.img+'" alt="'+s.name+'"/><h4 style="margin:8px 0 4px">'+s.name+'</h4><p class="note">Protection adaptée</p><button>Ajouter</button></article>';
         }).join('');
         document.getElementById('chooser-sku-grid').innerHTML=html;
       }
