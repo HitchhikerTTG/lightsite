@@ -1,0 +1,276 @@
+[
+  {
+    "id": "discreet-protege-mini",
+    "name": "Absodys Discreet – Protège-Slip Mini",
+    "img": "img/Absodys_Discreet_L.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-mini-absodys-discreet-carrefour-soft-3560070105724",
+    "price": null,
+    "qty": null,
+    "panel": null,
+    "chooserPaths": [
+      {"category": "petits-inconforts", "sub": "irregulier", "format": null},
+      {"category": "petits-inconforts", "sub": "regulier",   "format": "femme"}
+    ]
+  },
+  {
+    "id": "discreet-protege-long",
+    "name": "Absodys Discreet – Protège-Slip Long",
+    "img": "img/Absodys_Discreet_Long.webp",
+    "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-long-active-dry-pants-absodys-discreet-carrefour-soft-3560071000639",
+    "price": null,
+    "qty": null,
+    "panel": null,
+    "chooserPaths": [
+      {"category": "petits-inconforts", "sub": "irregulier", "format": null}
+    ]
+  },
+  {
+    "id": "discreet-normal-12",
+    "name": "Serviettes Normal Discreet",
+    "img": "img/Absodys_Discreet_Normal.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-normal-absodys-discreet-carrefour-soft-3560071512682",
+    "price": "2,69",
+    "qty": "12 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": [
+      {"category": "petits-inconforts", "sub": "regulier", "format": "femme"}
+    ]
+  },
+  {
+    "id": "discreet-normal-24",
+    "name": "Serviettes Normal Discreet (grand pack)",
+    "img": "img/Absodys_Discreet_Normal.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-normal-discreet-absodys-carrefour-soft-3560071512651",
+    "price": "4,49",
+    "qty": "24 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": []
+  },
+  {
+    "id": "discreet-super-20",
+    "name": "Serviettes Super Discreet",
+    "img": "img/Absodys_Discreet_Super.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-super-absodys-discreet-carrefour-soft-3560071512743",
+    "price": "4,49",
+    "qty": "20 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "accidents-reguliers", "format": "anatomiques-f"}
+    ]
+  },
+  {
+    "id": "discreet-super-10",
+    "name": "Serviettes Super Discreet (petit pack)",
+    "img": "img/Absodys_Discreet_Super.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-super-absodys-discreet-carrefour-soft-3560071512743",
+    "price": "2,69",
+    "qty": "10 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": []
+  },
+  {
+    "id": "discreet-maxi",
+    "name": "Serviettes Maxi Discreet",
+    "img": "img/Absodys_Discreet_Maxi.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-maxi-absodys-discreet-carrefour-soft-3560071512774",
+    "price": "4,89",
+    "qty": "16 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "fuites-augmentent", "format": "anatomiques-f"}
+    ]
+  },
+  {
+    "id": "serviette-maxi-mixte",
+    "name": "Serviettes Maxi Mixte Absodys",
+    "img": "img/Absodys_Maxi.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-hygieniques-fuites-urinaires-mixtes-maxi-absorption-absodys-carrefour-soft-3560071017484",
+    "price": "3,99",
+    "qty": "28 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": []
+  },
+  {
+    "id": "serviette-nuit-maxi",
+    "name": "Serviettes Nuit Maxi Absodys",
+    "img": "img/Absodys_Maxi_Night.webp",
+    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-nuit-maxi-absodys-carrefour-soft-3560071017491",
+    "price": "3,99",
+    "qty": "12 serviettes",
+    "panel": "serviettes",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "fuites-augmentent", "format": "anatomiques-f"}
+    ]
+  },
+  {
+    "id": "pants-day-m",
+    "name": "Absodys Pants Day – M",
+    "img": "img/Absodys_Pants_Day_M.jpg",
+    "link": "https://www.carrefour.fr/p/culottes-fuites-urinaires-jour-taille-m-mixtes-absodys-carrefour-soft-3560071185688",
+    "price": "9,99",
+    "qty": "14 culottes",
+    "panel": "pants",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "accidents-reguliers", "format": "sous-vetements-f"}
+    ]
+  },
+  {
+    "id": "pants-day-l",
+    "name": "Absodys Pants Day – L",
+    "img": "img/Absodys_Pants_Day_L.jpg",
+    "link": "https://www.carrefour.fr/p/culottes-fuites-urinaires-jour-mixtes-taille-l-absodys-carrefour-soft-3560071185718",
+    "price": "9,99",
+    "qty": "14 culottes",
+    "panel": "pants",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "fuites-augmentent", "format": "sous-vetement-mix"},
+      {"category": "faiblesses-vessie", "sub": "fuites-augmentent", "format": "culottes-mix"}
+    ]
+  },
+  {
+    "id": "active-dry-l",
+    "name": "Absodys Pants Active Dry – L",
+    "img": "img/Absodys_Pants_Day_L.jpg",
+    "link": "https://www.carrefour.fr/p/culotte-fuite-urinaire-taille-l-active-dry-pants-absodys-carrefour-soft-3560071231699",
+    "price": "9,85",
+    "qty": "8 culottes",
+    "panel": "pants",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "accidents-reguliers", "format": "deplacement-h"}
+    ]
+  },
+  {
+    "id": "active-dry-m",
+    "name": "Absodys Pants Active Dry – M",
+    "img": "img/Absodys_Pants_Day_M.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-taille-m-active-dry-pants-absodys-discreet-carrefour-soft-3560071231682",
+    "price": "9,85",
+    "qty": "8 culottes",
+    "panel": "pants",
+    "chooserPaths": []
+  },
+  {
+    "id": "pants-night-m",
+    "name": "Absodys Pants Night – M",
+    "img": "img/Absodys_Pants_Night_M.jpg",
+    "link": "https://www.carrefour.fr/p/culottes-mixtes-de-nuit-pour-incontinence-taille-m-42-54-kg-70-110-cm-absodys-3560071574109",
+    "price": "9,99",
+    "qty": "14 culottes",
+    "panel": "pants",
+    "chooserPaths": []
+  },
+  {
+    "id": "pants-night-l",
+    "name": "Absodys Pants Night – L",
+    "img": "img/Absodys_Pants_Night.jpg",
+    "link": "https://www.carrefour.fr/p/culottes-larges-pour-fuites-urinaires-severes-utilisation-nuit-tour-de-hanches-100-135-cm-absodys-3560071574031",
+    "price": "9,99",
+    "qty": "14 culottes",
+    "panel": "pants",
+    "chooserPaths": [
+      {"category": "incontinence", "sub": "actif-toilettes", "format": null}
+    ]
+  },
+  {
+    "id": "aio-day-m",
+    "name": "Absodys All-in Day M",
+    "img": "img/Absodys_AIO_Day_L.jpg",
+    "link": "https://www.carrefour.fr/p/couches-fuites-urinaires-jour-taille-m-absodys-all-in-day-carrefour-soft-3560070112791",
+    "price": "11,69",
+    "qty": "20 changes",
+    "panel": "allin",
+    "chooserPaths": []
+  },
+  {
+    "id": "aio-day-l",
+    "name": "Absodys All-in Day L",
+    "img": "img/Absodys_AIO_M.webp",
+    "link": "https://www.carrefour.fr/p/couches-fuites-urinaires-jour-taille-l-absodys-all-in-day-carrefour-soft-3560070112821",
+    "price": "11,69",
+    "qty": "20 changes",
+    "panel": "allin",
+    "chooserPaths": [
+      {"category": "incontinence", "sub": "aidant", "format": null}
+    ]
+  },
+  {
+    "id": "aio-night-m",
+    "name": "Absodys All-in Night M",
+    "img": "img/Absodys_AIO_Night_L.jpg",
+    "link": "https://www.carrefour.fr/p/couches-fuites-urinaires-nuit-taille-m-absodys-all-in-carrefour-soft-3560070755752",
+    "price": "13,15",
+    "qty": "20 changes",
+    "panel": "allin",
+    "chooserPaths": []
+  },
+  {
+    "id": "aio-night-l",
+    "name": "Absodys All-in Night L",
+    "img": "img/Absodys_AIO_Night_L.jpg",
+    "link": "https://www.carrefour.fr/p/changes-complets-nuit-taille-l-absodys-all-in-carrefour-soft-3560070755783",
+    "price": "13,15",
+    "qty": "20 changes",
+    "panel": "allin",
+    "chooserPaths": [
+      {"category": "incontinence", "sub": "aidant", "format": null}
+    ]
+  },
+  {
+    "id": "aleses-60x90",
+    "name": "Absodys Alèses 60×90 cm",
+    "img": "img/Absodys_Discreet_L.webp",
+    "link": "https://www.carrefour.fr/p/aleses-fuites-urinaires-60x90-cm-absodys-carrefour-3560071172176",
+    "price": "8,85",
+    "qty": "20 protections",
+    "panel": "alese",
+    "chooserPaths": [
+      {"category": "incontinence", "sub": "literie", "format": null}
+    ]
+  },
+  {
+    "id": "men-security-medium",
+    "name": "Absodys Security Men Medium",
+    "img": "img/Absodys_Men_Medium.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuites-urinaires-homme-medium-absodys-security-carrefour-men-3560070542529",
+    "price": "5,55",
+    "qty": "20 protections",
+    "panel": "homme",
+    "chooserPaths": [
+      {"category": "petits-inconforts", "sub": "regulier", "format": "homme"}
+    ]
+  },
+  {
+    "id": "men-anatomy-1",
+    "name": "Absodys Anatomy Men – Niveau 1",
+    "img": "img/Absodys_Men_Medium.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuites-urinaires-homme-niveau-1-absodys-anatomy-carrefour-men-3560071446277",
+    "price": "5,55",
+    "qty": "20 protections",
+    "panel": "homme",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "accidents-reguliers", "format": "gouttes-h"}
+    ]
+  },
+  {
+    "id": "men-anatomy-2",
+    "name": "Absodys Anatomy Men – Niveau 2 Medium",
+    "img": "img/Absodys_Men_Medium.jpg",
+    "link": "https://www.carrefour.fr/p/serviettes-hygieniques-fuites-urinaires-niveau-2-medium-absodys-anatomy-carrefour-men-3560071011499",
+    "price": "5,55",
+    "qty": "20 protections",
+    "panel": "homme",
+    "chooserPaths": [
+      {"category": "faiblesses-vessie", "sub": "fuites-augmentent", "format": "anatomiques-h"}
+    ]
+  },
+  {
+    "id": "men-active-dry-m",
+    "name": "Absodys Active Dry Pants Men M",
+    "img": "img/Absodys_Pants_Day_M.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-homme-taille-m-active-dry-pants-absodys-carrefour-men-3560071237769",
+    "price": "11,99",
+    "qty": "14 culottes",
+    "panel": "homme",
+    "chooserPaths": []
+  }
+]
