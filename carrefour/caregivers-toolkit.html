@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caregivers Toolkit – Carrefour Santé</title>
+  <meta name="description" content="Outils pratiques pour les aidants : fiches de suivi, trackers et listes de contrôle pour simplifier l'accompagnement au quotidien.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--blue:#254F9B;--blue-dark:#00387b;--red:#C20016;--ink:#111;--ink-2:#30343b;--bg:#f5f8fc;--card:#fff;--radius:12px;--radius-lg:18px;--shadow:0 4px 12px rgba(37,79,155,.08)}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff}
+    a{color:var(--ink);text-decoration:none}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* TOP BAR */
+    .top-bar{background:var(--blue-dark);color:#fff;font-size:13px;padding:8px 0}
+    .top-bar .wrap{display:flex;justify-content:space-between;align-items:center}
+    .top-bar a{color:#fff;opacity:.95}
+    .top-bar-links{display:flex;gap:20px}
+
+    /* HEADER */
+    header.main-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:99}
+    .header-inner{display:flex;align-items:center;gap:24px;padding:16px 0}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:24px;color:var(--blue)}
+    .logo-sub{font-size:13px;font-weight:600;color:var(--ink-2);margin-top:2px}
+    .nav-main{display:flex;gap:8px;flex-wrap:wrap}
+    .nav-main a{padding:8px 14px;border-radius:var(--radius);font-weight:600;font-size:14px;color:var(--ink)}
+    .nav-main a:hover{background:var(--bg);color:var(--blue)}
+    .header-search{flex:1;max-width:400px;display:flex;background:var(--bg);border-radius:999px;overflow:hidden}
+    .header-search input{flex:1;border:0;padding:12px 18px;font-size:15px;background:0}
+    .header-search button{background:var(--blue);color:#fff;border:0;padding:0 20px;font-weight:700;cursor:pointer}
+
+    /* BREADCRUMB */
+    .breadcrumb{padding:16px 0;font-size:14px;color:var(--ink-2)}
+    .breadcrumb a{color:var(--blue)}
+
+    /* PAGE HERO */
+    .page-hero{background:linear-gradient(135deg,#254F9B 0%,#1a3d7a 100%);color:#fff;padding:64px 0 56px}
+    .page-hero .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+    .page-hero-content{}
+    .page-hero .tag{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:800;padding:5px 14px;border-radius:999px;letter-spacing:.6px;margin-bottom:16px;text-transform:uppercase}
+    .page-hero h1{font-size:40px;margin:0 0 16px;font-weight:800;line-height:1.2}
+    .page-hero p{font-size:17px;margin:0;opacity:.9;max-width:560px;line-height:1.6}
+    .hero-badge{background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.25);border-radius:var(--radius-lg);padding:28px 32px;text-align:center;min-width:180px;flex-shrink:0}
+    .hero-badge .badge-num{font-size:48px;font-weight:800;color:#fff;line-height:1}
+    .hero-badge .badge-label{font-size:14px;color:rgba(255,255,255,.85);margin-top:6px;font-weight:600}
+
+    /* INTRO STRIP */
+    .intro-strip{background:var(--bg);border-bottom:1px solid #e0e8f4;padding:28px 0}
+    .intro-strip .wrap{display:flex;gap:40px;align-items:center;justify-content:center;flex-wrap:wrap}
+    .intro-pill{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:var(--ink-2)}
+    .intro-pill .dot{width:8px;height:8px;background:var(--blue);border-radius:50%;flex-shrink:0}
+
+    /* PDF SECTION */
+    .pdf-section{padding:64px 0}
+    .section-title{text-align:center;margin-bottom:48px}
+    .section-title h2{font-size:30px;margin:0 0 10px;color:var(--blue)}
+    .section-title p{font-size:15px;color:var(--ink-2);margin:0;max-width:560px;margin:0 auto}
+
+    .pdf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .pdf-card{background:var(--card);border-radius:var(--radius-lg);border:1px solid #e0e8f4;overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+    .pdf-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(37,79,155,.13)}
+    .pdf-card-header{padding:32px 28px 24px;display:flex;gap:16px;align-items:flex-start}
+    .pdf-icon{width:52px;height:52px;border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:26px}
+    .pdf-icon.blue{background:#eef2fb}
+    .pdf-icon.green{background:#eaf6f0}
+    .pdf-icon.orange{background:#fef5ea}
+    .pdf-card-header-text h3{font-size:18px;margin:0 0 6px;color:var(--blue);line-height:1.3}
+    .pdf-card-header-text .tag-chip{display:inline-block;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;letter-spacing:.4px}
+    .tag-chip.blue{background:#e8effe;color:#254F9B}
+    .tag-chip.green{background:#e0f5ec;color:#1a7a4a}
+    .tag-chip.orange{background:#fdecd5;color:#b86000}
+    .pdf-card-body{padding:0 28px 24px;flex:1}
+    .pdf-card-body p{font-size:14px;color:var(--ink-2);margin:0 0 16px;line-height:1.6}
+    .pdf-features{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+    .pdf-features li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--ink-2)}
+    .pdf-features li::before{content:'✓';color:#254F9B;font-weight:800;flex-shrink:0;margin-top:1px}
+    .pdf-card-footer{padding:20px 28px 28px;border-top:1px solid #f0f3f8}
+    .btn-download{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:14px 20px;background:var(--blue);color:#fff;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;transition:background .15s,transform .15s;border:none;cursor:pointer}
+    .btn-download:hover{background:var(--blue-dark);transform:translateY(-1px)}
+    .btn-download svg{width:18px;height:18px;fill:#fff;flex-shrink:0}
+    .pdf-meta{margin-top:12px;text-align:center;font-size:12px;color:#8a93a8}
+
+    /* SUBSCRIBE SECTION */
+    .subscribe-section{background:linear-gradient(135deg,#f5f8fc 0%,#eef2fb 100%);padding:72px 0;border-top:1px solid #e0e8f4}
+    .subscribe-inner{max-width:720px;margin:0 auto;text-align:center}
+    .subscribe-inner .icon-wrap{width:72px;height:72px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;font-size:32px}
+    .subscribe-inner h2{font-size:30px;margin:0 0 12px;color:var(--blue)}
+    .subscribe-inner .sub-lead{font-size:16px;color:var(--ink-2);margin:0 0 12px;line-height:1.6}
+    .subscribe-inner .sub-note{font-size:14px;color:var(--ink-2);margin:0 0 36px;opacity:.8}
+    .subscribe-perks{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:36px}
+    .subscribe-perk{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--ink-2)}
+    .subscribe-perk .perk-dot{width:8px;height:8px;background:var(--blue);border-radius:50%;flex-shrink:0}
+    .subscribe-form{display:flex;gap:12px;max-width:480px;margin:0 auto}
+    .subscribe-form input[type=email]{flex:1;border:2px solid #d0daea;border-radius:999px;padding:14px 20px;font-size:15px;font-family:inherit;color:var(--ink);outline:none;transition:border-color .15s}
+    .subscribe-form input[type=email]:focus{border-color:var(--blue)}
+    .subscribe-form button{background:var(--blue);color:#fff;border:none;border-radius:999px;padding:14px 28px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;white-space:nowrap;transition:background .15s}
+    .subscribe-form button:hover{background:var(--blue-dark)}
+    .subscribe-disclaimer{margin-top:16px;font-size:12px;color:#8a93a8;text-align:center}
+
+    /* SUCCESS */
+    .subscribe-success{display:none;background:#e0f5ec;border:1px solid #a8e0c8;border-radius:var(--radius);padding:20px 24px;text-align:center;color:#1a7a4a;font-weight:600;font-size:15px;max-width:480px;margin:0 auto}
+
+    /* FOOTER */
+    .footer-main{margin-top:0;background:#f0f2f5;padding:40px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-bottom:32px}
+    .footer-col h5{font-size:14px;font-weight:800;margin:0 0 12px;color:var(--blue)}
+    .footer-col ul{list-style:none;margin:0;padding:0}
+    .footer-col li{margin-bottom:8px}
+    .footer-col a{color:var(--ink-2);font-size:14px}
+    .footer-bottom{border-top:1px solid #ddd;padding-top:20px}
+    .footer-bottom p{margin:0;font-size:13px;color:var(--ink-2)}
+
+    @media(max-width:900px){.pdf-grid{grid-template-columns:repeat(2,1fr)}.page-hero .wrap{grid-template-columns:1fr}.hero-badge{display:none}}
+    @media(max-width:600px){.pdf-grid{grid-template-columns:1fr}.header-inner{flex-wrap:wrap}.nav-main{order:3;width:100%}.page-hero h1{font-size:28px}.subscribe-form{flex-direction:column}.footer-grid{grid-template-columns:1fr;gap:24px}}
+  </style>
+</head>
+<body>
+  <div class="top-bar"><div class="wrap"><div class="top-bar-links"><a href="lp.html">Mon drive</a><a href="lp.html">Mon magasin</a><a href="lp.html">Livraison</a></div></div></div>
+  <header class="main-header">
+    <div class="wrap header-inner">
+      <a href="lp.html" class="logo">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 96 96" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.819 20.9297C30.9718 20.7779 31.1156 20.7168 31.2393 20.7168C31.461 20.7168 31.6169 20.9149 31.6097 21.1562C31.6029 21.3001 31.5412 21.4576 31.4035 21.5957C25.8937 28.4664 21.8862 36.4957 21.8862 47.6357C21.8862 58.7662 25.8937 66.6422 31.4035 73.5091C31.5412 73.648 31.6029 73.8077 31.6097 73.9489C31.6169 74.1876 31.461 74.3891 31.2393 74.3891C31.1156 74.3891 30.9718 74.3276 30.819 74.1743L7.34792 51.4071C6.17619 50.4003 5.42896 49.2258 5.42896 47.5549C5.42896 45.8764 6.17619 44.7049 7.34792 43.7057L30.819 20.9297" fill="#C20016"/><path fill-rule="evenodd" clip-rule="evenodd" d="M49.8593 19.002C40.6693 19.002 37.0769 32.0656 37.0769 47.6358C37.0769 63.2101 40.6693 76.1007 49.8593 76.1007C55.3733 76.1007 60.0739 72.8606 60.0901 70.1981C60.0913 69.6163 59.8684 69.0573 59.3804 68.5701C56.7683 66.0369 55.7452 63.5046 55.7354 61.272C55.7206 57.0069 59.4103 53.8287 62.8093 53.8287C67.4853 53.8287 70.2423 57.5158 70.2423 62.2883C70.2423 66.8088 68.3176 70.5787 66.2299 73.5923C66.149 73.7182 66.1123 73.8526 66.1123 73.9736C66.1149 74.2116 66.2515 74.4051 66.4596 74.4051C66.5867 74.4051 66.735 74.338 66.8958 74.1744L90.3737 51.4072C91.5458 50.4004 92.2942 49.2258 92.2942 47.5549C92.2942 45.8764 91.5458 44.7049 90.3737 43.7057L66.8958 20.9298C66.735 20.7685 66.5867 20.7009 66.4596 20.7009C66.25 20.7009 66.1149 20.896 66.1123 21.1332C66.1123 21.2554 66.149 21.3909 66.2299 21.5172C68.3176 24.527 70.2423 28.3014 70.2423 32.8185C70.2423 37.5872 67.4853 41.2781 62.8093 41.2781C59.4103 41.2781 55.7206 38.1022 55.7354 33.8359C55.7452 31.6015 56.7683 29.0691 59.3804 26.539C59.8684 26.0465 60.0913 25.4916 60.0901 24.9099C60.0739 22.2443 55.3733 19.002 49.8593 19.002" fill="#254F9A"/></svg></span>
+        <div><span>Carrefour</span><div class="logo-sub">Santé & Bien-être</div></div>
+      </a>
+      <nav class="nav-main"><a href="lp.html#products">Produits</a><a href="lp.html#chooser">Trouver ma protection</a><a href="lp.html#articles">Conseils</a><a href="lp.html#faq">FAQ</a></nav>
+      <div class="header-search"><input placeholder="Que recherchez-vous ?"/><button type="button">Rechercher</button></div>
+    </div>
+  </header>
+
+  <div class="breadcrumb"><div class="wrap"><a href="lp.html">Accueil</a> › <a href="lp.html#services">Nos services</a> › Caregivers Toolkit</div></div>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="page-hero-content">
+        <span class="tag">Aidants & Proches</span>
+        <h1>Caregivers Toolkit</h1>
+        <p>Des outils pratiques conçus pour simplifier votre quotidien d'aidant. Fiches de suivi, trackers et listes de contrôle — tout ce dont vous avez besoin, prêt à imprimer.</p>
+      </div>
+      <div class="hero-badge">
+        <div class="badge-num">3</div>
+        <div class="badge-label">Outils<br>à télécharger</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="intro-strip">
+    <div class="wrap">
+      <div class="intro-pill"><span class="dot"></span>Gratuit & prêt à imprimer</div>
+      <div class="intro-pill"><span class="dot"></span>Conçu avec des professionnels de santé</div>
+      <div class="intro-pill"><span class="dot"></span>Mise à jour régulière</div>
+      <div class="intro-pill"><span class="dot"></span>Aucune application requise</div>
+    </div>
+  </div>
+
+  <section class="pdf-section">
+    <div class="wrap">
+      <div class="section-title">
+        <h2>Vos outils d'accompagnement</h2>
+        <p>Un soutien concret pour les aidants qui accompagnent une personne souffrant d'incontinence au quotidien.</p>
+      </div>
+
+      <div class="pdf-grid">
+
+        <!-- PDF 1 – Wetness Tracker -->
+        <div class="pdf-card">
+          <div class="pdf-card-header">
+            <div class="pdf-icon blue">💧</div>
+            <div class="pdf-card-header-text">
+              <h3>Wetness Tracker</h3>
+              <span class="tag-chip blue">Suivi quotidien</span>
+            </div>
+          </div>
+          <div class="pdf-card-body">
+            <p>Suivez les épisodes de fuites heure par heure. Identifiez les schémas récurrents pour adapter les soins et choisir la bonne protection.</p>
+            <ul class="pdf-features">
+              <li>Tableau journalier heure par heure</li>
+              <li>Niveau d'humidité (léger / modéré / abondant)</li>
+              <li>Notes sur l'activité et les circonstances</li>
+              <li>Synthèse hebdomadaire pour le médecin</li>
+            </ul>
+          </div>
+          <div class="pdf-card-footer">
+            <a href="pdf/wetness-tracker.pdf" download class="btn-download">
+              <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 9v2h6v-2h-6zm0-4h6v2h-6v-2z"/></svg>
+              Télécharger le PDF
+            </a>
+            <p class="pdf-meta">PDF · 1 page · Format A4</p>
+          </div>
+        </div>
+
+        <!-- PDF 2 – Medication Tracker -->
+        <div class="pdf-card">
+          <div class="pdf-card-header">
+            <div class="pdf-icon green">💊</div>
+            <div class="pdf-card-header-text">
+              <h3>Medication Tracker</h3>
+              <span class="tag-chip green">Suivi médical</span>
+            </div>
+          </div>
+          <div class="pdf-card-body">
+            <p>Gardez un suivi clair de tous les médicaments, dosages et horaires de prise. Évitez les oublis et facilitez la communication avec l'équipe soignante.</p>
+            <ul class="pdf-features">
+              <li>Liste de tous les médicaments et dosages</li>
+              <li>Planning hebdomadaire des prises</li>
+              <li>Espace pour les effets secondaires observés</li>
+              <li>Zone de contact médecin / pharmacien</li>
+            </ul>
+          </div>
+          <div class="pdf-card-footer">
+            <a href="pdf/medication-tracker.pdf" download class="btn-download">
+              <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 9v2h6v-2h-6zm0-4h6v2h-6v-2z"/></svg>
+              Télécharger le PDF
+            </a>
+            <p class="pdf-meta">PDF · 2 pages · Format A4</p>
+          </div>
+        </div>
+
+        <!-- PDF 3 – Quick Checklist -->
+        <div class="pdf-card">
+          <div class="pdf-card-header">
+            <div class="pdf-icon orange">✅</div>
+            <div class="pdf-card-header-text">
+              <h3>Quick Checklist</h3>
+              <span class="tag-chip orange">Essentiels</span>
+            </div>
+          </div>
+          <div class="pdf-card-body">
+            <p>La liste complète de tout ce dont vous avez besoin pour accompagner votre proche — à la maison, en déplacement ou lors d'un rendez-vous médical.</p>
+            <ul class="pdf-features">
+              <li>Matériel de soins quotidiens à avoir en stock</li>
+              <li>Checklist pour les sorties et déplacements</li>
+              <li>Documents importants à préparer</li>
+              <li>Contacts d'urgence et ressources utiles</li>
+            </ul>
+          </div>
+          <div class="pdf-card-footer">
+            <a href="pdf/quick-checklist.pdf" download class="btn-download">
+              <svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 9v2h6v-2h-6zm0-4h6v2h-6v-2z"/></svg>
+              Télécharger le PDF
+            </a>
+            <p class="pdf-meta">PDF · 1 page · Format A4</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section class="subscribe-section" id="subscribe">
+    <div class="wrap">
+      <div class="subscribe-inner">
+        <div class="icon-wrap">📬</div>
+        <h2>Recevez la Toolbox complète</h2>
+        <p class="sub-lead">Abonnez-vous pour recevoir les 3 outils directement dans votre boîte mail, ainsi que toutes les futures mises à jour et nouveaux documents dès leur parution.</p>
+        <p class="sub-note">Plus de 2 400 aidants font déjà confiance à notre Toolkit.</p>
+        <div class="subscribe-perks">
+          <span class="subscribe-perk"><span class="perk-dot"></span>Accès immédiat aux 3 PDFs</span>
+          <span class="subscribe-perk"><span class="perk-dot"></span>Mises à jour gratuites</span>
+          <span class="subscribe-perk"><span class="perk-dot"></span>Nouveaux outils en avant-première</span>
+        </div>
+        <form class="subscribe-form" id="subscribe-form" onsubmit="handleSubscribe(event)">
+          <input type="email" placeholder="Votre adresse e-mail" required autocomplete="email" />
+          <button type="submit">Recevoir la Toolbox</button>
+        </form>
+        <div class="subscribe-success" id="subscribe-success">
+          Merci ! Vérifiez votre boîte mail — votre Toolkit est en route. 🎉
+        </div>
+        <p class="subscribe-disclaimer">Aucun spam. Désabonnement en un clic à tout moment. Vos données ne sont jamais partagées.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-main">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h5>Carrefour et vous</h5>
+          <ul>
+            <li><a href="lp.html">Protections incontinence</a></li>
+            <li><a href="lp.html#chooser">Trouver ma protection</a></li>
+            <li><a href="lp.html#articles">Conseils & articles</a></li>
+            <li><a href="lp.html#faq">Foire aux questions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Nos services</h5>
+          <ul>
+            <li><a href="videos.html">Vidéos</a></li>
+            <li><a href="caregivers-toolkit.html">Caregivers Toolkit</a></li>
+            <li><a href="lp.html#product-selection">Sélection de produits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Besoin d'aide ?</h5>
+          <ul>
+            <li><a href="#">Contactez-nous</a></li>
+            <li><a href="#">0 800 389 618</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Carrefour Santé. Protection de confiance développée avec des professionnels de santé.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubscribe(e) {
+      e.preventDefault();
+      document.getElementById('subscribe-form').style.display = 'none';
+      document.getElementById('subscribe-success').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
