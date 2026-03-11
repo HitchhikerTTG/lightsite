@@ -2,8 +2,8 @@
   {
     "id": "discreet-protege-mini",
     "name": "Absodys Discreet – Protège-Slip Mini",
-    "img": "img/Absodys_Discreet_L.webp",
-    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-mini-absodys-discreet-carrefour-soft-3560070105724",
+    "img": "img/Absodys_Discreet_Protege_Mini.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-mini-absodys-discreet-carrefour-soft-3560070952588",
     "price": null,
     "qty": null,
     "panel": null,
@@ -15,43 +15,33 @@
   {
     "id": "discreet-protege-long",
     "name": "Absodys Discreet – Protège-Slip Long",
-    "img": "img/Absodys_Discreet_Long.webp",
+    "img": "img/Absodys_Discreet_Protege_Slip_Long.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-long-active-dry-pants-absodys-discreet-carrefour-soft-3560071000639",
-    "price": null,
-    "qty": null,
+    "price": "8,99",
+    "qty": "20",
     "panel": null,
     "chooserPaths": [
       {"category": "petits-inconforts", "sub": "irregulier", "format": null}
     ]
   },
   {
-    "id": "discreet-normal-12",
+    "id": "discreet-normal-24",
     "name": "Serviettes Normal Discreet",
-    "img": "img/Absodys_Discreet_Normal.webp",
+    "img": "img/Absodys_Discreet_Serviette_Normal.jpg",
     "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-normal-absodys-discreet-carrefour-soft-3560071512682",
-    "price": "2,69",
-    "qty": "12 serviettes",
+    "price": "8,99",
+    "qty": "24 serviettes",
     "panel": "serviettes",
     "chooserPaths": [
       {"category": "petits-inconforts", "sub": "regulier", "format": "femme"}
     ]
   },
   {
-    "id": "discreet-normal-24",
-    "name": "Serviettes Normal Discreet (grand pack)",
-    "img": "img/Absodys_Discreet_Normal.webp",
-    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-normal-discreet-absodys-carrefour-soft-3560071512651",
-    "price": "4,49",
-    "qty": "24 serviettes",
-    "panel": "serviettes",
-    "chooserPaths": []
-  },
-  {
     "id": "discreet-super-20",
     "name": "Serviettes Super Discreet",
-    "img": "img/Absodys_Discreet_Super.webp",
+    "img": "img/Absodys_Serviette_Super.jpg",
     "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-super-absodys-discreet-carrefour-soft-3560071512743",
-    "price": "4,49",
+    "price": "8,99",
     "qty": "20 serviettes",
     "panel": "serviettes",
     "chooserPaths": [
@@ -59,21 +49,11 @@
     ]
   },
   {
-    "id": "discreet-super-10",
-    "name": "Serviettes Super Discreet (petit pack)",
-    "img": "img/Absodys_Discreet_Super.webp",
-    "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-super-absodys-discreet-carrefour-soft-3560071512743",
-    "price": "2,69",
-    "qty": "10 serviettes",
-    "panel": "serviettes",
-    "chooserPaths": []
-  },
-  {
     "id": "discreet-maxi",
     "name": "Serviettes Maxi Discreet",
-    "img": "img/Absodys_Discreet_Maxi.webp",
+    "img": "img/Absodys_Discreet_Serviette_Maxi.jpg",
     "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-maxi-absodys-discreet-carrefour-soft-3560071512774",
-    "price": "4,89",
+    "price": "8,99",
     "qty": "16 serviettes",
     "panel": "serviettes",
     "chooserPaths": [
@@ -85,7 +65,7 @@
     "name": "Serviettes Maxi Mixte Absodys",
     "img": "img/Absodys_Maxi.webp",
     "link": "https://www.carrefour.fr/p/serviettes-hygieniques-fuites-urinaires-mixtes-maxi-absorption-absodys-carrefour-soft-3560071017484",
-    "price": "3,99",
+    "price": "8,99",
     "qty": "28 serviettes",
     "panel": "serviettes",
     "chooserPaths": []
@@ -93,9 +73,9 @@
   {
     "id": "serviette-nuit-maxi",
     "name": "Serviettes Nuit Maxi Absodys",
-    "img": "img/Absodys_Maxi_Night.webp",
+    "img": "img/Absodys_Discreet_Serviette_Maxi_Night.webp",
     "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-nuit-maxi-absodys-carrefour-soft-3560071017491",
-    "price": "3,99",
+    "price": "8,99",
     "qty": "12 serviettes",
     "panel": "serviettes",
     "chooserPaths": [
@@ -105,9 +85,9 @@
   {
     "id": "pants-day-m",
     "name": "Absodys Pants Day – M",
-    "img": "img/Absodys_Pants_Day_M.jpg",
+    "img": "img/Absodys_Pants_Day.jpg",
     "link": "https://www.carrefour.fr/p/culottes-fuites-urinaires-jour-taille-m-mixtes-absodys-carrefour-soft-3560071185688",
-    "price": "9,99",
+    "price": "8,99",
     "qty": "14 culottes",
     "panel": "pants",
     "chooserPaths": [
@@ -129,10 +109,10 @@
   },
   {
     "id": "active-dry-l",
-    "name": "Absodys Pants Active Dry – L",
-    "img": "img/Absodys_Pants_Day_L.jpg",
+    "name": "Absodys Discrieet Femme Pants – L",
+    "img": "img/Absodys_Discreet_Pants_Fem_L.jpg",
     "link": "https://www.carrefour.fr/p/culotte-fuite-urinaire-taille-l-active-dry-pants-absodys-carrefour-soft-3560071231699",
-    "price": "9,85",
+    "price": "6,85",
     "qty": "8 culottes",
     "panel": "pants",
     "chooserPaths": [
@@ -141,10 +121,10 @@
   },
   {
     "id": "active-dry-m",
-    "name": "Absodys Pants Active Dry – M",
-    "img": "img/Absodys_Pants_Day_M.jpg",
+    "name": "Absodys Discrieet Femme Pants – M",
+    "img": "img/Absodys_Discreet_Pants_Fem_L.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-taille-m-active-dry-pants-absodys-discreet-carrefour-soft-3560071231682",
-    "price": "9,85",
+    "price": "6,85",
     "qty": "8 culottes",
     "panel": "pants",
     "chooserPaths": []
@@ -154,7 +134,7 @@
     "name": "Absodys Pants Night – M",
     "img": "img/Absodys_Pants_Night_M.jpg",
     "link": "https://www.carrefour.fr/p/culottes-mixtes-de-nuit-pour-incontinence-taille-m-42-54-kg-70-110-cm-absodys-3560071574109",
-    "price": "9,99",
+    "price": "8,99",
     "qty": "14 culottes",
     "panel": "pants",
     "chooserPaths": []
@@ -162,7 +142,7 @@
   {
     "id": "pants-night-l",
     "name": "Absodys Pants Night – L",
-    "img": "img/Absodys_Pants_Night.jpg",
+    "img": "img/Absodys_Pants_Night_L.jpg",
     "link": "https://www.carrefour.fr/p/culottes-larges-pour-fuites-urinaires-severes-utilisation-nuit-tour-de-hanches-100-135-cm-absodys-3560071574031",
     "price": "9,99",
     "qty": "14 culottes",
