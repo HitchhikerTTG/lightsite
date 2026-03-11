@@ -4,9 +4,9 @@
     "name": "Absodys Discreet – Protège-Slip Mini",
     "img": "img/Absodys_Discreet_Protege_Mini.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-mini-absodys-discreet-carrefour-soft-3560070952588",
-    "price": null,
-    "qty": null,
-    "panel": null,
+    "price": "8,99",
+    "qty": "28",
+    "panel": "serviettes",
     "chooserPaths": [
       {"category": "petits-inconforts", "sub": "irregulier", "format": null},
       {"category": "petits-inconforts", "sub": "regulier",   "format": "femme"}
@@ -18,8 +18,8 @@
     "img": "img/Absodys_Discreet_Protege_Slip_Long.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-long-active-dry-pants-absodys-discreet-carrefour-soft-3560071000639",
     "price": "8,99",
-    "qty": "20",
-    "panel": null,
+    "qty": "21 serviettes",
+    "panel": "serviettes",
     "chooserPaths": [
       {"category": "petits-inconforts", "sub": "irregulier", "format": null}
     ]
@@ -73,7 +73,7 @@
   {
     "id": "serviette-nuit-maxi",
     "name": "Serviettes Nuit Maxi Absodys",
-    "img": "img/Absodys_Discreet_Serviette_Maxi_Night.webp",
+    "img": "img/Absodys_Discreet_Serviette_Maxi_Nuit.jpg",
     "link": "https://www.carrefour.fr/p/serviettes-fuite-urinaire-nuit-maxi-absodys-carrefour-soft-3560071017491",
     "price": "8,99",
     "qty": "12 serviettes",
@@ -156,7 +156,7 @@
     "name": "Absodys All-in Day M",
     "img": "img/Absodys_AIO_Day_L.jpg",
     "link": "https://www.carrefour.fr/p/couches-fuites-urinaires-jour-taille-m-absodys-all-in-day-carrefour-soft-3560070112791",
-    "price": "11,69",
+    "price": "8,69",
     "qty": "20 changes",
     "panel": "allin",
     "chooserPaths": []
@@ -198,7 +198,7 @@
   {
     "id": "aleses-60x90",
     "name": "Absodys Alèses 60×90 cm",
-    "img": "img/Absodys_Discreet_L.webp",
+    "img": "img/Absodys_Protection.jpg",
     "link": "https://www.carrefour.fr/p/aleses-fuites-urinaires-60x90-cm-absodys-carrefour-3560071172176",
     "price": "8,85",
     "qty": "20 protections",
@@ -210,7 +210,7 @@
   {
     "id": "men-security-medium",
     "name": "Absodys Security Men Medium",
-    "img": "img/Absodys_Men_Medium.jpg",
+    "img": "img/C4Men_Security_Medium.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuites-urinaires-homme-medium-absodys-security-carrefour-men-3560070542529",
     "price": "5,55",
     "qty": "20 protections",
@@ -222,9 +222,9 @@
   {
     "id": "men-anatomy-1",
     "name": "Absodys Anatomy Men – Niveau 1",
-    "img": "img/Absodys_Men_Medium.jpg",
+    "img": "img/Absodys_Anatomy_Niveau_1.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuites-urinaires-homme-niveau-1-absodys-anatomy-carrefour-men-3560071446277",
-    "price": "5,55",
+    "price": "5,35",
     "qty": "20 protections",
     "panel": "homme",
     "chooserPaths": [
@@ -234,9 +234,9 @@
   {
     "id": "men-anatomy-2",
     "name": "Absodys Anatomy Men – Niveau 2 Medium",
-    "img": "img/Absodys_Men_Medium.jpg",
+    "img": "img/Absodys_Anatomy_Niveau_2.jpg",
     "link": "https://www.carrefour.fr/p/serviettes-hygieniques-fuites-urinaires-niveau-2-medium-absodys-anatomy-carrefour-men-3560071011499",
-    "price": "5,55",
+    "price": "5,35",
     "qty": "20 protections",
     "panel": "homme",
     "chooserPaths": [
@@ -246,8 +246,18 @@
   {
     "id": "men-active-dry-m",
     "name": "Absodys Active Dry Pants Men M",
-    "img": "img/Absodys_Pants_Day_M.jpg",
+    "img": "img/Absodys_Active_Dry_Pants.jpg",
     "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-homme-taille-m-active-dry-pants-absodys-carrefour-men-3560071237769",
+    "price": "11,99",
+    "qty": "14 culottes",
+    "panel": "homme",
+    "chooserPaths": []
+  }
+  {
+    "id": "men-active-dry-m",
+    "name": "Absodys Active Dry Pants Men M",
+    "img": "img/Absodys_Active_Dry_Pants_L.jpg",
+    "link": "https://www.carrefour.fr/p/protections-fuite-urinaire-homme-taille-l-active-dry-pants-absodys-carrefour-men-3560071237776",
     "price": "11,99",
     "qty": "14 culottes",
     "panel": "homme",
