@@ -466,19 +466,20 @@
 	  // Inside renderCategory loop:
       // --- Image Cells ---
       // Image cell for the Old Product (if applicable)
-      var imgOldCell =<td style="padding:12px 16px; width: 150px"><img src="' + row.oldImage + '" alt="Old Product Image" class="img-fluid product-image"></td>';
+      //var imgOldCell =<td style="padding:12px 16px; width: 150px"><img src="' + row.oldImage + '" alt="Old Product Image" class="img-fluid product-image"></td>';
+      var imgOldCell ='<td style="padding:12px 16px; width: 150px"><img src="' + row.oldImage + '" alt="Old Product Image" class="img-fluid product-image"></td>';
     // Image cell for the New Product (if applicable)
-      var imgNewCell =<td style="padding:12px 16px; width: 150px"><img src="' + row.newImage + '" alt="New Product Image" class="img-fluid product-image"></td>';
+      var imgNewCell ='<td style="padding:12px 16px; width: 150px"><img src="' + row.newImage + '" alt="New Product Image" class="img-fluid product-image"></td>';
 
     // Old product cell (Details)
-    var oldCell =<div class="product-details-old">' + // Added wrapper for layout consistency
+    var oldCell ='<div class="product-details-old">' + // Added wrapper for layout consistency
                 '<strong>' + row.oldBrand + '</strong><br>'
                 +<span class="text-muted">' + (row.oldName || '') + '</span>'
                 + (row.oldDrops?<br<small>' + makeDropsDots(row.oldDrops) + '</small>' : '') +
               '</div>';
 
     // New product cell (Details)
-    var newCell =<div class="product-details-new">' + // Added wrapper for layout consistency
+    var newCell ='<div class="product-details-new">' + // Added wrapper for layout consistency
                 '<strong>' + row.newBrand + '</strong>' + subBadge(row.newSub) +<br>'
                 +<span class="text-muted">' + (row.newCat || '') + '- ' (row.newName || '') + '</span>' +
                 (row.newDrops?<br<small>' + makeDropsDots(row.newDrops) + '</small>' : '') +
