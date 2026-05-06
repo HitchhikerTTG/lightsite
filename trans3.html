@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>iD Product Transition Guide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #FAFAFA;
+      color: #2D2D2D;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    .hero-section {
+      background: linear-gradient(135deg, #003366 0%, #009FDB 100%);
+      color: white;
+      padding: 70px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="30" cy="40" r="0.5" fill="rgba(255,255,255,0.08)"/><circle cx="70" cy="20" r="0.8" fill="rgba(255,255,255,0.06)"/><circle cx="90" cy="60" r="1.2" fill="rgba(255,255,255,0.04)"/></svg>') repeat;
+      pointer-events: none;
+    }
+    .category-pills .nav-link {
+      border-radius: 25px;
+      font-weight: 600;
+      color: #003366;
+      border: 2px solid #003366;
+      margin: 4px;
+      padding: 10px 22px;
+      transition: all 0.25s ease;
+      background: white;
+    }
+    .category-pills .nav-link.active,
+    .category-pills .nav-link:hover {
+      background-color: #003366;
+      color: white;
+      border-color: #003366;
+    }
+    .badge-essential  { background-color: #009FDB; color: white; font-size: 0.72rem; padding: 0.28em 0.55em; border-radius: 0.4em; font-weight: 600; }
+    .badge-discreet   { background-color: #7B5EA7; color: white; font-size: 0.72rem; padding: 0.28em 0.55em; border-radius: 0.4em; font-weight: 600; }
+    .badge-sensitive  { background-color: #FF9F45; color: white; font-size: 0.72rem; padding: 0.28em 0.55em; border-radius: 0.4em; font-weight: 600; }
+    .sub-logo {
+      display: block;
+      margin-bottom: 4px;
+    }
+    .sub-logo img {
+      height: 28px;
+      width: auto;
+      display: block;
+    }
+    .status-badge {
+      font-size: 0.72rem; padding: 0.28em 0.55em; border-radius: 0.4em; font-weight: 600; white-space: nowrap;
+    }
+    .badge-same         { background-color: #6c757d; color: white; }
+    .badge-change       { background-color: #FF9F45; color: white; }
+    .badge-new-product  { background-color: #28a745; color: white; }
+    .badge-discontinued { background-color: #dc3545; color: white; }
+
+```
+.transition-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.transition-card .tc-header {
+  background-color: #003366;
+  color: white;
+  font-weight: 600;
+  padding: 14px 20px;
+  font-size: 1rem;
+}
+
+/* List header (column labels above the rows) */
+.tc-list-header {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 130px;
+  gap: 12px;
+  padding: 12px 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+}
+.tc-list-header > div:nth-child(2),
+.tc-list-header > div:nth-child(4) {
+  text-align: center;
+}
+
+/* List body */
+.tc-list { padding: 8px 0; }
+
+/* Each transition row as a div */
+.transition-row {
+  display: grid;
+  grid-template-columns: 1fr 50px 1fr 130px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.15s ease;
+}
+.transition-row:last-child { border-bottom: none; }
+.transition-row:hover { background-color: #f8f9fa; }
+.transition-row.row-new { border-left: 3px solid #28a745; padding-left: 17px; }
+.transition-row.row-discontinued .product-block { color: #888; }
+
+.product-block {
+  min-width: 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.product-image {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  border: 1px solid #e2e6ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-image .placeholder-icon {
+  width: 28px;
+  height: 28px;
+  opacity: 0.4;
+}
+.product-content { flex: 1; min-width: 0; }
+.product-content .brand {
+  font-weight: 600;
+  color: #2D2D2D;
+  display: block;
+  margin-bottom: 2px;
+}
+.product-content .name {
+  color: #6c757d;
+  font-size: 0.92rem;
+  display: block;
+}
+.product-content .drops { display: block; margin-top: 6px; }
+.product-content .no-product {
+  font-style: italic;
+  color: #999;
+  font-size: 0.85rem;
+}
+.product-content .no-replacement {
+  font-style: italic;
+  color: #dc3545;
+  font-size: 0.85rem;
+}
+
+/* Action buttons under new product */
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.product-actions a {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+.btn-product-info {
+  background-color: white;
+  color: #003366;
+  border: 1.5px solid #003366;
+}
+.btn-product-info:hover {
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+}
+.btn-buy-now {
+  background-color: #28a745;
+  color: white;
+  border: 1.5px solid #28a745;
+}
+.btn-buy-now:hover {
+  background-color: #218838;
+  border-color: #218838;
+  color: white;
+  text-decoration: none;
+}
+
+.arrow-block {
+  color: #009FDB;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status-block { text-align: center; }
+
+.drops-bar { display: inline-flex; gap: 3px; vertical-align: middle; }
+.drop-dot  { width: 9px; height: 9px; border-radius: 50%; background-color: #dee2e6; display: inline-block; }
+.drop-dot.filled { background-color: #009FDB; }
+
+.discontinued-alert {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile: stack the row vertically */
+@media (max-width: 767px) {
+  .tc-list-header { display: none; }
+  .transition-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px 18px;
+  }
+  .transition-row.row-new { padding-left: 15px; }
+  .product-block.old-product { flex-wrap: wrap; }
+  .product-block.new-product { flex-wrap: wrap; }
+  .product-block.old-product::before {
+    content: 'Current product';
+    display: block;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6c757d;
+    margin-bottom: 4px;
+  }
+  .product-block.new-product::before {
+    content: 'New product';
+    display: block;
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6c757d;
+    margin-bottom: 4px;
+  }
+  .arrow-block {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  .status-block { text-align: left; }
+  .hero-section { padding: 50px 0; }
+}
+```
+
+  </style>
+</head>
+<body>
+<!-- HERO -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 font-weight-bold mb-3">Product Transition Guide</h1>
+        <p class="lead mb-0">Find out what replaces the iD product you know. Select your product category below, then locate your current size and absorption level to see the new recommended product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CATEGORY SELECTOR + TAB CONTENT -->
+<section class="py-5">
+  <div class="container">
+    <!-- Pills nav -->
+    <ul class="nav category-pills justify-content-center flex-wrap mb-4" id="categoryTabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="tab-light" data-toggle="pill" href="#cat-LIGHT_INCO" role="tab">Light Inco</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-pants" data-toggle="pill" href="#cat-PANTS" role="tab">Pants</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-shaped" data-toggle="pill" href="#cat-SHAPED_PADS" role="tab">Form shaped pads</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-aio" data-toggle="pill" href="#cat-AIO" role="tab">iD Slips</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-belts" data-toggle="pill" href="#cat-BELTS" role="tab">Belts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="tab-underpads" data-toggle="pill" href="#cat-UNDERPADS" role="tab">Underpads</a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- LIGHT INCO -->
+      <div class="tab-pane fade show active" id="cat-LIGHT_INCO" role="tabpanel">
+        <div id="disc-alert-LIGHT_INCO" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">Liners and light pads for everyday discreet protection. Find your old product on the left to see the new equivalent.</p>
+        <div class="transition-card">
+          <div class="tc-header">Light Inco -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-LIGHT_INCO"></div>
+        </div>
+      </div>
+      <!-- PANTS -->
+      <div class="tab-pane fade" id="cat-PANTS" role="tabpanel">
+        <div id="disc-alert-PANTS" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">Pull-up pants for men and women. The iD Soft Feel range merges into iD Sensitive. Several new Essential options are now available.</p>
+        <div class="transition-card">
+          <div class="tc-header">Pants -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-PANTS"></div>
+        </div>
+      </div>
+      <!-- UNDERPADS -->
+      <div class="tab-pane fade" id="cat-UNDERPADS" role="tabpanel">
+        <div id="disc-alert-UNDERPADS" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">Bed and chair protection pads. iD Expert Protect transitions to iD Essential; iD Protect transitions to iD Discreet.</p>
+        <div class="transition-card">
+          <div class="tc-header">Underpads -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-UNDERPADS"></div>
+        </div>
+      </div>
+      <!-- AIO -->
+      <div class="tab-pane fade" id="cat-AIO" role="tabpanel">
+        <div id="disc-alert-AIO" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">All-in-one slip products. <strong>The iD Expert Slip range is being discontinued.</strong> Users are encouraged to switch to the iD Sensitive Slip line.</p>
+        <div class="transition-card">
+          <div class="tc-header">All-in-One Slips -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-AIO"></div>
+        </div>
+      </div>
+      <!-- SHAPED PADS -->
+      <div class="tab-pane fade" id="cat-SHAPED_PADS" role="tabpanel">
+        <div id="disc-alert-SHAPED_PADS" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">iD Form shaped pads transition to the iD Sensitive Form range with updated Darwin design.</p>
+        <div class="transition-card">
+          <div class="tc-header">Shaped Pads (iD Form) -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-SHAPED_PADS"></div>
+        </div>
+      </div>
+      <!-- BELTS -->
+      <div class="tab-pane fade" id="cat-BELTS" role="tabpanel">
+        <div id="disc-alert-BELTS" class="d-none"></div>
+        <p class="text-muted mb-3" style="font-size:0.9rem;">iD Belt products move to the iD Sensitive Belt range. Most sizes carry over directly. Note: Maxi Plus is being phased out.</p>
+        <div class="transition-card">
+          <div class="tc-header">Belts (iD Belt) -- Transition Map</div>
+          <div class="tc-list-header">
+            <div>Your current product</div>
+            <div></div>
+            <div>New product</div>
+            <div>Status</div>
+          </div>
+          <div class="tc-list" id="list-BELTS"></div>
+        </div>
+      </div>
+    </div><!-- /tab-content -->
+  </div>
+</section>
+<!-- FOOTER -->
+<footer style="background-color:#003366; color:white; padding:30px 0;">
+  <div class="container text-center">
+    <p class="mb-1" style="font-size:0.9rem;">iD by Ontex -- Product Transition Guide</p>
+    <p class="mb-0" style="font-size:0.8rem; opacity:0.7;">For questions contact your iD representative.</p>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+<script>
+// ─── TRANSITION DATA ─────────────────────────────────────────────────────────
+const TRANSITION_DATA = [
+  // ── LIGHT INCO ──────────────────────────────────────────────────────────────
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Ultra Mini",  oldDrops:1,  newBrand:"iD", newSub:"Discreet",  newCat:"Liners",        newName:"Ultra Mini",  newDrops:1,  moveType:"=", oldImg:"https://via.placeholder.com/64/e2e6ea/003366?text=Old", newImg:"https://via.placeholder.com/64/009FDB/ffffff?text=New", newProductUrl:"https://example.com/id-discreet-ultra-mini", newBuyUrl:"https://example.com/buy/id-discreet-ultra-mini" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Mini",        oldDrops:2,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Mini",        newDrops:2,  moveType:"=", newProductUrl:"https://example.com/id-discreet-mini" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Mini Plus",   oldDrops:3,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Mini Plus",   newDrops:3,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Normal",      oldDrops:4,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Normal",      newDrops:4,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Extra",       oldDrops:5,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Extra Plus",  newDrops:5,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Maxi",        oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Super",       newDrops:6,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Super",       oldDrops:7,  newBrand:"iD", newSub:"Discreet",  newCat:"Light Pads",    newName:"Maxi",        newDrops:7,  moveType:"CHANGE" },
+  { category:"LIGHT_INCO", oldBrand:null,                oldName:null,          oldDrops:null, newBrand:"iD", newSub:"Discreet", newCat:"Light Pads",   newName:"Maxi Night",  newDrops:8,  moveType:"NEW" },
+  { category:"LIGHT_INCO", oldBrand:"iD Expert Light",   oldName:"Normal",      oldDrops:4,  newBrand:"iD", newSub:"Essential", newCat:"Light Pads",   newName:"Normal",      newDrops:4,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Expert Light",   oldName:"Extra",       oldDrops:5,  newBrand:"iD", newSub:"Essential", newCat:"Light Pads",   newName:"Extra Plus",  newDrops:5,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD Expert Light",   oldName:"Maxi",        oldDrops:6,  newBrand:"iD", newSub:"Essential", newCat:"Light Pads",   newName:"Super",       newDrops:6,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD for Men",        oldName:"Level 1+",    oldDrops:4,  newBrand:"iD", newSub:"Discreet",  newCat:"Pads for Men", newName:"Normal",      newDrops:4,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD for Men",        oldName:"Level 2",     oldDrops:5,  newBrand:"iD", newSub:"Discreet",  newCat:"Pads for Men", newName:"Extra Plus",  newDrops:5,  moveType:"=" },
+  { category:"LIGHT_INCO", oldBrand:"iD for Men",        oldName:"Level 3",     oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Pads for Men", newName:"Super",       newDrops:6,  moveType:"=" },
+  // ── PANTS ────────────────────────────────────────────────────────────────────
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Normal M",        oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Normal M",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Normal L",        oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Normal L",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Normal M",        oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Normal M",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Normal L",        oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Normal L",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Plus XS",         oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus XS", newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Plus S",          oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus S",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Plus M",          oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus M",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Plus M",          oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus M",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Plus L",          oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus L",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Plus L",          oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus L",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Plus XL",         oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Extra Plus XL", newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Super M",         oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super M",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Super M",         oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super M",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Super L",         oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super L",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Soft Feel",     oldName:"Super L",         oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super L",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Super XL",        oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super XL",      newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Super XXL",       oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Super XXL",     newDrops:7,  moveType:"=" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Maxi M",          oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Maxi M",        newDrops:8,  moveType:"=" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Maxi L",          oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Maxi L",        newDrops:8,  moveType:"=" },
+  { category:"PANTS", oldBrand:"iD Pants",         oldName:"Maxi XL",         oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Pants",               newName:"Maxi XL",       newDrops:8,  moveType:"=" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Pants", newName:"Maxi S",        newDrops:8,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Pants", newName:"Maxi Night M",  newDrops:9,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Pants", newName:"Maxi Night L",  newDrops:9,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Normal M",      newDrops:6,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Normal L",      newDrops:6,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Extra Plus M",  newDrops:6,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Extra Plus L",  newDrops:6,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Extra Plus XL", newDrops:6,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Super M",       newDrops:7,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Super L",       newDrops:7,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Pants", newName:"Super XL",      newDrops:7,  moveType:"NEW" },
+  { category:"PANTS", oldBrand:"iD for Men",       oldName:"Level 4 M",       oldDrops:7,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Men",       newName:"Super M",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD for Men",       oldName:"Level 4 L",       oldDrops:7,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Men",       newName:"Super L",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Normal M",        oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Normal M",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Normal L",        oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Normal L",      newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Plus M",          oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Extra Plus M",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Plus L",          oldDrops:6,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Extra Plus L",  newDrops:6,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Super M",         oldDrops:7,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Super M",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:"iD Intime",        oldName:"Super L",         oldDrops:7,  newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women",     newName:"Super L",       newDrops:7,  moveType:"CHANGE" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women (black)", newName:"Super M", newDrops:7, moveType:"NEW" },
+  { category:"PANTS", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Pants for Women (black)", newName:"Super L", newDrops:7, moveType:"NEW" },
+  // ── UNDERPADS ────────────────────────────────────────────────────────────────
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Plus (60×60)",   oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Extra Plus", newDrops:null, moveType:"CHANGE" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Super (60×60)",  oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"CHANGE" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Plus (60×90)",   oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Extra Plus", newDrops:null, moveType:"CHANGE" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Super (60×90)",  oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Plus (90×180)",  oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Extra Plus", newDrops:null, moveType:"CHANGE" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Super (90×180)", oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Expert Protect", oldName:"Super (60×180)", oldDrops:null, newBrand:"iD", newSub:"Essential", newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Protect",        oldName:"Plus",           oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Underpads", newName:"Extra Plus", newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Protect",        oldName:"Super",          oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Protect",        oldName:"Plus (90×180)",  oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Underpads", newName:"Extra Plus", newDrops:null, moveType:"=" },
+  { category:"UNDERPADS", oldBrand:"iD Protect",        oldName:"Super (90×180)", oldDrops:null, newBrand:"iD", newSub:"Discreet",  newCat:"Underpads", newName:"Super",      newDrops:null, moveType:"=" },
+  // ── AIO ─────────────────────────────────────────────────────────────────────
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Normal M",     oldDrops:6,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Normal L",     oldDrops:6,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Plus M",       oldDrops:6,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Plus L",       oldDrops:6,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Extra Plus M", oldDrops:7,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Extra Plus L", oldDrops:7,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Super M",      oldDrops:8,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:"iD Expert Slip", oldName:"Super L",      oldDrops:8,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"The iD Expert Slip range will stop. Volume can be converted to the iD Sensitive Slip line." },
+  { category:"AIO", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Normal M",      newDrops:6,  moveType:"NEW" },
+  { category:"AIO", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Normal L",      newDrops:6,  moveType:"NEW" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Plus M",       oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Ultra M",       newDrops:6,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Plus L",       oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Ultra L",       newDrops:6,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Plus XL",      oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Ultra XL",      newDrops:6,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Extra Plus S",  oldDrops:7, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Extra Plus S",  newDrops:7,  moveType:"=" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Extra Plus M",  oldDrops:7, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Extra Plus M",  newDrops:7,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Extra Plus L",  oldDrops:7, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Extra Plus L",  newDrops:7,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Extra Plus XL", oldDrops:7, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Extra Plus XL", newDrops:7,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super XS",      oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super XS",      newDrops:8,  moveType:"=" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super S",       oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super S",       newDrops:8,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super M",       oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super M",       newDrops:8,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super L",       oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super L",       newDrops:8,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super XL",      oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super XL",      newDrops:8,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Super XXL",     oldDrops:8, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Super XXL",     newDrops:8,  moveType:"=" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi S",        oldDrops:9, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi S",        newDrops:9,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi M",        oldDrops:9, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi M",        newDrops:9,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi L",        oldDrops:9, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi L",        newDrops:9,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi XL",       oldDrops:9, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi XL",       newDrops:9,  moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi Prime M",  oldDrops:10, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi Night M", newDrops:10, moveType:"CHANGE" },
+  { category:"AIO", oldBrand:"iD Slip", oldName:"Maxi Prime L",  oldDrops:10, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi Night L", newDrops:10, moveType:"CHANGE" },
+  { category:"AIO", oldBrand:null, oldName:null, oldDrops:null, newBrand:"iD", newSub:"Sensitive", newCat:"Slip", newName:"Maxi Night XL", newDrops:10, moveType:"NEW" },
+  // ── SHAPED PADS ──────────────────────────────────────────────────────────────
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Normal – Discreet",      oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Normal",     newDrops:6,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Plus – Long",             oldDrops:6,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Plus",       newDrops:6,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Extra – Long",            oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Ultra",      newDrops:7,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Extra Plus – Long",       oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Extra",      newDrops:7,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Extra Plus – Extra Long", oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Extra Plus", newDrops:8,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Super – Long",            oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Super",      newDrops:8,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Super – Extra Long",      oldDrops:9,  newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Maxi",       newDrops:9,  moveType:"CHANGE" },
+  { category:"SHAPED_PADS", oldBrand:"iD Form", oldName:"Maxi – Extra Long",       oldDrops:10, newBrand:"iD", newSub:"Sensitive", newCat:"Form", newName:"Maxi Night", newDrops:10, moveType:"CHANGE" },
+  // ── BELTS ─────────────────────────────────────────────────────────────────────
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Plus S",      oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Extra Plus S",  newDrops:7,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Plus M",      oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Extra Plus M",  newDrops:7,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Plus L",      oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Extra Plus L",  newDrops:7,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Plus XL",     oldDrops:7,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Extra Plus XL", newDrops:7,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Super S",     oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Super S",       newDrops:8,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Super M",     oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Super M",       newDrops:8,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Super L",     oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Super L",       newDrops:8,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Super XL",    oldDrops:8,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Super XL",      newDrops:8,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi S",      oldDrops:9,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Maxi S",        newDrops:9,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi M",      oldDrops:9,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Maxi M",        newDrops:9,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi L",      oldDrops:9,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Maxi L",        newDrops:9,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi XL",     oldDrops:9,  newBrand:"iD", newSub:"Sensitive", newCat:"Belt", newName:"Maxi XL",       newDrops:9,  moveType:"=" },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi Plus M", oldDrops:9,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"Maxi Plus sizes are being phased out and will not have a direct replacement." },
+  { category:"BELTS", oldBrand:"iD Belt", oldName:"Maxi Plus L", oldDrops:9,  newBrand:null, newSub:null, newCat:null, newName:null, newDrops:null, moveType:"DISCONTINUED", note:"Maxi Plus sizes are being phased out and will not have a direct replacement." }
+];
+// ─── RENDERING HELPERS ───────────────────────────────────────────────────────
+function makeDropsDots(n) {
+  if (!n) return '';
+  var html = '<span class="drops-bar">';
+  for (var i = 1; i <= 10; i++) {
+    html += '<span class="drop-dot' + (i <= n ? ' filled' : '') + '"></span>';
+  }
+  html += '</span> <small class="text-muted">' + n + '/10</small>';
+  return html;
+}
+function subLogo(sub) {
+  if (!sub) return '';
+  var logos = {
+    'Essential': 'cat/Essential.png',
+    'Discreet':  'cat/Discreet.png',
+    'Sensitive': 'cat/Sensitive.png'
+  };
+  var src = logos[sub];
+  if (!src) return '';
+  return '<span class="sub-logo"><img src="' + src + '" alt="iD ' + sub + '"></span>';
+}
+function statusBadge(moveType) {
+  var map = {
+    '=':            ['badge-same',         'Same'],
+    'CHANGE':       ['badge-change',       'Change'],
+    'NEW':          ['badge-new-product',  'New'],
+    'DISCONTINUED': ['badge-discontinued', 'Discontinued']
+  };
+  var pair = map[moveType] || ['badge-secondary', moveType];
+  return '<span class="status-badge ' + pair[0] + '">' + pair[1] + '</span>';
+}
+function productImage(imgUrl, alt) {
+  if (imgUrl) {
+    return '<div class="product-image"><img src="' + imgUrl + '" alt="' + (alt || '') + '" onerror="this.parentNode.innerHTML=\'' +
+           '<svg class=&quot;placeholder-icon&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;%23003366&quot; stroke-width=&quot;1.5&quot;>' +
+           '<rect x=&quot;3&quot; y=&quot;3&quot; width=&quot;18&quot; height=&quot;18&quot; rx=&quot;2&quot;/><circle cx=&quot;8.5&quot; cy=&quot;8.5&quot; r=&quot;1.5&quot;/>' +
+           '<path d=&quot;m21 15-5-5L5 21&quot;/></svg>\'"></div>';
+  }
+  return '<div class="product-image">' +
+         '<svg class="placeholder-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#003366" stroke-width="1.5">' +
+         '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>' +
+         '<path d="m21 15-5-5L5 21"/></svg></div>';
+}
+function productActions(row) {
+  var btns = [];
+  if (row.newProductUrl) {
+    btns.push('<a href="' + row.newProductUrl + '" target="_blank" rel="noopener" class="btn-product-info">Product page</a>');
+  }
+  if (row.newBuyUrl) {
+    btns.push('<a href="' + row.newBuyUrl + '" target="_blank" rel="noopener" class="btn-buy-now">Buy now</a>');
+  }
+  if (btns.length === 0) return '';
+  return '<div class="product-actions">' + btns.join('') + '</div>';
+}
+function renderCategory(catKey) {
+  var list = document.getElementById('list-' + catKey);
+  if (!list) return;
+  var rows = TRANSITION_DATA.filter(function(r) { return r.category === catKey; });
+  // Show discontinued alert (deduplicated notes)
+  var discNotes = [];
+  rows.filter(function(r) { return r.moveType === 'DISCONTINUED' && r.note; })
+      .forEach(function(r) { if (discNotes.indexOf(r.note) === -1) discNotes.push(r.note); });
+  if (discNotes.length > 0) {
+    var alertDiv = document.getElementById('disc-alert-' + catKey);
+    if (alertDiv) {
+      alertDiv.innerHTML = discNotes.map(function(n) {
+        return '<div class="discontinued-alert">⚠️ <strong>Note:</strong> ' + n + '</div>';
+      }).join('');
+      alertDiv.classList.remove('d-none');
+    }
+  }
+  rows.forEach(function(row) {
+    var rowEl = document.createElement('div');
+    rowEl.className = 'transition-row';
+    if (row.moveType === 'NEW') rowEl.classList.add('row-new');
+    if (row.moveType === 'DISCONTINUED') rowEl.classList.add('row-discontinued');
+
+```
+// Old product block
+var oldContent;
+if (row.oldBrand) {
+  oldContent = '<span class="brand">' + row.oldBrand + '</span>'
+             + '<span class="name">' + (row.oldName || '') + '</span>'
+             + (row.oldDrops ? '<span class="drops">' + makeDropsDots(row.oldDrops) + '</span>' : '');
+} else {
+  oldContent = '<span class="no-product">No previous product</span>';
+}
+var oldBlock = productImage(row.oldImg, row.oldBrand || '')
+             + '<div class="product-content">' + oldContent + '</div>';
+
+// New product block
+var newContent;
+if (row.newBrand) {
+  newContent = subLogo(row.newSub)
+             + '<span class="name">' + (row.newCat || '') + ' -- ' + (row.newName || '') + '</span>'
+             + (row.newDrops ? '<span class="drops">' + makeDropsDots(row.newDrops) + '</span>' : '')
+             + productActions(row);
+} else {
+  newContent = '<span class="no-replacement">No direct replacement -- range discontinued</span>';
+}
+var newBlock = productImage(row.newImg, row.newName || '')
+             + '<div class="product-content">' + newContent + '</div>';
+
+rowEl.innerHTML =
+    '<div class="product-block old-product">' + oldBlock + '</div>'
+  + '<div class="arrow-block">→</div>'
+  + '<div class="product-block new-product">' + newBlock + '</div>'
+  + '<div class="status-block">' + statusBadge(row.moveType) + '</div>';
+
+list.appendChild(rowEl);
+```
+
+});
+}
+document.addEventListener(‘DOMContentLoaded’, function() {
+[‘LIGHT_INCO’,‘PANTS’,‘UNDERPADS’,‘AIO’,‘SHAPED_PADS’,‘BELTS’].forEach(renderCategory);
+});
+</script>
+
+</body>
+</html>
