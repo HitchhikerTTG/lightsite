@@ -280,6 +280,7 @@
   //   newDrops: new absorption level 1–10
   //   moveType: "="|"CHANGE"|"NEW"|"DISCONTINUED"
   //   note:     free-text shown in alert box (only for DISCONTINUED)
+  //  image: placeholder?
   const TRANSITION_DATA = [
     // ── LIGHT INCO ──────────────────────────────────────────────────────────────
     { category:"LIGHT_INCO", oldBrand:"iD Light Advanced", oldName:"Ultra Mini",  oldDrops:1,  newBrand:"iD", newSub:"Discreet",  newCat:"Liners",        newName:"Ultra Mini",  newDrops:1,  moveType:"=", image:"https://placehold.jp/150x150.png"},
@@ -463,31 +464,29 @@
 	  
 	  
 	  // Inside renderCategory loop:
+      // --- Image Cells ---
+      // Image cell for the Old Product (if applicable)
+      var imgOldCell =<td style="padding:12px 16px; width: 150px><img src="' + row.oldImage + '" alt="Old Product Image" class="img-fluid product-image"></td>';
+    // Image cell for the New Product (if applicable)
+      var imgNewCell =<td style="padding:12px 16px; width: 150px><img src="' + row.newImage + '" alt="New Product Image" class="img-fluid product-image"></td>';
 
-// --- Image Cells ---
-// Image cell for the Old Product (if applicable)
-var imgOldCell =<td style="padding:12px 16px; width: 150px<img src="' + row.oldImage + '" alt="Old Product Image" class="img-fluid product-image"></td>';
-
-// Image cell for the New Product (if applicable)
-var imgNewCell =<td style="padding:12px 16px; width: 150px<img src="' + row.newImage + '" alt="New Product Image" class="img-fluid product-image"></td>';
-
-// Old product cell (Details)
-var oldCell =<div class="product-details-old">' + // Added wrapper for layout consistency
+    // Old product cell (Details)
+    var oldCell =<div class="product-details-old">' + // Added wrapper for layout consistency
                 '<strong>' + row.oldBrand + '</strong><br>'
                 +<span class="text-muted">' + (row.oldName || '') + '</span>'
                 + (row.oldDrops?<br<small>' + makeDropsDots(row.oldDrops) + '</small>' : '') +
               '</div>';
 
-// New product cell (Details)
-var newCell =<div class="product-details-new">' + // Added wrapper for layout consistency
+    // New product cell (Details)
+    var newCell =<div class="product-details-new">' + // Added wrapper for layout consistency
                 '<strong>' + row.newBrand + '</strong>' + subBadge(row.newSub) +<br>'
                 +<span class="text-muted">' + (row.newCat || '') + '- ' (row.newName || '') + '</span>' +
                 (row.newDrops?<br<small>' + makeDropsDots(row.newDrops) + '</small>' : '') +
               '</div>';
 
 
-// --- Constructing the Row (This part needs the most structural change depending on desired layout) ---
-tr.innerHTML = 
+    // --- Constructing the Row (This part needs the most structural change depending on desired layout) ---
+    tr.innerHTML = 
     // [Image] [Old Details] [Arrow] [New Details] [Image] [Status]
     imgOldCell + // Added Old Image Cell
     <td style="padding:12px 16px;">' + oldCell + '</td>' +
